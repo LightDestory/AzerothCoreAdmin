@@ -333,46 +333,6 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_OffButton"]
   })
-
-   --[[ FrameLib:BuildButton({
-    name = "ma_chatonbutton",
-    group = "main",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_chatonbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 120,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 10,
-      offY = -170
-    },
-    text = Locale["ma_chatbutton"]
-  }) ]]--
-
-  FrameLib:BuildButton({
-    name = "ma_chatoffbutton",
-    group = "main",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_chatoffbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 40,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 134,
-      offY = -170
-    },
-    text = Locale["ma_OffButton"]
-  })
   
   FrameLib:BuildButton({
     name = "ma_waterwalkonbutton",
