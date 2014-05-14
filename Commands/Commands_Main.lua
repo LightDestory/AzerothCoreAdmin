@@ -101,7 +101,7 @@ function SetSpeed()
     --self:ChatMsg(".modify speed "..value)
     --self:ChatMsg(".modify fly "..value)
     --self:ChatMsg(".modify swim "..value)
-    MangAdmin:ChatMsg(".modify aspeed "..value)
+    MangAdmin:ChatMsg(".modify speed "..value)
     MangAdmin:LogAction("Set speed of "..player.." to "..value..".")
   else
     MangAdmin:Print(Locale["selectionerror1"])
@@ -377,7 +377,7 @@ end
 function ResetSpeed()
     ma_speedslider:SetValue(1)
     ma_speedsliderText:SetText("Speed: 1.0")
-    MangAdmin:ChatMsg(".mod aspeed 1")
+    MangAdmin:ChatMsg(".mod speed 1")
     
 end
 
