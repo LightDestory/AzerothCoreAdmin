@@ -24,6 +24,8 @@ end
 function ToggleGMMode(value)
   MangAdmin:ChatMsg(".gm "..value)
   MangAdmin:LogAction("Turned GM-mode to "..value..".")
+  MangAdmin:ChatMsg(".gm chat "..value)
+  Manadmin:LogAction("Turned Gm-Chat to "..value..".")
 end
 
 function ToggleFlyMode(value)

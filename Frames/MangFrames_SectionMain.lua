@@ -334,7 +334,7 @@ function MangAdmin:CreateMainSection()
     text = Locale["ma_OffButton"]
   })
 
-  FrameLib:BuildButton({
+   --[[ FrameLib:BuildButton({
     name = "ma_chatonbutton",
     group = "main",
     parent = ma_midframe,
@@ -352,7 +352,7 @@ function MangAdmin:CreateMainSection()
       offY = -170
     },
     text = Locale["ma_chatbutton"]
-  })
+  }) ]]--
 
   FrameLib:BuildButton({
     name = "ma_chatoffbutton",
