@@ -129,7 +129,7 @@ function Return_enUS()
     ["ma_displaylevelbutton"] = "Display Account Level",
     ["ma_GMOnButton"] = "GM-mode on",
     ["ma_FlyOnButton"] = "Fly-mode on",
-    ["ma_HoverOnButton"] = "Hover-mode on",
+    ["ma_HoverOnButton"] = "Hover-mode on",  --TODO: '.hover' does not exist (Change command)
     ["ma_WhisperOnButton"] = "Whisper on",
     ["ma_InvisOnButton"] = "Invisibility on",
     ["ma_TaxiOnButton"] = "Taxicheat on",    

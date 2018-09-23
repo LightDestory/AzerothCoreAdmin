@@ -39,14 +39,14 @@ function ToggleFlyMode(value)
 end
 
 function ToggleHoverMode(value)
-  MangAdmin:ChatMsg(".hover "..value)
+  MangAdmin:ChatMsg("hover command not used "..value) --TODO: Change to another function.
   local status
   if value == 1 then
     status = "on"
   else
     status = "off"
   end
-  MangAdmin:LogAction("Turned Hover-mode "..status..".")
+  MangAdmin:LogAction("Hover mode not an option "..status..".")
 end
 
 function ToggleWhisper(value)
