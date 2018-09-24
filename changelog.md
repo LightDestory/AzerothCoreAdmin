@@ -1,24 +1,28 @@
-TrinityAdmin Changelog
+# TrinityAdmin Changelog
 
--=[ Revision 46 - 9/23/2018]=-
+#### -=[ Revision 47 - 9/24/2018]=-
+- Corrected layout alignment the Server Tab:
+    - FIXED Reload Scripts -> changed to .reload smart_scripts
+
+#### -=[ Revision 46 - 9/23/2018]=-
 - MOD Main Window layout:
-    - Moved Language dropdown closer to the button
+    - Moved Language dropdown closer to the change button
     - Realigned lower window frames
     - Changed lower right frame text alignment
 - Corrected layout alignmnet the Misc Tab:
     - ADD Move checkbox to Misc Tab
 
--=[ Revision 45 - 1/18/2012]=-
+#### -=[ Revision 45 - 1/18/2012]=-
 - Added "Reload" Linkifier button to the output of ".npc info" to reload the creature_template
 
--=[ Revision 44 - 1/15/2011]=-
+#### -=[ Revision 44 - 1/15/2011]=-
 - Forgot to update internal revision string, fixed
 
--=[ Revision 43 - 1/15/2011]=-
+#### -=[ Revision 43 - 1/15/2011]=-
 Touchups to r42 changes. Changed "Spawn on Move" to "Add on Move", then added "Move on Move" so you
 can "move" gobs finely (it actually deletes and recreates the gob to get around the .gob move bug)
 
--=[ Revision 42 - 1/15/2011]=-
+#### -=[ Revision 42 - 1/15/2011]=-
 - Major changes to GOB tab: 
 - ADD Model viewer to see targeted model with rotate/zoom
 - ADD Move/spawn system for builders
@@ -36,7 +40,7 @@ a long time ago. I updated and converted pieces of his code to make this work. P
 Note2: The Gob info boxes can become messy due to a race condition. Since WoW LUA has no Sleep() function, 
 I cannot prevent this. Click the Obj Target button to reset the info boxes.
 
--=[ Revision 41 - 1/10/2011]=-
+#### -=[ Revision 41 - 1/10/2011]=-
 - ADD new NPC2 tab - Please close WoW and restart to load new files!!!
 - Moved all NPC Waypoint/movement related buttons to NPC2
 - Fixed MvRandom, NPCStay, NPCStayDEl, and MvWaypt buttons
@@ -45,11 +49,11 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD .possess and .unpossess to NPC tab
 - ADD .recall and .repairitems to CHAR tab
 
--=[ Revision 40 - 1/8/2011]=-
+#### -=[ Revision 40 - 1/8/2011]=-
 - ADD .cometome command to NPC tab
 - Added enUS locale for above
 
--=[ Revision 39 - 1/8/2011]=-
+#### -=[ Revision 39 - 1/8/2011]=-
 - ADD .bindsight to NPC tab
 - ADD .unbindsight to NPC tab. Note: this command is broken in core on my core revision. 
 - ADD .bindsight to CHAR tab
@@ -57,7 +61,7 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD .char rename, customize, changerace, and changefaction to CHAR tab
 - ADD enUS locale for the above items
 
--=[ Revision 38 - 1/8/2011]=-
+#### -=[ Revision 38 - 1/8/2011]=-
 - Misc code formatting cleanup
 - ADD aspeed, arena, bwalk, drunk, fly, gender, honor, mount, phase, runicpower, speed, standstate, swim, and tp to Modify
 - Updated enUS locale for above adds
@@ -67,14 +71,14 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD/MOD added missing tables to Reload. Removed individual tables that are reloaded with an all_xxxx command... 
 	so now the list fits the screen, but you may have to choose an all_xxxx command to reload the table you want.
 
--=[ Revision 37 - 1/4/2011]=-
+#### -=[ Revision 37 - 1/4/2011]=-
 - Wiki changes
 
--=[ Revision 36 - 1/4/2011]=-
+#### -=[ Revision 36 - 1/4/2011]=-
 - You'd think after years of programming experience, I'd not get in this sort of mess. Like letting my code on two
 different machines get out of sync. Like trying to commit with conflicts o' plenty. Fixed. Ignore r25-r35.
 
--=[ Revision 24 - 1/4/2011]=-
+#### -=[ Revision 24 - 1/4/2011]=-
 - Merry (Belated) Christmas!
 - Numerous bugs fixed from issue tracker
 - New camera functions and rearrangement of model frame on Char and NPC tabs
@@ -82,22 +86,21 @@ different machines get out of sync. Like trying to commit with conflicts o' plen
 - Tweak to DisplayID browser 
 - Found some more .namego and .goname, changed to .appear and .summon
 
--=[ Revision 23 - 12/12/2010]=-
+#### -=[ Revision 23 - 12/12/2010]=-
 - ADD NPC DisplayID broser
 
--=[ Revision 22 - 9/6/2010]=-
+#### -=[ Revision 22 - 9/6/2010]=-
 - FIX version string
 
--=[ Revision 21 - 9/6/2010]=-
+#### -=[ Revision 21 - 9/6/2010]=-
 - FIX for new .summon, .appear, .groupsummon commands
 
--=[ Revision 20 - 8/10/2010]=-
+#### -=[ Revision 20 - 8/10/2010]=-
 - FIX Whisper issues with 3.3.5a client
 - MOD Revive button on Char tab is now always available
 - FIX Server Info spamming when Show Chat Output is ON.
 
-
--=[ Revision 19 - 4/13/2010]=-
+#### -=[ Revision 19 - 4/13/2010]=-
 - FIX issue 36 WHO tab overlap
 - FIX issue 35 TICKET - Online list not working
 - FIX issue with Nil object error in tele scrolling on startup
@@ -109,8 +112,7 @@ different machines get out of sync. Like trying to commit with conflicts o' plen
 - It is reported that r19 with Chat Output ON allows all the chat window clickable links to work properly. Please verify.
 - It is also reported that deDe clients with deDe selected in TrintiyAdmin and deDe selected in Core is now working properly.
 
-
--=[ Revision 18 - 4/7/2010]=-
+#### -=[ Revision 18 - 4/7/2010]=-
 Note: This version is compatible with TC2 revision 7757+
 - FIX: WHO tab functioning with new entries in Trinity_String (MANY thanks to TC Devs for the changes!!!)
 - ADD: Map-Zone to WHO tab. Note: this is NOT realtime since it pulls from the database after save
@@ -120,10 +122,10 @@ Note: This version is compatible with TC2 revision 7757+
 - MOD: In Item search frame, click= add item to target inventory, right-click= list item. Changed this to: click=add, r-click=remove. Multiple amounts work for removing too, can enter either a positive or negative munber to be removed.
 - FIX: Server info no longer spamming chat window
 
--=[ Revision 17 - 3/4/2010 ]=-
+#### -=[ Revision 17 - 3/4/2010 ]=-
 - ADD: deDE localisation
 
--=[ Revision 16 - 2/26/2010 ]=-
+#### -=[ Revision 16 - 2/26/2010 ]=-
 - UPDATE: svSV locale updated
 - UPDATE: Close Mail popup when send button clicked - Thanks, Shocker!
 - ADD: Ticket tab, new button to view tickets of online players only (.ticket onlinelist) Thanks, Shocker!
@@ -131,17 +133,16 @@ Note: This version is compatible with TC2 revision 7757+
 - UPDATE: Moved Tele Add and Tele Del buttons to GM tab, rather than Char2 tab.
 - ADD: On WHO tab: .char customize, .char delete, .char rename, .ban (1 day), .ban (perm), Jail (Alliance), Jail(Horde), UnJail
 
-
--=[ Revision 15 - 2/25/2010 ]=-
+#### -=[ Revision 15 - 2/25/2010 ]=-
 - FIX: Issue #23 Ticket list not clearing when last ticket closed
 - FIX: Issue #24 Tickets with IDs containing '00' not displaying - ta.sql MUST be reapplied
 - The above two issues found and fixed by Shocker. Thanks m8!
 
--=[ Revision 14 - 2/24/2010 ]=-
+#### -=[ Revision 14 - 2/24/2010 ]=-
 - Fixed internal revision number, forgotten at last commit.
 
--=[ Revision 13 - 2/24/2010 ]=-
-This is a major release, incorporating many, mnay fixes along with
+#### -=[ Revision 13 - 2/24/2010 ]=-
+This is a major release, incorporating many, many fixes along with
 some major new features (Tickets, Who). This release would NOT have 
 happened without the generous and patient assistance of Kitharo (from 
 Land of Legends). All of us owe Kitharo a great debt for testing TrinityAdmin
@@ -177,28 +178,27 @@ so that I could make Tickets work again. Thank you, my friend!
 - added .gmnotify
 - Logo updated (Thanks Lyrr123!!!)
 
-Locale Team:
-Supported Locales & translator:
-enUS: iotech
-frFR: Namida 
-svSV: Lyrr123
-ptPT: Morpheux 
-ptBR: Morpheux 
+## Locale Team:
+#### Supported Locales & translator:
+- [x] enUS: iotech
+- [x] frFR: Namida
+- [x] svSV: Lyrr123
+- [x] ptPT: Morpheux
+- [x] ptBR: Morpheux
 
-Locales in-progress:
-csCZ: Ravenheart 
-huHU: Gimp 
-itIT: dracula70 
-ruRU: mrlakec 
-deDE: Amok 
-roRO: borgotech 
-esES: Georgios 
+### Locales in-progress:
+- [ ] csCZ: Ravenheart
+- [ ] huHU: Gimp
+- [ ] itIT: dracula70
+- [ ] ruRU: mrlakec
+- [ ] deDE: Amok
+- [ ] roRO: borgotech
+- [ ] esES: Georgios
 
-Unsupported Locales: (Can you read/write/speak one of these languages as well as English? Want to join the project?)
-bgBG: 
-fiFI:
-liLI:
-zhCN:
-nlNL:
-plPL:
-
+### Unsupported Locales:
+- [ ] bgBG: 
+- [ ] fiFI: 
+- [ ] liLI: 
+- [ ] zhCN: 
+- [ ] nlNL: 
+- [ ] plPL: 
