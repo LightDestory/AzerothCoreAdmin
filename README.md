@@ -2,7 +2,7 @@
 
 TrinityAdmin v2.5 is a general interface add-on which will help staff member ingame for trinity core. 
 
-## TRINITYADMIN WILL NOT WORK IF YOU DO NOT FOLLOW THESE INSTRUCTIONS
+## INSTRUCTIONS
 
 #### This new version of TrinityAdmin contains many changes over previous versions.
 - TrinityAdmin v 2.5 supports client versions 3.x and 4.x only. 
