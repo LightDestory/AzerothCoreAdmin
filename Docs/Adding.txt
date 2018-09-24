@@ -1,6 +1,7 @@
 Extending TrinityAdmin
 
-Preface: This is a living document, meaning it will grow and change as time goes by. I am using it as a 'scratchpad' to record notes for myself, and perhaps someday, YOU. It contains snippets and shoirtcuts to make developing for TrinityAdmin easier and faster.
+Preface: This is a living document, meaning it will grow and change as time goes by. I am using it as a 'scratchpad' to record notes for myself, and perhaps someday, YOU.
+It contains snippets and shoirtcuts to make developing for TrinityAdmin easier and faster.
 
 
 [[Adding a new command button to TrinityAdmin]]

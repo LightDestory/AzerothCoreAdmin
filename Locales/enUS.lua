@@ -534,6 +534,7 @@ function Return_enUS()
   --[[Tooltips]]
     ["tt_FrmTrSlider"] = "Change frame transparency.",
     ["tt_BtnTrSlider"] = "Change button transparency.",
+    ["tt_windowismovable"] = "Allow a movable window",
   --[[Control Labels]]
     ["cmd_toggle"] = "Toggle the main window",
     ["cmd_transparency"] = "Toggle the basic transparency (0.5 or 1.0)",
