@@ -36,7 +36,7 @@ function ReloadTable(tablename)
   if not (tablename == "") then
     MangAdmin:ChatMsg(".reload "..tablename)
     if tablename == "all" then
-      MangAdmin:LogAction("Reloaded all reloadable MaNGOS database tables.")
+      MangAdmin:LogAction("Reloaded all reloadable TrinityCore database tables.")
     else
       MangAdmin:LogAction("Reloaded the table "..tablename..".")
     end
@@ -44,6 +44,6 @@ function ReloadTable(tablename)
 end
 
 function ReloadScripts()
-  MangAdmin:ChatMsg(".loadscripts")
-  MangAdmin:LogAction("(Re-)Loaded scripts.")
+  MangAdmin:ChatMsg(".reload smart_scripts")
+  MangAdmin:LogAction("Reload Smart Scripts.")
 end

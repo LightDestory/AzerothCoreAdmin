@@ -153,9 +153,9 @@ function MangAdmin:CreateServerSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 505,
-      offY = -10
+      pos = "TOPRIGHT",
+      offX = -95,
+      offY = -6
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -169,15 +169,15 @@ function MangAdmin:CreateServerSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 90,
+      width = 100,
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 650,
+      pos = "TOPRIGHT",
+      offX = -10,
       offY = -10
     },
-    text = "Reload table"
+    text = "Reload Table"
   })
   
   FrameLib:BuildButton({
@@ -189,15 +189,15 @@ function MangAdmin:CreateServerSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 110,
+      width = 100,
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 630,
-      offY = -35
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -38
     },
-    text = "(Re-)Load Scripts"
+    text = "Reload Scripts"
   })
   
   FrameLib:BuildFrame({
@@ -210,9 +210,9 @@ function MangAdmin:CreateServerSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 600,
-      offY = -68
+      pos = "TOPRIGHT",
+      offX = -112,
+      offY = -65
     },
     inherits = "InputBoxTemplate"
   })
@@ -230,9 +230,9 @@ function MangAdmin:CreateServerSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 635,
-      offY = -68
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -65
     },
     text = Locale["ma_ShutdownButton"]
   })

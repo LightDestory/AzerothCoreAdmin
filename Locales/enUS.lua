@@ -53,6 +53,7 @@ selected language.
 
 If you have any questions, contact iotech.
 ]]
+
 function Return_enUS()
   return {
 --[[General]]
@@ -620,6 +621,14 @@ function Return_enUS()
     ["ma_AnswerWhoButton"] = "Mail",
     ["ma_DeleteWhoButton"] = "Kick",
     ["ma_whisperbutton"] = "Whisper",
+  --[[Other]]
+
+    
+    
+--[[Who Tab]]
+  --["tabmenu_changelog"] = "ChangeLog",
+  --[[Tooltips]]
+  --[[Control Labels]]
   --[[Other]]
 
     

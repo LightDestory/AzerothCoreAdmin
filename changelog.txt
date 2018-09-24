@@ -1,5 +1,9 @@
 TrinityAdmin Changelog
 
+-=[ Revision 47 - 9/24/2018]=-
+- Corrected layout alignmnet the Server Tab:
+    - FIXED Reload Scripts -> changed to .reload smart_scripts
+
 -=[ Revision 46 - 9/23/2018]=-
 - MOD Main Window layout:
     - Moved Language dropdown closer to the button
