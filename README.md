@@ -3,6 +3,7 @@
 
 TrinityAdmin v2.5 is a general interface add-on which will help staff member ingame for trinity core. 
 
+
 TRINITYADMIN WILL NOT WORK IF YOU DO NOT FOLLOW THESE INSTRUCTIONS
 ----
 
@@ -15,6 +16,7 @@ officially support 1.x or 2.x installs, nor does it fully support 4.x.
 
 TrinityAdmin supports TrinityCore servers ONLY. It will not work with MaNGOS, Arc, 
 Ascent, Hearthstone, or any other emu.
+
 
 INSTALLATION
 ----
