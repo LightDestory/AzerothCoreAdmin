@@ -1,10 +1,10 @@
 TrinityAdmin Changelog
 
--=[ Revision 46 - 9/23/2018]=
+-=[ Revision 46 - 9/23/2018]=-
 - MOD Main Window layout:
-    -Moved Language dropdown closer to the button
-    -Realigned lower window frames
-    -Changed lower right frame text alignment
+    - Moved Language dropdown closer to the button
+    - Realigned lower window frames
+    - Changed lower right frame text alignment
 - Corrected layout alignmnet the Misc Tab:
     - ADD Move checkbox to Misc Tab
 
