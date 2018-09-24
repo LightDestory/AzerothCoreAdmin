@@ -3,7 +3,7 @@
 -- TrinityAdmin Version 3.x
 -- TrinityAdmin is a derivative of MangAdmin.
 --
--- Copyright (C) 2007 Free Software Foundation, Inc.
+-- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 -- This is free software: you are free to change and redistribute it.
 -- There is NO WARRANTY, to the extent permitted by law.
@@ -35,7 +35,7 @@ function MangAdmin:CreateStartFrames()
   }
   
   -- [[ Main Elements ]]
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Main Window Frame
     name = "ma_bgframe",
     group = "bg",
     parent = UIParent,
@@ -45,7 +45,7 @@ function MangAdmin:CreateStartFrames()
     draggable = true,
     size = {
       width = 750,
-      height = 440
+      height = 440 --Original 440
     },
     setpoint = {
       pos = "CENTER"
@@ -53,7 +53,7 @@ function MangAdmin:CreateStartFrames()
     inherits = nil
   })
 
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Main Window Menu Frame
     name = "ma_menubgframe",
     group = "bg",
     parent = ma_bgframe,
@@ -62,7 +62,7 @@ function MangAdmin:CreateStartFrames()
     },
     size = {
       width = 750,
-      height = 22
+      height = 22 --Original 22
     },
     setpoint = {
       pos = "TOPLEFT",
@@ -72,7 +72,7 @@ function MangAdmin:CreateStartFrames()
     inherits = nil
   })
 
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Top Window Frame that has TrinityAdmin Logo
     name = "ma_topframe",
     group = "bg",
     parent = ma_bgframe,
@@ -81,7 +81,7 @@ function MangAdmin:CreateStartFrames()
     },
     size = {
       width = 750,
-      height = 80
+      height = 80 --Original 80
     },
     setpoint = {
       pos = "TOP",
@@ -90,7 +90,7 @@ function MangAdmin:CreateStartFrames()
     inherits = nil
   })
 
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Middle Main Window Frame
     name = "ma_midframe",
     group = "bg",
     parent = ma_bgframe,
@@ -108,7 +108,7 @@ function MangAdmin:CreateStartFrames()
     inherits = nil
   })
 
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Bottom Left Frame
     name = "ma_leftframe",
     group = "bg",
     parent = ma_bgframe,
@@ -116,18 +116,18 @@ function MangAdmin:CreateStartFrames()
       color = {color.frm.r, color.frm.g, color.frm.b, transparency.frm}
     },
     size = {
-      width = 409,
+      width = 330, --Original 409
       height = 100
     },
     setpoint = {
       pos = "TOP",
-      offX = -168.5,
+      offX = -208, --Original -168.5
       offY = -338
     },
     inherits = nil
   })
 
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Bottom Right Frame
     name = "ma_rightframe",
     group = "bg",
     parent = ma_bgframe,
@@ -135,12 +135,12 @@ function MangAdmin:CreateStartFrames()
       color = {color.frm.r, color.frm.g, color.frm.b, transparency.frm}
     },
     size = {
-      width = 335,
+      width = 415, --Original 335
       height = 100
     },
     setpoint = {
       pos = "TOP",
-      offX = 205.5,
+      offX = 165.5, --Original 205.5
       offY = -338
     },
     inherits = nil
@@ -183,7 +183,7 @@ function MangAdmin:CreateStartFrames()
     text = MAJOR_VERSION.." "..MINOR_VERSION,
     setpoint = {
       pos = "BOTTOMLEFT",
-      offX = 15,
+      offX = 28, --Original 15
       offY = 2
     }
   })
@@ -220,7 +220,7 @@ function MangAdmin:CreateStartFrames()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -25
+      offY = -32
     }
   })
   
@@ -232,7 +232,7 @@ function MangAdmin:CreateStartFrames()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -40
+      offY = -52
     }
   })
   
@@ -244,7 +244,7 @@ function MangAdmin:CreateStartFrames()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -55
+      offY = -72
     }
   })
   
@@ -290,7 +290,7 @@ function MangAdmin:CreateStartFrames()
     },
     setpoint = {
       pos = "TOPRIGHT",
-      offX = -200,
+      offX = -115,
       offY = -10
     },
     inherits = "UIDropDownMenuTemplate"

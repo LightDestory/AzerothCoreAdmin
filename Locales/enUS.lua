@@ -3,7 +3,7 @@
 -- TrinityAdmin Version 3.x
 -- TrinityAdmin is a derivative of MangAdmin.
 --
--- Copyright (C) 2007 Free Software Foundation, Inc.
+-- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 -- This is free software: you are free to change and redistribute it.
 -- There is NO WARRANTY, to the extent permitted by law.
@@ -534,6 +534,7 @@ function Return_enUS()
   --[[Tooltips]]
     ["tt_FrmTrSlider"] = "Change frame transparency.",
     ["tt_BtnTrSlider"] = "Change button transparency.",
+    ["tt_windowismovable"] = "Allow a movable window",
   --[[Control Labels]]
     ["cmd_toggle"] = "Toggle the main window",
     ["cmd_transparency"] = "Toggle the basic transparency (0.5 or 1.0)",
@@ -555,7 +556,7 @@ function Return_enUS()
     ["tt_ShutdownButton"] = "Shut down the server in the amount of seconds from the field, if omitted shut down immediately!",
   --[[Control Labels]]
     ["ma_AnnounceButton"] = "Announce",
-    ["ma_ShutdownButton"] = "Shutdown!",
+    ["ma_ShutdownButton"] = "Server Shutdown!",
   --[[Other]]
 
 
@@ -643,7 +644,7 @@ function Return_enUS()
     ["ma_ObjectButton"] = "Object-Search",
     ["ma_TeleSearchButton"] = "Teleport-Search",
     ["ma_MailRecipient"] = "Recipient",
-    ["ma_Mail"] = "Send a Mail",
+    ["ma_Mail"] = "Send Mail",
     ["ma_Send"] = "Send",
     ["ma_MailSubject"] = "Subject",
     ["ma_MailYourMsg"] = "Here your message!",

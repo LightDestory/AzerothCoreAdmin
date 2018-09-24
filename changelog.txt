@@ -1,5 +1,13 @@
 TrinityAdmin Changelog
 
+-=[ Revision 46 - 9/23/2018]=-
+- MOD Main Window layout:
+    - Moved Language dropdown closer to the button
+    - Realigned lower window frames
+    - Changed lower right frame text alignment
+- Corrected layout alignmnet the Misc Tab:
+    - ADD Move checkbox to Misc Tab
+
 -=[ Revision 45 - 1/18/2012]=-
 - Added "Reload" Linkifier button to the output of ".npc info" to reload the creature_template
 
@@ -28,7 +36,6 @@ a long time ago. I updated and converted pieces of his code to make this work. P
 Note2: The Gob info boxes can become messy due to a race condition. Since WoW LUA has no Sleep() function, 
 I cannot prevent this. Click the Obj Target button to reset the info boxes.
 
-
 -=[ Revision 41 - 1/10/2011]=-
 - ADD new NPC2 tab - Please close WoW and restart to load new files!!!
 - Moved all NPC Waypoint/movement related buttons to NPC2
@@ -37,7 +44,6 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD .combatstop, .maxskill, .freeze, .unfreeze, .listfreeze, .possess, .unpossess to CHAR tab
 - ADD .possess and .unpossess to NPC tab
 - ADD .recall and .repairitems to CHAR tab
-
 
 -=[ Revision 40 - 1/8/2011]=-
 - ADD .cometome command to NPC tab

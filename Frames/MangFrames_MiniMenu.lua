@@ -3,7 +3,7 @@
 -- TrinityAdmin Version 3.x
 -- TrinityAdmin is a derivative of MangAdmin.
 --
--- Copyright (C) 2007 Free Software Foundation, Inc.
+-- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 -- This is free software: you are free to change and redistribute it.
 -- There is NO WARRANTY, to the extent permitted by law.
@@ -72,7 +72,7 @@ function MangAdmin:CreateMiniMenu()
     inherits = nil
   })
   
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --BUG: Clicking this on first start shows multiple TABS viewable
     name = "ma_mm_logoframe",
     group = "minimenu",
     parent = ma_miniframe,

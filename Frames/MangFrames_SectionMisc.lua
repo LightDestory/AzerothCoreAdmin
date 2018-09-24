@@ -3,7 +3,7 @@
 -- TrinityAdmin Version 3.x
 -- TrinityAdmin is a derivative of MangAdmin.
 --
--- Copyright (C) 2007 Free Software Foundation, Inc.
+-- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 -- This is free software: you are free to change and redistribute it.
 -- There is NO WARRANTY, to the extent permitted by law.
@@ -105,18 +105,20 @@ function MangAdmin:CreateMiscSection()
     inherits = "OptionsCheckButtonTemplate"
   })
 
-  FrameLib:BuildFontString({
-    name = "ma_delayparamlabel",
+  FrameLib:BuildButton({  --Fucntion not implimented yet
+    type = "CheckButton",
+    name = "ma_windowismovable",
     group = "misc",
     parent = ma_midframe,
-    text = "Update Delay",
     setpoint = {
       pos = "TOPLEFT",
       offX = 160,
       offY = -124
-    }
+    },
+    text = "Movable",
+    inherits = "OptionsCheckButtonTemplate"
   })
- 
+
   FrameLib:BuildFontString({
     name = "ma_delayparamlabel2",
     group = "misc",
@@ -124,8 +126,8 @@ function MangAdmin:CreateMiscSection()
     text = "Specifies update frequency of Diff graph on Server tab.\n 4000 = ~1 minute, 20000 =~5 minutes",
     setpoint = {
       pos = "TOPLEFT",
-      offX = 160,
-      offY = -144
+      offX = 165,
+      offY = -155
     }
   })
 
@@ -140,8 +142,8 @@ function MangAdmin:CreateMiscSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 250,
-      offY = -124
+      offX = 195,
+      offY = -180
     },
     inherits = "InputBoxTemplate"
   })
@@ -156,8 +158,8 @@ function MangAdmin:CreateMiscSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
-      offY = -50
+      offX = 15,
+      offY = -40
     },
     inherits = "OptionsSliderTemplate"
   })
@@ -172,8 +174,8 @@ function MangAdmin:CreateMiscSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
-      offY = -85
+      offX = 15,
+      offY = -80
     },
     inherits = "OptionsSliderTemplate"
   })
@@ -311,15 +313,15 @@ function MangAdmin:CreateMiscSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 180,
-      height = 30
+      width = 100,
+      height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 40,
-      offY = -220
+      offX = 10,
+      offY = -225
     },
-    text = "Apply changes"
+    text = "Update Changes"
   })
   
   FrameLib:BuildFrame({
@@ -332,8 +334,8 @@ function MangAdmin:CreateMiscSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 500,
-      offY = -8
+      offX = 495,
+      offY = -6
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -355,6 +357,6 @@ function MangAdmin:CreateMiscSection()
       offX = 630,
       offY = -10
     },
-    text = "Change weather"
+    text = "Apply Weather"
   })
 end
