@@ -556,7 +556,7 @@ function Return_enUS()
     ["tt_ShutdownButton"] = "Shut down the server in the amount of seconds from the field, if omitted shut down immediately!",
   --[[Control Labels]]
     ["ma_AnnounceButton"] = "Announce",
-    ["ma_ShutdownButton"] = "Shutdown!",
+    ["ma_ShutdownButton"] = "Server Shutdown!",
   --[[Other]]
 
 
@@ -644,7 +644,7 @@ function Return_enUS()
     ["ma_ObjectButton"] = "Object-Search",
     ["ma_TeleSearchButton"] = "Teleport-Search",
     ["ma_MailRecipient"] = "Recipient",
-    ["ma_Mail"] = "Send a Mail",
+    ["ma_Mail"] = "Send Mail",
     ["ma_Send"] = "Send",
     ["ma_MailSubject"] = "Subject",
     ["ma_MailYourMsg"] = "Here your message!",

@@ -72,7 +72,7 @@ function MangAdmin:CreateMiniMenu()
     inherits = nil
   })
   
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --BUG: Clicking this on first start shows multiple TABS viewable
     name = "ma_mm_logoframe",
     group = "minimenu",
     parent = ma_miniframe,
