@@ -14,6 +14,7 @@ TrinityAdmin v2.5 is a general interface add-on which will help staff member ing
 
 
 ## INSTALLATION
+NOTE: These steps are required for locales to properly create the new local tables to store tickets and 'who' information')
 1. Unzip the install archive into your Addons folder
     - (i.e the TrinityAdmin folder is in the Addons folder).
 2. ON THE SERVER -> You may wish to review the security level requirements for certain GM commands. 
@@ -25,5 +26,3 @@ TrinityAdmin v2.5 is a general interface add-on which will help staff member ing
 6. Click the TA icon on the minimap frame. Do NOT open TrinityAdmin any other way just yet.
 7. Click the Who tab. If you receive and error, DO NOT close it, just click the Who tab again.
 8. Click the Change Language button to reload the addon.
-(these steps are required on some locales in order to properly create the new local tables that the addon uses
-to store tickets and 'who' information')
