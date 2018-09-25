@@ -113,8 +113,7 @@ function MangAdmin:CreateNpc2Section()
       offX = 12,
       offY = -37
     },
-    --text = "AddWayPT"
-    text = Locale["[WayAdd]"]
+    text = Locale["ma_WayAdd"]
   })
   
   FrameLib:BuildButton({
@@ -214,7 +213,7 @@ function MangAdmin:CreateNpc2Section()
       offX = 182,
       offY = -62
     },
-    text = Locale["[WayShow]"]
+    text = Locale["ma_WayShow"]
   })
  
   FrameLib:BuildButton({
@@ -236,23 +235,6 @@ function MangAdmin:CreateNpc2Section()
     },
     text = Locale["ma_NPCUnFreeze_WayButton"]
   })
- 
-  FrameLib:BuildFrame({
-    type = "EditBox",
-    name = "ma_npcunfreeze_random_distancebutton",	-- ma_npccharactertarget
-    group = "npc2",
-    parent = ma_midframe,
-    size = {
-      width = 80,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 187,
-      offY = -87
-    },
-    inherits = "InputBoxTemplate"
-  })
 
   FrameLib:BuildButton({
     name = "ma_npcunfreeze_randombutton",
@@ -273,6 +255,23 @@ function MangAdmin:CreateNpc2Section()
     },
     text = Locale["ma_NPCUnFreeze_RandomButton"]
   })
+
+  FrameLib:BuildFrame({
+    type = "EditBox",
+    name = "ma_npcunfreeze_random_distancebutton",	-- ma_npccharactertarget
+    group = "npc2",
+    parent = ma_midframe,
+    size = {
+      width = 75,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 102,
+      offY = -110
+    },
+    inherits = "InputBoxTemplate"
+  })
   
   FrameLib:BuildButton({
     name = "ma_movestackbutton",
@@ -288,11 +287,22 @@ function MangAdmin:CreateNpc2Section()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 12,
-      offY = -222
+      offX = 182,
+      offY = -87
     },
     text = Locale["ma_MoveStackButton"]
   })
 
+  FrameLib:BuildFontString({
+    name = "ma_npcdistanceboxtext",
+    group = "npc2",
+    parent = ma_midframe,
+    text = Locale["ma_DistanceBox"],
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 55,
+      offY = -115
+    }
+  })
 
 end

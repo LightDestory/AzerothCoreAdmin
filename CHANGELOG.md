@@ -1,7 +1,13 @@
 # TrinityAdmin Changelog
 
 #### -=[ Revision 48 - 9/25/2018]=-
-- Corrected layout alignment in the LookUpButtons Frame:
+- LookUpButtons Frame:
+    - Corrected button layout/alignment
+- NPC2 Corrections/Adjustments:
+    - FIX TYPO: Removed [] from WayAdd & WayShow buttons
+    - FIX TYPO: Corrected enUS locals WayAdd/WayShow
+    - FIX Textbox width to match button width
+    - ADD 'Distance' discription text
 
 #### -=[ Revision 47 - 9/24/2018]=-
 - Corrected layout alignment in the Server Tab:
