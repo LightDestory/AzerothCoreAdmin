@@ -1,7 +1,10 @@
 # TrinityAdmin Changelog
 
+#### -=[ Revision 48 - 9/25/2018]=-
+- Corrected layout alignment in the LookUpButtons Frame:
+
 #### -=[ Revision 47 - 9/24/2018]=-
-- Corrected layout alignment the Server Tab:
+- Corrected layout alignment in the Server Tab:
     - FIXED Reload Scripts -> changed to .reload smart_scripts
 
 #### -=[ Revision 46 - 9/23/2018]=-

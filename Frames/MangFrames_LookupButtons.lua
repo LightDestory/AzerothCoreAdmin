@@ -50,7 +50,7 @@ function MangAdmin:CreateLookupButtons()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -4
+      offY = -10
     },
     text = Locale["ma_ItemButton"]
   })
@@ -70,7 +70,7 @@ function MangAdmin:CreateLookupButtons()
     setpoint = {
       pos = "TOPLEFT",
       offX = 114,
-      offY = -4
+      offY = -10
     },
     text = Locale["ma_ItemSetButton"]
   })
@@ -90,7 +90,7 @@ function MangAdmin:CreateLookupButtons()
     setpoint = {
       pos = "TOPLEFT",
       offX = 218,
-      offY = -4
+      offY = -10
     },
     text = Locale["ma_SpellButton"]
   })
@@ -108,9 +108,9 @@ function MangAdmin:CreateLookupButtons()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
+      pos = "BOTTOMLEFT",
       offX = 10,
-      offY = -28
+      offY = 40
     },
     text = Locale["ma_SkillButton"]
   })
@@ -128,9 +128,9 @@ function MangAdmin:CreateLookupButtons()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
+      pos = "BOTTOMLEFT",
       offX = 114,
-      offY = -28
+      offY = 40
     },
     text = Locale["ma_QuestButton"]
   })
@@ -148,9 +148,9 @@ function MangAdmin:CreateLookupButtons()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
+      pos = "BOTTOMLEFT",
       offX = 218,
-      offY = -28
+      offY = 40
     },
     text = Locale["ma_ObjectButton"]
   })
@@ -168,9 +168,9 @@ function MangAdmin:CreateLookupButtons()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
+      pos = "BOTTOMLEFT",
       offX = 10,
-      offY = -52
+      offY = 10
     },
     text = Locale["ma_CreatureButton"]
   })
@@ -188,9 +188,9 @@ function MangAdmin:CreateLookupButtons()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
+      pos = "BOTTOMLEFT",
       offX = 114,
-      offY = -52
+      offY = 10
     },
     text = Locale["ma_TeleSearchButton"]
   })
@@ -208,9 +208,9 @@ function MangAdmin:CreateLookupButtons()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
+      pos = "BOTTOMLEFT",
       offX = 218,
-      offY = -52
+      offY = 10
     },
     text = Locale["ma_Mail"]
   })
