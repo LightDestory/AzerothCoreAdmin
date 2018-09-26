@@ -10,5 +10,5 @@ Shocker (various)
 Locale Team:
 iotech, Ravenheart, Gimp, Dracula70, MrLakeC, Namida, Amok, Lyrr123, borgotech, Morpheux, Georgios, Kitharo
 
-MangAdmin is developed by:
+TrinityAdmin(MangAdmin) is developed by:
 Josh (Project Owner), iotech, infamousblob, Atreus420, killat200623, dragonfrost, Necroblack and SuperStyro
