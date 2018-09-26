@@ -72,7 +72,7 @@ function MangAdmin:CreateWhoSection()
       offX = 120,
       offY = -5
     },
-    text = "RESET"
+    text = Locale["ma_resetwhobutton"]
   })
    
   FrameLib:BuildButton({

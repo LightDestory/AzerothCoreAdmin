@@ -673,6 +673,7 @@ function Return_enUS()
     ["tt_who_unjailbutton"]           = "UnJails the character",
   --[[Control Labels]]
     ["ma_ShowWhoButton"]              = "Refresh",
+    ["ma_resetwhobutton"]             = "Reset",
     ["ma_whisperbutton"]              = "Whisper",
     ["ma_SummonWhoButton"]            = "Summon",
     ["ma_GoCharWhoButton"]            = "Appear",
