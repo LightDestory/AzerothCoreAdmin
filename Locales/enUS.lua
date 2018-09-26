@@ -79,6 +79,7 @@ function Return_enUS()
     ["selectionerror3"]               = "Please select only another player!",
     ["selectionerror4"]               = "Please select only a NPC!",
     ["searchResults"]                 = "|cFF00FF00Search-Results:|r ",
+    ["ma_parameters"]                 = "Parameter(s):", --Used on multiple tabs
 
 
 
@@ -123,13 +124,38 @@ function Return_enUS()
     ["tt_DisplayAccountLvl"]          = "Display your account level.",
     ["tt_SpeedSliderReset"]           = "Reset Speed to 1.0",
     ["tt_ScaleSliderReset"]           = "Reset Scale to 1.0",
-    
+    ["tt_gmnotifybutton"]             = "Sends message $message to all online GMs [[Parameters: $message]]",
+    ["tt_gmingamebutton"]             = "Shows GMs who are logged in.",
+    ["tt_gmlistbutton"]               = "Shows the GM accounts on this server",
+    ["tt_petcreatebutton"]            = "Makes the selected ANIMAL your pet.",
+    ["tt_petlearnbutton"]             = "Teaches your pet spell [[Parameter: #SPELLID]]",
+    ["tt_petunlearnbutton"]           = "Un-Teaches your pet spell [[Parameter: #SPELLID]]",
+    ["tt_pettpbutton"]                = "Modifies pet's training points [[Parameter: #points]]",
+    ["tt_lookuptaxibutton"]           = "Lookup a TaxiNode [[Parameter: $Areanamepart]]",
+    ["tt_gotaxinodebutton"]           = "Teleports to given TaxiNode [[Parameter: #taxinode]]",
+    ["tt_gotriggerbutton"]            = "Teleports to given area trigger [[Parameter: #trigger_id]]",
+    ["tt_goxybutton"]                 = "Teleports to given coordinates at ground/water level on MapID. If MapID omitted, current map [[Parameters: #x #y [#mapid]]]",
+    ["tt_goxyzbutton"]                = "Teleports to given coordinates at #z level on MapID. If MapID omitted, current map [[Parameters: #x #y #z [#mapid]]]",
+    ["tt_gozonexybutton"]             = "Teleports to given coordinates at ground/water level in ZoneID. If ZoneID omitted, current zone [[Parameters: #x #y [#zoneid]]]",
+    ["tt_lookupzonebutton"]           = "Lookup a Zone. [[Parameters: $Areanamepart]]",
+    ["tt_castbutton"]                 = "Cast a spell. [[Parameters: #SpellID]]",
+    ["tt_castbackbutton"]             = "Selected creature will cast spell [SpellID] at YOU. [[Parameters: #SpellID]]",
+    ["tt_castdistbutton"]             = "You cast a spell [SpellID] at distance [#Dist]. [[Parameters: #SpellID #Dist]]",
+    ["tt_castselfbutton"]             = "Selected creature casts spell [SpellID] at itself. [[Parameters: #SpellID]]",
+    ["tt_casttargetbutton"]           = "Selected creature casts spell [SpellID] at it's target. [[Parameters: #SpellID]]",
+    ["tt_gmclearbutton"]              = "Clears the parameter box.",
+    ["tt_listitembutton"]             = "Lists all occurences of [#itemID]. [[Parameters: #ItemID]]",
+    ["tt_acctcreatebutton"]           = "Creates a player account [[Parameters: $accountname $password]]",
+    ["tt_acctdeletebutton"]           = "Deletes a player account and all characters [[Parameters: $accountname]]",
+    ["tt_acctaddonbutton"]            = "Sets $account to use #addon(0=WoW, 1=TBC, 2=WotLK) [[Parameters: $accountname #addon]]",
+    ["tt_acctgmlvlbutton"]            = "Sets $account to #gmlevel (0=Player, 1=Helper, 2=Assistant, 3=GM, 4=Admin) [[Parameters: $accountname #gmlevel]]",
+    ["tt_acctpasswdbutton"]           = "Sets $account $password [[Parameters: $accountname $password $password]]",
   --[[Control Labels]]
     ["ma_OffButton"]                  = "Off",
     ["ma_displaylevelbutton"]         = "Display Account Level",
     ["ma_GMOnButton"]                 = "GM-mode on",
     ["ma_FlyOnButton"]                = "Fly-mode on",
-    ["ma_HoverOnButton"]              = "Hover-mode on",  --TODO: '.hover' does not exist 4.3.4 (Change command)
+    ["ma_HoverOnButton"]              = "Hover-mode on",  --TODO: '.hover' does not exist 4.3.4 (Remove/Change command)
     ["ma_WhisperOnButton"]            = "Whisper on",
     ["ma_InvisOnButton"]              = "Invisibility on",
     ["ma_TaxiOnButton"]               = "Taxicheat on",    
@@ -150,6 +176,32 @@ function Return_enUS()
     ["ma_mapsbutton"]                 = "View All Maps",
     ["ma_waterwalkbutton"]            = "Waterwalk On",
     ["ma_accountlockbutton"]          = "Account Lock",
+    ["ma_gmnotify"]                   = "GM Notify",
+    ["ma_gmingame"]                   = "GMs InGame",
+    ["ma_gmlist"]                     = "GM List",
+    ["ma_petcreate"]                  = "Pet Create",
+    ["ma_petlearn"]                   = "Pet Learn",
+    ["ma_petunlearn"]                 = "Pet UnLearn",
+    ["ma_pettp"]                      = "Pet TP",
+    ["ma_lookuptaxi"]                 = "Lookup Taxi",
+    ["ma_gotaxinode"]                 = "Go TaxiNode",
+    ["ma_gotrigger"]                  = "Go Trigger",
+    ["ma_goxy"]                       = "Go XY",
+    ["ma_goxyz"]                      = "Go XYZ",
+    ["ma_gozonexy"]                   = "Go ZoneXY",
+    ["ma_lookupzone"]                 = "Lookup Zone",
+    ["ma_cast"]                       = "Cast",
+    ["ma_castback"]                   = "Cast Back",
+    ["ma_castdist"]                   = "Cast Dist",
+    ["ma_castself"]                   = "Cast Self",
+    ["ma_casttarget"]                 = "Cast Target",
+    ["ma_listitem"]                   = "List Item",
+    ["ma_GmClear"]                    = "Clear",
+    ["ma_acctcreate"]                 = "Acct Create",
+    ["ma_acctdelete"]                 = "Acct Delete",
+    ["ma_acctaddon"]                  = "Acct Addon",
+    ["ma_acctgmlvl"]                  = "Acct GMLvl",
+    ["ma_acctpasswd"]                 = "Acct Passwd",
   --[[Other]]
 
 
@@ -193,7 +245,6 @@ function Return_enUS()
     ["tt_charunpossess"]              = "Unpossesses the selected creature",
     ["tt_charrecall"]                 = "Recalls the selected player to the last teleport position they had",
     ["tt_charrepair"]                 = "Repairs the selected player's armor and weapons",
-
   --[[Control Labels]]
     ["ma_KillButton"]                 = "Kill",
     ["ma_ReviveButton"]               = "Revive",
@@ -207,7 +258,7 @@ function Return_enUS()
     ["ma_DemorphButton"]              = "Demorph",
     ["ma_ShowMapsCharButton"]         = "Show Maps",
     ["ma_HideMapsCharButton"]         = "Hide Maps",
-    ["ma_LearnLangButton"]            = "All languages", --remove
+    ["ma_LearnLangButton"]            = "All languages",
     ["ma_Learn"]                      = "Learn",
     ["ma_Modify"]                     = "Modify",
     ["ma_Reset"]                      = "Reset",
@@ -226,7 +277,6 @@ function Return_enUS()
     ["ma_charunpossess"]              = "UnPossess",
     ["ma_charrecall"]                 = "Recall",
     ["ma_charrepair"]                 = "Repair",
-    
   --[[Other]]
     ["ma_LevelUp"]                    = "Level up",
     ["ma_LevelDown"]                  = "Level down",
@@ -258,7 +308,6 @@ function Return_enUS()
     ["ma_StandSate"]                  = "StandState",
     ["ma_SwimSpeed"]                  = "SwimSpeed",
     ["ma_TalentPoints"]               = "TalentPoints",
-    
     -- languages
     ["Common"]                        = "Common",
     ["Orcish"]                        = "Orcish",
@@ -314,7 +363,6 @@ function Return_enUS()
     ["tt_HonorAddButton"]             = "Adds #honorpoints to **selected** player.",
     ["tt_HonorUpdateButton"]          = "No parameter required. Saves Honor for **selected** player.",
   --[[Control Labels]]
-    ["ma_parameter"]                  = "Parameter(s)",
     ["ma_ParameterizedCommands"]      = "Parameterized Commands",
     ["ma_banbutton"]                  = "Ban",
     ["ma_gonamebutton"]               = "Appear",
@@ -388,7 +436,6 @@ function Return_enUS()
     ["tt_npccometome"]                = "Forces the selected NPC to come to your location. Location NOT stored in DB.",
     ["tt_npcpossess"]                 = "Indefinitely possesses the selected creature",
     ["tt_npcunpossess"]               = "Unpossesses the selected creature",
-    
   --[[Control Labels]]
     ["Morph"]                         = "Morph",
     ["ma_NPCKillButton"]              = "Kill",
@@ -447,6 +494,7 @@ function Return_enUS()
     ["tt_MoveStackButton"]            = "Shows movement stack of the selected character.",
 
 
+
 --[[GObjects Tab]]
   --[[Name]]
     ["tabmenu_GO"]                    = "GOB",
@@ -463,7 +511,6 @@ function Return_enUS()
     ["tt_ObjAddTemp"]                 = "Adds a temporary copy of the object",
     ["tt_ObjInfo"]                    = "Gets extended info about the object",
     ["tt_ObjSetPhase"]                = "Sets the phase of the object",
-    
   --[[Control Labels]]
     ["ma_OBJGo"]                      = "Obj Go",
     ["ma_OBJAdd"]                     = "Obj Add",
@@ -476,8 +523,10 @@ function Return_enUS()
     ["ma_OBJAddTemp"]                 = "Obj Add Tmp",
     ["ma_OBJInfo"]                    = "Obj Info",
     ["ma_OBJSetPhase"]                = "Obj Phase",
-    
   --[[Other]]
+
+
+
 --[[Tele Tab]]
   --[[Name]]
     ["tabmenu_Tele"]                  = "Tele",
@@ -614,18 +663,34 @@ function Return_enUS()
 --[[Who Tab]]
     ["tabmenu_who"]                   = "Who",
   --[[Tooltips]]
+    ["tt_who_customize"]              = "Flag character for customization at next login.",
+    ["tt_who_chardelete"]             = "CAUTION! Deletes the selected character. CAUTION!",
+    ["tt_who_charrename"]             = "Flags selected character for rename at next login.",
+    ["tt_who_permbanbutton"]          = "Bans the selected character's account PERMANENTLY",
+    ["tt_who_1daybanbutton"]          = "Bans the selected character's account for 1 day",
+    ["tt_who_jailabutton"]            = "Jails the character in the Alliance Jail",
+    ["tt_who_jailhbutton"]            = "Jails the character in the Horde Jail",
+    ["tt_who_unjailbutton"]           = "UnJails the character",
   --[[Control Labels]]
     ["ma_ShowWhoButton"]              = "Refresh",
+    ["ma_whisperbutton"]              = "Whisper",
     ["ma_SummonWhoButton"]            = "Summon",
     ["ma_GoCharWhoButton"]            = "Appear",
     ["ma_AnswerWhoButton"]            = "Mail",
+    ["ma_who_customize"]              = "Customize",
+    ["ma_who_chardelete"]             = "|c00FF0000Char Del|r",
+    ["ma_who_charrename"]             = "Rename",
     ["ma_DeleteWhoButton"]            = "Kick",
-    ["ma_whisperbutton"]              = "Whisper",
+    ["ma_who_1daybanbutton"]          = "1dayBan",
+    ["ma_who_permbanbutton"]          = "PermBan",
+    ["ma_who_jailabutton"]            = "Jail(A)",
+    ["ma_who_jailhbutton"]            = "Jail(H)",
+    ["ma_who_unjailbutton"]           = "UnJail",
   --[[Other]]
 
     
     
---[[Who Tab]]
+--[[ChangeLog Tab]]  --Place holder for future update*
   --["tabmenu_changelog"] = "ChangeLog",
   --[[Tooltips]]
   --[[Control Labels]]
@@ -700,77 +765,7 @@ function Return_enUS()
     ["lfer_Remove"]                   = "Remove",
     ["lfer_Learn"]                    = "Learn",
     ["lfer_Unlearn"]                  = "Unlearn",
-    ["lfer_Error"]                    = "Error Search String Matched but an error occured or unable to find type",
-    
---[[New additions]]
-    ["parameters"]                    = "Parameter(s):",
-    ["gmingame"]                      = "GMs InGame",
-    ["gmlist"]                        = "GM List",
-    ["petcreate"]                     = "Pet Create",
-    ["petlearn"]                      = "Pet Learn",
-    ["petunlearn"]                    = "Pet UnLearn",
-    ["pettp"]                         = "Pet TP",
-    ["lookuptaxi"]                    = "Lookup Taxi",
-    ["gotaxinode"]                    = "Go TaxiNode",
-    ["gotrigger"]                     = "Go Trigger",
-    ["goxy"]                          = "Go XY",
-    ["goxyz"]                         = "Go XYZ",
-    ["gozonexy"]                      = "Go ZoneXY",
-    ["lookupzone"]                    = "Lookup Zone",
-    ["cast"]                          = "Cast",
-    ["castback"]                      = "Cast Back",
-    ["castdist"]                      = "Cast Dist",
-    ["castself"]                      = "Cast Self",
-    ["casttarget"]                    = "Cast Target",
-    ["listitem"]                      = "List Item",
-    ["GmClear"]                       = "Clear",
-    ["acctcreate"]                    = "Acct Create",
-    ["acctdelete"]                    = "Acct Delete",
-    ["acctaddon"]                     = "Acct Addon",
-    ["acctgmlvl"]                     = "Acct GMLvl",
-    ["acctpasswd"]                    = "Acct Passwd",
-    ["gmnotify"]                      = "GM Notify",
-    ["ma_who_customize"]              = "Customize",
-    ["ma_who_chardelete"]             = "|c00FF0000Char Del|r",
-    ["ma_who_charrename"]             = "Rename",
-    ["ma_who_1daybanbutton"]          = "1dayBan",
-    ["ma_who_permbanbutton"]          = "PermBan",
-    ["ma_who_jailabutton"]            = "Jail(A)",
-    ["ma_who_jailhbutton"]            = "Jail(H)",
-    ["ma_who_unjailbutton"]           = "UnJail",
-    ["tt_gmingamebutton"]             = "Shows GMs who are logged in.",
-    ["tt_gmlistbutton"]               = "Shows the GM accounts on this server",
-    ["tt_petcreatebutton"]            = "Makes the selected ANIMAL your pet.",
-    ["tt_petlearnbutton"]             = "Teaches your pet spell [[Parameter: #SPELLID]]",
-    ["tt_petunlearnbutton"]           = "Un-Teaches your pet spell [[Parameter: #SPELLID]]",
-    ["tt_pettpbutton"]                = "Modifies pet's training points [[Parameter: #points]]",
-    ["tt_lookuptaxibutton"]           = "Lookup a TaxiNode [[Parameter: $Areanamepart]]",
-    ["tt_gotaxinodebutton"]           = "Teleports to given TaxiNode [[Parameter: #taxinode]]",
-    ["tt_gotriggerbutton"]            = "Teleports to given area trigger [[Parameter: #trigger_id]]",
-    ["tt_goxybutton"]                 = "Teleports to given coordinates at ground/water level on MapID. If MapID omitted, current map [[Parameters: #x #y [#mapid]]]",
-    ["tt_goxyzbutton"]                = "Teleports to given coordinates at #z level on MapID. If MapID omitted, current map [[Parameters: #x #y #z [#mapid]]]",
-    ["tt_gozonexybutton"]             = "Teleports to given coordinates at ground/water level in ZoneID. If ZoneID omitted, current zone [[Parameters: #x #y [#zoneid]]]",
-    ["tt_lookupzonebutton"]           = "Lookup a Zone. [[Parameters: $Areanamepart]]",
-    ["tt_castbutton"]                 = "Cast a spell. [[Parameters: #SpellID]]",
-    ["tt_castbackbutton"]             = "Selected creature will cast spell [SpellID] at YOU. [[Parameters: #SpellID]]",
-    ["tt_castdistbutton"]             = "You cast a spell [SpellID] at distance [#Dist]. [[Parameters: #SpellID #Dist]]",
-    ["tt_castselfbutton"]             = "Selected creature casts spell [SpellID] at itself. [[Parameters: #SpellID]]",
-    ["tt_casttargetbutton"]           = "Selected creature casts spell [SpellID] at it's target. [[Parameters: #SpellID]]",
-    ["tt_gmclearbutton"]              = "Clears the parameter box.",
-    ["tt_listitembutton"]             = "Lists all occurences of [#itemID]. [[Parameters: #ItemID]]",
-    ["tt_acctcreatebutton"]           = "Creates a player account [[Parameters: $accountname $password]]",
-    ["tt_acctdeletebutton"]           = "Deletes a player account and all characters [[Parameters: $accountname]]",
-    ["tt_acctaddonbutton"]            = "Sets $account to use #addon(0=WoW, 1=TBC, 2=WotLK) [[Parameters: $accountname #addon]]",
-    ["tt_acctgmlvlbutton"]            = "Sets $account to #gmlevel (0=Player, 1=Helper, 2=Assistant, 3=GM, 4=Admin) [[Parameters: $accountname #gmlevel]]",
-    ["tt_acctpasswdbutton"]           = "Sets $account $password [[Parameters: $accountname $password $password]]",
-    ["tt_gmnotifybutton"]             = "Sends message $message to all online GMs [[Parameters: $message]]",
-    ["tt_who_customize"]              = "Flag character for customization at next login.",
-    ["tt_who_chardelete"]             = "CAUTION! Deletes the selected character. CAUTION!",
-    ["tt_who_charrename"]             = "Flags selected character for rename at next login.",
-    ["tt_who_permbanbutton"]          = "Bans the selected character's account PERMANENTLY",
-    ["tt_who_1daybanbutton"]          = "Bans the selected character's account for 1 day",
-    ["tt_who_jailabutton"]            = "Jails the character in the Alliance Jail",
-    ["tt_who_jailhbutton"]            = "Jails the character in the Horde Jail",
-    ["tt_who_unjailbutton"]           = "UnJails the character"
+    ["lfer_Error"]                    = "Error Search String Matched but an error occured or unable to find type"
+
 }
 end

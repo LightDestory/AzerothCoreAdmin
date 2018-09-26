@@ -638,7 +638,7 @@ function MangAdmin:CreateChar2Section()
     name = "ma_parameterboxtext",
     group = "char2",
     parent = ma_midframe,
-    text = Locale["ma_parameter"],
+    text = Locale["ma_parameters"],
     setpoint = {
       pos = "BOTTOMLEFT",
       offX = 10,
