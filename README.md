@@ -35,14 +35,14 @@ NOTE: These steps are required for locales to properly create the new local tabl
 - [ ] NPC
 - [x] NPC2
 - [ ] GOB
-- [ ] Tele
+- [x] Tele
 - [ ] Tickets
 - [x] Misc
 - [x] Server
 - [x] Log
-- [ ] PvP
-- [ ] Event
-- [ ] RPG
-- [ ] Vendor
-- [ ] AhBot
+- [x] PvP-No Data
+- [x] Event-No Data
+- [x] RPG-No Data
+- [x] Vendor-No Data
+- [x] AhBot-No Data
 - [ ] Who
