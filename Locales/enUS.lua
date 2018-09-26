@@ -663,6 +663,7 @@ function Return_enUS()
     
 --[[Who Tab]]
     ["tabmenu_who"]                   = "WHO",
+    ["tt_whotabmenubutton"]           = "Toggle a window which allows control of Who commands.",
   --[[Tooltips]]
     ["tt_who_customize"]              = "Flag character for customization at next login.",
     ["tt_who_chardelete"]             = "CAUTION! Deletes the selected character. CAUTION!",
@@ -675,6 +676,8 @@ function Return_enUS()
   --[[Control Labels]]
     ["ma_ShowWhoButton"]              = "Refresh",
     ["ma_resetwhobutton"]             = "Reset",
+    ["ma_acctdetail"]                 = "Acct:",
+    ["ma_chardetail"]                 = "Char:",
     ["ma_whisperbutton"]              = "Whisper",
     ["ma_SummonWhoButton"]            = "Summon",
     ["ma_GoCharWhoButton"]            = "Appear",
