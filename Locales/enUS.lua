@@ -208,7 +208,7 @@ function Return_enUS()
 
 --[[Char Tab]]
   --[[Name]]
-    ["tabmenu_Char"]                  = "Char",
+    ["tabmenu_Char"]                  = "CHAR",
     ["tt_CharButton"]                 = "Toggle a window with character-specific actions.",
   --[[Tooltips]]
     ["tt_RotateLeft"]                 = "Rotate left.",
@@ -328,6 +328,7 @@ function Return_enUS()
   
 --[[Char2 Tab]]
   --[[Name]]
+    ["tabmenu_Char2"]                 = "CHAR2",
     ["tt_Char2Button"]                = "Toggle a window with character-specific actions.",
   --[[Tooltips]]
     ["tt_banbutton"]                  = "Parameters= <account|ip|character> $NameOrIp <-1|xxdyyhzzm> $reason   [[Ban acct/IP & kick. -1=permban, or a string like 4d3h24m16s]]",
@@ -612,7 +613,7 @@ function Return_enUS()
 
 
 --[[Log Tab]]
-    ["tabmenu_Log"]                   = "Log",
+    ["tabmenu_Log"]                   = "LOG",
     ["tt_LogButton"]                  = "Show the log of all actions done with TrinityAdmin.",
   --[[Tooltips]]
   --[[Control Labels]]

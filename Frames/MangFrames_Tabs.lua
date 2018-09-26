@@ -111,7 +111,7 @@ function MangAdmin:CreateTabs()
       relPos = "TOPRIGHT",
       offX = 2
     },
-    text = "Char 2"
+    text = Locale["tabmenu_Char2"]
   })
 
   FrameLib:BuildButton({
