@@ -1,8 +1,13 @@
 # TrinityAdmin Changelog
 
-#### -=[ Revision 48 - 9/25/2018]=-
+#### -=[ Revision 48 - 9/26/2018]=-
+- Char Corrections/Adjustments:
+    - Swap modify_textbox with level_up dropdown
+    - Centered Rotate and Zoom buttons over 3D view
+- Char2 Corrections/Adjustments:
+    - Moved Parameter input & text
 - LookUpButtons Frame:
-    - Corrected button layout/alignment
+    - Changed button layout/Corrected alignment
 - NPC2 Corrections/Adjustments:
     - FIX TYPO: Removed [] from WayAdd & WayShow buttons
     - FIX TYPO: Corrected enUS locals WayAdd/WayShow
@@ -29,7 +34,7 @@
 
 #### -=[ Revision 43 - 1/15/2011]=-
 Touchups to r42 changes. Changed "Spawn on Move" to "Add on Move", then added "Move on Move" so you
-can "move" gobs finely (it actually deletes and recreates the gob to get around the .gob move bug)
+can "move" gobs finally (it actually deletes and recreates the gob to get around the .gob move bug)
 
 #### -=[ Revision 42 - 1/15/2011]=-
 - Major changes to GOB tab: 

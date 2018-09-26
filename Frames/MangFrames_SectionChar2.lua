@@ -33,47 +33,6 @@ function MangAdmin:CreateChar2Section()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
- FrameLib:BuildFontString({
-    name = "ma_char2placeholder",
-    group = "char2",
-    parent = ma_midframe,
-    text = Locale["ma_ParameterizedCommands"],
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 10,
-      offY = 0
-    }
-  })
-
- FrameLib:BuildFontString({
-    name = "ma_parameterboxtext",
-    group = "char2",
-    parent = ma_midframe,
-    text = Locale["ma_parameter"],
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 10,
-      offY = -230
-    }
-  })
-  
- FrameLib:BuildFrame({
-    type = "EditBox",
-    name = "ma_charactertarget",
-    group = "char2",
-    parent = ma_midframe,
-    size = {
-      width = 200,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 100,
-      offY = -230
-    },
-    inherits = "InputBoxTemplate"
-  })
 
  FrameLib:BuildButton({
     name = "ma_banbutton",
@@ -673,6 +632,35 @@ function MangAdmin:CreateChar2Section()
       offY = -169
     },
     text = Locale["ma_HonorUpdateButton"]
+  })
+
+  FrameLib:BuildFontString({
+    name = "ma_parameterboxtext",
+    group = "char2",
+    parent = ma_midframe,
+    text = Locale["ma_parameter"],
+    setpoint = {
+      pos = "BOTTOMLEFT",
+      offX = 10,
+      offY = 45
+    }
+  })
+
+  FrameLib:BuildFrame({
+    type = "EditBox",
+    name = "ma_charactertarget",
+    group = "char2",
+    parent = ma_midframe,
+    size = {
+      width = 260,
+      height = 20
+    },
+    setpoint = {
+      pos = "BOTTOMLEFT",
+      offX = 77,
+      offY = 40
+    },
+    inherits = "InputBoxTemplate"
   })
 
 end

@@ -65,7 +65,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
+      offX = 60,
       offY = -10
     },
     text = "<<="
@@ -85,7 +85,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 44,
+      offX = 94,
       offY = -10
     },
     text = "=>>"
@@ -105,7 +105,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 80,
+      offX = 131,
       offY = -10
     },
     text = "+"
@@ -125,7 +125,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 100,
+      offX = 150,
       offY = -10
     },
     text = "-"
@@ -422,7 +422,7 @@ function MangAdmin:CreateCharSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -15
+      offY = -14
     },
     text = Locale["ma_Learn"]
   })
@@ -437,7 +437,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 480,
+      offX = 520,
       offY = -40
     },
     inherits = "UIDropDownMenuTemplate"
@@ -454,8 +454,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 620,
-      offY = -45
+      offX = 505,
+      offY = -44
     },
     inherits = "InputBoxTemplate"
   })
@@ -475,7 +475,7 @@ function MangAdmin:CreateCharSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -45
+      offY = -44
     },
     text = Locale["ma_Modify"]
   })
@@ -511,7 +511,7 @@ function MangAdmin:CreateCharSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -75
+      offY = -74
     },
     text = Locale["ma_Reset"]
   })
