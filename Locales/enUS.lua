@@ -530,7 +530,7 @@ function Return_enUS()
 
 --[[Tele Tab]]
   --[[Name]]
-    ["tabmenu_Tele"]                  = "Tele",
+    ["tabmenu_Tele"]                  = "TELE",
     ["tt_TeleButton"]                 = "Toggle a window with teleport-functions.",
   --[[Tooltips]]
   --[[Control Labels]]
@@ -543,7 +543,7 @@ function Return_enUS()
 
 --[[Tickets Tab]]
   --[[Name]]
-    ["tabmenu_Ticket"]                = "Tickets",
+    ["tabmenu_Ticket"]                = "TICKETS",
     ["tt_TicketButton"]               = "Toggle a window which shows all tickets and lets you administrate them.",
   --[[Tooltips]]
   --[[Control Labels]]
@@ -580,7 +580,7 @@ function Return_enUS()
 
 --[[Misc Tab]]
   --[[Name]]
-    ["tabmenu_Misc"]                  = "Misc",
+    ["tabmenu_Misc"]                  = "MISC",
     ["tt_MiscButton"]                 = "Toggle a window with miscellaneous actions.",
   --[[Tooltips]]
     ["tt_FrmTrSlider"]                = "Change frame transparency.",
@@ -600,7 +600,7 @@ function Return_enUS()
 
 
 --[[Server Tab]]
-    ["tabmenu_Server"]                = "Server",
+    ["tabmenu_Server"]                = "SERVER",
     ["tt_ServerButton"]               = "Show several server informations and do actions concerning the server.",
   --[[Tooltips]]
     ["tt_AnnounceButton"]             = "Announce a system message.",
@@ -630,7 +630,7 @@ function Return_enUS()
 
 
 --[[Event Tab]]
-    ["tabmenu_event"]                 = "Event",
+    ["tabmenu_event"]                 = "EVENT",
   --[[Tooltips]]
   --[[Control Labels]]
   --[[Other]]
@@ -646,7 +646,7 @@ function Return_enUS()
 
 
 --[[Vendor Tab]]
-    ["tabmenu_vendor"]                = "Vendor",
+    ["tabmenu_vendor"]                = "VENDOR",
   --[[Tooltips]]
   --[[Control Labels]]
   --[[Other]]
@@ -654,7 +654,7 @@ function Return_enUS()
 
 
 --[[AhBot Tab]]
-    ["tabmenu_ahbot"]                 = "AhBot",
+    ["tabmenu_ahbot"]                 = "AHBOT",
   --[[Tooltips]]
   --[[Control Labels]]
   --[[Other]]
@@ -662,7 +662,7 @@ function Return_enUS()
 
     
 --[[Who Tab]]
-    ["tabmenu_who"]                   = "Who",
+    ["tabmenu_who"]                   = "WHO",
   --[[Tooltips]]
     ["tt_who_customize"]              = "Flag character for customization at next login.",
     ["tt_who_chardelete"]             = "CAUTION! Deletes the selected character. CAUTION!",
