@@ -30,19 +30,19 @@ NOTE: These steps are required for locales to properly create the new local tabl
 ## TABS WITH COMPLETED LAYOUTS:
 
 - [ ] GM
-- [x] Char
-- [x] Char2
+- [x] Chgar
+- [x] CHAR2
 - [ ] NPC
 - [x] NPC2
 - [ ] GOB
-- [x] Tele
-- [ ] Tickets
-- [x] Misc
-- [x] Server
-- [x] Log
+- [ ] TELE *Need to fix scroll bar location
+- [ ] TICKETS
+- [x] MISC
+- [x] SERVER
+- [x] LOG
 - [x] PvP-No Data
-- [x] Event-No Data
+- [x] EVENT-No Data
 - [x] RPG-No Data
-- [x] Vendor-No Data
-- [x] AhBot-No Data
-- [ ] Who
+- [x] VENDOR-No Data
+- [x] AHBOT-No Data
+- [ ] WHO *Need to fix scroll bar location

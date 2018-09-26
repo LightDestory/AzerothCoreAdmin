@@ -1,6 +1,9 @@
 # TrinityAdmin Changelog
 
 ### -=[ Revision 48 - 9/26/2018]=-
+- Nomalized TABS to use all UPPERCASE names
+- Who Corrections/Adjustments:
+    - Changed button layout/Corrected alignment
 - Char Corrections/Adjustments:
     - Swap modify_textbox with level_up dropdown
     - Centered Rotate and Zoom buttons over 3D view
