@@ -94,7 +94,7 @@ function Return_nlNL()
     ["ma_LearnAllButton"] = "Alle spreuken",
     ["ma_LearnCraftsButton"] = "Alle beroepen en recepten",
     ["ma_LearnGMButton"] = "Standaard GM spreuken",
-    ["ma_LearnLangButton"] = "Alle Talen",--remove
+    ["ma_LearnLangButton"] = "Alle Talen",
     ["ma_LearnClassButton"] = "Alle Klasse-Spreuken",
     ["ma_SearchButton"] = "Zoeken...",
     ["ma_ResetButton"] = "Reset",
