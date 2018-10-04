@@ -65,7 +65,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
+      offX = 60,
       offY = -10
     },
     text = "<<="
@@ -85,7 +85,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 44,
+      offX = 94,
       offY = -10
     },
     text = "=>>"
@@ -105,7 +105,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 80,
+      offX = 131,
       offY = -10
     },
     text = "+"
@@ -125,7 +125,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 100,
+      offX = 150,
       offY = -10
     },
     text = "-"
@@ -205,7 +205,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -10
     },
     text = Locale["ma_NPCGUIDButton"]
@@ -225,7 +225,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -34
     },
     text = Locale["ma_NPCInfoButton"]
@@ -245,7 +245,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -58
     },
     text = Locale["ma_NPCDemorph"]
@@ -265,7 +265,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -35
     },
     text = Locale["ma_NPCMove"]
@@ -285,7 +285,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -10
     },
     text = Locale["ma_NPCDel"]
@@ -305,7 +305,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -60
     },
     text = Locale["ma_NPCGo"]
@@ -620,7 +620,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -180
     },
     text = Locale["ma_NPCSay"]
@@ -640,7 +640,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -180
     },
     text = Locale["ma_NPCYell"]
@@ -680,7 +680,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -205
     },
     text = Locale["ma_NPCUnAura"]
@@ -720,7 +720,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -82
     },
     text = Locale["ma_NPCUnBindsight"]
@@ -740,7 +740,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -82
     },
     text = Locale["ma_NPCComeToMe"]
@@ -780,7 +780,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -106
     },
     text = Locale["ma_npcunpossess"]

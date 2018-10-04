@@ -145,7 +145,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -10
     },
     text = Locale["ma_KillButton"]
@@ -165,7 +165,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -34
     },
     text = Locale["ma_ReviveButton"]
@@ -185,7 +185,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -58
     },
     text = Locale["ma_SaveButton"]
@@ -205,7 +205,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -82
     },
     text = Locale["ma_KickButton"]
@@ -225,7 +225,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -106
     },
     text = Locale["ma_CooldownButton"]
@@ -245,7 +245,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -106
     },
     text = Locale["ma_DemorphButton"]
@@ -265,7 +265,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -10
     },
     text = Locale["ma_ShowMapsCharButton"]
@@ -285,7 +285,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -34
     },
     text = Locale["ma_HideMapsButton"]
@@ -305,7 +305,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -58
     },
     text = Locale["ma_GPSButton"]
@@ -325,7 +325,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -10
     },
     text = Locale["ma_GUIDButton"]
@@ -345,7 +345,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -34
     },
     text = Locale["ma_PinfoButton"]
@@ -365,7 +365,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -58
     },
     text = Locale["ma_DistanceButton"]
@@ -385,7 +385,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -82
     },
     text = Locale["ma_RecallButton"]
@@ -530,7 +530,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -82
     },
     text = Locale["ma_CharBindsight"]
@@ -550,7 +550,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -106
     },
     text = Locale["ma_CharUnBindsight"]
@@ -570,7 +570,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -130
     },
     text = Locale["ma_charrename"]
@@ -590,7 +590,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -130
     },
     text = Locale["ma_charcustomize"]
@@ -610,7 +610,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -130
     },
     text = Locale["ma_charchangerace"]
@@ -630,7 +630,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -154
     },
     text = Locale["ma_charchnagefaction"]
@@ -650,7 +650,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -154
     },
     text = Locale["ma_charcombatstop"]
@@ -670,7 +670,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -154
     },
     text = Locale["ma_charmaxskill"]
@@ -690,7 +690,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -178
     },
     text = Locale["ma_charfreeze"]
@@ -710,7 +710,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -178
     },
     text = Locale["ma_charunfreeze"]
@@ -730,7 +730,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -178
     },
     text = Locale["ma_charlistfreeze"]
@@ -750,7 +750,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -202
     },
     text = Locale["ma_charpossess"]
@@ -770,7 +770,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
+      offX = 307,
       offY = -202
     },
     text = Locale["ma_charunpossess"]
@@ -790,7 +790,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 388,
       offY = -202
     },
     text = Locale["ma_charrecall"]
@@ -810,7 +810,7 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
+      offX = 225,
       offY = -226
     },
     text = Locale["ma_charrepair"]
