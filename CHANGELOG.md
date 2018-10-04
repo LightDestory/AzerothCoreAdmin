@@ -1,7 +1,9 @@
 # TrinityAdmin Changelog
 
-### -=[ Revision 48 - 9/26/2018]=-
+### -=[ Revision 48 - 10/03/2018]=-
 - Nomalized TABS to use all UPPERCASE names
+- GM Corrections/Adjustments:
+    - Changed button layout/Corrected alignment
 - Who Corrections/Adjustments:
     - Changed button layout/Corrected alignment
 - Char Corrections/Adjustments:
