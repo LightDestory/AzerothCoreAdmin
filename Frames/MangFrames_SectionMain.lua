@@ -522,7 +522,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 180,
-      offY = -180
+      offY = -10
     },
     text = Locale["ma_instakill"],
     inherits = "OptionsCheckButtonTemplate"
@@ -537,9 +537,9 @@ function MangAdmin:CreateMainSection()
       width = 80
     },
     setpoint = {
-      pos = "BOTTOMLEFT",
-      offX = 10,
-      offY = 10
+      pos = "TOPLEFT",
+      offX = 205,
+      offY = -50
     },
     inherits = "OptionsSliderTemplate"
   })
@@ -557,9 +557,9 @@ function MangAdmin:CreateMainSection()
       height = 15
     },
     setpoint = {
-      pos = "BOTTOMLEFT",
-      offX = 95,
-      offY = 10
+      pos = "TOPLEFT",
+      offX = 288,
+      offY = -50
     },
     text = "R"
   })
@@ -573,9 +573,9 @@ function MangAdmin:CreateMainSection()
       width = 80
     },
     setpoint = {
-      pos = "BOTTOMLEFT",
-      offX = 115,
-      offY = 10
+      pos = "TOPLEFT",
+      offX = 205,
+      offY = -95
     },
     inherits = "OptionsSliderTemplate"
   })
@@ -593,9 +593,9 @@ function MangAdmin:CreateMainSection()
       height = 15
     },
     setpoint = {
-      pos = "BOTTOMLEFT",
-      offX = 200,
-      offY = 10
+      pos = "TOPLEFT",
+      offX = 288,
+      offY = -95
     },
     text = "R"
   })
@@ -623,8 +623,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "BOTTOMRIGHT",
-      offX = 30,
-      offY = -30
+      offX = -29,
+      offY = 41
     },
     maxLetters = 2,
     inherits = "InputBoxTemplate"
@@ -644,8 +644,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "BOTTOMRIGHT",
-      offX = 40,
-      offY = -30
+      offX = -32,
+      offY = 62
     },
     text = Locale["N"]
   })
@@ -664,8 +664,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "BOTTOMRIGHT",
-      offX = -40,
-      offY = 15
+      offX = -32,
+      offY = 20
     },
     text = Locale["S"]
   })
@@ -684,8 +684,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "BOTTOMRIGHT",
-      offX = -40, ---THIS IS WHERE THE 'S' SHOULD BE
-      offY = 15
+      offX = -55,
+      offY = 41
     },
     text = Locale["E"]
   })
@@ -704,8 +704,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "BOTTOMRIGHT",
-      offX = 30,
-      offY = -40
+      offX = -8,
+      offY = 41
     },
     text = Locale["W"]
   })  
@@ -717,8 +717,8 @@ function MangAdmin:CreateMainSection()
     text = Locale["ma_parameters"],
     setpoint = {
       pos = "TOPLEFT",
-      offX = 186,
-      offY = -225
+      offX = 333,
+      offY = -167
     }
   })
   
@@ -728,13 +728,13 @@ function MangAdmin:CreateMainSection()
     group = "main",
     parent = ma_midframe,
     size = {
-      width = 315,
+      width = 260,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 275,
-      offY = -222
+      offX = 400,
+      offY = -163
     },
     inherits = "InputBoxTemplate"
   })
@@ -1128,13 +1128,13 @@ function MangAdmin:CreateMainSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
+      width = 80,
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 592,
-      offY = -223
+      pos = "TOPLEFT",  ---Correct This Location
+      offX = 578,
+      offY = -142
     },
         text = Locale["ma_GmClear"]
   })  
@@ -1174,7 +1174,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 333,
-      offY = -32 --58
+      offY = -32
     },
         text = Locale["ma_acctdelete"]
   })  
