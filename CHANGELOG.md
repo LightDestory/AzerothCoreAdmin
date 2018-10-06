@@ -1,5 +1,15 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 49 - 10/06/2018]=-
+- Char Corrections/Adjustments:
+    - Changed button layout/Corrected alignment
+    - Changed scale of 3D model view
+    - Changed 3D model view control buttons
+- NPC Corrections/Adjustments:
+    - Changed button layout/Corrected alignment
+    - Changed scale of 3D model view
+    - Changed 3D model view control buttons
+
 ### -=[ Revision 48 - 10/03/2018]=-
 - Nomalized TABS to use all UPPERCASE names
 - GM Corrections/Adjustments:

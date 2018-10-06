@@ -40,13 +40,13 @@ function MangAdmin:CreateNpcSection()
     group = "npc",
     parent = ma_midframe,
     size = {
-      width = 210,
-      height = 210
+      width = 140,
+      height = 200
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 10,
-      offY = -35
+      pos = "BOTTOMLEFT",
+      offX = 0,
+      offY = 0
     },
     inherits = nil
   })
@@ -60,13 +60,13 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
-      height = 20
+      width = 25,
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 60,
-      offY = -10
+      offX = 28,
+      offY = -35
     },
     text = "<<="
   })
@@ -80,13 +80,13 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
-      height = 20
+      width = 25,
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 94,
-      offY = -10
+      offX = 54,
+      offY = -35
     },
     text = "=>>"
   })
@@ -101,12 +101,12 @@ function MangAdmin:CreateNpcSection()
     },
     size = {
       width = 15,
-      height = 20
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 131,
-      offY = -10
+      offX = 81,
+      offY = -35
     },
     text = "+"
   })
@@ -121,12 +121,12 @@ function MangAdmin:CreateNpcSection()
     },
     size = {
       width = 15,
-      height = 20
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 150,
-      offY = -10
+      offX = 97,
+      offY = -35
     },
     text = "-"
   })

@@ -30,7 +30,7 @@ NOTE: These steps are required for locales to properly create the new local tabl
 ## TABS WITH COMPLETED LAYOUTS:
 
 - [x] GM
-- [x] Chgar
+- [x] CHAR
 - [x] CHAR2
 - [ ] NPC
 - [x] NPC2
