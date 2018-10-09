@@ -1300,5 +1300,3 @@ function MangAdmin:CreateMainSection()
     })
 
 end
-
-
