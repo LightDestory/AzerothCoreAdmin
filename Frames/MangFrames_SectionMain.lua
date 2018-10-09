@@ -489,7 +489,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -76
+      offY = -75
     },
     text = Locale["ma_SetJail_A_Button"]
   })
@@ -509,7 +509,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -98
+      offY = -97
     },
     text = Locale["ma_SetJail_H_Button"]
   })
@@ -717,7 +717,7 @@ function MangAdmin:CreateMainSection()
     text = Locale["ma_parameters"],
     setpoint = {
       pos = "TOPLEFT",
-      offX = 333,
+      offX = 334,
       offY = -167
     }
   })
@@ -814,7 +814,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 578,
-      offY = -76
+      offY = -75
     },
     text = Locale["ma_petlearn"]
   })  
@@ -834,7 +834,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 578,
-      offY = -98
+      offY = -97
     },
     text = Locale["ma_petunlearn"]
   })  
@@ -854,7 +854,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 578,
-      offY = -120
+      offY = -119
     },
     text = Locale["ma_pettp"]
   })  
@@ -934,7 +934,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 497,
-      offY = -76
+      offY = -75
     },
     text = Locale["ma_goxy"]
   })  
@@ -954,7 +954,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 497,
-      offY = -98
+      offY = -97
     },
     text = Locale["ma_goxyz"]
   })  
@@ -974,7 +974,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 497,
-      offY = -120
+      offY = -119
     },
         text = Locale["ma_gozonexy"]
   })  
@@ -994,7 +994,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 497,
-      offY = -142
+      offY = -140
     },
         text = Locale["ma_lookupzone"]
   })  
@@ -1074,7 +1074,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 415,
-      offY = -76
+      offY = -75
     },
         text = Locale["ma_castself"]
   })  
@@ -1094,7 +1094,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 415,
-      offY = -98
+      offY = -97
     },
         text = Locale["ma_casttarget"]
   })  
@@ -1114,7 +1114,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 415,
-      offY = -120
+      offY = -119
     },
         text = Locale["ma_listitem"]
   })  
@@ -1134,7 +1134,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",  ---Correct This Location
       offX = 578,
-      offY = -142
+      offY = -140
     },
         text = Locale["ma_GmClear"]
   })  
@@ -1214,7 +1214,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 333,
-      offY = -76
+      offY = -75
     },
         text = Locale["ma_acctgmlvl"]
   })  
@@ -1234,7 +1234,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 333,
-      offY = -98
+      offY = -97
     },
         text = Locale["ma_acctpasswd"]
   })  
@@ -1254,7 +1254,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 333,
-      offY = -120
+      offY = -119
     },
         text = Locale["ma_gmnotify"]
   })  
@@ -1274,7 +1274,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 333,
-      offY = -142
+      offY = -140
     },
     text = Locale["ma_teleaddbutton"]
     })
@@ -1294,7 +1294,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 415,
-      offY = -142
+      offY = -140
     },
     text = Locale["ma_teledelbutton"]
     })
