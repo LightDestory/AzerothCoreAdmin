@@ -401,8 +401,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 520,
-      offY = -10
+      offX = -15,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -416,13 +416,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -14
+      offX = 120,
+      offY = -4
     },
     text = Locale["ma_Learn"]
   })
@@ -437,8 +437,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 520,
-      offY = -40
+      offX = 315,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -454,8 +454,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 505,
-      offY = -44
+      offX = 455,
+      offY = -4
     },
     inherits = "InputBoxTemplate"
   })
@@ -469,13 +469,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -44
+      offX = 485,
+      offY = -4
     },
     text = Locale["ma_Modify"]
   })
@@ -485,13 +485,13 @@ function MangAdmin:CreateCharSection()
     group = "char",
     parent = ma_midframe,
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 520,
-      offY = -70
+      offX = 150,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -505,13 +505,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -74
+      offX = 285,
+      offY = -4
     },
     text = Locale["ma_Reset"]
   })
