@@ -1763,12 +1763,12 @@ function MangAdmin:InitButtons()
   self:PrepareScript(ma_tabbutton_misc       , Locale["tt_MiscButton"]         , function() MangAdmin:InstantGroupToggle("misc") end)
   self:PrepareScript(ma_tabbutton_server     , Locale["tt_ServerButton"]       , function() MangAdmin:InstantGroupToggle("server") end)
   self:PrepareScript(ma_tabbutton_log        , Locale["tt_LogButton"]          , function() MangAdmin:InstantGroupToggle("log") end)
-  self:PrepareScript(ma_tabbutton_pvp        , nil          , function() MangAdmin:InstantGroupToggle("pvp") end)
-  self:PrepareScript(ma_tabbutton_event      , nil          , function() MangAdmin:InstantGroupToggle("event") end)
-  self:PrepareScript(ma_tabbutton_rpg        , nil          , function() MangAdmin:InstantGroupToggle("rpg") end)
-  self:PrepareScript(ma_tabbutton_vendor     , nil          , function() MangAdmin:InstantGroupToggle("vendor") end)
-  self:PrepareScript(ma_tabbutton_ahbot      , nil          , function() MangAdmin:InstantGroupToggle("ahbot") end)
-  self:PrepareScript(ma_tabbutton_who        , nil          , function() MangAdmin:InstantGroupToggle("who") end)
+  self:PrepareScript(ma_tabbutton_pvp        , nil                             , function() MangAdmin:InstantGroupToggle("pvp") end)
+  self:PrepareScript(ma_tabbutton_event      , nil                             , function() MangAdmin:InstantGroupToggle("event") end)
+  self:PrepareScript(ma_tabbutton_rpg        , nil                             , function() MangAdmin:InstantGroupToggle("rpg") end)
+  self:PrepareScript(ma_tabbutton_vendor     , nil                             , function() MangAdmin:InstantGroupToggle("vendor") end)
+  self:PrepareScript(ma_tabbutton_ahbot      , nil                             , function() MangAdmin:InstantGroupToggle("ahbot") end)
+  self:PrepareScript(ma_tabbutton_who        , nil                             , function() MangAdmin:InstantGroupToggle("who") end)
   --end tab buttons
   -- start mini buttons
   self:PrepareScript(ma_mm_logoframe         , nil                             , function() MangAdmin:OnClick() end)
@@ -1783,12 +1783,12 @@ function MangAdmin:InitButtons()
   self:PrepareScript(ma_mm_miscbutton        , Locale["tt_MiscButton"]         , function() MangAdmin:InstantGroupToggle("misc") end)
   self:PrepareScript(ma_mm_serverbutton      , Locale["tt_ServerButton"]       , function() MangAdmin:InstantGroupToggle("server") end)
   self:PrepareScript(ma_mm_logbutton         , Locale["tt_LogButton"]          , function() MangAdmin:InstantGroupToggle("log") end)
-  self:PrepareScript(ma_mm_pvpbutton        , nil          , function() MangAdmin:InstantGroupToggle("pvp") end)
-  self:PrepareScript(ma_mm_eventbutton      , nil          , function() MangAdmin:InstantGroupToggle("event") end)
-  self:PrepareScript(ma_mm_rpgbutton        , nil          , function() MangAdmin:InstantGroupToggle("rpg") end)
-  self:PrepareScript(ma_mm_vendorbutton     , nil          , function() MangAdmin:InstantGroupToggle("vendor") end)
-  self:PrepareScript(ma_mm_ahbotbutton      , nil          , function() MangAdmin:InstantGroupToggle("ahbot") end)
-  self:PrepareScript(ma_mm_whobutton        , nil          , function() MangAdmin:InstantGroupToggle("who") end)
+  self:PrepareScript(ma_mm_pvpbutton        , nil                              , function() MangAdmin:InstantGroupToggle("pvp") end)
+  self:PrepareScript(ma_mm_eventbutton      , nil                              , function() MangAdmin:InstantGroupToggle("event") end)
+  self:PrepareScript(ma_mm_rpgbutton        , nil                              , function() MangAdmin:InstantGroupToggle("rpg") end)
+  self:PrepareScript(ma_mm_vendorbutton     , nil                              , function() MangAdmin:InstantGroupToggle("vendor") end)
+  self:PrepareScript(ma_mm_ahbotbutton      , nil                              , function() MangAdmin:InstantGroupToggle("ahbot") end)
+  self:PrepareScript(ma_mm_whobutton        , nil                              , function() MangAdmin:InstantGroupToggle("who") end)
   --end mini buttons
   self:PrepareScript(ma_languagebutton       , Locale["tt_LanguageButton"]     , function() MangAdmin:ChangeLanguage(UIDropDownMenu_GetSelectedValue(ma_languagedropdown)) end)
   self:PrepareScript(ma_itembutton           , Locale["tt_ItemButton"]         , function() MangAdmin:TogglePopup("search", {type = "item"}) end)
@@ -2014,12 +2014,12 @@ function MangAdmin:InitDropDowns()
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
 --      {"Ceský","csCZ"},
-      {"Deutsch","deDE"},
+--      {"Deutsch","deDE"},
 --      {"Dutch","nlNL"},
       {"English","enUS"},
 --      {"Spanish","esES"},
 --      {"Finnish","fiFI"},
-      {"Français","frFR"},
+--      {"Français","frFR"},
 --      {"Magyar","huHU"},
 --      {"Italiano","itIT"},
 --      {"Lithuanian","liLI"},
@@ -2027,7 +2027,7 @@ function MangAdmin:InitDropDowns()
 --      {"Portuguese","ptPT"},
 --      {"Romanian","roRO"},
 --      {"Russkiy","ruRU"},
-      {"Svenska","svSV"},
+--      {"Svenska","svSV"},
 --      {"Chinese","zhCN"},
 --      {"Bulgarian", "buBU"}
     }
