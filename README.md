@@ -26,3 +26,23 @@ NOTE: These steps are required for locales to properly create the new local tabl
 6. Click the TA icon on the minimap frame. Do NOT open TrinityAdmin any other way just yet.
 7. Click the Who tab. If you receive and error, DO NOT close it, just click the Who tab again.
 8. Click the Change Language button to reload the addon.
+
+## TABS WITH COMPLETED LAYOUTS:
+
+- [x] GM
+- [x] CHAR
+- [x] CHAR2
+- [ ] NPC
+- [x] NPC2
+- [ ] GOB
+- [ ] TELE *Need to fix scroll bar location
+- [ ] TICKETS
+- [x] MISC
+- [x] SERVER
+- [x] LOG
+- [x] PvP-No Data
+- [x] EVENT-No Data
+- [x] RPG-No Data
+- [x] VENDOR-No Data
+- [x] AHBOT-No Data
+- [ ] WHO *Need to fix scroll bar location

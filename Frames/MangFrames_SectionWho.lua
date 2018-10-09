@@ -35,7 +35,7 @@ function MangAdmin:CreateWhoSection()
     linkifier = MangAdmin.db.account.style.color.linkifier
   }
   
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --Refesh Button
     name = "ma_showwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -50,12 +50,12 @@ function MangAdmin:CreateWhoSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -5
+      offY = -15
     },
     text = Locale["ma_ShowWhoButton"]
   })
   
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --Reset Button
     name = "ma_resetwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -70,9 +70,9 @@ function MangAdmin:CreateWhoSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 120,
-      offY = -5
+      offY = -15
     },
-    text = "RESET"
+    text = Locale["ma_resetwhobutton"]
   })
    
   FrameLib:BuildButton({
@@ -88,9 +88,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = 0
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -15
     },
     text = Locale["ma_whisperbutton"]
   })
@@ -108,9 +108,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -15
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -30
     },
     text = Locale["ma_SummonWhoButton"]
   })
@@ -128,14 +128,14 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -30
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -45
     },
     text = Locale["ma_GoCharWhoButton"]
   })
   
-  FrameLib:BuildButton({--Mail
+  FrameLib:BuildButton({ --Mail
     name = "ma_answerwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -148,9 +148,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -45
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -60
     },
     text = Locale["ma_AnswerWhoButton"]
   })
@@ -168,9 +168,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -60
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -75
     },
     text = Locale["ma_who_customize"]
   })
@@ -188,9 +188,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -75
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -90
     },
     text = Locale["ma_who_chardelete"]
   })
@@ -208,9 +208,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -90
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -105
     },
     text = Locale["ma_who_charrename"]
   })
@@ -228,9 +228,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -105
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -120
     },
     text = Locale["ma_DeleteWhoButton"]
   })
@@ -248,9 +248,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -120
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -135
     },
     text = Locale["ma_who_1daybanbutton"]
   })
@@ -268,9 +268,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -135
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -150
     },
     text = Locale["ma_who_permbanbutton"]
   })
@@ -288,9 +288,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -150
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -165
     },
     text = Locale["ma_who_jailabutton"]
   })
@@ -308,9 +308,9 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -165
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -180
     },
     text = Locale["ma_who_jailhbutton"]
   })
@@ -328,14 +328,14 @@ function MangAdmin:CreateWhoSection()
       height = 15
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 665,
-      offY = -180
+      pos = "TOPRIGHT",
+      offX = -10,
+      offY = -195
     },
     text = Locale["ma_who_unjailbutton"]
   })
 
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Main Scroll Body
     type = "ScrollFrame",
     name = "ma_whoscrollframe",
     group = "who",
@@ -349,14 +349,14 @@ function MangAdmin:CreateWhoSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 270,
-      offY = -10
+      offX = 240,
+      offY = -15
     },
     inherits = "FauxScrollFrameTemplate"
 --    inherits = "UIPanelScrollFrameTemplate"
   })
   
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({  --Weird Editbox, left side, top
     type = "EditBox",
     name = "ma_whodetail",
     group = "who",
@@ -366,20 +366,20 @@ function MangAdmin:CreateWhoSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 260,
+      width = 220,
       height = 85
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 5,
-      offY = -55
+      offX = 10,
+      offY = -65
     },
     maxletters = 100000,
     multiline = true,
     textcolor = {1, 1, 1, 1.0}
   })
  
-  FrameLib:BuildFrame({
+  FrameLib:BuildFrame({ --Weird Editbox, left side, bottom
     type = "EditBox",
     name = "ma_whodetail2",
     group = "who",
@@ -389,12 +389,12 @@ function MangAdmin:CreateWhoSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 260,
+      width = 220,
       height = 110
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 5,
+      offX = 10,
       offY = -140
     },
     maxletters = 100000,
@@ -406,7 +406,7 @@ function MangAdmin:CreateWhoSection()
     name = "ma_whoidlabel",
     group = "who",
     parent = ma_midframe,
-    text = "Acct:",
+    text = Locale["ma_acctdetail"],
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
@@ -433,8 +433,8 @@ function MangAdmin:CreateWhoSection()
     text = "",
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
-      offY = -40
+      offX = 40,
+      offY = -30
     }
   })
 
@@ -442,10 +442,10 @@ function MangAdmin:CreateWhoSection()
     name = "ma_wholabel",
     group = "who",
     parent = ma_midframe,
-    text = "Char:",
+    text = Locale["ma_chardetail"],
     setpoint = {
       pos = "TOPLEFT",
-      offX = 100,
+      offX = 120,
       offY = -30
     }
   })
@@ -457,7 +457,7 @@ function MangAdmin:CreateWhoSection()
     text = "",
     setpoint = {
       pos = "TOPLEFT",
-      offX = 140,
+      offX = 150,
       offY = -30
     }
   })

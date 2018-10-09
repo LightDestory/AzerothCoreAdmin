@@ -10,7 +10,7 @@
 --
 -- You should have received a copy of the GNU General Public License
 -- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1397  USA
 --
 -- Official Forums: http://groups.google.com/group/trinityadmin
 -- GoogleCode Website: http://code.google.com/p/trinityadmin/
@@ -40,13 +40,13 @@ function MangAdmin:CreateCharSection()
     group = "char",
     parent = ma_midframe,
     size = {
-      width = 210,
-      height = 210
+      width = 140,
+      height = 200
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 10,
-      offY = -35
+      pos = "BOTTOMLEFT",
+      offX = 0,
+      offY = 0
     },
     inherits = nil
   })
@@ -60,13 +60,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
-      height = 20
+      width = 25,
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
-      offY = -10
+      offX = 28,
+      offY = -35
     },
     text = "<<="
   })
@@ -80,13 +80,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
-      height = 20
+      width = 25,
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 44,
-      offY = -10
+      offX = 54,
+      offY = -35
     },
     text = "=>>"
   })
@@ -101,12 +101,12 @@ function MangAdmin:CreateCharSection()
     },
     size = {
       width = 15,
-      height = 20
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 80,
-      offY = -10
+      offX = 81,
+      offY = -35
     },
     text = "+"
   })
@@ -121,12 +121,12 @@ function MangAdmin:CreateCharSection()
     },
     size = {
       width = 15,
-      height = 20
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 100,
-      offY = -10
+      offX = 97,
+      offY = -35
     },
     text = "-"
   })
@@ -145,8 +145,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -10
+      offX = 140, --charColOne
+      offY = -30 --charRowOne
     },
     text = Locale["ma_KillButton"]
   })
@@ -165,8 +165,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -34
+      offX = 140, --charColOne
+      offY = -52 --rowtwo
     },
     text = Locale["ma_ReviveButton"]
   })
@@ -185,8 +185,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -58
+      offX = 140, --charColOne
+      offY = -74  --rowthree
     },
     text = Locale["ma_SaveButton"]
   })
@@ -205,8 +205,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -82
+      offX = 140, --charColOne
+      offY = -95
     },
     text = Locale["ma_KickButton"]
   })
@@ -225,8 +225,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -106
+      offX = 140, --charColOne
+      offY = -117
     },
     text = Locale["ma_CooldownButton"]
   })
@@ -245,8 +245,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -106
+      offX = 222,
+      offY = -117
     },
     text = Locale["ma_DemorphButton"]
   })
@@ -265,8 +265,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -10
+      offX = 303, --charColThree
+      offY = -30 --charRowOne
     },
     text = Locale["ma_ShowMapsCharButton"]
   })
@@ -285,8 +285,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -34
+      offX = 303, --charColThree
+      offY = -52 --rowtwo
     },
     text = Locale["ma_HideMapsButton"]
   })
@@ -305,8 +305,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -58
+      offX = 303, --charColThree
+      offY = -74 --rowthree
     },
     text = Locale["ma_GPSButton"]
   })
@@ -325,8 +325,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -10
+      offX = 222, --charColTwo
+      offY = -30 --charRowOne
     },
     text = Locale["ma_GUIDButton"]
   })
@@ -345,8 +345,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -34
+      offX = 222, --charColTwo,
+      offY = -52 --rowtwo
     },
     text = Locale["ma_PinfoButton"]
   })
@@ -365,8 +365,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -58
+      offX = 222, --charColTwo,
+      offY = -74 --rowthree
     },
     text = Locale["ma_DistanceButton"]
   })
@@ -385,8 +385,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -82
+      offX = 222, --charColTwo,
+      offY = -95
     },
     text = Locale["ma_RecallButton"]
   })
@@ -401,8 +401,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 520,
-      offY = -10
+      offX = -15,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -416,13 +416,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -15
+      offX = 120,
+      offY = -4
     },
     text = Locale["ma_Learn"]
   })
@@ -437,8 +437,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 480,
-      offY = -40
+      offX = 315,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -454,8 +454,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 620,
-      offY = -45
+      offX = 455,
+      offY = -4
     },
     inherits = "InputBoxTemplate"
   })
@@ -469,13 +469,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -45
+      offX = 485,
+      offY = -4
     },
     text = Locale["ma_Modify"]
   })
@@ -485,13 +485,13 @@ function MangAdmin:CreateCharSection()
     group = "char",
     parent = ma_midframe,
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 520,
-      offY = -70
+      offX = 150,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -505,13 +505,13 @@ function MangAdmin:CreateCharSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -75
+      offX = 285,
+      offY = -4
     },
     text = Locale["ma_Reset"]
   })
@@ -530,8 +530,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -82
+      offX = 303, --charColThree
+      offY = -95
     },
     text = Locale["ma_CharBindsight"]
   })
@@ -550,8 +550,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -106
+      offX = 303, --charColThree
+      offY = -117
     },
     text = Locale["ma_CharUnBindsight"]
   })
@@ -570,8 +570,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -130
+      offX = 140, --charColOne
+      offY = -139
     },
     text = Locale["ma_charrename"]
   })
@@ -590,8 +590,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -130
+      offX = 222,
+      offY = -139
     },
     text = Locale["ma_charcustomize"]
   })
@@ -610,8 +610,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -130
+      offX = 303, --charColThree
+      offY = -139
     },
     text = Locale["ma_charchangerace"]
   })
@@ -630,8 +630,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -154
+      offX = 140, --charColOne
+      offY = -160
     },
     text = Locale["ma_charchnagefaction"]
   })
@@ -650,8 +650,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -154
+      offX = 222,
+      offY = -160
     },
     text = Locale["ma_charcombatstop"]
   })
@@ -670,8 +670,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -154
+      offX = 303, --charColThree
+      offY = -160
     },
     text = Locale["ma_charmaxskill"]
   })
@@ -690,8 +690,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -178
+      offX = 140, --charColOne
+      offY = -182
     },
     text = Locale["ma_charfreeze"]
   })
@@ -710,8 +710,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -178
+      offX = 222,
+      offY = -182
     },
     text = Locale["ma_charunfreeze"]
   })
@@ -730,8 +730,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -178
+      offX = 303, --charColThree
+      offY = -182
     },
     text = Locale["ma_charlistfreeze"]
   })
@@ -750,8 +750,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -202
+      offX = 140, --charColOne
+      offY = -204
     },
     text = Locale["ma_charpossess"]
   })
@@ -770,8 +770,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 315,
-      offY = -202
+      offX = 222,
+      offY = -204
     },
     text = Locale["ma_charunpossess"]
   })
@@ -790,8 +790,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
-      offY = -202
+      offX = 303, --charColThree
+      offY = -204
     },
     text = Locale["ma_charrecall"]
   })
@@ -810,8 +810,8 @@ function MangAdmin:CreateCharSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 230,
-      offY = -226
+      offX = 140, --charColOne
+      offY = -225
     },
     text = Locale["ma_charrepair"]
   })

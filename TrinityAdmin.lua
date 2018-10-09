@@ -34,7 +34,7 @@ gettingGOBinfo=0
 gettingGOBinfoinfo=0
 
 MAJOR_VERSION = "TrinityAdmin-4.3.4"
-MINOR_VERSION = "$Revision: 047 $"
+MINOR_VERSION = "$Revision: 049 $"
 ROOT_PATH     = "Interface\\AddOns\\TrinityAdmin\\"
 local cont = ""
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end

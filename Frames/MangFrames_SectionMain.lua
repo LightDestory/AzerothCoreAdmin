@@ -349,7 +349,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -190
+      offY = -170
     },
     text = Locale["ma_waterwalkbutton"]
   })
@@ -369,7 +369,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 134,
-      offY = -190
+      offY = -170
     },
     text = Locale["ma_OffButton"]
   })  
@@ -389,7 +389,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -210
+      offY = -190
     },
     text = Locale["ma_accountlockbutton"]
   })
@@ -409,7 +409,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 134,
-      offY = -210
+      offY = -190
     },
     text = Locale["ma_OffButton"]
   })    
@@ -449,7 +449,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -34
+      offY = -32
     },
     text = Locale["ma_BankButton"]
   })
@@ -469,7 +469,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -58
+      offY = -54
     },
     text = Locale["ma_DismountButton"]
   })
@@ -489,7 +489,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -82
+      offY = -75
     },
     text = Locale["ma_SetJail_A_Button"]
   })
@@ -509,7 +509,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -106
+      offY = -97
     },
     text = Locale["ma_SetJail_H_Button"]
   })
@@ -538,7 +538,7 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 180,
+      offX = 205,
       offY = -50
     },
     inherits = "OptionsSliderTemplate"
@@ -558,7 +558,7 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 265,
+      offX = 288,
       offY = -50
     },
     text = "R"
@@ -574,8 +574,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 180,
-      offY = -85
+      offX = 205,
+      offY = -95
     },
     inherits = "OptionsSliderTemplate"
   })
@@ -594,8 +594,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 265,
-      offY = -85
+      offX = 288,
+      offY = -95
     },
     text = "R"
   })
@@ -606,9 +606,9 @@ function MangAdmin:CreateMainSection()
     parent = ma_midframe,
     text = Locale["gridnavigator"],
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 655,
-      offY = -160
+      pos = "BOTTOMRIGHT",
+      offX = -5,
+      offY = 5
     }
   })
   
@@ -622,9 +622,9 @@ function MangAdmin:CreateMainSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 698,
-      offY = -200
+      pos = "BOTTOMRIGHT",
+      offX = -29,
+      offY = 41
     },
     maxLetters = 2,
     inherits = "InputBoxTemplate"
@@ -643,9 +643,9 @@ function MangAdmin:CreateMainSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 698,
-      offY = -180
+      pos = "BOTTOMRIGHT",
+      offX = -32,
+      offY = 62
     },
     text = Locale["N"]
   })
@@ -663,9 +663,9 @@ function MangAdmin:CreateMainSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 698,
-      offY = -223
+      pos = "BOTTOMRIGHT",
+      offX = -32,
+      offY = 20
     },
     text = Locale["S"]
   })
@@ -683,9 +683,9 @@ function MangAdmin:CreateMainSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 676,
-      offY = -200
+      pos = "BOTTOMRIGHT",
+      offX = -55,
+      offY = 41
     },
     text = Locale["E"]
   })
@@ -703,9 +703,9 @@ function MangAdmin:CreateMainSection()
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 720,
-      offY = -200
+      pos = "BOTTOMRIGHT",
+      offX = -8,
+      offY = 41
     },
     text = Locale["W"]
   })  
@@ -714,11 +714,11 @@ function MangAdmin:CreateMainSection()
     name = "ma_parametertext",
     group = "main",
     parent = ma_midframe,
-    text = Locale["parameters"],
+    text = Locale["ma_parameters"],
     setpoint = {
       pos = "TOPLEFT",
-      offX = 186,
-      offY = -225
+      offX = 334,
+      offY = -167
     }
   })
   
@@ -728,13 +728,13 @@ function MangAdmin:CreateMainSection()
     group = "main",
     parent = ma_midframe,
     size = {
-      width = 315,
+      width = 260,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 275,
-      offY = -222
+      offX = 400,
+      offY = -163
     },
     inherits = "InputBoxTemplate"
   })
@@ -753,10 +753,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 575,
+      offX = 578,
       offY = -10
     },
-    text = Locale["gmingame"]
+    text = Locale["ma_gmingame"]
   })  
   
   FrameLib:BuildButton({
@@ -773,10 +773,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 575,
-      offY = -34
+      offX = 578,
+      offY = -32
     },
-    text = Locale["gmlist"]
+    text = Locale["ma_gmlist"]
   })  
   
   FrameLib:BuildButton({
@@ -793,10 +793,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 575,
-      offY = -58
+      offX = 578,
+      offY = -54
     },
-    text = Locale["petcreate"]
+    text = Locale["ma_petcreate"]
   })  
 
   FrameLib:BuildButton({
@@ -813,10 +813,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 575,
-      offY = -82
+      offX = 578,
+      offY = -75
     },
-    text = Locale["petlearn"]
+    text = Locale["ma_petlearn"]
   })  
 
   FrameLib:BuildButton({
@@ -833,10 +833,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 575,
-      offY = -106
+      offX = 578,
+      offY = -97
     },
-    text = Locale["petunlearn"]
+    text = Locale["ma_petunlearn"]
   })  
 
   FrameLib:BuildButton({
@@ -853,10 +853,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 575,
-      offY = -130
+      offX = 578,
+      offY = -119
     },
-    text = Locale["pettp"]
+    text = Locale["ma_pettp"]
   })  
 
   FrameLib:BuildButton({
@@ -873,10 +873,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
+      offX = 497,
       offY = -10
     },
-    text = Locale["lookuptaxi"]
+    text = Locale["ma_lookuptaxi"]
   })  
 
   FrameLib:BuildButton({
@@ -893,10 +893,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -34
+      offX = 497,
+      offY = -32
     },
-    text = Locale["gotaxinode"]
+    text = Locale["ma_gotaxinode"]
   })  
 
   FrameLib:BuildButton({
@@ -913,10 +913,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -58
+      offX = 497,
+      offY = -54
     },
-    text = Locale["gotrigger"]
+    text = Locale["ma_gotrigger"]
   })  
 
   FrameLib:BuildButton({
@@ -933,10 +933,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -82
+      offX = 497,
+      offY = -75
     },
-    text = Locale["goxy"]
+    text = Locale["ma_goxy"]
   })  
 
   FrameLib:BuildButton({
@@ -953,10 +953,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -106
+      offX = 497,
+      offY = -97
     },
-    text = Locale["goxyz"]
+    text = Locale["ma_goxyz"]
   })  
 
   FrameLib:BuildButton({
@@ -973,10 +973,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -130
+      offX = 497,
+      offY = -119
     },
-        text = Locale["gozonexy"]
+        text = Locale["ma_gozonexy"]
   })  
 
   FrameLib:BuildButton({
@@ -993,10 +993,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -154
+      offX = 497,
+      offY = -140
     },
-        text = Locale["lookupzone"]
+        text = Locale["ma_lookupzone"]
   })  
 
   FrameLib:BuildButton({
@@ -1013,10 +1013,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 404,
-      offY = -34
+      offX = 415,
+      offY = -10
     },
-        text = Locale["cast"]
+        text = Locale["ma_cast"]
   })  
 
   FrameLib:BuildButton({
@@ -1033,10 +1033,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 404,
-      offY = -58
+      offX = 415,
+      offY = -32
     },
-        text = Locale["castback"]
+        text = Locale["ma_castback"]
   })  
 
   FrameLib:BuildButton({
@@ -1053,10 +1053,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 404,
-      offY = -82
+      offX = 415,
+      offY = -54
     },
-        text = Locale["castdist"]
+        text = Locale["ma_castdist"]
   })  
 
   FrameLib:BuildButton({
@@ -1073,10 +1073,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 404,
-      offY = -106
+      offX = 415,
+      offY = -75
     },
-        text = Locale["castself"]
+        text = Locale["ma_castself"]
   })  
 
   FrameLib:BuildButton({
@@ -1093,10 +1093,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 404,
-      offY = -130
+      offX = 415,
+      offY = -97
     },
-        text = Locale["casttarget"]
+        text = Locale["ma_casttarget"]
   })  
 
   FrameLib:BuildButton({
@@ -1113,10 +1113,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 404,
-      offY = -154
+      offX = 415,
+      offY = -119
     },
-        text = Locale["listitem"]
+        text = Locale["ma_listitem"]
   })  
 
   FrameLib:BuildButton({
@@ -1128,15 +1128,15 @@ function MangAdmin:CreateMainSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
+      width = 80,
       height = 20
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 592,
-      offY = -223
+      pos = "TOPLEFT",  ---Correct This Location
+      offX = 578,
+      offY = -140
     },
-        text = Locale["GmClear"]
+        text = Locale["ma_GmClear"]
   })  
 
   FrameLib:BuildButton({
@@ -1153,10 +1153,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 319,
-      offY = -34
+      offX = 333,
+      offY = -10
     },
-        text = Locale["acctcreate"]
+        text = Locale["ma_acctcreate"]
   })  
 
   FrameLib:BuildButton({
@@ -1173,10 +1173,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 319,
-      offY = -58
+      offX = 333,
+      offY = -32
     },
-        text = Locale["acctdelete"]
+        text = Locale["ma_acctdelete"]
   })  
 
   FrameLib:BuildButton({
@@ -1193,10 +1193,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 319,
-      offY = -82
+      offX = 333,
+      offY = -54
     },
-        text = Locale["acctaddon"]
+        text = Locale["ma_acctaddon"]
   })  
 
   FrameLib:BuildButton({
@@ -1213,10 +1213,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 319,
-      offY = -106
+      offX = 333,
+      offY = -75
     },
-        text = Locale["acctgmlvl"]
+        text = Locale["ma_acctgmlvl"]
   })  
   
   FrameLib:BuildButton({
@@ -1233,10 +1233,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 319,
-      offY = -130
+      offX = 333,
+      offY = -97
     },
-        text = Locale["acctpasswd"]
+        text = Locale["ma_acctpasswd"]
   })  
   
   FrameLib:BuildButton({
@@ -1253,10 +1253,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 319,
-      offY = -154
+      offX = 333,
+      offY = -119
     },
-        text = Locale["gmnotify"]
+        text = Locale["ma_gmnotify"]
   })  
 
   FrameLib:BuildButton({
@@ -1273,8 +1273,8 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 234,
-      offY = -130
+      offX = 333,
+      offY = -140
     },
     text = Locale["ma_teleaddbutton"]
     })
@@ -1293,12 +1293,10 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 234,
-      offY = -154
+      offX = 415,
+      offY = -140
     },
     text = Locale["ma_teledelbutton"]
     })
 
 end
-
-

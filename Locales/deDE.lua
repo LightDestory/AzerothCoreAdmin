@@ -151,7 +151,7 @@ function Return_deDE()
     ["ma_DemorphButton"] = "Demorph",
     ["ma_ShowMapsCharButton"] = "Zeige Kraten",
     ["ma_HideMapsCharButton"] = "Verstecke Karten",
-    ["ma_LearnLangButton"] = "Alle Sprachen",--remove
+    ["ma_LearnLangButton"] = "Alle Sprachen",
     ["ma_Learn"] = "lernen",
     ["ma_Modify"] = "modifizieren",
     ["ma_Reset"] = "Reset",

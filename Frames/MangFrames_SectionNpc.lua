@@ -40,13 +40,13 @@ function MangAdmin:CreateNpcSection()
     group = "npc",
     parent = ma_midframe,
     size = {
-      width = 210,
-      height = 210
+      width = 140,
+      height = 200
     },
     setpoint = {
-      pos = "TOPLEFT",
-      offX = 10,
-      offY = -35
+      pos = "BOTTOMLEFT",
+      offX = 0,
+      offY = 0
     },
     inherits = nil
   })
@@ -60,13 +60,13 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
-      height = 20
+      width = 25,
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 10,
-      offY = -10
+      offX = 28,
+      offY = -35
     },
     text = "<<="
   })
@@ -80,13 +80,13 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 30,
-      height = 20
+      width = 25,
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 44,
-      offY = -10
+      offX = 54,
+      offY = -35
     },
     text = "=>>"
   })
@@ -101,12 +101,12 @@ function MangAdmin:CreateNpcSection()
     },
     size = {
       width = 15,
-      height = 20
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 80,
-      offY = -10
+      offX = 81,
+      offY = -35
     },
     text = "+"
   })
@@ -121,12 +121,12 @@ function MangAdmin:CreateNpcSection()
     },
     size = {
       width = 15,
-      height = 20
+      height = 15
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 100,
-      offY = -10
+      offX = 97,
+      offY = -35
     },
     text = "-"
   })
@@ -205,7 +205,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -10
     },
     text = Locale["ma_NPCGUIDButton"]
@@ -225,7 +225,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -34
     },
     text = Locale["ma_NPCInfoButton"]
@@ -245,7 +245,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -58
     },
     text = Locale["ma_NPCDemorph"]
@@ -265,7 +265,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -35
     },
     text = Locale["ma_NPCMove"]
@@ -285,7 +285,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -10
     },
     text = Locale["ma_NPCDel"]
@@ -305,7 +305,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -60
     },
     text = Locale["ma_NPCGo"]
@@ -620,7 +620,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -180
     },
     text = Locale["ma_NPCSay"]
@@ -640,7 +640,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -180
     },
     text = Locale["ma_NPCYell"]
@@ -680,7 +680,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -205
     },
     text = Locale["ma_NPCUnAura"]
@@ -720,7 +720,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -82
     },
     text = Locale["ma_NPCUnBindsight"]
@@ -740,7 +740,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 395,
+      offX = 388,
       offY = -82
     },
     text = Locale["ma_NPCComeToMe"]
@@ -780,7 +780,7 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 310,
+      offX = 307,
       offY = -106
     },
     text = Locale["ma_npcunpossess"]

@@ -94,7 +94,7 @@ function Return_ruRU()
     ["ma_LearnAllButton"] = "Все спеллы",
     ["ma_LearnCraftsButton"] = "Все профессии и рецепты",
     ["ma_LearnGMButton"] = "Спеллы ГМ-а по умолчанию",
-    ["ma_LearnLangButton"] = "Все языки",--remove
+    ["ma_LearnLangButton"] = "Все языки",
     ["ma_LearnClassButton"] = "Все классовые спеллы",
     ["ma_SearchButton"] = "Поиск...",
     ["ma_ResetButton"] = "Очистить",
