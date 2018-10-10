@@ -35,7 +35,6 @@ Commands\Commands_Main.lua
 Commands\Commands_Tele.lua
 Commands\Commands_Log.lua
 Commands\Commands_Char.lua
-Commands\Commands_Char2.lua
 Commands\Commands_Ticket.lua
 Commands\Commands_Misc.lua
 Commands\Commands_Server.lua
@@ -63,7 +62,6 @@ Frames\MangFrames_SectionMain.lua
 Frames\MangFrames_SectionTele.lua
 Frames\MangFrames_SectionLog.lua
 Frames\MangFrames_SectionChar.lua
-Frames\MangFrames_SectionChar2.lua
 Frames\MangFrames_SectionTicket.lua
 Frames\MangFrames_SectionMisc.lua
 Frames\MangFrames_SectionServer.lua

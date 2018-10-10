@@ -1,5 +1,10 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 50 - 10/10/2018]=-
+- Char Corrections/Adjustments:
+    - Merged CHAR2 tab into CHAR
+    - Removed CHAR2 Tab
+
 ### -=[ Revision 49 - 10/06/2018]=-
 - Char Corrections/Adjustments:
     - Changed button layout/Corrected alignment

@@ -153,7 +153,7 @@ function InitControls()
   UIDropDownMenu_Initialize(ma_resetdropdown, ResetDropDownInitialize)
   UIDropDownMenu_SetWidth(ma_resetdropdown, 100)
   UIDropDownMenu_SetButtonWidth(ma_resetdropdown, 20)
---[[Char2 Tab]]
+
   MangAdmin:PrepareScript(ma_banbutton            , Locale["tt_banbutton"]          , function() BanButton() end)
   MangAdmin:PrepareScript(ma_gonamebutton         , Locale["tt_gonamebutton"]       , function() GoNameButton() end)
   MangAdmin:PrepareScript(ma_createguildbutton    , Locale["tt_createguildbutton"]  , function() CreateGuildButton() end)
