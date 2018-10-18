@@ -309,7 +309,6 @@ function Return_enUS()
     ["ma_charunpossess"]              = "UnPossess",
     ["ma_charrecall"]                 = "Recall",
     ["ma_charrepair"]                 = "Repair",
-    ["ma_ParameterizedCommands"]      = "Parameterized Commands",
     ["ma_banbutton"]                  = "Ban",
     ["ma_gonamebutton"]               = "Appear",
     ["ma_createguildbutton"]          = "G Create",
@@ -611,46 +610,6 @@ function Return_enUS()
 
 
 
---[[PvP Tab]]
-    ["tabmenu_pvp"]                   = "PvP",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[Event Tab]]
-    ["tabmenu_event"]                 = "EVENT",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[RPG Tab]]
-    ["tabmenu_rpg"]                   = "RPG",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[Vendor Tab]]
-    ["tabmenu_vendor"]                = "VENDOR",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[AhBot Tab]]
-    ["tabmenu_ahbot"]                 = "AHBOT",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-  
-
-    
 --[[Who Tab]]
     ["tabmenu_who"]                   = "WHO",
     ["tt_whotabmenubutton"]           = "Toggle a window which allows control of Who commands.",

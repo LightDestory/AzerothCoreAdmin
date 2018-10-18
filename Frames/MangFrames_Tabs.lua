@@ -297,137 +297,7 @@ function MangAdmin:CreateTabs()
     },
     text = Locale["tabmenu_Log"]
   })
-  
-  FrameLib:BuildButton({
-    name = "ma_tabbutton_pvp",
-    group = "tabbuttons",
-    parent = ma_topframe,
-    texture = {
-      name = "ma_tabbutton_pvp_texture",
-      color = {color.bg.r, color.bg.g, color.bg.b, transparency.bg},
-      gradient = {
-        orientation = "vertical",
-        min = {102,102,102,0},
-        max = {color.bg.r, color.bg.g, color.bg.b, transparency.bg}
-      }
-    },
-    size = {
-      width = 35,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_tabbutton_log",
-      relPos = "TOPRIGHT",
-      offX = 2
-    },
-    text = Locale["tabmenu_pvp"]
-  })
 
-  FrameLib:BuildButton({
-    name = "ma_tabbutton_event",
-    group = "tabbuttons",
-    parent = ma_topframe,
-    texture = {
-      name = "ma_tabbutton_event_texture",
-      color = {color.bg.r, color.bg.g, color.bg.b, transparency.bg},
-      gradient = {
-        orientation = "vertical",
-        min = {102,102,102,0},
-        max = {color.bg.r, color.bg.g, color.bg.b, transparency.bg}
-      }
-    },
-    size = {
-      width = 40,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_tabbutton_pvp",
-      relPos = "TOPRIGHT",
-      offX = 2
-    },
-    text = Locale["tabmenu_event"]
-  })
-
-  FrameLib:BuildButton({
-    name = "ma_tabbutton_rpg",
-    group = "tabbuttons",
-    parent = ma_topframe,
-    texture = {
-      name = "ma_tabbutton_rpg_texture",
-      color = {color.bg.r, color.bg.g, color.bg.b, transparency.bg},
-      gradient = {
-        orientation = "vertical",
-        min = {102,102,102,0},
-        max = {color.bg.r, color.bg.g, color.bg.b, transparency.bg}
-      }
-    },
-    size = {
-      width = 35,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_tabbutton_event",
-      relPos = "TOPRIGHT",
-      offX = 2
-    },
-    text = Locale["tabmenu_rpg"]
-  })
-  
-  FrameLib:BuildButton({
-    name = "ma_tabbutton_vendor",
-    group = "tabbuttons",
-    parent = ma_topframe,
-    texture = {
-      name = "ma_tabbutton_vendor_texture",
-      color = {color.bg.r, color.bg.g, color.bg.b, transparency.bg},
-      gradient = {
-        orientation = "vertical",
-        min = {102,102,102,0},
-        max = {color.bg.r, color.bg.g, color.bg.b, transparency.bg}
-      }
-    },
-    size = {
-      width = 40,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_tabbutton_rpg",
-      relPos = "TOPRIGHT",
-      offX = 2
-    },
-    text = Locale["tabmenu_vendor"]
-  })
-  
-  FrameLib:BuildButton({
-    name = "ma_tabbutton_ahbot",
-    group = "tabbuttons",
-    parent = ma_topframe,
-    texture = {
-      name = "ma_tabbutton_ahbot_texture",
-      color = {color.bg.r, color.bg.g, color.bg.b, transparency.bg},
-      gradient = {
-        orientation = "vertical",
-        min = {102,102,102,0},
-        max = {color.bg.r, color.bg.g, color.bg.b, transparency.bg}
-      }
-    },
-    size = {
-      width = 40,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_tabbutton_vendor",
-      relPos = "TOPRIGHT",
-      offX = 2
-    },
-    text = Locale["tabmenu_ahbot"]
-  })
-  
   FrameLib:BuildButton({
     name = "ma_tabbutton_who",
     group = "tabbuttons",
@@ -447,7 +317,7 @@ function MangAdmin:CreateTabs()
     },
     setpoint = {
       pos = "TOPLEFT",
-      relTo = "ma_tabbutton_ahbot",
+      relTo = "ma_tabbutton_log",
       relPos = "TOPRIGHT",
       offX = 2
     },
