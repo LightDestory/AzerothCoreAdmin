@@ -216,7 +216,7 @@ function MangAdmin:CreateTabs()
       relPos = "TOPRIGHT",
       offX = 2
     },
-    text = Locale["tabmenu_Ticket"]
+    text = Locale["tabmenu_ticket"]
   })
 
   FrameLib:BuildButton({
@@ -269,7 +269,7 @@ function MangAdmin:CreateTabs()
       relPos = "TOPRIGHT",
       offX = 2
     },
-    text = Locale["tabmenu_Server"]
+    text = Locale["tabmenu_server"]
   })
 
   FrameLib:BuildButton({
@@ -295,7 +295,7 @@ function MangAdmin:CreateTabs()
       relPos = "TOPRIGHT",
       offX = 2
     },
-    text = Locale["tabmenu_Log"]
+    text = Locale["tabmenu_log"]
   })
 
   FrameLib:BuildButton({

@@ -309,116 +309,6 @@ function MangAdmin:CreateMiniMenu()
     text = "Lo"
   })
   
-  FrameLib:BuildButton({
-    name = "ma_mm_pvpbutton",
-    group = "minimenu",
-    parent = ma_miniframe,
-    texture = {
-      name = "ma_mm_pvpbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 20,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_mm_logbutton",
-      relPos = "BOTTOMLEFT",
-      offX = 0,
-      offY = -2
-    },
-    text = "Pv"
-  })
-  
-    FrameLib:BuildButton({
-    name = "ma_mm_eventbutton",
-    group = "minimenu",
-    parent = ma_miniframe,
-    texture = {
-      name = "ma_mm_eventbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 20,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_mm_pvpbutton",
-      relPos = "BOTTOMLEFT",
-      offX = 0,
-      offY = -2
-    },
-    text = "Ev"
-  })
-  
-    FrameLib:BuildButton({
-    name = "ma_mm_rpgbutton",
-    group = "minimenu",
-    parent = ma_miniframe,
-    texture = {
-      name = "ma_mm_rpgbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 20,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_mm_eventbutton",
-      relPos = "BOTTOMLEFT",
-      offX = 0,
-      offY = -2
-    },
-    text = "Rp"
-  })
-  
-    FrameLib:BuildButton({
-    name = "ma_mm_vendorbutton",
-    group = "minimenu",
-    parent = ma_miniframe,
-    texture = {
-      name = "ma_mm_vendorbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 20,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_mm_rpgbutton",
-      relPos = "BOTTOMLEFT",
-      offX = 0,
-      offY = -2
-    },
-    text = "Ve"
-  })
-  
-    FrameLib:BuildButton({
-    name = "ma_mm_ahbotbutton",
-    group = "minimenu",
-    parent = ma_miniframe,
-    texture = {
-      name = "ma_mm_ahbotbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 20,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_mm_vendorbutton",
-      relPos = "BOTTOMLEFT",
-      offX = 0,
-      offY = -2
-    },
-    text = "Ah"
-  })
-  
     FrameLib:BuildButton({
     name = "ma_mm_whobutton",
     group = "minimenu",
@@ -433,7 +323,7 @@ function MangAdmin:CreateMiniMenu()
     },
     setpoint = {
       pos = "TOPLEFT",
-      relTo = "ma_mm_ahbotbutton",
+      relTo = "ma_mm_logbutton",
       relPos = "BOTTOMLEFT",
       offX = 0,
       offY = -2
@@ -441,7 +331,7 @@ function MangAdmin:CreateMiniMenu()
     text = "Wh"
   })
   
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --This button shops up in the center of the screen when you die!
     name = "ma_mm_revivebutton",
     group = "noneyet",
     parent = UIParent,

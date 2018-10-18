@@ -532,7 +532,7 @@ function Return_enUS()
 
 --[[Tickets Tab]]
   --[[Name]]
-    ["tabmenu_Ticket"]                = "TICKETS",
+    ["tabmenu_ticket"]                = "TICKETS",
     ["tt_TicketButton"]               = "Toggle a window which shows all tickets and lets you administrate them.",
   --[[Tooltips]]
   --[[Control Labels]]
@@ -589,7 +589,7 @@ function Return_enUS()
 
 
 --[[Server Tab]]
-    ["tabmenu_Server"]                = "SERVER",
+    ["tabmenu_server"]                = "SERVER",
     ["tt_ServerButton"]               = "Show several server informations and do actions concerning the server.",
   --[[Tooltips]]
     ["tt_AnnounceButton"]             = "Announce a system message.",
@@ -602,7 +602,7 @@ function Return_enUS()
 
 
 --[[Log Tab]]
-    ["tabmenu_Log"]                   = "LOG",
+    ["tabmenu_log"]                   = "LOG",
     ["tt_LogButton"]                  = "Show the log of all actions done with TrinityAdmin.",
   --[[Tooltips]]
   --[[Control Labels]]
