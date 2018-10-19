@@ -1,5 +1,18 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 52 - 10/18/2018]=-
+- TAB Corrections/Adjustments:
+    - Merged CHAR2 tab into CHAR
+    - Removed NPC2 Tab
+
+### -=[ Revision 51 - 10/14/2018]=-
+- TAB Corrections/Adjustments:
+    - Removed PvP Tab
+    - Removed EVENT Tab
+    - Removed RPG Tab
+    - Removed VENDOR Tab
+    - Removed AhBOT Tab
+
 ### -=[ Revision 50 - 10/10/2018]=-
 - Char Corrections/Adjustments:
     - Merged CHAR2 tab into CHAR
