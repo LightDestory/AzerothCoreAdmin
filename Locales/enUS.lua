@@ -426,6 +426,18 @@ function Return_enUS()
     ["tt_npccometome"]                = "Forces the selected NPC to come to your location. Location NOT stored in DB.",
     ["tt_npcpossess"]                 = "Indefinitely possesses the selected creature",
     ["tt_npcunpossess"]               = "Unpossesses the selected creature",
+    ["tt_NPCFreezeButton"]            = "Stops movement of the selected NPC, saving Waypoints",
+    ["tt_NPCFreezeDelButton"]         = "Stops movement of the selected NPC, NOT saving Waypoints",
+    ["tt_WayEndAdd"]                  = "Adds a waypoint to the end of the existing stack",
+    ["tt_NPCAddWay"]                  = "Adds a waypoint to the stack. Creature GUID must be in below box",
+    ["tt_WayMAdd"]                    = "Adds a waypoint to selected creatures existing move stack",
+    ["tt_WayModifyDel"]               = "Deletes the selected waypoint from creatures existing move stack",
+    ["tt_WayShow0"]                   = "Stops showing waypoints for selected creature.",
+    ["tt_WayShow1"]                   = "Show waypoints for selected creature.",
+    ["tt_NPCAdd_WayShowOn"]           = "shows waypoints for the selected creature",
+    ["tt_NPCUnFreeze_RandomButton"]   = "Allows random movement of the selected NPC.",
+    ["tt_NPCUnFreeze_WayButton"]      = "Allows waypoint movement of the selected NPC.",
+    ["tt_MoveStackButton"]            = "Shows movement stack of the selected character.",
   --[[Control Labels]]
     ["Morph"]                         = "Morph",
     ["ma_NPCKillButton"]              = "Kill",
@@ -445,19 +457,12 @@ function Return_enUS()
     ["ma_NPCAura"]                    = "NPC Aura",
     ["ma_NPCUnAura"]                  = "NPC Unaura",
     ["ma_ParameterBox"]               = "Params",
-    ["ma_DistanceBox"]                = "Distance", --Added for NPC2 tab Distance textbox (Patch 19)
-    ["ma_PlayEmote"]                  = "Play Emote",
+    ["ma_DistanceBox"]                = "Distance",
     ["ma_NPCBindsight"]               = "Bindsight",
     ["ma_NPCUnBindsight"]             = "UnBindsight",
     ["ma_NPCComeToMe"]                = "ComeToMe",
     ["ma_npcpossess"]                 = "Possess",
     ["ma_npcunpossess"]               = "UnPossess",
-  --[[Other]]
-
---[[NPC2 Tab]]
-  --[[Name]]
-    ["tabmenu_NPC2"]                  = "NPC2",
-    ["tt_Npc2Button"]                 = "Toggle a window with npc related functions.",
     ["ma_WayShow1"]                   = "WayShowOn",
     ["ma_WayShow0"]                   = "WayShowOff",
     ["ma_MoveStackButton"]            = "Show Moves",
@@ -470,18 +475,7 @@ function Return_enUS()
     ["ma_WayEndAdd"]                  = "WayEndAdd",
     ["ma_WayAdd"]                     = "WayAdd",
     ["ma_WayShow"]                    = "WayShow",
-    ["tt_NPCFreezeButton"]            = "Stops movement of the selected NPC, saving Waypoints",
-    ["tt_NPCFreezeDelButton"]         = "Stops movement of the selected NPC, NOT saving Waypoints",
-    ["tt_WayEndAdd"]                  = "Adds a waypoint to the end of the existing stack",
-    ["tt_NPCAddWay"]                  = "Adds a waypoint to the stack. Creature GUID must be in below box",
-    ["tt_WayMAdd"]                    = "Adds a waypoint to selected creatures existing move stack",
-    ["tt_WayModifyDel"]               = "Deletes the selected waypoint from creatures existing move stack",
-    ["tt_WayShow0"]                   = "Stops showing waypoints for selected creature.",
-    ["tt_WayShow1"]                   = "Show waypoints for selected creature.",
-    ["tt_NPCAdd_WayShowOn"]           = "shows waypoints for the selected creature",
-    ["tt_NPCUnFreeze_RandomButton"]   = "Allows random movement of the selected NPC.",
-    ["tt_NPCUnFreeze_WayButton"]      = "Allows waypoint movement of the selected NPC.",
-    ["tt_MoveStackButton"]            = "Shows movement stack of the selected character.",
+  --[[Other]]
 
 
 

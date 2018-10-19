@@ -115,32 +115,6 @@ function MangAdmin:CreateTabs()
   })
 
   FrameLib:BuildButton({
-    name = "ma_tabbutton_npc2",
-    group = "tabbuttons",
-    parent = ma_topframe,
-    texture = {
-      name = "ma_tabbutton_npc2_texture",
-      color = {color.bg.r, color.bg.g, color.bg.b, transparency.bg},
-      gradient = {
-        orientation = "vertical",
-        min = {102,102,102,0},
-        max = {color.bg.r, color.bg.g, color.bg.b, transparency.bg}
-      }
-    },
-    size = {
-      width = 35,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_tabbutton_npc",
-      relPos = "TOPRIGHT",
-      offX = 2
-    },
-    text = Locale["tabmenu_NPC2"]
-  })
-
-  FrameLib:BuildButton({
     name = "ma_tabbutton_go",
     group = "tabbuttons",
     parent = ma_topframe,
@@ -159,7 +133,7 @@ function MangAdmin:CreateTabs()
     },
     setpoint = {
       pos = "TOPLEFT",
-      relTo = "ma_tabbutton_npc2",
+      relTo = "ma_tabbutton_npc",
       relPos = "TOPRIGHT",
       offX = 2
     },

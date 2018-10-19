@@ -218,8 +218,6 @@ function InitControls()
   MangAdmin:PrepareScript(ma_npccometomebutton    , Locale["tt_npccometome"]         , function() NPCComeToMe() end)
   MangAdmin:PrepareScript(ma_npcpossessbutton     , Locale["tt_npcpossess"]          , function() NPCPossess() end)
   MangAdmin:PrepareScript(ma_npcunpossessbutton   , Locale["tt_npcunpossess"]        , function() NPCUnPossess() end)
-
---[[NPC2 Tab]]
   MangAdmin:PrepareScript(ma_npcfreezebutton      , Locale["tt_NPCFreezeButton"]    , function() NPCFreeze() end)
   MangAdmin:PrepareScript(ma_npcfreezedelbutton   , Locale["tt_NPCFreezeDelButton"] , function() NPCFreezeDEL() end)
   MangAdmin:PrepareScript(ma_way_endaddbutton     , Locale["tt_WayEndAdd"]          , function() WayEndAdd() end)

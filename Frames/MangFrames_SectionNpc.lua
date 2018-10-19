@@ -786,4 +786,277 @@ function MangAdmin:CreateNpcSection()
     text = Locale["ma_npcunpossess"]
   })
 
+
+  --[[NPC2 copy over]]
+
+  FrameLib:BuildButton({
+    name = "ma_npcfreezebutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_npcfreezebutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 12,
+      offY = -12
+    },
+    text = Locale["ma_NPCFreezeButton"]
+  })
+  
+  FrameLib:BuildButton({
+    name = "ma_npcfreezedelbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_npcfreezedelbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 97,
+      offY = -12
+    },
+    --text = "NPCStayDEL"
+    text = Locale["ma_WayAllDel"]
+  })
+
+  FrameLib:BuildButton({
+    name = "ma_way_endaddbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_way_endaddbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 182,
+      offY = -12
+    },
+    text = Locale["ma_WayEndAdd"]
+  })
+
+  FrameLib:BuildButton({
+    name = "ma_npcunfreeze_addwaybutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "npcunfreeze_addwaybutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 12,
+      offY = -37
+    },
+    text = Locale["ma_WayAdd"]
+  })
+  
+  FrameLib:BuildButton({
+    name = "ma_way_modifyaddbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_way_modifyaddbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 97,
+      offY = -37
+    },
+    text = Locale["ma_WayMAdd"]
+  })
+
+  FrameLib:BuildButton({
+    name = "ma_way_modifydelbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_way_modifydelbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 182,
+      offY = -37
+    },
+    text = Locale["ma_WayMDel"]
+  })
+
+  FrameLib:BuildButton({
+    name = "ma_way_showonbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_way_showonbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 12,
+      offY = -62
+    },
+    text = Locale["ma_WayShow1"]
+  })
+  
+  FrameLib:BuildButton({
+    name = "ma_way_showoffbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_way_showoffbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 97,
+      offY = -62
+    },
+    text = Locale["ma_WayShow0"]
+  })
+ 
+  FrameLib:BuildButton({
+    name = "ma_npcunfreeze_addway_showonbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_npcunfreeze_addway_showonbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 182,
+      offY = -62
+    },
+    text = Locale["ma_WayShow"]
+  })
+ 
+  FrameLib:BuildButton({
+    name = "ma_npcunfreeze_waybutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_npcunfreeze_waybutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 12,
+      offY = -87
+    },
+    text = Locale["ma_NPCUnFreeze_WayButton"]
+  })
+
+  FrameLib:BuildButton({
+    name = "ma_npcunfreeze_randombutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_npcunfreeze_randombutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 97,
+      offY = -87
+    },
+    text = Locale["ma_NPCUnFreeze_RandomButton"]
+  })
+
+  FrameLib:BuildFrame({
+    type = "EditBox",
+    name = "ma_npcunfreeze_random_distancebutton",	-- ma_npccharactertarget
+    group = "npc",
+    parent = ma_midframe,
+    size = {
+      width = 75,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 102,
+      offY = -110
+    },
+    inherits = "InputBoxTemplate"
+  })
+  
+  FrameLib:BuildButton({
+    name = "ma_movestackbutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_movestackbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 182,
+      offY = -87
+    },
+    text = Locale["ma_MoveStackButton"]
+  })
+
+  FrameLib:BuildFontString({
+    name = "ma_npcdistanceboxtext",
+    group = "npc",
+    parent = ma_midframe,
+    text = Locale["ma_DistanceBox"],
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 55,
+      offY = -115
+    }
+  })
+
 end

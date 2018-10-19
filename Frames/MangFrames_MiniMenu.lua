@@ -154,27 +154,6 @@ function MangAdmin:CreateMiniMenu()
     text = "Np"
   })
 
-    FrameLib:BuildButton({
-    name = "ma_mm_npc2button",
-    group = "minimenu",
-    parent = ma_miniframe,
-    texture = {
-      name = "ma_mm_npc2button_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 20,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      relTo = "ma_mm_npcbutton",
-      relPos = "BOTTOMLEFT",
-      offX = 0,
-      offY = -2
-    },
-    text = "N2"
-  })
 
   FrameLib:BuildButton({
     name = "ma_mm_gobutton",
@@ -190,7 +169,7 @@ function MangAdmin:CreateMiniMenu()
     },
     setpoint = {
       pos = "TOPLEFT",
-      relTo = "ma_mm_npc2button",
+      relTo = "ma_mm_npcbutton",
       relPos = "BOTTOMLEFT",
       offX = 0,
       offY = -2
