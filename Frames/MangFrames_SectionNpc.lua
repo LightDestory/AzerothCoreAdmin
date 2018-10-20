@@ -145,8 +145,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -10
+      offX = 140, --charColOne
+      offY = -30 --charRowOne
     },
     text = Locale["ma_NPCKillButton"]
   })
@@ -165,8 +165,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -34
+      offX = 222, --charColTwo
+      offY = -30 --charRowOne
     },
     text = Locale["ma_Respawn"]
   })
@@ -185,8 +185,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -58
+      offX = 140, --charColOne
+      offY = -160 --charRowSeven
     },
     text = Locale["ma_NPCDistanceButton"]
   })
@@ -205,8 +205,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 307,
-      offY = -10
+      offX = 548, --charColSix
+      offY = -160 --charRowSeven
     },
     text = Locale["ma_NPCGUIDButton"]
   })
@@ -225,32 +225,12 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 307,
-      offY = -34
+      offX = 303, --charColThree
+      offY = -52 --charRowTwo
     },
     text = Locale["ma_NPCInfoButton"]
   })
-  
-  FrameLib:BuildButton({
-    name = "ma_npcdemorphbutton",
-    group = "npc",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_npcdemorphbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 80,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 307,
-      offY = -58
-    },
-    text = Locale["ma_NPCDemorph"]
-  })
-  
+ 
   FrameLib:BuildButton({
     name = "ma_npcmovebutton",
     group = "npc",
@@ -265,8 +245,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 388,
-      offY = -35
+      offX = 303, --charColThree
+      offY = -95 --charRowFour
     },
     text = Locale["ma_NPCMove"]
   })
@@ -285,8 +265,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 388,
-      offY = -10
+      offX = 303, --charColThree
+      offY = -74  --charRowThree
     },
     text = Locale["ma_NPCDel"]
   })
@@ -305,36 +285,14 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 388,
-      offY = -60
+      offX = 303, --charColThree
+      offY = -117 --charRowFive
     },
     text = Locale["ma_NPCGo"]
   })
 
-
-
-  
-  FrameLib:BuildButton({
-    name = "ma_npcemotebutton",
-    group = "npc",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_npcemotebutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 80,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 660,
-      offY = -15
-    },
-    text = Locale["ma_PlayEmote"]
-  })
-
-  FrameLib:BuildFrame({
+  --[[First Dropdown Menu]]--
+  FrameLib:BuildFrame({ 
     name = "ma_npcemotedropdown",
     group = "npc",
     parent = ma_midframe,
@@ -344,8 +302,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 525,
-      offY = -10
+      offX = -15,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
   })
@@ -359,17 +317,18 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 80,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 660,
-      offY = -39
+      offX = 120,
+      offY = -4
     },
-    text = Locale["ma_PlayEmote"]
+    text = Locale["ma_PlayEmote1"]
   })
 
+  --[[Second Dropdown Menu]]
   FrameLib:BuildFrame({
     name = "ma_npcemotedropdown_a",
     group = "npc",
@@ -380,10 +339,30 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 525,
-      offY = -34
+      offX = 150,
+      offY = 0
     },
     inherits = "UIDropDownMenuTemplate"
+  })
+
+  FrameLib:BuildButton({
+    name = "ma_npcemotebutton",
+    group = "npc",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_npcemotebutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 40,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 285,
+      offY = -4
+    },
+    text = Locale["ma_PlayEmote2"]
   })
   
   FrameLib:BuildButton({
@@ -400,8 +379,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -230
+      offX = 385, --charColFour
+      offY = -204 --charRowNine
     },
     text = "<<"
     })
@@ -417,8 +396,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 580,
-      offY = -230
+      offX = 467, --charColFive
+      offY = -204 --charRowNine
     },
     inherits = "InputBoxTemplate"
   })
@@ -437,8 +416,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 665,
-      offY = -230
+      offX = 548, --charColSix
+      offY = -204 --charRowNine
     },
     text = ">>"
     })
@@ -454,8 +433,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 580,
-      offY = -205
+      offX = 467, --charColFive
+      offY = -182 --charRowEight
     },
     inherits = "InputBoxTemplate"
   })
@@ -469,13 +448,13 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 20,
+      width = 39,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 690,
-      offY = -205
+      offX = 589,
+      offY = -182 --charRowEight
     },
     text = ">>"
   })
@@ -489,13 +468,13 @@ function MangAdmin:CreateNpcSection()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 20,
+      width = 40,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 665,
-      offY = -205
+      offX = 548,
+      offY = -182 --charRowEight
     },
     text = "<<"
   })
@@ -514,8 +493,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -205
+      offX = 385, --charColFour
+      offY = -182 --charRowEight
     },
     text = Locale["ma_NPCAdd"]
   })
@@ -534,8 +513,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 490,
-      offY = -180
+      offX = 385, --charColFour
+      offY = -160 --charRowSeven
     },
     text = Locale["ma_getguid"]
   })
@@ -551,8 +530,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 580,
-      offY = -180
+      offX = 467, --charColFive
+      offY = -160 --charRowSeven
     },
     inherits = "InputBoxTemplate"
   })
@@ -564,29 +543,30 @@ function MangAdmin:CreateNpcSection()
     text = Locale["ma_ParameterBox"],
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -230
+      offX = 140, --charColOne
+      offY = -231
     }
   })
   
+  --[[Parameter Box Input]]
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_npccharactertarget",
     group = "npc",
     parent = ma_midframe,
     size = {
-      width = 200,
+      width = 120,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 280,
-      offY = -230
+      offX = 180,
+      offY = -225 --charRowTen
     },
     inherits = "InputBoxTemplate"
   })
 
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --Morph
     name = "ma_npcmorphbutton",
     group = "npc",
     parent = ma_midframe,
@@ -600,10 +580,30 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -180
+      offX = 303, --charColThree
+      offY = -182 --charRowEight
     },
     text = Locale["ma_NPCMorph"]
+    })
+
+    FrameLib:BuildButton({ --Demorph
+      name = "ma_npcdemorphbutton",
+      group = "npc",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_npcdemorphbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 80,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 303, --charColThree
+        offY = -204 --charRowNine
+      },
+      text = Locale["ma_NPCDemorph"]
     })
     
   FrameLib:BuildButton({
@@ -620,8 +620,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 307,
-      offY = -180
+      offX = 303, --charColThree
+      offY = -139 --charRowSix
     },
     text = Locale["ma_NPCSay"]
     })
@@ -640,8 +640,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 388,
-      offY = -180
+      offX = 303, --charColThree
+      offY = -160 --charRowSeven
     },
     text = Locale["ma_NPCYell"]
     })
@@ -660,8 +660,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -205
+      offX = 140, --charColOne
+      offY = -204 --charRowNine
     },
     text = Locale["ma_NPCAura"]
     })
@@ -680,8 +680,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 307,
-      offY = -205
+      offX = 222, --charColTwo
+      offY = -204 --charRowNine
     },
     text = Locale["ma_NPCUnAura"]
     })
@@ -700,8 +700,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -82
+      offX = 140, --charColOne
+      offY = -182 --charRowEight
     },
     text = Locale["ma_NPCBindsight"]
   })
@@ -720,8 +720,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 307,
-      offY = -82
+      offX = 222, --charColTwo
+      offY = -182 --charRowEight
     },
     text = Locale["ma_NPCUnBindsight"]
   })
@@ -740,8 +740,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 388,
-      offY = -82
+      offX = 222, --charColTwo
+      offY = -160 --charRowSeven
     },
     text = Locale["ma_NPCComeToMe"]
   })
@@ -760,8 +760,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 225,
-      offY = -106
+      offX = 140, --charColOne
+      offY = -139 --charRowSix
     },
     text = Locale["ma_npcpossess"]
   })
@@ -780,14 +780,14 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 307,
-      offY = -106
+      offX = 222, --charColTwo
+      offY = -139 --charRowSix
     },
     text = Locale["ma_npcunpossess"]
   })
 
 
-  --[[NPC2 copy over]]
+  --[[NPC2 copy over]]--
 
   FrameLib:BuildButton({
     name = "ma_npcfreezebutton",
@@ -803,8 +803,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 12,
-      offY = -12
+      offX = 140, --charColOne
+      offY = -52 --charRowTwo
     },
     text = Locale["ma_NPCFreezeButton"]
   })
@@ -823,8 +823,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 97,
-      offY = -12
+      offX = 222, --charColTwo
+      offY = -52 --charRowTwo
     },
     --text = "NPCStayDEL"
     text = Locale["ma_WayAllDel"]
@@ -844,8 +844,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 182,
-      offY = -12
+      offX = 140, --charColOne
+      offY = -95 --charRowFour
     },
     text = Locale["ma_WayEndAdd"]
   })
@@ -864,8 +864,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 12,
-      offY = -37
+      offX = 140, --charColOne
+      offY = -74 --charRowThree
     },
     text = Locale["ma_WayAdd"]
   })
@@ -884,8 +884,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 97,
-      offY = -37
+      offX = 140, --charColOne
+      offY = -117 --charRowFive
     },
     text = Locale["ma_WayMAdd"]
   })
@@ -904,8 +904,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 182,
-      offY = -37
+      offX = 222, --charColTwo
+      offY = -117 --charRowFive
     },
     text = Locale["ma_WayMDel"]
   })
@@ -924,8 +924,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 12,
-      offY = -62
+      offX = 222, --charColTwo
+      offY = -74  --charRowThree
     },
     text = Locale["ma_WayShow1"]
   })
@@ -944,8 +944,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 97,
-      offY = -62
+      offX = 222, --charColTwo
+      offY = -95 --charRowFour
     },
     text = Locale["ma_WayShow0"]
   })
@@ -964,8 +964,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 182,
-      offY = -62
+      offX = 385, --charColFour
+      offY = -74  --charRowThree
     },
     text = Locale["ma_WayShow"]
   })
@@ -984,8 +984,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 12,
-      offY = -87
+      offX = 385, --charColFour
+      offY = -95 --charRowFour
     },
     text = Locale["ma_NPCUnFreeze_WayButton"]
   })
@@ -1004,8 +1004,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 97,
-      offY = -87
+      offX = 385, --charColFour
+      offY = -139 --charRowSix
     },
     text = Locale["ma_NPCUnFreeze_RandomButton"]
   })
@@ -1016,13 +1016,13 @@ function MangAdmin:CreateNpcSection()
     group = "npc",
     parent = ma_midframe,
     size = {
-      width = 75,
+      width = 80,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 102,
-      offY = -110
+      offX = 467, --charColFive
+      offY = -139 --charRowSix
     },
     inherits = "InputBoxTemplate"
   })
@@ -1041,8 +1041,8 @@ function MangAdmin:CreateNpcSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 182,
-      offY = -87
+      offX = 385, --charColFour
+      offY = -117 --charRowFive
     },
     text = Locale["ma_MoveStackButton"]
   })
@@ -1054,8 +1054,8 @@ function MangAdmin:CreateNpcSection()
     text = Locale["ma_DistanceBox"],
     setpoint = {
       pos = "TOPLEFT",
-      offX = 55,
-      offY = -115
+      offX = 548, --charColSix
+      offY = -144
     }
   })
 

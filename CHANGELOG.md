@@ -1,5 +1,9 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 53 - 10/19/2018]=-
+- NPC Corrections/Adjustments:
+    - Changed button layout/corrected alignment
+
 ### -=[ Revision 52 - 10/18/2018]=-
 - TAB Corrections/Adjustments:
     - Merged CHAR2 tab into CHAR
