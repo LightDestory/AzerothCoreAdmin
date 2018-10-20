@@ -42,3 +42,4 @@ NOTE: These steps are required for locales to properly create the new local tabl
 
 ## SCREENSHOT:
 ![image](/Textures/TriniyAdminScreenshot.fw.png)
+![image](/Textures/TriniyAdminScreenshot1.fw.png)
