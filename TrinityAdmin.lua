@@ -34,7 +34,7 @@ gettingGOBinfo=0
 gettingGOBinfoinfo=0
 
 MAJOR_VERSION = "TrinityAdmin-4.3.4"
-MINOR_VERSION = "$Revision: 049 $"
+MINOR_VERSION = "$Revision: 053 $"
 ROOT_PATH     = "Interface\\AddOns\\TrinityAdmin\\"
 local cont = ""
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
@@ -148,11 +148,11 @@ MangAdmin:RegisterDefaults("account",
 Locale:EnableDynamicLocales(true)
 --Locale:EnableDebugging()
 Locale:RegisterTranslations("enUS", function() return Return_enUS() end)
-Locale:RegisterTranslations("frFR", function() return Return_frFR() end)
-Locale:RegisterTranslations("svSV", function() return Return_svSV() end)
-Locale:RegisterTranslations("deDE", function() return Return_deDE() end)
+--Locale:RegisterTranslations("frFR", function() return Return_frFR() end)
+--Locale:RegisterTranslations("svSV", function() return Return_svSV() end)
+--Locale:RegisterTranslations("deDE", function() return Return_deDE() end)
 --Locale:RegisterTranslations("ptBR", function() return Return_ptBR() end)
-Locale:RegisterTranslations("itIT", function() return Return_itIT() end)
+--Locale:RegisterTranslations("itIT", function() return Return_itIT() end)
 --Locale:RegisterTranslations("fiFI", function() return Return_fiFI() end)
 --Locale:RegisterTranslations("plPL", function() return Return_plPL() end)
 --Locale:RegisterTranslations("liLI", function() return Return_liLI() end)
@@ -168,11 +168,11 @@ Locale:RegisterTranslations("itIT", function() return Return_itIT() end)
 -- Register String Traslations
 Strings:EnableDynamicLocales(true)
 Strings:RegisterTranslations("enUS", function() return ReturnStrings_enUS() end)
-Strings:RegisterTranslations("frFR", function() return ReturnStrings_frFR() end)
-Strings:RegisterTranslations("svSV", function() return ReturnStrings_svSV() end)
-Strings:RegisterTranslations("deDE", function() return ReturnStrings_deDE() end)
+--Strings:RegisterTranslations("frFR", function() return ReturnStrings_frFR() end)
+--Strings:RegisterTranslations("svSV", function() return ReturnStrings_svSV() end)
+--Strings:RegisterTranslations("deDE", function() return ReturnStrings_deDE() end)
 --Strings:RegisterTranslations("ptBR", function() return ReturnStrings_ptBR() end)
-Strings:RegisterTranslations("itIT", function() return ReturnStrings_itIT() end)
+--Strings:RegisterTranslations("itIT", function() return ReturnStrings_itIT() end)
 --Strings:RegisterTranslations("fiFI", function() return ReturnStrings_fiFI() end)
 --Strings:RegisterTranslations("plPL", function() return ReturnStrings_plPL() end)
 --Strings:RegisterTranslations("liLI", function() return ReturnStrings_liLI() end)
@@ -576,20 +576,13 @@ end
 function MangAdmin:HideAllGroups()
   FrameLib:HandleGroup("main", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("char", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("char2", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("npc", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("npc2", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("go", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("tele", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("ticket", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("server", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("misc", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("log", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("pvp", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("event", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("rpg", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("vendor", function(frame) frame:Hide() end)
-  FrameLib:HandleGroup("ahbot", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("who", function(frame) frame:Hide() end)
 end
 
@@ -1740,7 +1733,7 @@ function MangAdmin:PrepareScript(object, text, script)
       end
     end
     if type(script) == "function" then
-      object:SetScript("OnClick", script)
+      object:SetScript("OnClick", script) --Creates A Bug
     elseif type(script) == "table" then
       for k,v in pairs(script) do
         object:SetScript(unpack(v))
@@ -1755,40 +1748,26 @@ function MangAdmin:InitButtons()
   -- start tab buttons
   self:PrepareScript(ma_tabbutton_main       , Locale["tt_MainButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
   self:PrepareScript(ma_tabbutton_char       , Locale["tt_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
-  self:PrepareScript(ma_tabbutton_char2      , Locale["tt_Char2Button"]        , function() MangAdmin:InstantGroupToggle("char2") end)
   self:PrepareScript(ma_tabbutton_npc        , Locale["tt_NpcButton"]          , function() MangAdmin:InstantGroupToggle("npc"); end)
-  self:PrepareScript(ma_tabbutton_npc2       , Locale["tt_Npc2Button"]         , function() MangAdmin:InstantGroupToggle("npc2"); end)
   self:PrepareScript(ma_tabbutton_go         , Locale["tt_GOButton"]           , function() MangAdmin:InstantGroupToggle("go"); end)
   self:PrepareScript(ma_tabbutton_tele       , Locale["tt_TeleButton"]         , function() MangAdmin:InstantGroupToggle("tele"); end)
   self:PrepareScript(ma_tabbutton_misc       , Locale["tt_MiscButton"]         , function() MangAdmin:InstantGroupToggle("misc") end)
   self:PrepareScript(ma_tabbutton_server     , Locale["tt_ServerButton"]       , function() MangAdmin:InstantGroupToggle("server") end)
   self:PrepareScript(ma_tabbutton_log        , Locale["tt_LogButton"]          , function() MangAdmin:InstantGroupToggle("log") end)
-  self:PrepareScript(ma_tabbutton_pvp        , nil          , function() MangAdmin:InstantGroupToggle("pvp") end)
-  self:PrepareScript(ma_tabbutton_event      , nil          , function() MangAdmin:InstantGroupToggle("event") end)
-  self:PrepareScript(ma_tabbutton_rpg        , nil          , function() MangAdmin:InstantGroupToggle("rpg") end)
-  self:PrepareScript(ma_tabbutton_vendor     , nil          , function() MangAdmin:InstantGroupToggle("vendor") end)
-  self:PrepareScript(ma_tabbutton_ahbot      , nil          , function() MangAdmin:InstantGroupToggle("ahbot") end)
-  self:PrepareScript(ma_tabbutton_who        , nil          , function() MangAdmin:InstantGroupToggle("who") end)
+  self:PrepareScript(ma_tabbutton_who        , nil                             , function() MangAdmin:InstantGroupToggle("who") end)
   --end tab buttons
   -- start mini buttons
   self:PrepareScript(ma_mm_logoframe         , nil                             , function() MangAdmin:OnClick() end)
   self:PrepareScript(ma_mm_mainbutton        , Locale["tt_MainButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
   self:PrepareScript(ma_mm_charbutton        , Locale["tt_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
-  self:PrepareScript(ma_mm_char2button       , Locale["tt_Char2Button"]        , function() MangAdmin:InstantGroupToggle("char2") end)
   self:PrepareScript(ma_mm_npcbutton         , Locale["tt_NpcButton"]          , function() MangAdmin:InstantGroupToggle("npc") end)
-  self:PrepareScript(ma_mm_npc2button        , Locale["tt_Npc2Button"]         , function() MangAdmin:InstantGroupToggle("npc2") end)
   self:PrepareScript(ma_mm_gobutton          , Locale["tt_GOButton"]           , function() MangAdmin:InstantGroupToggle("go") end)
   self:PrepareScript(ma_mm_telebutton        , Locale["tt_TeleButton"]         , function() MangAdmin:InstantGroupToggle("tele") end)
   self:PrepareScript(ma_mm_ticketbutton      , Locale["tt_TicketButton"]       , function() ShowTicketTab() end)
   self:PrepareScript(ma_mm_miscbutton        , Locale["tt_MiscButton"]         , function() MangAdmin:InstantGroupToggle("misc") end)
   self:PrepareScript(ma_mm_serverbutton      , Locale["tt_ServerButton"]       , function() MangAdmin:InstantGroupToggle("server") end)
   self:PrepareScript(ma_mm_logbutton         , Locale["tt_LogButton"]          , function() MangAdmin:InstantGroupToggle("log") end)
-  self:PrepareScript(ma_mm_pvpbutton        , nil          , function() MangAdmin:InstantGroupToggle("pvp") end)
-  self:PrepareScript(ma_mm_eventbutton      , nil          , function() MangAdmin:InstantGroupToggle("event") end)
-  self:PrepareScript(ma_mm_rpgbutton        , nil          , function() MangAdmin:InstantGroupToggle("rpg") end)
-  self:PrepareScript(ma_mm_vendorbutton     , nil          , function() MangAdmin:InstantGroupToggle("vendor") end)
-  self:PrepareScript(ma_mm_ahbotbutton      , nil          , function() MangAdmin:InstantGroupToggle("ahbot") end)
-  self:PrepareScript(ma_mm_whobutton        , nil          , function() MangAdmin:InstantGroupToggle("who") end)
+  self:PrepareScript(ma_mm_whobutton        , nil                              , function() MangAdmin:InstantGroupToggle("who") end)
   --end mini buttons
   self:PrepareScript(ma_languagebutton       , Locale["tt_LanguageButton"]     , function() MangAdmin:ChangeLanguage(UIDropDownMenu_GetSelectedValue(ma_languagedropdown)) end)
   self:PrepareScript(ma_itembutton           , Locale["tt_ItemButton"]         , function() MangAdmin:TogglePopup("search", {type = "item"}) end)
@@ -2014,12 +1993,12 @@ function MangAdmin:InitDropDowns()
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
 --      {"Ceský","csCZ"},
-      {"Deutsch","deDE"},
+--      {"Deutsch","deDE"},
 --      {"Dutch","nlNL"},
       {"English","enUS"},
 --      {"Spanish","esES"},
 --      {"Finnish","fiFI"},
-      {"Français","frFR"},
+--      {"Français","frFR"},
 --      {"Magyar","huHU"},
 --      {"Italiano","itIT"},
 --      {"Lithuanian","liLI"},
@@ -2027,7 +2006,7 @@ function MangAdmin:InitDropDowns()
 --      {"Portuguese","ptPT"},
 --      {"Romanian","roRO"},
 --      {"Russkiy","ruRU"},
-      {"Svenska","svSV"},
+--      {"Svenska","svSV"},
 --      {"Chinese","zhCN"},
 --      {"Bulgarian", "buBU"}
     }

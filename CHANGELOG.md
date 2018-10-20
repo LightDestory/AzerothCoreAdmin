@@ -1,5 +1,27 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 53 - 10/19/2018]=-
+- NPC Corrections/Adjustments:
+    - Changed button layout/corrected alignment
+
+### -=[ Revision 52 - 10/18/2018]=-
+- TAB Corrections/Adjustments:
+    - Merged CHAR2 tab into CHAR
+    - Removed NPC2 Tab
+
+### -=[ Revision 51 - 10/14/2018]=-
+- TAB Corrections/Adjustments:
+    - Removed PvP Tab
+    - Removed EVENT Tab
+    - Removed RPG Tab
+    - Removed VENDOR Tab
+    - Removed AhBOT Tab
+
+### -=[ Revision 50 - 10/10/2018]=-
+- Char Corrections/Adjustments:
+    - Merged CHAR2 tab into CHAR
+    - Removed CHAR2 Tab
+
 ### -=[ Revision 49 - 10/06/2018]=-
 - Char Corrections/Adjustments:
     - Changed button layout/Corrected alignment

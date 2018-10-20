@@ -245,6 +245,38 @@ function Return_enUS()
     ["tt_charunpossess"]              = "Unpossesses the selected creature",
     ["tt_charrecall"]                 = "Recalls the selected player to the last teleport position they had",
     ["tt_charrepair"]                 = "Repairs the selected player's armor and weapons",
+    ["tt_banbutton"]                  = "Parameters= <account|ip|character> $NameOrIp <-1|xxdyyhzzm> $reason   [[Ban acct/IP & kick. -1=permban, or a string like 4d3h24m16s]]",
+    ["tt_gonamebutton"]               = "Parameter= $charactername  [[Teleports you to the specified character]]",
+    ["tt_createguildbutton"]          = "Parameters= $GuildLeaderName $GuildName  [[Creates a guild named $GuildName, with $GuildLeaderName as leader]]",
+    ["tt_teleaddbutton"]              = "Parameter= $Name  [[Adds a teleport location .tele command for your current location with the name $Name]]",
+    ["tt_baninfobutton"]              = "Parameter= <account|ip|character>  [[View detailed info about bans on the specified account/ip/character]]",
+    ["tt_groupgobutton"]              = "Parameter= $charactername   [[Teleports the specified character and his/her group to your location]]",
+    ["tt_guildinvitebutton"]          = "Parameters= $charactername $guildname   [[Adds $charactername to the guild $guildname]]",
+    ["tt_teledelbutton"]              = "Parameter= $telename  [[Removes the location named $telename from the .tele locations list]]",
+    ["tt_banlistbutton"]              = "Parameters= <account|ip> $NameOrIp   [[Searches and returns for specific bans matching the parameters]]",
+    ["tt_namegobutton"]               = "Parameter= $charactername   [[Teleports the specified character to your location]]",
+    ["tt_guildrankbutton"]            = "Parameters= $charactername #ranknumber   [[Sets the character specified to the rank specified in his/her guild]]",
+    ["tt_telegroupbutton"]            = "Parameter= $telename  [[Teleports the **selected** character and his/her group to the .tele location named $telename]]",
+    ["tt_unbanbutton"]                = "Parameters= <account|ip|character> $NameOrIp  [[Unbans the specified acct/IP/character]]",
+    ["tt_guilddeletebutton"]          = "Parameter= $guildname  [[Deletes the specified Guild]]",
+    ["tt_guilduninvitebutton"]        = "Parameter= $charactername  [[Kicks the specified character out of his/her guild]]",
+    ["tt_telenamebutton"]             = "Parameters= $charactername $telename  [[Teleports $charactername to $telename]]",
+    ["tt_mutebutton"]                 = "Parameters= $charactername #minutes  [[Disables chat for $charactername's entire account for #minutes]]",
+    ["tt_charmorphbutton"]            = "Parameters = #DisplayID [[Enter the DisplayID of the morph you want to apply]]", 
+    ["tt_charaurabutton"]             = "Parameters = #AuraID [[Enter the AuraID of the aura you want to apply]]",
+    ["tt_charunaurabutton"]           = "Parameters = #AuraID [[Enter the AuraID of the aura you want to remove]]",
+    ["tt_JailAButton"]                = "Parameter= $charactername [[Sends the character whose name appears in this box to the Alliance Jail]]",
+    ["tt_JailHButton"]                = "Parameter= $charactername [[Sends the character whose name appears in this box to the Horde Jail]]",
+    ["tt_UnJailButton"]               = "Parameter= $charactername [[Unjails the character whose name appears in this box.]]",
+    ["tt_UnMuteButton"]               = "Unmutes $player.",
+    ["tt_QuestAddButton"]             = "Adds #questid to **selected** player.",
+    ["tt_QuestCompleteButton"]        = "Marks #questid as complete for **selected** player.",
+    ["tt_QuestRemoveButton"]          = "Removes #questid from **selected** player.",
+    ["tt_DamageButton"]               = "Parameter= #amount of damage to apply to **selected** creature/player",
+    ["tt_HideAreaButton"]             = "Hides #areaid from **selected** player.",
+    ["tt_ShowAreaButton"]             = "Shows #areaid to **selected** player.",
+    ["tt_HonorAddButton"]             = "Adds #honorpoints to **selected** player.",
+    ["tt_HonorUpdateButton"]          = "No parameter required. Saves Honor for **selected** player.",
   --[[Control Labels]]
     ["ma_KillButton"]                 = "Kill",
     ["ma_ReviveButton"]               = "Revive",
@@ -277,6 +309,38 @@ function Return_enUS()
     ["ma_charunpossess"]              = "UnPossess",
     ["ma_charrecall"]                 = "Recall",
     ["ma_charrepair"]                 = "Repair",
+    ["ma_banbutton"]                  = "Ban",
+    ["ma_gonamebutton"]               = "Appear",
+    ["ma_createguildbutton"]          = "G Create",
+    ["ma_teleaddbutton"]              = "TeleAdd",
+    ["ma_baninfobutton"]              = "BanInfo",
+    ["ma_groupgobutton"]              = "GroupSumn",
+    ["ma_guildinvitebutton"]          = "G Invite",
+    ["ma_teledelbutton"]              = "TeleDel",
+    ["ma_banlistbutton"]              = "BanList",
+    ["ma_namegobutton"]               = "Summon",
+    ["ma_guildrankbutton"]            = "G Rank",
+    ["ma_telegroupbutton"]            = "TeleGroup",
+    ["ma_unbanbutton"]                = "UnBan",
+    ["ma_guilddeletebutton"]          = "G Delete",
+    ["ma_guilduninvitebutton"]        = "G UnInv",
+    ["ma_telenamebutton"]             = "TeleName",
+    ["ma_mutebutton"]                 = "Mute",
+    ["ma_Aura"]                       = "Aura",
+    ["ma_UnAura"]                     = "UnAura",
+    ["ma_Morph"]                      = "Morph",
+    ["ma_JailAButton"]                = "Jail (A)",
+    ["ma_JailHButton"]                = "Jail (H)",
+    ["ma_UnJailButton"]               = "UnJail",
+    ["ma_UnMuteButton"]               = "UnMute",
+    ["ma_QuestAddButton"]             = "QuestAdd",
+    ["ma_QuestCompleteButton"]        = "QuestCompl",
+    ["ma_QuestRemoveButton"]          = "QuestRem",
+    ["ma_DamageButton"]               = "Damage",
+    ["ma_HideAreaButton"]             = "HideArea",
+    ["ma_ShowAreaButton"]             = "ShowArea",
+    ["ma_HonorAddButton"]             = "HonorAdd",
+    ["ma_HonorUpdateButton"]          = "HonorUpdt",
   --[[Other]]
     ["ma_LevelUp"]                    = "Level up",
     ["ma_LevelDown"]                  = "Level down",
@@ -323,81 +387,6 @@ function Return_enUS()
     ["Troll"]                         = "Troll",
     ["Gutterspeak"]                   = "Gutterspeak",
     ["Draenei"]                       = "Draenei",
-  
-  
-  
---[[Char2 Tab]]
-  --[[Name]]
-    ["tabmenu_Char2"]                 = "CHAR2",
-    ["tt_Char2Button"]                = "Toggle a window with character-specific actions.",
-  --[[Tooltips]]
-    ["tt_banbutton"]                  = "Parameters= <account|ip|character> $NameOrIp <-1|xxdyyhzzm> $reason   [[Ban acct/IP & kick. -1=permban, or a string like 4d3h24m16s]]",
-    ["tt_gonamebutton"]               = "Parameter= $charactername  [[Teleports you to the specified character]]",
-    ["tt_createguildbutton"]          = "Parameters= $GuildLeaderName $GuildName  [[Creates a guild named $GuildName, with $GuildLeaderName as leader]]",
-    ["tt_teleaddbutton"]              = "Parameter= $Name  [[Adds a teleport location .tele command for your current location with the name $Name]]",
-    ["tt_baninfobutton"]              = "Parameter= <account|ip|character>  [[View detailed info about bans on the specified account/ip/character]]",
-    ["tt_groupgobutton"]              = "Parameter= $charactername   [[Teleports the specified character and his/her group to your location]]",
-    ["tt_guildinvitebutton"]          = "Parameters= $charactername $guildname   [[Adds $charactername to the guild $guildname]]",
-    ["tt_teledelbutton"]              = "Parameter= $telename  [[Removes the location named $telename from the .tele locations list]]",
-    ["tt_banlistbutton"]              = "Parameters= <account|ip> $NameOrIp   [[Searches and returns for specific bans matching the parameters]]",
-    ["tt_namegobutton"]               = "Parameter= $charactername   [[Teleports the specified character to your location]]",
-    ["tt_guildrankbutton"]            = "Parameters= $charactername #ranknumber   [[Sets the character specified to the rank specified in his/her guild]]",
-    ["tt_telegroupbutton"]            = "Parameter= $telename  [[Teleports the **selected** character and his/her group to the .tele location named $telename]]",
-    ["tt_unbanbutton"]                = "Parameters= <account|ip|character> $NameOrIp  [[Unbans the specified acct/IP/character]]",
-    ["tt_guilddeletebutton"]          = "Parameter= $guildname  [[Deletes the specified Guild]]",
-    ["tt_guilduninvitebutton"]        = "Parameter= $charactername  [[Kicks the specified character out of his/her guild]]",
-    ["tt_telenamebutton"]             = "Parameters= $charactername $telename  [[Teleports $charactername to $telename]]",
-    ["tt_mutebutton"]                 = "Parameters= $charactername #minutes  [[Disables chat for $charactername's entire account for #minutes]]",
-    ["tt_charmorphbutton"]            = "Parameters = #DisplayID [[Enter the DisplayID of the morph you want to apply]]", 
-    ["tt_charaurabutton"]             = "Parameters = #AuraID [[Enter the AuraID of the aura you want to apply]]",
-    ["tt_charunaurabutton"]           = "Parameters = #AuraID [[Enter the AuraID of the aura you want to remove]]",
-    ["tt_JailAButton"]                = "Parameter= $charactername [[Sends the character whose name appears in this box to the Alliance Jail]]",
-    ["tt_JailHButton"]                = "Parameter= $charactername [[Sends the character whose name appears in this box to the Horde Jail]]",
-    ["tt_UnJailButton"]               = "Parameter= $charactername [[Unjails the character whose name appears in this box.]]",
-    ["tt_UnMuteButton"]               = "Unmutes $player.",
-    ["tt_QuestAddButton"]             = "Adds #questid to **selected** player.",
-    ["tt_QuestCompleteButton"]        = "Marks #questid as complete for **selected** player.",
-    ["tt_QuestRemoveButton"]          = "Removes #questid from **selected** player.",
-    ["tt_DamageButton"]               = "Parameter= #amount of damage to apply to **selected** creature/player",
-    ["tt_HideAreaButton"]             = "Hides #areaid from **selected** player.",
-    ["tt_ShowAreaButton"]             = "Shows #areaid to **selected** player.",
-    ["tt_HonorAddButton"]             = "Adds #honorpoints to **selected** player.",
-    ["tt_HonorUpdateButton"]          = "No parameter required. Saves Honor for **selected** player.",
-  --[[Control Labels]]
-    ["ma_ParameterizedCommands"]      = "Parameterized Commands",
-    ["ma_banbutton"]                  = "Ban",
-    ["ma_gonamebutton"]               = "Appear",
-    ["ma_createguildbutton"]          = "G Create",
-    ["ma_teleaddbutton"]              = "TeleAdd",
-    ["ma_baninfobutton"]              = "BanInfo",
-    ["ma_groupgobutton"]              = "GroupSumn",
-    ["ma_guildinvitebutton"]          = "G Invite",
-    ["ma_teledelbutton"]              = "TeleDel",
-    ["ma_banlistbutton"]              = "BanList",
-    ["ma_namegobutton"]               = "Summon",
-    ["ma_guildrankbutton"]            = "G Rank",
-    ["ma_telegroupbutton"]            = "TeleGroup",
-    ["ma_unbanbutton"]                = "UnBan",
-    ["ma_guilddeletebutton"]          = "G Delete",
-    ["ma_guilduninvitebutton"]        = "G UnInv",
-    ["ma_telenamebutton"]             = "TeleName",
-    ["ma_mutebutton"]                 = "Mute",
-    ["ma_Aura"]                       = "Aura",
-    ["ma_UnAura"]                     = "UnAura",
-    ["ma_Morph"]                      = "Morph",
-    ["ma_JailAButton"]                = "Jail (A)",
-    ["ma_JailHButton"]                = "Jail (H)",
-    ["ma_UnJailButton"]               = "UnJail",
-    ["ma_UnMuteButton"]               = "UnMute",
-    ["ma_QuestAddButton"]             = "QuestAdd",
-    ["ma_QuestCompleteButton"]        = "QuestCompl",
-    ["ma_QuestRemoveButton"]          = "QuestRem",
-    ["ma_DamageButton"]               = "Damage",
-    ["ma_HideAreaButton"]             = "HideArea",
-    ["ma_ShowAreaButton"]             = "ShowArea",
-    ["ma_HonorAddButton"]             = "HonorAdd",
-    ["ma_HonorUpdateButton"]          = "HonorUpdt",
-  --[[Other]]
 
 
 
@@ -437,6 +426,18 @@ function Return_enUS()
     ["tt_npccometome"]                = "Forces the selected NPC to come to your location. Location NOT stored in DB.",
     ["tt_npcpossess"]                 = "Indefinitely possesses the selected creature",
     ["tt_npcunpossess"]               = "Unpossesses the selected creature",
+    ["tt_NPCFreezeButton"]            = "Stops movement of the selected NPC, saving Waypoints",
+    ["tt_NPCFreezeDelButton"]         = "Stops movement of the selected NPC, NOT saving Waypoints",
+    ["tt_WayEndAdd"]                  = "Adds a waypoint to the end of the existing stack",
+    ["tt_NPCAddWay"]                  = "Adds a waypoint to the stack. Creature GUID must be in below box",
+    ["tt_WayMAdd"]                    = "Adds a waypoint to selected creatures existing move stack",
+    ["tt_WayModifyDel"]               = "Deletes the selected waypoint from creatures existing move stack",
+    ["tt_WayShow0"]                   = "Stops showing waypoints for selected creature.",
+    ["tt_WayShow1"]                   = "Show waypoints for selected creature.",
+    ["tt_NPCAdd_WayShowOn"]           = "shows waypoints for the selected creature",
+    ["tt_NPCUnFreeze_RandomButton"]   = "Allows random movement of the selected NPC.",
+    ["tt_NPCUnFreeze_WayButton"]      = "Allows waypoint movement of the selected NPC.",
+    ["tt_MoveStackButton"]            = "Shows movement stack of the selected character.",
   --[[Control Labels]]
     ["Morph"]                         = "Morph",
     ["ma_NPCKillButton"]              = "Kill",
@@ -456,19 +457,14 @@ function Return_enUS()
     ["ma_NPCAura"]                    = "NPC Aura",
     ["ma_NPCUnAura"]                  = "NPC Unaura",
     ["ma_ParameterBox"]               = "Params",
-    ["ma_DistanceBox"]                = "Distance", --Added for NPC2 tab Distance textbox (Patch 19)
-    ["ma_PlayEmote"]                  = "Play Emote",
+    ["ma_PlayEmote1"]                 = "Emote",
+    ["ma_PlayEmote2"]                 = "Emote",
+    ["ma_DistanceBox"]                = "Distance",
     ["ma_NPCBindsight"]               = "Bindsight",
     ["ma_NPCUnBindsight"]             = "UnBindsight",
     ["ma_NPCComeToMe"]                = "ComeToMe",
     ["ma_npcpossess"]                 = "Possess",
     ["ma_npcunpossess"]               = "UnPossess",
-  --[[Other]]
-
---[[NPC2 Tab]]
-  --[[Name]]
-    ["tabmenu_NPC2"]                  = "NPC2",
-    ["tt_Npc2Button"]                 = "Toggle a window with npc related functions.",
     ["ma_WayShow1"]                   = "WayShowOn",
     ["ma_WayShow0"]                   = "WayShowOff",
     ["ma_MoveStackButton"]            = "Show Moves",
@@ -481,18 +477,7 @@ function Return_enUS()
     ["ma_WayEndAdd"]                  = "WayEndAdd",
     ["ma_WayAdd"]                     = "WayAdd",
     ["ma_WayShow"]                    = "WayShow",
-    ["tt_NPCFreezeButton"]            = "Stops movement of the selected NPC, saving Waypoints",
-    ["tt_NPCFreezeDelButton"]         = "Stops movement of the selected NPC, NOT saving Waypoints",
-    ["tt_WayEndAdd"]                  = "Adds a waypoint to the end of the existing stack",
-    ["tt_NPCAddWay"]                  = "Adds a waypoint to the stack. Creature GUID must be in below box",
-    ["tt_WayMAdd"]                    = "Adds a waypoint to selected creatures existing move stack",
-    ["tt_WayModifyDel"]               = "Deletes the selected waypoint from creatures existing move stack",
-    ["tt_WayShow0"]                   = "Stops showing waypoints for selected creature.",
-    ["tt_WayShow1"]                   = "Show waypoints for selected creature.",
-    ["tt_NPCAdd_WayShowOn"]           = "shows waypoints for the selected creature",
-    ["tt_NPCUnFreeze_RandomButton"]   = "Allows random movement of the selected NPC.",
-    ["tt_NPCUnFreeze_WayButton"]      = "Allows waypoint movement of the selected NPC.",
-    ["tt_MoveStackButton"]            = "Shows movement stack of the selected character.",
+  --[[Other]]
 
 
 
@@ -543,7 +528,7 @@ function Return_enUS()
 
 --[[Tickets Tab]]
   --[[Name]]
-    ["tabmenu_Ticket"]                = "TICKETS",
+    ["tabmenu_ticket"]                = "TICKETS",
     ["tt_TicketButton"]               = "Toggle a window which shows all tickets and lets you administrate them.",
   --[[Tooltips]]
   --[[Control Labels]]
@@ -600,7 +585,7 @@ function Return_enUS()
 
 
 --[[Server Tab]]
-    ["tabmenu_Server"]                = "SERVER",
+    ["tabmenu_server"]                = "SERVER",
     ["tt_ServerButton"]               = "Show several server informations and do actions concerning the server.",
   --[[Tooltips]]
     ["tt_AnnounceButton"]             = "Announce a system message.",
@@ -613,7 +598,7 @@ function Return_enUS()
 
 
 --[[Log Tab]]
-    ["tabmenu_Log"]                   = "LOG",
+    ["tabmenu_log"]                   = "LOG",
     ["tt_LogButton"]                  = "Show the log of all actions done with TrinityAdmin.",
   --[[Tooltips]]
   --[[Control Labels]]
@@ -621,46 +606,6 @@ function Return_enUS()
 
 
 
---[[PvP Tab]]
-    ["tabmenu_pvp"]                   = "PvP",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[Event Tab]]
-    ["tabmenu_event"]                 = "EVENT",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[RPG Tab]]
-    ["tabmenu_rpg"]                   = "RPG",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[Vendor Tab]]
-    ["tabmenu_vendor"]                = "VENDOR",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-
-
-
---[[AhBot Tab]]
-    ["tabmenu_ahbot"]                 = "AHBOT",
-  --[[Tooltips]]
-  --[[Control Labels]]
-  --[[Other]]
-  
-
-    
 --[[Who Tab]]
     ["tabmenu_who"]                   = "WHO",
     ["tt_whotabmenubutton"]           = "Toggle a window which allows control of Who commands.",

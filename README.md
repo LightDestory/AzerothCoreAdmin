@@ -31,18 +31,11 @@ NOTE: These steps are required for locales to properly create the new local tabl
 
 - [x] GM
 - [x] CHAR
-- [x] CHAR2
-- [ ] NPC
-- [x] NPC2
+- [x] NPC
 - [ ] GOB
-- [ ] TELE *Need to fix scroll bar location
-- [ ] TICKETS
+- [x] TELE
+- [x] TICKETS
 - [x] MISC
 - [x] SERVER
 - [x] LOG
-- [x] PvP-No Data
-- [x] EVENT-No Data
-- [x] RPG-No Data
-- [x] VENDOR-No Data
-- [x] AHBOT-No Data
-- [ ] WHO *Need to fix scroll bar location
+- [x] WHO

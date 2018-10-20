@@ -153,7 +153,7 @@ function InitControls()
   UIDropDownMenu_Initialize(ma_resetdropdown, ResetDropDownInitialize)
   UIDropDownMenu_SetWidth(ma_resetdropdown, 100)
   UIDropDownMenu_SetButtonWidth(ma_resetdropdown, 20)
---[[Char2 Tab]]
+
   MangAdmin:PrepareScript(ma_banbutton            , Locale["tt_banbutton"]          , function() BanButton() end)
   MangAdmin:PrepareScript(ma_gonamebutton         , Locale["tt_gonamebutton"]       , function() GoNameButton() end)
   MangAdmin:PrepareScript(ma_createguildbutton    , Locale["tt_createguildbutton"]  , function() CreateGuildButton() end)
@@ -218,8 +218,6 @@ function InitControls()
   MangAdmin:PrepareScript(ma_npccometomebutton    , Locale["tt_npccometome"]         , function() NPCComeToMe() end)
   MangAdmin:PrepareScript(ma_npcpossessbutton     , Locale["tt_npcpossess"]          , function() NPCPossess() end)
   MangAdmin:PrepareScript(ma_npcunpossessbutton   , Locale["tt_npcunpossess"]        , function() NPCUnPossess() end)
-
---[[NPC2 Tab]]
   MangAdmin:PrepareScript(ma_npcfreezebutton      , Locale["tt_NPCFreezeButton"]    , function() NPCFreeze() end)
   MangAdmin:PrepareScript(ma_npcfreezedelbutton   , Locale["tt_NPCFreezeDelButton"] , function() NPCFreezeDEL() end)
   MangAdmin:PrepareScript(ma_way_endaddbutton     , Locale["tt_WayEndAdd"]          , function() WayEndAdd() end)
