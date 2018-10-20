@@ -39,3 +39,6 @@ NOTE: These steps are required for locales to properly create the new local tabl
 - [x] SERVER
 - [x] LOG
 - [x] WHO
+
+## SCREENSHOT:
+![image](/Textures/TriniyAdminScreenshot.fw.png)
