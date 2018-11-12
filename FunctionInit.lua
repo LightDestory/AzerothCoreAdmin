@@ -18,7 +18,7 @@
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
 --Convention:
--- MangAdmin:PrepareScript(*nameofbutton*     , Locale["*tooltiplocalisation*"]   , function() *functionnameandparameters()* end)
+-- MangAdmin:PrepareScript(*nameofbutton*         , Locale["*tooltiplocalisation*"]     , function() *functionnameandparameters()* end)
 
 
 function InitControls()
@@ -203,7 +203,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_npcmorphbutton       , Locale["tt_NPCMorph"]           , function() NPCMorph() end)
   MangAdmin:PrepareScript(ma_npcsaybutton         , Locale["tt_NPCSay"]             , function() NPCSay() end)
   MangAdmin:PrepareScript(ma_npcyellbutton        , Locale["tt_NPCYell"]            , function() NPCYell() end)
-  MangAdmin:PrepareScript(ma_npcaurabutton        ,  Locale["tt_NPCAura"]           , function() NPCAura() end)
+  MangAdmin:PrepareScript(ma_npcaurabutton        , Locale["tt_NPCAura"]            , function() NPCAura() end)
   MangAdmin:PrepareScript(ma_npcunaurabutton      , Locale["tt_NPCUnaura"]          , function() NPCUnaura() end)
   MangAdmin:PrepareScript(ma_npcemotebutton       , Locale["tt_PlayEmote"]          , function() NpcEmote(UIDropDownMenu_GetSelectedValue(ma_npcemotedropdown)) end)
   MangAdmin:PrepareScript(ma_npcemotebutton_a     , Locale["tt_PlayEmote"]          , function() NpcEmote(UIDropDownMenu_GetSelectedValue(ma_npcemotedropdown_a)) end)
@@ -293,7 +293,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_btncolorshowbutton   , nil                             , function() ShowColorPicker("btn") end)
   MangAdmin:PrepareScript(ma_linkifiercolorbutton , nil                             , function() ShowColorPicker("linkifier") end)
   MangAdmin:PrepareScript(ma_applystylebutton     , nil                             , function() ApplyStyleChanges() end)
-  --MangAdmin:PrepareScript(ma_windowismovable      , Locale["tt_windowismovable"]    , function() AllowMovableWindow() end)
+  --MangAdmin:PrepareScript(ma_windowismovable      , nil                             , function() AllowMovableWindow() end)
   MangAdmin:PrepareScript(ma_changeweatherbutton  , nil                             , function() ChangeWeather(UIDropDownMenu_GetSelectedValue(ma_weatherdropdown)) end)
 
 --[[Server Tab]]
@@ -318,6 +318,6 @@ function InitControls()
   MangAdmin:PrepareScript(ma_who_permbanbutton    , Locale["tt_who_permbanbutton"]  , function() Who("permban") end)
   MangAdmin:PrepareScript(ma_who_jailabutton      , Locale["tt_who_jailabutton"]    , function() Who("jaila") end)
   MangAdmin:PrepareScript(ma_who_jailhbutton      , Locale["tt_who_jailhbutton"]    , function() Who("jailh") end)
-  MangAdmin:PrepareScript(ma_who_unjailbutton      , Locale["tt_who_unjailbutton"]    , function() Who("unjail") end)
+  MangAdmin:PrepareScript(ma_who_unjailbutton     , Locale["tt_who_unjailbutton"]   , function() Who("unjail") end)
 
 end
