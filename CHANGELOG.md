@@ -1,5 +1,11 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 54 - 11/13/2018]=-
+- Fixed Tele Tab function with previous commit
+- Removed multiple files for non-existing tabs
+- Removed excessive spacing
+- Cleaned trailing whitespace
+
 ### -=[ Revision 53 - 10/19/2018]=-
 - NPC Corrections/Adjustments:
     - Changed button layout/corrected alignment
