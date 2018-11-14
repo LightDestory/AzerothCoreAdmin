@@ -18,7 +18,7 @@
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
 
-function ReturnMapName(MapID)				
+function ReturnMapName(MapID)
     if MapID == "0" then return "Eastern Kingdoms"
     elseif MapID == "1" then return "Kalimdor"
     elseif MapID == "13" then return "Testing"

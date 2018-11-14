@@ -34,8 +34,8 @@ function InitModelFrame()
   ma_modelframe:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
   ma_modelframe.rotation = 0.61;
   ma_modelframe:SetRotation(ma_modelframe.rotation)
-  ma_modelframe:SetUnit("player") 
-  
+  ma_modelframe:SetUnit("player")
+
 end
 
 function MangAdminModelOnUpdate(elapsedTime)
@@ -202,7 +202,7 @@ function LearnSpell(value, state)
   end
 end
 
-function Modify(case, value) 
+function Modify(case, value)
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
     local player = UnitName("target") or UnitName("player")
     if case == "money" then
@@ -315,7 +315,7 @@ function LearnLangDropDownInitialize()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_learnlangdropdown, "all_lang")
-end  
+end
 
   -- MODIFY
 function ModifyDropDownInitialize()
@@ -354,7 +354,7 @@ function ModifyDropDownInitialize()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_modifydropdown, "levelup")
-end  
+end
 
   -- RESET
 function ResetDropDownInitialize()
@@ -380,7 +380,7 @@ function ResetDropDownInitialize()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
-end  
+end
 
 function CharModelZoomIn()
     ma_modelframe:SetCamera(0)
@@ -410,7 +410,7 @@ function CharUnBindSight()
     MangAdmin:LogAction("Sight unbound to "..cname)
 end
 
-function CharRename() 
+function CharRename()
     local cname = ma_charactertarget:GetText()
     MangAdmin:ChatMsg(".character rename")
     MangAdmin:LogAction("Forced rename of "..cname)
@@ -440,48 +440,48 @@ function CharCombatStop()
     MangAdmin:LogAction("Forced combat stop on "..player)
 end
 
-function CharMaxSkill() 
+function CharMaxSkill()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".maxskill")
     MangAdmin:LogAction("Set player MaxSkill for "..player)
 end
 
-function CharFreeze() 
+function CharFreeze()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".freeze")
     MangAdmin:LogAction("Set Freeze for "..player)
 end
 
-function CharUnFreeze() 
+function CharUnFreeze()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".unfreeze")
     MangAdmin:LogAction("UnFroze "..player)
 end
 
-function CharListFreeze() 
+function CharListFreeze()
     MangAdmin:ChatMsg(".listfreeze")
     MangAdmin:LogAction("Listed Frozen players")
 end
 
-function CharPossess() 
+function CharPossess()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".possess")
     MangAdmin:LogAction("Possessed "..player)
 end
 
-function CharUnPossess() 
+function CharUnPossess()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".unpossess")
     MangAdmin:LogAction("UnPossessed "..player)
 end
 
-function CharRecall() 
+function CharRecall()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".recall")
     MangAdmin:LogAction("Recalled "..player)
 end
 
-function CharRepair() 
+function CharRepair()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".repairitems")
     MangAdmin:LogAction("Repaired  "..player.."'s items")

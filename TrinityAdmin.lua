@@ -48,7 +48,7 @@ Graph        = AceLibrary("Graph-1.0")
 local Tablet = AceLibrary("Tablet-2.0")
 
 MangAdmin:RegisterDB("MangAdminDb", "MangAdminDbPerChar")
-MangAdmin:RegisterDefaults("char", 
+MangAdmin:RegisterDefaults("char",
   {
     functionQueue = {},
     requests = {
@@ -71,10 +71,10 @@ MangAdmin:RegisterDefaults("char",
     newTicketQueue = {},
     instantKillMode = false,
     msgDeltaTime = time(),
-    
+
   }
 )
-MangAdmin:RegisterDefaults("account", 
+MangAdmin:RegisterDefaults("account",
   {
     language = nil,
     localesearchstring = true,
@@ -120,8 +120,8 @@ MangAdmin:RegisterDefaults("account",
       color = {
         buffer = {},
         buttons = {
-          r = 33, 
-          g = 164, 
+          r = 33,
+          g = 164,
           b = 210
         },
         frames = {
@@ -223,7 +223,7 @@ function MangAdmin:OnInitialize()
   self:SetLanguage()
   self:CreateFrames()
   self:RegisterChatCommand(Locale["slashcmds"], self.consoleOpts) -- this registers the chat commands
-  self:InitButtons()  -- this prepares the actions and tooltips of nearly all MangAdmin buttons  
+  self:InitButtons()  -- this prepares the actions and tooltips of nearly all MangAdmin buttons
   InitControls()
   self:SearchReset()
   MangAdmin.db.account.buffer.who = {}
@@ -262,7 +262,6 @@ function MangAdmin:OnInitialize()
   if not self.db.account.style.showminimenu then
     FrameLib:HandleGroup("minimenu", function(frame) frame:Hide() end)
   end
- 
 end
 
 function MangAdmin:OnEnable()
@@ -418,9 +417,9 @@ function MangAdmin:OnTooltipUpdate()
 end
 
 function MangAdmin:ToggleTabButton(group)
-  --this modifies the look of tab buttons when clicked on them 
-  FrameLib:HandleGroup("tabbuttons", 
-  function(button) 
+  --this modifies the look of tab buttons when clicked on them
+  FrameLib:HandleGroup("tabbuttons",
+  function(button)
     if button:GetName() == "ma_tabbutton_"..group then
       getglobal(button:GetName().."_texture"):SetGradientAlpha("vertical", 102, 102, 102, 1, 102, 102, 102, 0.7)
     else
@@ -450,7 +449,7 @@ end
 
 function MangAdmin:TogglePopup(value, param)
   -- this toggles the MangAdmin Search Popup frame, toggling deactivated, popup will be overwritten
-  --[[if ma_popupframe:IsVisible() then 
+  --[[if ma_popupframe:IsVisible() then
     FrameLib:HandleGroup("popup", function(frame) frame:Hide()  end)
   else]]
   if value == "search" then
@@ -609,7 +608,7 @@ function MangAdmin:TicketHackTimer()
 end]]
 
 function MangAdmin:AddMessage(frame, text, r, g, b, id)
-  -- frame is the object that was hooked (one of the ChatFrames)  
+  -- frame is the object that was hooked (one of the ChatFrames)
   local catchedSth = false
   local output = MangAdmin.db.account.style.showchat
   if id == 1 then --make sure that the message comes from the server, message id = 1
@@ -617,8 +616,6 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     if self.db.char.requests.toggle and not ma_popupframe:IsVisible() then
       self.db.char.requests.toggle = false
     end
-
---********************************************************************    
     if gettingGOBinfoinfo > 0 then
         if gettingGOBinfoinfo == 1 then
             ma_gobinfoinfo:SetText('')
@@ -627,7 +624,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
             ma_gobinfoinfo:SetText(ma_gobinfoinfo:GetText().."\n"..text)
         end
         gettingGOBinfoinfo=gettingGOBinfoinfo+1
-        if gettingGOBinfoinfo>=5 then 
+        if gettingGOBinfoinfo>=5 then
             gettingGOBinfoinfo=0
         end
     end
@@ -639,14 +636,11 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
             ma_gobtargetinfo:SetText(ma_gobtargetinfo:GetText().."\n|cffffffff"..string.gsub(text, ']', ']\n|cffffffff'))
         end
         gettingGOBinfo=gettingGOBinfo+1
-        if gettingGOBinfo>=7 then 
+        if gettingGOBinfo>=7 then
             gettingGOBinfo=0
             gettingGOBinfoinfo=1
         end
     end
-
-    
-    
     if cWorking == 1 then
         WorkString = string.gsub(text, '(|.........)', '') -- This removes any color formating
         --SendChatMessage("Workstring:"..WorkString)
@@ -698,11 +692,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         cWorking = 0
         end
         OBJTarget()
-        
     end
---***************************************************************    
-
-
     -- hook .gps for gridnavigation
     for x, y in string.gmatch(text, Strings["ma_GmatchGPS"]) do
       for k,v in pairs(self.db.char.functionQueue) do
@@ -713,63 +703,54 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         end
       end
     end
-
-    if MangAdmin:ID_Setting_Start_Read() then    
+    if MangAdmin:ID_Setting_Start_Read() then
         local b1,e1,pattern = string.find(text, "GUID: (%d+)%.")
         --local b1,e1,pattern = string.find(text, "GUID:")
         if b1 then
             b1,e1,pattern = string.find(text, "([0-9]+)")
             if b1 then
                 MangAdmin:ID_Setting_Start_Write(0)
-                
                 MangAdmin:ID_Setting_Write(0,pattern)
                 ma_NPC_guidbutton:SetText(pattern)
                 self:LogAction("NPC_GUID_Get id "..pattern..".")
-            end	
+            end
         else
         end
-    
         b1,e1,pattern = string.find(text, "Entry: (%d+)%.")
         if b1 then
             b1,e1,pattern = string.find(text, "([0-9]+)")
             if b1 then
-                
                 MangAdmin:ID_Setting_Write(1,pattern)
                 ma_NPC_idbutton:SetText(pattern)
                 self:LogAction("NPC_EntryID_Get id "..pattern..".")
-            end	
+            end
         else
         end
-    
         b1,e1,pattern = string.find(text, "DisplayID: (%d+).*")
         if b1 then
             b1,e1,pattern = string.find(text, "([0-9]+)")
             if b1 then
-                
                 --MangAdmin:ID_Setting_Write(1,pattern)
                 ma_npcdisplayid:SetText(pattern)
                 self:LogAction("NPC_DisplayID_Get id "..pattern..".")
-            end	
+            end
         else
         end
-    
     end
-
-    if MangAdmin:OID_Setting_Start_Read() then    
+    if MangAdmin:OID_Setting_Start_Read() then
         local b1,e1,pattern = string.find(text, "GUID: (%d+) ")
         --local b1,e1,pattern = string.find(text, "GUID:")
         if b1 then
             b1,e1,pattern = string.find(text, "([0-9]+)")
             if b1 then
                 MangAdmin:OID_Setting_Start_Write(0)
-                
+
                 MangAdmin:OID_Setting_Write(0,pattern)
                 ma_Obj_guidbutton:SetText(pattern)
                 self:LogAction("OBJECT_GUID_Get id "..pattern..".")
-            end	
+            end
         else
         end
-        
         --b1,e1,pattern = string.find(text, "ID: (%d+)% ")
         --b1,e1,pattern = string.find(text, "GUID: (%d+) ID: (%d+)")
         b1,e1,xpattern = string.find(text, " ID: (%d+)")
@@ -777,46 +758,36 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
             --b1,e1,pattern = string.find(text, "([0-9]+)")
             b1,e1,pattern = string.find(xpattern, "([0-9]+)")
             if b1 then
-                
     --      		MangAdmin:OID_Setting_Write(1,pattern)
                 ma_Obj_idbutton:SetText(pattern)
                 self:LogAction("OBJECT_EntryID_Get id "..pattern..".")
-                
-            end	
+            end
         else
         end
-    
-        
         b1,e1,xpattern = string.find(text, "DisplayID: (%d+)")
         if b1 then
             --b1,e1,pattern = string.find(text, "([0-9]+)")
             b1,e1,pattern = string.find(xpattern, "([0-9]+)")
             if b1 then
-                
     --      		MangAdmin:OID_Setting_Write(1,pattern)
     --      		ma_Obj_idbutton:SetText(pattern)
                 ma_gobdisplayid:SetText(pattern)
                 self:LogAction("OBJECT DisplayID"..pattern..".")
-                
-            end	
+            end
         else
         end
-    
     end
-
-    if MangAdmin:Way_Point_Add_Start_Read() then    
+    if MangAdmin:Way_Point_Add_Start_Read() then
         b1,e1,pattern = string.find(text, "Waypoint (%d+)")
         if b1 then
             MangAdmin:Way_Point_Add_Start_Write(0)
-            
+
             local wnpc =	ma_NPC_guidbutton:GetText()
             self:ChatMsg(".wp show on "..wnpc)
             self:LogAction("Waypoint set OK")
         else
         end
-        
     end
-    
     if self.db.char.requests.toggle then
       if self.db.char.requests.item then
         -- hook all item lookups
@@ -831,7 +802,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
             end
             PopupScrollUpdate()
             catchedSth = true
-            output = MangAdmin.db.account.style.showchat  
+            output = MangAdmin.db.account.style.showchat
         end
       elseif self.db.char.requests.itemset then
         -- hook all itemset lookups
@@ -900,9 +871,8 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         ma_difftext:SetText(diff)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
-        output = MangAdmin.db.account.style.showchat  
+        output = MangAdmin.db.account.style.showchat
     end
-
     -- hook all new tickets
     for name in string.gmatch(text, Strings["ma_GmatchNewTicket"]) do
       self:SetIcon(ROOT_PATH.."Textures\\icon2.tga")
@@ -923,7 +893,6 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         output = MangAdmin.db.account.style.showchat
       end
     end
-    
     -- hook player account info
     for played, level, money in string.gmatch(text, Strings["ma_GmatchAccountInfo2"]) do
       if self.db.char.requests.tpinfo then
@@ -933,33 +902,31 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         self.db.char.requests.tpinfo = false
       end
     end
-    
     --check for info command to update informations in right bottom
     for revision in string.gmatch(text, Strings["ma_GmatchRevision"]) do
       ma_inforevisiontext:SetText(Locale["info_revision"]..revision)
       --ma_infoplatformtext:SetText(Locale["info_platform"]..platform)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
-        output = MangAdmin.db.account.style.showchat  
+        output = MangAdmin.db.account.style.showchat
     end
     for users, maxusers in string.gmatch(text, Strings["ma_GmatchOnlinePlayers"]) do
       ma_infoonlinetext:SetText(Locale["info_online"]..users)
       ma_infomaxonlinetext:SetText(Locale["info_maxonline"]..maxusers)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
-        output = MangAdmin.db.account.style.showchat  
+        output = MangAdmin.db.account.style.showchat
     end
     for uptime in string.gmatch(text, Strings["ma_GmatchUptime"]) do
       ma_infouptimetext:SetText(Locale["info_uptime"]..uptime)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
-        output = MangAdmin.db.account.style.showchat  
+        output = MangAdmin.db.account.style.showchat
     end
     for match in string.gmatch(text, Strings["ma_GmatchActiveConnections"]) do
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
-        output = MangAdmin.db.account.style.showchat  
-    
+        output = MangAdmin.db.account.style.showchat
     end
     -- get results of ticket list. In Trinity, everything will be constructed off the list
     for id, char, create, update in string.gmatch(text, Strings["ma_GmatchTickets"]) do
@@ -972,7 +939,6 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         self.db.char.requests.ticketbody = id
         self.db.char.msgDeltaTime = time()
     end
-
     for msg in string.gmatch(text, "Ticket Message.-:.-(.*)") do
         MangAdmin.db.account.buffer.ticketread=true
         MangAdmin.db.account.buffer.ticketsfull = {}
@@ -982,8 +948,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         ma_ticketdetail:SetText("|cffffffff"..msg)
         catchedSth = true
         output = MangAdmin.db.account.style.showchat
-    end       
-
+    end
     if MangAdmin.db.account.buffer.ticketread==true then
         for msg in string.gmatch(text, "(.*)]|r") do
             local object = MangAdmin.db.account.buffer.ticketsfull[1]
@@ -999,7 +964,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         end
         for msg in string.gmatch(text, "(.*)") do
             local object = MangAdmin.db.account.buffer.ticketsfull[1]
-            local t_msg = "" 
+            local t_msg = ""
             t_msg = object["tMsg"]
             t_msg = t_msg.." ".."|cffffffff"..msg
             table.remove(MangAdmin.db.account.buffer.ticketsfull, 1)
@@ -1008,13 +973,11 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
             output = MangAdmin.db.account.style.showchat
         end
     end
-
     for eraseme in string.gmatch(text, "Showing list of open tickets") do
         catchedSth = true
         output = MangAdmin.db.account.style.showchat
-        
     end
-    
+
     for acc, char, ip, map, zone, exp, gmlevel in string.gmatch(text, Strings["ma_GmatchWho"]) do
     	acc= string.gsub(acc, " ", "")
     	char= string.gsub(char, " ", "")
@@ -1036,14 +999,14 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
 --    ["ma_GmatchAccountInfo"] = "Player(.*) %(guid: (%d+)%) Account: (.*) %(id: (%d+)%) Email: (.*) GMLevel: (%d+) Last IP: (.*) Last login: (.*) Latency: (%d+)ms",
 --    ["ma_GmatchAccountInfo2"] = "Race: (.*) Class: (.*) Played time: (.*) Level: (%d+) Money: (.*)",
     for charname, charguid, account, accountid, email, gmlvl, lastip, lastlogin, latency in string.gmatch(text, Strings["ma_GmatchAccountInfo"]) do
-       ma_whodetail:SetText("|c00ff00ffCharacter:|r"..charname.." |cffffffff("..charguid..")|r\n".."|c00ff0000Acct:|r|cffffffff"..account.." ("..accountid..")|r\n".."|c00ff0000IP:|r|cffffffff"..lastip.."|r\n".."|c00ff0000Login:|r|cffffffff"..lastlogin.."|r\n".."|c00ff0000Latency:|r|cffffffff"..latency.."ms|r\n")  
+       ma_whodetail:SetText("|c00ff00ffCharacter:|r"..charname.." |cffffffff("..charguid..")|r\n".."|c00ff0000Acct:|r|cffffffff"..account.." ("..accountid..")|r\n".."|c00ff0000IP:|r|cffffffff"..lastip.."|r\n".."|c00ff0000Login:|r|cffffffff"..lastlogin.."|r\n".."|c00ff0000Latency:|r|cffffffff"..latency.."ms|r\n")
        catchedSth = true
        output = MangAdmin.db.account.style.showchat
     end
-    
+
     for race, class, playedtime, level, money in string.gmatch(text, Strings["ma_GmatchAccountInfo2"]) do
         --self:ChatMsg("Matched Who")
-       ma_whodetail2:SetText("|c00ff0000Race:|r|cffffffff"..race.."|r\n".."|c00ff0000Class|r|cffffffff"..class.."|r\n".."|c00ff0000Level:|r|cffffffff"..level.."|r\n".."|c00ff0000Money:|r|cffffffff"..money.."|r\n".."|c00ff0000Played Time:|r|cffffffff"..playedtime.."|r\n")  
+       ma_whodetail2:SetText("|c00ff0000Race:|r|cffffffff"..race.."|r\n".."|c00ff0000Class|r|cffffffff"..class.."|r\n".."|c00ff0000Level:|r|cffffffff"..level.."|r\n".."|c00ff0000Money:|r|cffffffff"..money.."|r\n".."|c00ff0000Played Time:|r|cffffffff"..playedtime.."|r\n")
        catchedSth = true
        output = MangAdmin.db.account.style.showchat
     end
@@ -1055,7 +1018,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         catchedSth = true
         output = MangAdmin.db.account.style.showchat
     end
- --[[   
+ --[[
     -- get ticket content
     if self.db.char.requests.ticket then
       local delta = time() - self.db.char.msgDeltaTime
@@ -1083,7 +1046,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         end
       end
     end
-]]    
+]]
     -- Check for possible UrlModification
     if catchedSth then
       if output == false then
@@ -1115,7 +1078,7 @@ end
     self.db.char.getValueCallHandler.calledGetGuid = true
     self.db.char.getValueCallHandler.realGuid = value
     ma_toptext:SetText(Locale["char"]..Locale["guid"]..UnitGUID())
-    return false    
+    return false
   elseif guid == realGuid then
     return true
   else
@@ -1128,7 +1091,6 @@ function MangAdmin:LogAction(msg)
   ma_logframe:AddMessage("|cFF00FF00["..date("%H:%M:%S").."]|r "..msg, 1.0, 1.0, 0.0)
 end
 
-
 function MangAdmin:ChatMsg(msg, msgt, recipient)
   if not msgt then local msgt = "say" end
   if msgt == "addon" then
@@ -1138,7 +1100,7 @@ function MangAdmin:ChatMsg(msg, msgt, recipient)
       SendAddonMessage("", msg, "GUILD")
     end
   else
-    if recipient then 
+    if recipient then
       SendChatMessage(msg, "WHISPER", nil, recipient)
     else
       SendChatMessage(msg, msgt, nil, nil)
@@ -1165,10 +1127,9 @@ function MangAdmin:Selection(selection)
   end
 end
 
-function MangAdmin:AndBit(value, test) 
-  return mod(value, test*2) >= test 
+function MangAdmin:AndBit(value, test)
+  return mod(value, test*2) >= test
 end
-
 
 --=================================--
 --MangAdmin Commands functions--
@@ -1270,7 +1231,6 @@ function MangAdmin:Creature(value, state)
       self:ChatMsg(command.." "..value)
       self:LogAction(logcmd.." creature with id "..value..".")
     end
-
 end
 
 function MangAdmin:AddItem(value, state)
@@ -1280,20 +1240,18 @@ function MangAdmin:AddItem(value, state)
     if state == "RightButton" then
       if amount == "" then
         self:ChatMsg(".additem "..value.." -1")
-    --      self:ChatMsg(".list item "..value)
+          --self:ChatMsg(".list item "..value)
         self:LogAction("Removed item with id "..value.." from "..player..".")
-    --      self:LogAction("Listed item with id "..value..".")
+          --self:LogAction("Listed item with id "..value..".")
       else
         local amt=tonumber(amount)
-        if amt >0 then 
+        if amt >0 then
            amt=amt*-1
            amount=tostring(amt)
         end
         self:ChatMsg(".additem "..value.." "..amount)
         self:LogAction("Removed "..amount.." items with id "..value.." to "..player..".")
-      
       end
-      
     else
       if amount == "" then
         self:ChatMsg(".additem "..value)
@@ -1357,31 +1315,22 @@ local mang_OID_guid = ""
 local mang_OID_entryid = ""
 
 function MangAdmin:Way_Point_Add_Start_Write(num)
-
     mang_Waypoint_start = num
-
 end
 
 function MangAdmin:Way_Point_Add_Start_Read()
-
     return mang_Waypoint_start
-
 end
 
 function MangAdmin:ID_Setting_Start_Write(num)
-    
     mang_ID_start = num
-
-end    
+end
 
 function MangAdmin:ID_Setting_Start_Read()
-    
     return mang_ID_start
-
-end    
+end
 
 function MangAdmin:ID_Setting_Write(num,val)
-    
     if num == 0 then
     -- GUID
     	mang_ID_guid = val
@@ -1389,13 +1338,10 @@ function MangAdmin:ID_Setting_Write(num,val)
     -- ID
     	mang_ID_entryid = val
     end
-
-end    
+end
 
 function MangAdmin:ID_Setting_Read(num)
-           
-local val = "" 
-           
+local val = ""
     if num == 0 then
     -- GUID
     	val = mang_ID_guid
@@ -1403,24 +1349,19 @@ local val = ""
     -- ID
     	val = mang_ID_entryid
     end
-    
     return val
-end    
+end
 
 function MangAdmin:OID_Setting_Start_Write(num)
-    
     mang_OID_start = num
-
-end    
+end
 
 function MangAdmin:OID_Setting_Start_Read()
-    
     return mang_OID_start
-
-end    
+end
 
 function MangAdmin:OID_Setting_Write(num,val)
-    
+
     if num == 0 then
     -- GUID
     	mang_OID_guid = val
@@ -1428,13 +1369,10 @@ function MangAdmin:OID_Setting_Write(num,val)
     -- ID
     	mang_OID_entryid = val
     end
-
-end    
+end
 
 function MangAdmin:OID_Setting_Read(num)
-           
-local val = "" 
-           
+local val = ""
     if num == 0 then
     -- GUID
     	val = mang_OID_guid
@@ -1442,11 +1380,10 @@ local val = ""
     -- ID
     	val = mang_OID_entryid
     end
-    
     return val
-end    
+end
 
-function MangAdmin:NPCAdd_Way_o()                            
+function MangAdmin:NPCAdd_Way_o()
     local player = UnitName("target") or UnitName("player")
     local npc =	ma_NPC_guidbutton:GetText()
     self:ChatMsg(".wp add "..npc)
@@ -1460,27 +1397,26 @@ function MangAdmin:WayModify()
     self:LogAction("Got NPC info for player "..player..".")
 end
 
-function MangAdmin:NPC_GUID_Get_org()                            
-    local player = UnitName("target") or UnitName("player") 
-    
-    --local val1 = UnitGUID("target")                     
+function MangAdmin:NPC_GUID_Get_org()
+    local player = UnitName("target") or UnitName("player")
+
+    --local val1 = UnitGUID("target")
     -- F13000002E013D79 -> Object GUID is lowpart 81273  highpart F130
-    --local val2 = string.sub(tostring(val1),13,18)   	
+    --local val2 = string.sub(tostring(val1),13,18)
     -- 013D79 -> string.sub(myString, start, end)
-    --local str1 = string.format("0x%s",val2)             
+    --local str1 = string.format("0x%s",val2)
     -- 0x013D79
     --local str2 = tonumber(str1)
- 
+
     local str1 = ID_Setting_Read(0)
     ma_NPC_guidbutton:SetText(str1)
     self:LogAction("NPC_GUID_Get for val "..str1..".")
- 
+
     local str2 = ID_Setting_Read(1)
     ma_NPC_idbutton:SetText(str2)
     self:LogAction("NPC_EntryID_Get for val "..str2..".")
 
 end
-
 
 function MangAdmin:CreateGuild(leader, name)
   self:ChatMsg(".guild create "..leader.." "..name)
@@ -1497,10 +1433,6 @@ function MangAdmin:SendMail(recipient, subject, body)
   self:LogAction("Sent a mail to "..recipient..". Subject was: "..subject)
 end
 
-
-
-
-
 function MangAdmin:UpdateMailBytesLeft()
   local bleft = 246 - strlen(ma_searcheditbox:GetText()) - strlen(ma_var1editbox:GetText()) - strlen(ma_maileditbox:GetText())
   if bleft >= 0 then
@@ -1509,12 +1441,6 @@ function MangAdmin:UpdateMailBytesLeft()
     ma_lookupresulttext:SetText(Locale["ma_MailBytesLeft"].."|cffff0000"..bleft.."|r")
   end
 end
-
-
-
-
-
-
 
 function MangAdmin:Favorites(value, searchtype)
   if value == "add" then
@@ -1539,35 +1465,35 @@ function MangAdmin:Favorites(value, searchtype)
   elseif value == "remove" then
     if searchtype == "item" then
       for k,v in pairs(self.db.account.favorites.items) do
-        if v["checked"] then table.remove(self.db.account.favorites.items, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.items, k) end
       end
     elseif searchtype == "itemset" then
       for k,v in pairs(self.db.account.favorites.itemsets) do
-        if v["checked"] then table.remove(self.db.account.favorites.itemsets, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.itemsets, k) end
       end
     elseif searchtype == "spell" then
       for k,v in pairs(self.db.account.favorites.spells) do
-        if v["checked"] then table.remove(self.db.account.favorites.spells, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.spells, k) end
       end
     elseif searchtype == "skill" then
       for k,v in pairs(self.db.account.favorites.skills) do
-        if v["checked"] then table.remove(self.db.account.favorites.skills, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.skills, k) end
       end
     elseif searchtype == "quest" then
       for k,v in pairs(self.db.account.favorites.quests) do
-        if v["checked"] then table.remove(self.db.account.favorites.quests, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.quests, k) end
       end
     elseif searchtype == "creature" then
       for k,v in pairs(self.db.account.favorites.creatures) do
-        if v["checked"] then table.remove(self.db.account.favorites.creatures, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.creatures, k) end
       end
     elseif searchtype == "object" then
       for k,v in pairs(self.db.account.favorites.objects) do
-        if v["checked"] then table.remove(self.db.account.favorites.objects, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.objects, k) end
       end
     elseif searchtype == "tele" then
       for k,v in pairs(self.db.account.favorites.teles) do
-        if v["checked"] then table.remove(self.db.account.favorites.teles, k) end 
+        if v["checked"] then table.remove(self.db.account.favorites.teles, k) end
       end
     end
     self:LogAction("Removed some favorited "..searchtype.."s from the list.")
@@ -1742,7 +1668,6 @@ function MangAdmin:PrepareScript(object, text, script)
   --end
 end
 
-
 --[[INITIALIZION FUNCTIONS]]
 function MangAdmin:InitButtons()
   -- start tab buttons
@@ -1790,12 +1715,10 @@ function MangAdmin:InitButtons()
   self:PrepareScript(ma_popupclosebutton     , nil                             , function() MangAdmin:CloseButton("popup") end)
   self:PrepareScript(ma_popup2closebutton    , nil                             , function() MangAdmin:CloseButton("popup2") end)
   self:PrepareScript(ma_inforefreshbutton    , nil                             , function() MangAdmin:ChatMsg(".server info") end)
-  self:PrepareScript(ma_frmtrslider          , Locale["tt_FrmTrSlider"]        , {{"OnMouseUp", function() MangAdmin:ChangeTransparency("frames") end},{"OnValueChanged", function() ma_frmtrsliderText:SetText(string.format("%.2f", ma_frmtrslider:GetValue())) end}})  
-  self:PrepareScript(ma_btntrslider          , Locale["tt_BtnTrSlider"]        , {{"OnMouseUp", function() MangAdmin:ChangeTransparency("buttons") end},{"OnValueChanged", function() ma_btntrsliderText:SetText(string.format("%.2f", ma_btntrslider:GetValue())) end}})  
+  self:PrepareScript(ma_frmtrslider          , Locale["tt_FrmTrSlider"]        , {{"OnMouseUp", function() MangAdmin:ChangeTransparency("frames") end},{"OnValueChanged", function() ma_frmtrsliderText:SetText(string.format("%.2f", ma_frmtrslider:GetValue())) end}})
+  self:PrepareScript(ma_btntrslider          , Locale["tt_BtnTrSlider"]        , {{"OnMouseUp", function() MangAdmin:ChangeTransparency("buttons") end},{"OnValueChanged", function() ma_btntrsliderText:SetText(string.format("%.2f", ma_btntrslider:GetValue())) end}})
   self:PrepareScript(ma_mm_revivebutton      , nil                             , function() SendChatMessage(".revive", "GUILD", nil, nil) end)
 end
-
-
 
 function MangAdmin:InitDropDowns()
   -- RELOAD TABLES
@@ -1845,7 +1768,7 @@ function MangAdmin:InitDropDowns()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_reloadtabledropdown, "all")
-  end  
+  end
   UIDropDownMenu_Initialize(ma_reloadtabledropdown, ReloadTableDropDownInitialize)
   UIDropDownMenu_SetWidth(ma_reloadtabledropdown,100)
   UIDropDownMenu_SetButtonWidth(ma_reloadtabledropdown, 20)
@@ -1872,7 +1795,7 @@ function MangAdmin:InitDropDowns()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_weatherdropdown, "0 0")
-  end  
+  end
   UIDropDownMenu_Initialize(ma_weatherdropdown, WeatherDropDownInitialize)
   UIDropDownMenu_SetWidth(ma_weatherdropdown, 100)
   UIDropDownMenu_SetButtonWidth(ma_weatherdropdown, 20)
@@ -2025,7 +1948,6 @@ function MangAdmin:InitDropDowns()
   UIDropDownMenu_Initialize(ma_languagedropdown, LangDropDownInitialize)
   UIDropDownMenu_SetWidth(ma_languagedropdown, 100)
   UIDropDownMenu_SetButtonWidth(ma_languagedropdown, 20)
-
 
 end
 
@@ -2221,7 +2143,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.itemset or MangAdmin.db.char.requests.favitemset then --get itemsets
     local count = 0
     if MangAdmin.db.char.requests.itemset then
@@ -2277,7 +2199,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.quest or MangAdmin.db.char.requests.favquest then --get quests
     local count = 0
     if MangAdmin.db.char.requests.quest then
@@ -2333,7 +2255,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.creature or MangAdmin.db.char.requests.favcreature then --get creatures
     local count = 0
     if MangAdmin.db.char.requests.creature then
@@ -2356,7 +2278,7 @@ function PopupScrollUpdate()
           end
           local key = lineplusoffset
           getglobal("ma_PopupScrollBarEntry"..line):SetText("Id: |cffffffff"..creature["crId"].."|r Name: |cffffffff"..creature["crName"].."|r")
-          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:Creature(creature["crId"], arg1) end) 
+          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:Creature(creature["crId"], arg1) end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnEnter", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnLeave", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):Enable()
@@ -2389,7 +2311,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.spell or MangAdmin.db.char.requests.favspell then --get spells
     local count = 0
     if MangAdmin.db.char.requests.spell then
@@ -2417,7 +2339,7 @@ function PopupScrollUpdate()
           getglobal("ma_PopupScrollBarEntry"..line):SetText("Id: |cffffffff"..spell["spId"].."|r Name: |cffffffff"..spell["spName"].."|r")
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnEnter", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnLeave", function() --[[Do nothing]] end)
-          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() LearnSpell(spell["spId"], arg1) end)  
+          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() LearnSpell(spell["spId"], arg1) end)
           getglobal("ma_PopupScrollBarEntry"..line):Enable()
           getglobal("ma_PopupScrollBarEntry"..line):Show()
           if MangAdmin.db.char.requests.spell then
@@ -2448,7 +2370,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.skill or MangAdmin.db.char.requests.favskill then --get skills
     local count = 0
     if MangAdmin.db.char.requests.skill then
@@ -2473,7 +2395,7 @@ function PopupScrollUpdate()
           getglobal("ma_PopupScrollBarEntry"..line):SetText("Id: |cffffffff"..skill["skId"].."|r Name: |cffffffff"..skill["skName"].."|r")
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnEnter", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnLeave", function() --[[Do nothing]] end)
-          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:SetSkill(skill["skId"], nil, nil) end)  
+          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:SetSkill(skill["skId"], nil, nil) end)
           getglobal("ma_PopupScrollBarEntry"..line):Enable()
           getglobal("ma_PopupScrollBarEntry"..line):Show()
           if MangAdmin.db.char.requests.skill then
@@ -2504,7 +2426,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.object or MangAdmin.db.char.requests.favobject then --get objects
     local count = 0
     if MangAdmin.db.char.requests.object then
@@ -2527,7 +2449,7 @@ function PopupScrollUpdate()
           end
           local key = lineplusoffset
           getglobal("ma_PopupScrollBarEntry"..line):SetText("Id: |cffffffff"..object["objId"].."|r Name: |cffffffff"..object["objName"].."|r")
-          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:AddObject(object["objId"], arg1) end)    
+          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:AddObject(object["objId"], arg1) end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnEnter", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnLeave", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):Enable()
@@ -2560,7 +2482,7 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   elseif MangAdmin.db.char.requests.tele or MangAdmin.db.char.requests.favtele then --get teles
     local count = 0
     if MangAdmin.db.char.requests.tele then
@@ -2583,7 +2505,7 @@ function PopupScrollUpdate()
           end
           local key = lineplusoffset
           getglobal("ma_PopupScrollBarEntry"..line):SetText("Name: |cffffffff"..tele["tName"].."|r")
-          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:ChatMsg(".tele "..tele["tName"]) end)    
+          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() MangAdmin:ChatMsg(".tele "..tele["tName"]) end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnEnter", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnLeave", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):Enable()
@@ -2616,12 +2538,11 @@ function PopupScrollUpdate()
         MangAdmin:NoResults("favorites")
       end
     end
-    
+
   else
     MangAdmin:NoResults("search")
   end
 end
-
 
 function MangAdmin:InlineScrollUpdate_temp()
     ma_ticketscrollframe:Hide()
@@ -2637,10 +2558,6 @@ function MangAdmin:InlineScrollUpdate_temp()
         FauxScrollFrame_Update(ma_ticketscrollframe,ticketCount,12,16);
     end
 end
-
-
-
-
 
 function pairsByKeys(t, f)
   if t == Nil then
@@ -2658,8 +2575,6 @@ function pairsByKeys(t, f)
     return iter
   end
 end
-
-
 
 -- STYLE FUNCTIONS
 function MangAdmin:ToggleTransparency()
@@ -2712,10 +2627,6 @@ function MangAdmin:InitCheckButtons()
   if dp == Nil or dp == "" then dp = "4000" end
   ma_delayparam:SetText(dp)
 end
-
-
-
-
 
 function MangAdmin:CloseButton(name)
   if name == "bg" then

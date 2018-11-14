@@ -33,7 +33,7 @@ function MangAdmin:CreateTeleSection()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   FrameLib:BuildFontString({
     name = "ma_teleconttext",
     group = "tele",
@@ -342,7 +342,7 @@ function MangAdmin:CreateTeleSection()
       offY = -10
     }
   })
-  
+
   FrameLib:BuildFrame({
     type = "ScrollFrame",
     name = "ma_ZoneScrollBar",
@@ -362,7 +362,7 @@ function MangAdmin:CreateTeleSection()
     },
     inherits = "FauxScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry1",
     group = "tele",
@@ -468,7 +468,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry6",
     group = "tele",
@@ -510,7 +510,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry8",
     group = "tele",
@@ -531,7 +531,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry9",
     group = "tele",
@@ -552,7 +552,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry10",
     group = "tele",
@@ -573,7 +573,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry11",
     group = "tele",
@@ -594,7 +594,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ZoneScrollBarEntry12",
     group = "tele",
@@ -627,7 +627,7 @@ function MangAdmin:CreateTeleSection()
       offY = -10
     }
   })
-  
+
   FrameLib:BuildFrame({
     type = "ScrollFrame",
     name = "ma_SubzoneScrollBar",
@@ -647,7 +647,7 @@ function MangAdmin:CreateTeleSection()
     },
     inherits = "FauxScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry1",
     group = "tele",
@@ -753,7 +753,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry6",
     group = "tele",
@@ -795,7 +795,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry8",
     group = "tele",
@@ -816,7 +816,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry9",
     group = "tele",
@@ -837,7 +837,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry10",
     group = "tele",
@@ -858,7 +858,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry11",
     group = "tele",
@@ -879,7 +879,7 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_SubzoneScrollBarEntry12",
     group = "tele",
@@ -900,5 +900,5 @@ function MangAdmin:CreateTeleSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
 end

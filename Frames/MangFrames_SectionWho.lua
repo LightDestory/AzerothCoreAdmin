@@ -34,7 +34,7 @@ function MangAdmin:CreateWhoSection()
     frm = MangAdmin.db.account.style.color.frames,
     linkifier = MangAdmin.db.account.style.color.linkifier
   }
-  
+
   FrameLib:BuildButton({ --Refesh Button
     name = "ma_showwhobutton",
     group = "who",
@@ -54,7 +54,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_ShowWhoButton"]
   })
-  
+
   FrameLib:BuildButton({ --Reset Button
     name = "ma_resetwhobutton",
     group = "who",
@@ -74,7 +74,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_resetwhobutton"]
   })
-   
+
   FrameLib:BuildButton({
     name = "ma_whisperwhobutton",
     group = "who",
@@ -94,7 +94,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_whisperbutton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_summonwhobutton",
     group = "who",
@@ -114,7 +114,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_SummonWhoButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gocharwhobutton",
     group = "who",
@@ -134,7 +134,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_GoCharWhoButton"]
   })
-  
+
   FrameLib:BuildButton({ --Mail
     name = "ma_answerwhobutton",
     group = "who",
@@ -154,7 +154,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_AnswerWhoButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_who_customizebutton",
     group = "who",
@@ -174,7 +174,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_who_customize"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_who_chardeletebutton",
     group = "who",
@@ -234,7 +234,7 @@ function MangAdmin:CreateWhoSection()
     },
     text = Locale["ma_DeleteWhoButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_who_1daybanbutton",
     group = "who",
@@ -355,7 +355,7 @@ function MangAdmin:CreateWhoSection()
     inherits = "FauxScrollFrameTemplate"
 --    inherits = "UIPanelScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildFrame({  --Weird Editbox, left side, top
     type = "EditBox",
     name = "ma_whodetail",
@@ -378,7 +378,7 @@ function MangAdmin:CreateWhoSection()
     multiline = true,
     textcolor = {1, 1, 1, 1.0}
   })
- 
+
   FrameLib:BuildFrame({ --Weird Editbox, left side, bottom
     type = "EditBox",
     name = "ma_whodetail2",
@@ -401,7 +401,7 @@ function MangAdmin:CreateWhoSection()
     multiline = true,
     textcolor = {1, 1, 1, 1.0}
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_whoidlabel",
     group = "who",
@@ -413,7 +413,7 @@ function MangAdmin:CreateWhoSection()
       offY = -30
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_whoid",
     group = "who",
@@ -449,7 +449,7 @@ function MangAdmin:CreateWhoSection()
       offY = -30
     }
   })
- 
+
   FrameLib:BuildFontString({
     name = "ma_who",
     group = "who",
@@ -461,7 +461,7 @@ function MangAdmin:CreateWhoSection()
       offY = -30
     }
   })
- 
+
   FrameLib:BuildButton({
     name = "ma_whoscrollframe1",
     JustifyH = "LEFT",
@@ -484,7 +484,7 @@ function MangAdmin:CreateWhoSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
     FrameLib:BuildButton({
     name = "ma_whoscrollframe2",
     group = "who",
@@ -506,7 +506,7 @@ function MangAdmin:CreateWhoSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
     FrameLib:BuildButton({
     name = "ma_whoscrollframe3",
     group = "who",

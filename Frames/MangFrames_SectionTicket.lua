@@ -52,8 +52,8 @@ function MangAdmin:CreateTicketSection()
         offY = -5
     },
     text = "1.RESET"
-})   
-  
+})
+
   FrameLib:BuildButton({
     name = "ma_showticketsbutton",
     group = "ticket",
@@ -112,7 +112,7 @@ function MangAdmin:CreateTicketSection()
         offY = -5
     },
     text = "3.SHOW"
-})   
+})
 
   FrameLib:BuildButton({
     name = "ma_goticketbutton",
@@ -131,7 +131,7 @@ function MangAdmin:CreateTicketSection()
       offX = 240,
       offY = -226
     },
-    text = "Go Ticket" 
+    text = "Go Ticket"
   })
 
   FrameLib:BuildButton({
@@ -153,7 +153,7 @@ function MangAdmin:CreateTicketSection()
     },
     text = "Whisper" --Locale["ma_WhisperButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_getcharticketbutton",
     group = "ticket",
@@ -173,7 +173,7 @@ function MangAdmin:CreateTicketSection()
     },
     text = Locale["ma_GetCharTicketButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gocharticketbutton",
     group = "ticket",
@@ -193,7 +193,7 @@ function MangAdmin:CreateTicketSection()
     },
     text = Locale["ma_GoCharTicketButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_answerticketbutton",
     group = "ticket",
@@ -213,7 +213,7 @@ function MangAdmin:CreateTicketSection()
     },
     text = Locale["ma_AnswerButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_deleteticketbutton",
     group = "ticket",
@@ -233,7 +233,7 @@ function MangAdmin:CreateTicketSection()
     },
     text = Locale["ma_DeleteButton"]
   })
-  
+
   FrameLib:BuildFrame({
     type = "ScrollFrame",
     name = "ma_ticketscrollframe",
@@ -259,7 +259,7 @@ function MangAdmin:CreateTicketSection()
     inherits = "FauxScrollFrameTemplate"
 --    inherits = "UIPanelScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_ticketdetail",
@@ -282,7 +282,7 @@ function MangAdmin:CreateTicketSection()
     multiline = true,
     textcolor = {1, 1, 1, 1.0}
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_ticketidlabel",
     group = "ticket",
@@ -306,7 +306,7 @@ function MangAdmin:CreateTicketSection()
       offY = -30
     }
   })
- 
+
   FrameLib:BuildFontString({
     name = "ma_ticketwholabel",
     group = "ticket",
@@ -330,7 +330,7 @@ function MangAdmin:CreateTicketSection()
       offY = -30
     }
   })
- 
+
   FrameLib:BuildButton({
     name = "ma_ticketscrollframe1",
     JustifyH = "LEFT",
@@ -353,7 +353,7 @@ function MangAdmin:CreateTicketSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ticketscrollframe2",
     group = "ticket",
@@ -375,7 +375,7 @@ function MangAdmin:CreateTicketSection()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ticketscrollframe3",
     group = "ticket",

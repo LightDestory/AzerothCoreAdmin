@@ -33,7 +33,7 @@ function MangAdmin:CreateStartFrames()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   -- [[ Main Elements ]]
   FrameLib:BuildFrame({ --Main Window Frame
     name = "ma_bgframe",
@@ -199,7 +199,7 @@ function MangAdmin:CreateStartFrames()
       offY = 10
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_infoonlinetext",
     group = "bg",
@@ -211,7 +211,7 @@ function MangAdmin:CreateStartFrames()
       offY = -10
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_infomaxonlinetext",
     group = "bg",
@@ -223,7 +223,7 @@ function MangAdmin:CreateStartFrames()
       offY = -32
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_infouptimetext",
     group = "bg",
@@ -235,7 +235,7 @@ function MangAdmin:CreateStartFrames()
       offY = -52
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_inforevisiontext",
     group = "bg",
@@ -247,7 +247,7 @@ function MangAdmin:CreateStartFrames()
       offY = -72
     }
   })
-  
+
 --  FrameLib:BuildFontString({
 --    name = "ma_infoplatformtext",
 --    group = "bg",
@@ -259,7 +259,7 @@ function MangAdmin:CreateStartFrames()
 --      offY = -70
 --    }
 --  })
-  
+
   FrameLib:BuildButton({
     name = "ma_inforefreshbutton",
     group = "bg",

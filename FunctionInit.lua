@@ -17,9 +17,9 @@
 -- Subversion Repository: http://trinityadmin.googlecode.com/svn/
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
+
 --Convention:
 -- MangAdmin:PrepareScript(*nameofbutton*                    , Locale["*tooltiplocalisation*"]         , function() *functionnameandparameters()* end)
-
 
 function InitControls()
 --[[GM Tab]]
@@ -40,7 +40,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_mapsoffbutton                   , Locale["tt_HideMapsButton"]             , function() ToggleMaps(0) end)
   MangAdmin:PrepareScript(ma_instantkillbutton               , Locale["tt_instakill"]                  , function() InstantKill() end)
   MangAdmin:PrepareScript(ma_speedslider                     , Locale["tt_SpeedSlider"]                , {{"OnMouseUp", function() SetSpeed() end},{"OnValueChanged", function() ma_speedsliderText:SetText("Speed: "..string.format("%.1f", ma_speedslider:GetValue())) end}})
-  MangAdmin:PrepareScript(ma_scaleslider                     , Locale["tt_ScaleSlider"]                , {{"OnMouseUp", function() SetScale() end},{"OnValueChanged", function() ma_scalesliderText:SetText("Scale: "..string.format("%.1f", ma_scaleslider:GetValue())) end}})  
+  MangAdmin:PrepareScript(ma_scaleslider                     , Locale["tt_ScaleSlider"]                , {{"OnMouseUp", function() SetScale() end},{"OnValueChanged", function() ma_scalesliderText:SetText("Scale: "..string.format("%.1f", ma_scaleslider:GetValue())) end}})
   MangAdmin:PrepareScript(ma_screenshotbutton                , Locale["tt_ScreenButton"]               , function() Screenie() end)
   MangAdmin:PrepareScript(ma_bankbutton                      , Locale["tt_BankButton"]                 , function() ShowBank() end)
   MangAdmin:PrepareScript(ma_dismountbutton                  , Locale["tt_Dismount"]                   , function() DismountPlayer() end)
@@ -139,8 +139,8 @@ function InitControls()
   MangAdmin:PrepareScript(ma_charunpossessbutton             , Locale["tt_charunpossess"]              , function() CharUnPossess() end)
   MangAdmin:PrepareScript(ma_charrecallbutton                , Locale["tt_charrecall"]                 , function() CharRecall() end)
   MangAdmin:PrepareScript(ma_charrepairitemsbutton           , Locale["tt_charrepair"]                 , function() CharRepair() end)
-  
-  
+
+
   LearnLangDropDownInitialize()
   UIDropDownMenu_Initialize(ma_learnlangdropdown , LearnLangDropDownInitialize)
   UIDropDownMenu_SetWidth(ma_learnlangdropdown          ,100)
@@ -175,15 +175,15 @@ function InitControls()
   MangAdmin:PrepareScript(ma_jailabutton                     , Locale["tt_JailAButton"]                , function() JailA() end)
   MangAdmin:PrepareScript(ma_jailhbutton                     , Locale["tt_JailHButton"]                , function() JailH() end)
   MangAdmin:PrepareScript(ma_unjailbutton                    , Locale["tt_UnJailButton"]               , function() UnJail() end)
-  MangAdmin:PrepareScript(ma_unmutebutton                    , Locale["tt_UnMuteButton"]               , function() UnMuteButton() end) 
-  MangAdmin:PrepareScript(ma_questaddbutton                  , Locale["tt_QuestAddButton"]             , function() QuestAddButton() end) 
-  MangAdmin:PrepareScript(ma_questcompletebutton             , Locale["tt_QuestCompleteButton"]        , function() QuestCompleteButton() end) 
-  MangAdmin:PrepareScript(ma_questremovebutton               , Locale["tt_QuestRemoveButton"]          , function() QuestRemoveButton() end) 
-  MangAdmin:PrepareScript(ma_damagebutton                    , Locale["tt_DamageButton"]               , function() DamageButton() end) 
-  MangAdmin:PrepareScript(ma_hideareabutton                  , Locale["tt_HideAreaButton"]             , function() HideAreaButton() end) 
-  MangAdmin:PrepareScript(ma_showareabutton                  , Locale["tt_ShowAreaButton"]             , function() ShowAreaButton() end) 
-  MangAdmin:PrepareScript(ma_honoraddbutton                  , Locale["tt_HonorAddButton"]             , function() HonorAddButton() end) 
-  MangAdmin:PrepareScript(ma_honorupdatebutton               , Locale["tt_HonorUpdateButton"]          , function() HonorUpdateButton() end) 
+  MangAdmin:PrepareScript(ma_unmutebutton                    , Locale["tt_UnMuteButton"]               , function() UnMuteButton() end)
+  MangAdmin:PrepareScript(ma_questaddbutton                  , Locale["tt_QuestAddButton"]             , function() QuestAddButton() end)
+  MangAdmin:PrepareScript(ma_questcompletebutton             , Locale["tt_QuestCompleteButton"]        , function() QuestCompleteButton() end)
+  MangAdmin:PrepareScript(ma_questremovebutton               , Locale["tt_QuestRemoveButton"]          , function() QuestRemoveButton() end)
+  MangAdmin:PrepareScript(ma_damagebutton                    , Locale["tt_DamageButton"]               , function() DamageButton() end)
+  MangAdmin:PrepareScript(ma_hideareabutton                  , Locale["tt_HideAreaButton"]             , function() HideAreaButton() end)
+  MangAdmin:PrepareScript(ma_showareabutton                  , Locale["tt_ShowAreaButton"]             , function() ShowAreaButton() end)
+  MangAdmin:PrepareScript(ma_honoraddbutton                  , Locale["tt_HonorAddButton"]             , function() HonorAddButton() end)
+  MangAdmin:PrepareScript(ma_honorupdatebutton               , Locale["tt_HonorUpdateButton"]          , function() HonorUpdateButton() end)
 
 --[[NPC Tab]]
   InitModelFrameNPC()

@@ -33,7 +33,7 @@ function MangAdmin:CreateMiniMenu()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   -- [[ MiniMenu Elements ]]
   FrameLib:BuildFrame({
     name = "ma_minibgframe",
@@ -52,7 +52,7 @@ function MangAdmin:CreateMiniMenu()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_miniframe",
     group = "minimenu",
@@ -71,7 +71,7 @@ function MangAdmin:CreateMiniMenu()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_logoframe",
     group = "minimenu",
@@ -89,7 +89,7 @@ function MangAdmin:CreateMiniMenu()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_mainbutton",
     group = "minimenu",
@@ -109,7 +109,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Gm"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_charbutton",
     group = "minimenu",
@@ -154,7 +154,6 @@ function MangAdmin:CreateMiniMenu()
     text = "Np"
   })
 
-
   FrameLib:BuildButton({
     name = "ma_mm_gobutton",
     group = "minimenu",
@@ -177,7 +176,7 @@ function MangAdmin:CreateMiniMenu()
     text = "GO"
   })
 
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_telebutton",
     group = "minimenu",
@@ -199,7 +198,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Te"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_ticketbutton",
     group = "minimenu",
@@ -221,7 +220,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Ti"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_miscbutton",
     group = "minimenu",
@@ -243,7 +242,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Mi"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_serverbutton",
     group = "minimenu",
@@ -265,7 +264,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Se"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mm_logbutton",
     group = "minimenu",
@@ -287,7 +286,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Lo"
   })
-  
+
     FrameLib:BuildButton({
     name = "ma_mm_whobutton",
     group = "minimenu",
@@ -309,7 +308,7 @@ function MangAdmin:CreateMiniMenu()
     },
     text = "Wh"
   })
-  
+
   FrameLib:BuildButton({ --This button shops up in the center of the screen when you die!
     name = "ma_mm_revivebutton",
     group = "noneyet",

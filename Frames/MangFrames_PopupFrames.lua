@@ -33,7 +33,7 @@ function MangAdmin:CreatePopupFrames()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   -- [[Popup Frame]]
   FrameLib:BuildFrame({
     name = "ma_popupframe",
@@ -53,7 +53,7 @@ function MangAdmin:CreatePopupFrames()
     frameStrata = "HIGH",
     inherits = nil
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_popmenubgframe",
     group = "popup",
@@ -108,7 +108,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_popupbottomframe",
     group = "popup",
@@ -128,7 +128,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_popupclosebutton",
     group = "popup",
@@ -148,7 +148,7 @@ function MangAdmin:CreatePopupFrames()
     },
     text = "X"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_ptabbutton_1",
     group = "popup",
@@ -201,7 +201,7 @@ function MangAdmin:CreatePopupFrames()
     },
     text = "Favorites"
   })
-  
+
   -- Popup Editbox and Searchbutton
   FrameLib:BuildFontString({
     name = "ma_lookupresulttext",
@@ -231,7 +231,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_searchbutton",
     group = "popup",
@@ -251,7 +251,7 @@ function MangAdmin:CreatePopupFrames()
     },
     text = Locale["ma_SearchButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_resetsearchbutton",
     group = "popup",
@@ -271,7 +271,7 @@ function MangAdmin:CreatePopupFrames()
     },
     text = Locale["ma_ResetButton"]
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_var1text",
     group = "popup",
@@ -283,7 +283,7 @@ function MangAdmin:CreatePopupFrames()
       offY = 8
     }
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_var1editbox",
@@ -300,7 +300,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_var2text",
     group = "popup",
@@ -312,7 +312,7 @@ function MangAdmin:CreatePopupFrames()
       offY = 8
     }
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_var2editbox",
@@ -329,7 +329,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   -- Popup Search ScrollFrame
   FrameLib:BuildFrame({
     type = "ScrollFrame",
@@ -350,7 +350,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "FauxScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntry1",
     group = "popup",
@@ -387,7 +387,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry1ChkBtn",
@@ -420,7 +420,7 @@ function MangAdmin:CreatePopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntryIcon2",
     group = "popup",
@@ -435,7 +435,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry2ChkBtn",
@@ -468,7 +468,7 @@ function MangAdmin:CreatePopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntryIcon3",
     group = "popup",
@@ -483,7 +483,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry3ChkBtn",
@@ -516,7 +516,7 @@ function MangAdmin:CreatePopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntryIcon4",
     group = "popup",
@@ -531,7 +531,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry4ChkBtn",
@@ -564,7 +564,7 @@ function MangAdmin:CreatePopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntryIcon5",
     group = "popup",
@@ -579,7 +579,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry5ChkBtn",
@@ -612,7 +612,7 @@ function MangAdmin:CreatePopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntryIcon6",
     group = "popup",
@@ -627,7 +627,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry6ChkBtn",
@@ -660,7 +660,7 @@ function MangAdmin:CreatePopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_PopupScrollBarEntryIcon7",
     group = "popup",
@@ -675,7 +675,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "ItemButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_PopupScrollBarEntry7ChkBtn",
@@ -687,7 +687,7 @@ function MangAdmin:CreatePopupFrames()
     },
     inherits = "UICheckButtonTemplate"
   })
-  
+
   -- [[Mail Popup]]
   FrameLib:BuildFrame({
     type = "ScrollFrame",
@@ -706,7 +706,7 @@ function MangAdmin:CreatePopupFrames()
     inherits = "FauxScrollFrameTemplate"
     --inherits = "UIPanelScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_maileditbox",
@@ -734,7 +734,7 @@ function MangAdmin:CreatePopupFrames()
     multiline = true,
     textcolor = {0, 0, 0, 1.0}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_modfavsbutton",
     group = "popup",
@@ -754,7 +754,7 @@ function MangAdmin:CreatePopupFrames()
     },
     text = "Invisible"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_selectallbutton",
     group = "popup",
@@ -774,7 +774,7 @@ function MangAdmin:CreatePopupFrames()
     },
     text = Locale["ma_SelectAllButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_deselectallbutton",
     group = "popup",

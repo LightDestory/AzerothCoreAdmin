@@ -60,7 +60,7 @@ function ToggleVisible(value)
     MangAdmin:LogAction("Turned you visible.")
   else
     MangAdmin:LogAction("Turned you invisible.")
-  end  
+  end
 end
 
 function ToggleTaxicheat(value)
@@ -380,7 +380,7 @@ function ResetSpeed()
     ma_speedslider:SetValue(1)
     ma_speedsliderText:SetText("Speed: 1.0")
     MangAdmin:ChatMsg(".mod speed 1")
-    
+
 end
 
 function ResetScale()

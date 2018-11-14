@@ -33,7 +33,7 @@ function MangAdmin:CreateCharSection()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   FrameLib:BuildFrame({
     type = "PlayerModel",
     name = "ma_modelframe",
@@ -50,7 +50,7 @@ function MangAdmin:CreateCharSection()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_modelrotatelbutton",
     group = "char",
@@ -70,7 +70,7 @@ function MangAdmin:CreateCharSection()
     },
     text = "<<="
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_modelrotaterbutton",
     group = "char",
@@ -90,7 +90,7 @@ function MangAdmin:CreateCharSection()
     },
     text = "=>>"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_modelzoominbutton",
     group = "char",
@@ -130,7 +130,7 @@ function MangAdmin:CreateCharSection()
     },
     text = "-"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_killbutton",
     group = "char",
@@ -170,7 +170,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_ReviveButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_savebutton",
     group = "char",
@@ -190,7 +190,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_SaveButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_kickbutton",
     group = "char",
@@ -230,7 +230,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_CooldownButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_demorphbutton",
     group = "char",
@@ -250,7 +250,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_DemorphButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_showmapsbutton",
     group = "char",
@@ -270,7 +270,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_ShowMapsCharButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_hidemapsbutton",
     group = "char",
@@ -310,7 +310,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_GPSButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_guidbutton",
     group = "char",
@@ -406,7 +406,7 @@ function MangAdmin:CreateCharSection()
     },
     inherits = "UIDropDownMenuTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_learnlangbutton",
     group = "char",
@@ -426,7 +426,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_Learn"]
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_modifydropdown",
     group = "char",
@@ -442,7 +442,7 @@ function MangAdmin:CreateCharSection()
     },
     inherits = "UIDropDownMenuTemplate"
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_modifyeditbox",
@@ -459,7 +459,7 @@ function MangAdmin:CreateCharSection()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_modifybutton",
     group = "char",
@@ -479,7 +479,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_Modify"]
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_resetdropdown",
     group = "char",
@@ -495,7 +495,7 @@ function MangAdmin:CreateCharSection()
     },
     inherits = "UIDropDownMenuTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_resetbutton",
     group = "char",
@@ -555,7 +555,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_CharUnBindsight"]
   })
-     
+
   FrameLib:BuildButton({
     name = "ma_charrenamebutton",
     group = "char",
@@ -1176,7 +1176,7 @@ function MangAdmin:CreateCharSection()
     },
     text = Locale["ma_UnAura"]
     })
-      
+
  FrameLib:BuildButton({
     name = "ma_jailabutton",
     group = "char",

@@ -18,8 +18,6 @@
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
 
-
-
 function OBJGo()
     local player = UnitName("target") or UnitName("player")
     local obj =	ma_Obj_guidbutton:GetText()
@@ -66,7 +64,7 @@ function OBJTarget()
         gettingGOBinfo=1
         --ma_gobtargetinfo:SetText("|cffffffff")
         --ma_gobinfoinfo:SetText("|cffffffff")
-        
+
         local player =  UnitName("player")
         MangAdmin:ChatMsg(".gobject target")
         MangAdmin:LogAction("Object Target for player "..player..".")
@@ -106,8 +104,8 @@ end
 function ShowGobModel()
     local Scale = UIParent:GetEffectiveScale();
     local Hypotenuse = ( ( GetScreenWidth() * Scale ) ^ 2 + ( GetScreenHeight() * Scale ) ^ 2 ) ^ 0.5;
-    local CoordRight = ( ma_gobjectmodel:GetRight() - ma_gobjectmodel:GetLeft() ) / Hypotenuse 
-    local CoordTop = ( ma_gobjectmodel:GetTop() - ma_gobjectmodel:GetBottom() ) / Hypotenuse 
+    local CoordRight = ( ma_gobjectmodel:GetRight() - ma_gobjectmodel:GetLeft() ) / Hypotenuse
+    local CoordTop = ( ma_gobjectmodel:GetTop() - ma_gobjectmodel:GetBottom() ) / Hypotenuse
     local Radian = 0.0174532925
     local gobdisplay = ma_gobdisplayid:GetText()
     local fu = tonumber(gobdisplay)
@@ -120,7 +118,7 @@ function ShowGobModel()
     tVar = ModelA[fu]
     if not tVar then
         ma_gobinfoinfo="No data for this model"
-    else 
+    else
         ma_gobjectmodel:SetModel(tVar)
     end
 end
@@ -143,9 +141,9 @@ function InitGobModelFrame()
   ma_gobjectmodel:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
   ma_gobjectmodel.rotation = 0.61
   ma_gobjectmodel:SetRotation(0.61)
-  --ma_gobjectmodel:SetUnit("player") 
-  
-end  
+  --ma_gobjectmodel:SetUnit("player")
+
+end
 
 function GobModelZoomIn()
     --ma_gobjectmodel:SetCamera(0)
@@ -177,7 +175,7 @@ end
             WorkString = string.gsub(WorkString, 'GUID:', '')
             ObjectIDTxT:SetText(WorkString)
             fID = 3
-        end        
+        end
     end
     if string.find(arg1,"Model:") ~= nil then
         if fID == 3 then
@@ -185,7 +183,7 @@ end
             WorkString = string.gsub(WorkString, 'Model:', '')
             ObjectMTxt:SetText(WorkString)
             fID = 0
-        end        
+        end
     end
     if string.find(arg1,"Model:") ~= nil then
         WorkString = string.gsub(arg1, '(|.........)', '')
@@ -195,7 +193,7 @@ end
     if string.find(arg1,"No inrange GameObject") ~= nil then
         if fID == 1 then
             fID = 0
-        end        
+        end
     end
 end ]]
 

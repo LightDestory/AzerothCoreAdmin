@@ -1,11 +1,11 @@
 ![GitHub Logo](/Textures/logo.png)
 
-TrinityAdmin v2.5 is a general interface add-on which will help staff member ingame for trinity core. 
+TrinityAdmin v2.5 is a general interface add-on which will help staff member ingame for trinity core.
 
 ## INSTRUCTIONS
 
 #### This new version of TrinityAdmin contains many changes over previous versions.
-- TrinityAdmin v 2.5 supports client versions 3.x and 4.x only. 
+- TrinityAdmin v 2.5 supports client versions 3.x and 4.x only.
     - It does not officially support 1.x or 2.x installs.
 - TrinityAdmin supports TrinityCore servers ONLY.
     - It will not work with MaNGOS, Arc, Ascent, Hearthstone, or any other emu.
@@ -17,8 +17,8 @@ TrinityAdmin v2.5 is a general interface add-on which will help staff member ing
 NOTE: These steps are required for locales to properly create the new local tables to store tickets and 'who' information')
 1. Unzip the install archive into your Addons folder
     - (i.e the TrinityAdmin folder is in the Addons folder).
-2. ON THE SERVER -> You may wish to review the security level requirements for certain GM commands. 
-    - For example, the .account onlinelist by default needs a level 4. 
+2. ON THE SERVER -> You may wish to review the security level requirements for certain GM commands.
+    - For example, the .account onlinelist by default needs a level 4.
     - If your GMs dont have level 4, they wont be able to use the WHO tab.
 3. Click the TA icon on the minimap frame. Do NOT open TrinityAdmin any other way just yet.
 4. Click the Tickets tab. If you receive and error, DO NOT close it, just click the Tickets tab again.

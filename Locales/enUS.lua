@@ -24,7 +24,7 @@ How to add a localised string:
 3. Each line is an assignment equation. On the left side is the 'token' which represents the string. The token is used
    in the source code, and is replaced by the actual string at runtime. The token is quoted, and contained in square brackets ([]).
    Eaxample: ["strength"]
-4. Now assign a value to the token for the language you are working with. For example, if I am editing the enUS file, I want to 
+4. Now assign a value to the token for the language you are working with. For example, if I am editing the enUS file, I want to
    assign the value, in US English, to the token:
    ["strength"] = "Strength",
    Please note the line is terminated with a comma (,).
@@ -33,21 +33,21 @@ How to add a localised string:
 6. Some of these lines also contain color codes (example: |cFF00FF00 and |r) Don't alter these, please.
 
 TrinityAdmin Locale Team:
-You have received this file which currently contains enUS strings, but will actually be the file for your 
-selected language. 
+You have received this file which currently contains enUS strings, but will actually be the file for your
+selected language.
 1. Edit the first un-commented line below, which should resemble: function Return_enUS(). Change
    the 'enUS' to the four letter code for your locale (example: deDE).
-2. Proceed to localisation by examining each line in the file, and altering the US English strings on 
-   the RIGHT of each equation to your selected language. DO NOT alter anything on the LEFT sides 
+2. Proceed to localisation by examining each line in the file, and altering the US English strings on
+   the RIGHT of each equation to your selected language. DO NOT alter anything on the LEFT sides
    (the tokens). Example: ["token_do_not_edit"] = "Edit this string to your language",
 3. Some text includes color codes:     ["info_revision"] = "|cFF00FF00Trinity Revision:|r ",
-   The Color code should NOT be localised/edited. The color code is a tag, with an opening element 
+   The Color code should NOT be localised/edited. The color code is a tag, with an opening element
    and a closing element. The opening element is "|c" followed by 8 numbers. The closing element
    is "|r". In the example above, "|cFF00FF00" and "|r" are the color code and should NOT be changed.
    That leaves "Trinity Revision:" as the string to edit in the above example.
 4. Some strings may not be edited at all because they are used in code or contain code. They
    are marked.
-5. Please do not edit comments. In LUA, the programming language we use here, code comments are seperated from code by the 
+5. Please do not edit comments. In LUA, the programming language we use here, code comments are seperated from code by the
    use of "" (makes anything AFTER it a comment, to the end of the line) or comments can be enclosed between.
 
 If you have any questions, contact iotech.
@@ -115,11 +115,11 @@ function Return_enUS()
     ["tt_S"]                          = "Navigate South",
     ["tt_E"]                          = "Navigate East",
     ["tt_W"]                          = "Navigate West",
-  --["tt_chatonbutton"]               = "Turn GM Chat ON", 
-  --["tt_chatoffbutton"]              = "Turn GM Chat OFF", 
-    ["tt_waterwalkonbutton"]          = "Turn Waterwalk ON for the selected creature"  , 
-    ["tt_watewrwalkoffbutton"]        = "Turn Waterwalk OFF for the selected creature", 
-    ["tt_accountlockonbutton"]        = "Lock your account",  
+  --["tt_chatonbutton"]               = "Turn GM Chat ON",
+  --["tt_chatoffbutton"]              = "Turn GM Chat OFF",
+    ["tt_waterwalkonbutton"]          = "Turn Waterwalk ON for the selected creature"  ,
+    ["tt_watewrwalkoffbutton"]        = "Turn Waterwalk OFF for the selected creature",
+    ["tt_accountlockonbutton"]        = "Lock your account",
     ["tt_accountlockoffbutton"]       = "UnLock your account",
     ["tt_DisplayAccountLvl"]          = "Display your account level.",
     ["tt_SpeedSliderReset"]           = "Reset Speed to 1.0",
@@ -158,7 +158,7 @@ function Return_enUS()
     ["ma_HoverOnButton"]              = "Hover-mode on",  --TODO: '.hover' does not exist 4.3.4 (Remove/Change command)
     ["ma_WhisperOnButton"]            = "Whisper on",
     ["ma_InvisOnButton"]              = "Invisibility on",
-    ["ma_TaxiOnButton"]               = "Taxicheat on",    
+    ["ma_TaxiOnButton"]               = "Taxicheat on",
     ["ma_ShowMapsButton"]             = "Show Maps",
     ["ma_HideMapsButton"]             = "Hide Maps",
     ["ma_instakill"]                  = "Insta-kill enemy creatures",
@@ -262,7 +262,7 @@ function Return_enUS()
     ["tt_guilduninvitebutton"]        = "Parameter= $charactername  [[Kicks the specified character out of his/her guild]]",
     ["tt_telenamebutton"]             = "Parameters= $charactername $telename  [[Teleports $charactername to $telename]]",
     ["tt_mutebutton"]                 = "Parameters= $charactername #minutes  [[Disables chat for $charactername's entire account for #minutes]]",
-    ["tt_charmorphbutton"]            = "Parameters = #DisplayID [[Enter the DisplayID of the morph you want to apply]]", 
+    ["tt_charmorphbutton"]            = "Parameters = #DisplayID [[Enter the DisplayID of the morph you want to apply]]",
     ["tt_charaurabutton"]             = "Parameters = #AuraID [[Enter the AuraID of the aura you want to apply]]",
     ["tt_charunaurabutton"]           = "Parameters = #AuraID [[Enter the AuraID of the aura you want to remove]]",
     ["tt_JailAButton"]                = "Parameter= $charactername [[Sends the character whose name appears in this box to the Alliance Jail]]",
@@ -638,19 +638,19 @@ function Return_enUS()
     ["ma_who_unjailbutton"]           = "UnJail",
   --[[Other]]
 
-    
-    
+
+
 --[[ChangeLog Tab]]  --Place holder for future update*
   --["tabmenu_changelog"] = "ChangeLog",
   --[[Tooltips]]
   --[[Control Labels]]
   --[[Other]]
 
-    
-    
+
+
 --[[Pop UPs]]
    --[[General]]
-   --[[ToolTips]]   
+   --[[ToolTips]]
     ["tt_ItemButton"]                 = "Toggle a popup with the function to search for items and manage your favorites.",
     ["tt_ItemSetButton"]              = "Toggle a popup with the function to search for itemsets and manage your favorites.",
     ["tt_SpellButton"]                = "Toggle a popup with the function to search for spells and manage your favorites.",
@@ -687,10 +687,10 @@ function Return_enUS()
     ["ma_ObjectVar2Button"]           = "Spawn Time",
     ["ma_NoFavorites"]                = "There are currently no saved favorites!",
     ["favoriteResults"]               = "|cFF00FF00Favorites:|r ",
-  
-  
-  
---[[Deprecated, but may be used again.]]  
+
+
+
+--[[Deprecated, but may be used again.]]
     ["ma_LearnAllButton"]             = "All spells",
     ["ma_LearnCraftsButton"]          = "All professions and recipes",
     ["ma_LearnGMButton"]              = "Default GM spells",

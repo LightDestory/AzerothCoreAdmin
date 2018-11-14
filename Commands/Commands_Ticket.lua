@@ -17,6 +17,7 @@
 -- Subversion Repository: http://trinityadmin.googlecode.com/svn/
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
+
 function ShowTicketTab()
   wipe(MangAdmin.db.account.buffer.tickets)
   ma_deleteticketbutton:Disable()
@@ -40,7 +41,7 @@ function RefreshOnlineTickets()
        getglobal("ma_ticketscrollframe"..i):Hide()
     end
     getglobal("ma_showticketsbutton"):Hide()
-    
+
 end
 
 function RefreshTickets()
@@ -69,13 +70,12 @@ function ResetTickets()
     end
     getglobal("ma_showticketsbutton"):Show()
     getglobal("ma_showonlineticketsbutton"):Show()
-    
+
 end
 
 function ShowTickets()
  InlineScrollUpdate()
 end
-
 
 --[[function MangAdmin:LoadTickets(number)
   self.db.char.newTicketQueue = {}
@@ -149,11 +149,11 @@ function Ticket(value)
        if not editbox then
          -- Support for 3.3.5 and newer
          editbox = ChatEdit_GetActiveWindow()
-       end 
+       end
        ChatEdit_ActivateChat(editbox);
        if editbox then
          editbox:Insert("/w "..ma_ticketwho:GetText().." ");
-       end 
+       end
 
   elseif value == "goticket" then
     MangAdmin:ChatMsg(".go ticket "..ma_ticketid:GetText())
@@ -217,7 +217,7 @@ function ReadTicket(tNumber, tChar)
 --   MangAdmin:ChatMsg(tNumber)
 --   tNumber=string.gsub(tNumber, ".", "")
 --   MangAdmin:ChatMsg(tNumber)
-    --x = x - 1 
+    --x = x - 1
     tNumber = string.match(tNumber, "%d+")
     MangAdmin:ChatMsg(".ticket viewid "..tNumber)
     ma_ticketid:SetText(tNumber)

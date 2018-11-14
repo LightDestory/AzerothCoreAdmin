@@ -34,7 +34,7 @@ function MangAdmin:CreateMiscSection()
     frm = MangAdmin.db.account.style.color.frames,
     linkifier = MangAdmin.db.account.style.color.linkifier
   }
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_checktransparencybutton",
@@ -48,7 +48,7 @@ function MangAdmin:CreateMiscSection()
     text = "Enable Transparency",
     inherits = "OptionsCheckButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_checklocalsearchstringsbutton",
@@ -62,7 +62,7 @@ function MangAdmin:CreateMiscSection()
     text = "Enable Localized Search Strings",
     inherits = "OptionsCheckButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_showminimenubutton",
@@ -76,7 +76,7 @@ function MangAdmin:CreateMiscSection()
     text = "Enable Minimenu/Toolbar",
     inherits = "OptionsCheckButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_showtooltipsbutton",
@@ -90,7 +90,7 @@ function MangAdmin:CreateMiscSection()
     text = "Enable Tooltips",
     inherits = "OptionsCheckButtonTemplate"
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_showchatoutputbutton",
@@ -163,7 +163,7 @@ function MangAdmin:CreateMiscSection()
     },
     inherits = "OptionsSliderTemplate"
   })
-  
+
   FrameLib:BuildFrame({
     type = "Slider",
     name = "ma_btntrslider",
@@ -179,7 +179,7 @@ function MangAdmin:CreateMiscSection()
     },
     inherits = "OptionsSliderTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_bgcolorshowbutton",
     group = "misc",
@@ -198,7 +198,7 @@ function MangAdmin:CreateMiscSection()
       offY = -114
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_bgcolorshowtext",
     group = "misc",
@@ -210,7 +210,7 @@ function MangAdmin:CreateMiscSection()
       offY = -114
     }
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_frmcolorshowbutton",
     group = "misc",
@@ -229,7 +229,7 @@ function MangAdmin:CreateMiscSection()
       offY = -138
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_frmcolorshowtext",
     group = "misc",
@@ -241,7 +241,7 @@ function MangAdmin:CreateMiscSection()
       offY = -138
     }
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_btncolorshowbutton",
     group = "misc",
@@ -260,7 +260,7 @@ function MangAdmin:CreateMiscSection()
       offY = -162
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_btncolorshowtext",
     group = "misc",
@@ -272,7 +272,7 @@ function MangAdmin:CreateMiscSection()
       offY = -162
     }
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_linkifiercolorbutton",
     group = "misc",
@@ -291,7 +291,7 @@ function MangAdmin:CreateMiscSection()
       offY = -186
     }
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_linkifiercolortext",
     group = "misc",
@@ -303,7 +303,7 @@ function MangAdmin:CreateMiscSection()
       offY = -186
     }
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_applystylebutton",
     group = "misc",
@@ -323,7 +323,7 @@ function MangAdmin:CreateMiscSection()
     },
     text = "Update Changes"
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_weatherdropdown",
     group = "misc",
@@ -339,7 +339,7 @@ function MangAdmin:CreateMiscSection()
     },
     inherits = "UIDropDownMenuTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_changeweatherbutton",
     group = "misc",
