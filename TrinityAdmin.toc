@@ -1,8 +1,8 @@
 ## Interface: 40300
 ## Title: TrinityAdmin
 ## Author: TrinityAdmin Dev team + Manground Dev Team
-## Version: 3.3.5a
-## Notes: This addon works with TrinityCore 4.3.4 & 3.3.5a clients.
+## Version: 4.3.4
+## Notes: This addon works with TrinityCore 4.3.4
 ## URL: http://code.google.com/p/trinityadmin/
 ## Name: TrinityAdmin
 ## License: GPLv3
