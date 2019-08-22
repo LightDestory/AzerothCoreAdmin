@@ -1,5 +1,12 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 55 - 8/21/2019]=-
+- Changed version specific build to 3.3.5
+- Updated TOC for version 3.3.5
+- updated README to reflect 3.3.5
+- Corrected flip flopped Emote buttons on the NPC Tab
+- Fixed a few spelling errors
+
 ### -=[ Revision 54 - 11/13/2018]=-
 - Fixed Tele Tab function with previous commit
 - Removed multiple files for non-existing tabs
