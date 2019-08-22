@@ -33,8 +33,8 @@ fID = 0
 gettingGOBinfo=0
 gettingGOBinfoinfo=0
 
-MAJOR_VERSION = "TrinityAdmin-4.3.4"
-MINOR_VERSION = "$Revision: 054 $"
+MAJOR_VERSION = "TrinityAdmin-3.3.5"
+MINOR_VERSION = "$Revision: 055 $"
 ROOT_PATH     = "Interface\\AddOns\\TrinityAdmin\\"
 local cont = ""
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
@@ -279,7 +279,7 @@ function MangAdmin:OnEnable()
   self:RegisterEvent("PLAYER_DEAD")
   self:RegisterEvent("PLAYER_ALIVE")
   self:PLAYER_TARGET_CHANGED() --init
-   --ma_mm_revivebutton:Show()
+  --ma_mm_revivebutton:Show()
 end
 
 --events
@@ -590,7 +590,7 @@ end
     local deltatime = time()
     while deltatime < stime do
       deltatime = time()
-   end
+  end
 end
 
 function MangAdmin:TicketHackTimer()
@@ -1061,7 +1061,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
   else
     -- message is not from server
-    --Linkifier should be used on non server messages as well to catch links suc as items in chat
+    --Linkifier should be used on non server messages as well to catch links such as items in chat
     text = MangLinkifier_Decompose(text)
     -- Returns the message to the client, or else the chat frame never shows it
     self.hooks[frame].AddMessage(frame, text, r, g, b, id)
