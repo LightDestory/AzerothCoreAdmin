@@ -308,8 +308,9 @@ function MangAdmin:CreateNpcSection()
     inherits = "UIDropDownMenuTemplate"
   })
 
+  --[[First Dropdown Menu Button]]
   FrameLib:BuildButton({
-    name = "ma_npcemotebutton_a",
+    name = "ma_npcemotebutton", --Button
     group = "npc",
     parent = ma_midframe,
     texture = {
@@ -345,8 +346,9 @@ function MangAdmin:CreateNpcSection()
     inherits = "UIDropDownMenuTemplate"
   })
 
+  --[[Second Dropdown Menu Button]]
   FrameLib:BuildButton({
-    name = "ma_npcemotebutton",
+    name = "ma_npcemotebutton_a", -- Button
     group = "npc",
     parent = ma_midframe,
     texture = {
