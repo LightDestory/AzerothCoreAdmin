@@ -33,7 +33,7 @@ function MangAdmin:CreateServerSection()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   FrameLib:BuildFrame({
     name = "ma_netgraphframe",
     group = "server",
@@ -52,7 +52,7 @@ function MangAdmin:CreateServerSection()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_lagmetertext",
     group = "server",
@@ -64,7 +64,7 @@ function MangAdmin:CreateServerSection()
       offY = -170
     }
   })
-  
+
   RealGraph=Graph:CreateGraphRealtime("ma_netgraph_lag",ma_netgraphframe,"CENTER","CENTER",0,0,150,150)
   local g=RealGraph
   g:SetAutoScale(false)
@@ -76,7 +76,7 @@ function MangAdmin:CreateServerSection()
   local f = CreateFrame("Frame",name,parent)
   f.frames=0
   f.NextUpdate=GetTime()
-  f:SetScript("OnUpdate",function() 
+  f:SetScript("OnUpdate",function()
       if f.NextUpdate>GetTime() then
         return
       end
@@ -143,7 +143,7 @@ function MangAdmin:CreateServerSection()
     },
     text = Locale["ma_ResetButton"]
   })
-  
+
   FrameLib:BuildFrame({
     name = "ma_reloadtabledropdown",
     group = "server",
@@ -159,7 +159,7 @@ function MangAdmin:CreateServerSection()
     },
     inherits = "UIDropDownMenuTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_loadtablebutton",
     group = "server",
@@ -179,7 +179,7 @@ function MangAdmin:CreateServerSection()
     },
     text = "Reload Table"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_loadscriptsbutton",
     group = "server",
@@ -199,7 +199,7 @@ function MangAdmin:CreateServerSection()
     },
     text = "Reload Scripts"
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_shutdowneditbox",
@@ -236,7 +236,7 @@ function MangAdmin:CreateServerSection()
     },
     text = Locale["ma_ShutdownButton"]
   })
- 
+
   FrameLib:BuildFrame({
     name = "ma_netgraphframe2",
     group = "server",
@@ -255,7 +255,7 @@ function MangAdmin:CreateServerSection()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_lagmetertext2",
     group = "server",
@@ -279,7 +279,7 @@ function MangAdmin:CreateServerSection()
       offY = -170
     }
   })
-  
+
   RealGraph=Graph:CreateGraphRealtime("ma_netgraph_diff",ma_netgraphframe2,"CENTER","CENTER",0,0,150,150)
   local z=RealGraph
   z:SetAutoScale(false)
@@ -292,7 +292,7 @@ function MangAdmin:CreateServerSection()
   x.frames=0
   x.NextUpdate=GetTime()
   local q=0
-  x:SetScript("OnUpdate",function() 
+  x:SetScript("OnUpdate",function()
       q=q+1
       if q > tonumber(ma_delayparam:GetText()) then --20000=approx 5 minutes, 4000= ~1 minute
           MangAdmin:ChatMsg(".server info")
@@ -302,7 +302,7 @@ function MangAdmin:CreateServerSection()
           local r="100" -- Trinity says anything over 150 is bad
           if s > r then
               z:SetBarColors({1.0,0.0,0.0,1.0},{1.0,0.0,0.0,1.0}) -->150, turn red
-          else  
+          else
               z:SetBarColors({0.0,1.0,0.0,1.0},{0.0,1.0,0.0,1.0}) -- otherwise green
           end
           z:AddBar(s)
@@ -317,5 +317,5 @@ function MangAdmin:CreateServerSection()
     end)
   x:Show()
 
-  
+
 end

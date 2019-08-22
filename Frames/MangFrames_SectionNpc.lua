@@ -50,7 +50,7 @@ function MangAdmin:CreateNpcSection()
     },
     inherits = nil
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcmodelrotatelbutton",
     group = "npc",
@@ -70,7 +70,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = "<<="
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcmodelrotaterbutton",
     group = "npc",
@@ -150,7 +150,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_NPCKillButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_respawnbutton",
     group = "npc",
@@ -170,7 +170,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_Respawn"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcdistancebutton",
     group = "npc",
@@ -190,7 +190,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_NPCDistanceButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcguidbutton",
     group = "npc",
@@ -230,7 +230,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_NPCInfoButton"]
   })
- 
+
   FrameLib:BuildButton({
     name = "ma_npcmovebutton",
     group = "npc",
@@ -292,7 +292,7 @@ function MangAdmin:CreateNpcSection()
   })
 
   --[[First Dropdown Menu]]--
-  FrameLib:BuildFrame({ 
+  FrameLib:BuildFrame({
     name = "ma_npcemotedropdown",
     group = "npc",
     parent = ma_midframe,
@@ -307,7 +307,7 @@ function MangAdmin:CreateNpcSection()
     },
     inherits = "UIDropDownMenuTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcemotebutton_a",
     group = "npc",
@@ -364,7 +364,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_PlayEmote2"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcdisplaydownbutton",
     group = "npc",
@@ -384,7 +384,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = "<<"
     })
-    
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_npcdisplayid",
@@ -421,7 +421,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = ">>"
     })
- 
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_NPC_idbutton",
@@ -438,7 +438,7 @@ function MangAdmin:CreateNpcSection()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcID_UPbutton",
     group = "npc",
@@ -478,7 +478,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = "<<"
   })
- 
+
   FrameLib:BuildButton({
     name = "ma_NPC_addbutton",
     group = "npc",
@@ -547,7 +547,7 @@ function MangAdmin:CreateNpcSection()
       offY = -231
     }
   })
-  
+
   --[[Parameter Box Input]]
   FrameLib:BuildFrame({
     type = "EditBox",
@@ -605,7 +605,7 @@ function MangAdmin:CreateNpcSection()
       },
       text = Locale["ma_NPCDemorph"]
     })
-    
+
   FrameLib:BuildButton({
     name = "ma_npcsaybutton",
     group = "npc",
@@ -787,7 +787,7 @@ function MangAdmin:CreateNpcSection()
   })
 
 
-  --[[NPC2 copy over]]--
+  --[[npc copy over]]--
 
   FrameLib:BuildButton({
     name = "ma_npcfreezebutton",
@@ -808,7 +808,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_NPCFreezeButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_npcfreezedelbutton",
     group = "npc",
@@ -869,7 +869,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_WayAdd"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_way_modifyaddbutton",
     group = "npc",
@@ -929,7 +929,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_WayShow1"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_way_showoffbutton",
     group = "npc",
@@ -949,7 +949,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_WayShow0"]
   })
- 
+
   FrameLib:BuildButton({
     name = "ma_npcunfreeze_addway_showonbutton",
     group = "npc",
@@ -969,7 +969,7 @@ function MangAdmin:CreateNpcSection()
     },
     text = Locale["ma_WayShow"]
   })
- 
+
   FrameLib:BuildButton({
     name = "ma_npcunfreeze_waybutton",
     group = "npc",
@@ -1026,7 +1026,7 @@ function MangAdmin:CreateNpcSection()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_movestackbutton",
     group = "npc",

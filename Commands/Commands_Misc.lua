@@ -17,6 +17,7 @@
 -- Subversion Repository: http://trinityadmin.googlecode.com/svn/
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
+
 function ApplyStyleChanges()
   if MangAdmin.db.account.style.color.buffer.backgrounds then
     MangAdmin.db.account.style.color.backgrounds = MangAdmin.db.account.style.color.buffer.backgrounds

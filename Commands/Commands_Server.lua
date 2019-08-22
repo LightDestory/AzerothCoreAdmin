@@ -17,6 +17,7 @@
 -- Subversion Repository: http://trinityadmin.googlecode.com/svn/
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
+
 function Announce(value)
   MangAdmin:ChatMsg(".announce "..value)
   MangAdmin:LogAction("Announced message: "..value)

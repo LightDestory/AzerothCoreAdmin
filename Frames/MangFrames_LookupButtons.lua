@@ -33,8 +33,8 @@ function MangAdmin:CreateLookupButtons()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
-  --[[Lookup Buttons]]  
+
+  --[[Lookup Buttons]]
   FrameLib:BuildButton({
     name = "ma_itembutton",
     group = "bg",
@@ -54,7 +54,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_ItemButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_itemsetbutton",
     group = "bg",
@@ -74,7 +74,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_ItemSetButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_spellbutton",
     group = "bg",
@@ -94,7 +94,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_SpellButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_skillbutton",
     group = "bg",
@@ -114,7 +114,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_SkillButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_questbutton",
     group = "bg",
@@ -134,7 +134,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_QuestButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_objectbutton",
     group = "bg",
@@ -174,7 +174,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_CreatureButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_telesearchbutton",
     group = "bg",
@@ -194,7 +194,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_TeleSearchButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_sendmailbutton",
     group = "bg",
@@ -214,7 +214,7 @@ function MangAdmin:CreateLookupButtons()
     },
     text = Locale["ma_Mail"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_closebutton",
     group = "bg",

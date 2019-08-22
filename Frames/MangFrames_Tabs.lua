@@ -33,7 +33,7 @@ function MangAdmin:CreateTabs()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   -- [[ Tab Buttons ]]
   FrameLib:BuildButton({
     name = "ma_tabbutton_main",

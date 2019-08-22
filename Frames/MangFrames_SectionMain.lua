@@ -32,7 +32,7 @@ function MangAdmin:CreateMainSection()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   FrameLib:BuildButton({
     name = "ma_displaylevelbutton",
     group = "main",
@@ -53,7 +53,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_displaylevelbutton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gmonbutton",
     group = "main",
@@ -253,7 +253,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_OffButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_taxicheatonbutton",
     group = "main",
@@ -293,7 +293,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_OffButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_mapsonbutton",
     group = "main",
@@ -333,7 +333,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_OffButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_waterwalkonbutton",
     group = "main",
@@ -372,8 +372,8 @@ function MangAdmin:CreateMainSection()
       offY = -170
     },
     text = Locale["ma_OffButton"]
-  })  
-  
+  })
+
   FrameLib:BuildButton({
     name = "ma_accountlockonbutton",
     group = "main",
@@ -412,8 +412,8 @@ function MangAdmin:CreateMainSection()
       offY = -190
     },
     text = Locale["ma_OffButton"]
-  })    
-  
+  })
+
   FrameLib:BuildButton({
     name = "ma_screenshotbutton",
     group = "main",
@@ -453,7 +453,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_BankButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_dismountbutton",
     group = "main",
@@ -473,7 +473,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_DismountButton"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_setjail_a_button",
     group = "main",
@@ -513,7 +513,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["ma_SetJail_H_Button"]
   })
-  
+
   FrameLib:BuildButton({
     type = "CheckButton",
     name = "ma_instantkillbutton",
@@ -527,7 +527,7 @@ function MangAdmin:CreateMainSection()
     text = Locale["ma_instakill"],
     inherits = "OptionsCheckButtonTemplate"
   })
-  
+
   FrameLib:BuildFrame({
     type = "Slider",
     name = "ma_speedslider",
@@ -579,7 +579,7 @@ function MangAdmin:CreateMainSection()
     },
     inherits = "OptionsSliderTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_scalesliderreset_button",
     group = "main",
@@ -611,7 +611,7 @@ function MangAdmin:CreateMainSection()
       offY = 5
     }
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_gridnavieditbox",
@@ -629,7 +629,7 @@ function MangAdmin:CreateMainSection()
     maxLetters = 2,
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gridnaviaheadbutton",
     group = "main",
@@ -649,7 +649,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["N"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gridnavibackbutton",
     group = "main",
@@ -669,7 +669,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["S"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gridnavirightbutton",
     group = "main",
@@ -689,7 +689,7 @@ function MangAdmin:CreateMainSection()
     },
     text = Locale["E"]
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gridnavileftbutton",
     group = "main",
@@ -708,8 +708,8 @@ function MangAdmin:CreateMainSection()
       offY = 41
     },
     text = Locale["W"]
-  })  
-  
+  })
+
   FrameLib:BuildFontString({
     name = "ma_parametertext",
     group = "main",
@@ -721,7 +721,7 @@ function MangAdmin:CreateMainSection()
       offY = -167
     }
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_parameter",
@@ -738,7 +738,7 @@ function MangAdmin:CreateMainSection()
     },
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gmingamebutton",
     group = "main",
@@ -757,8 +757,8 @@ function MangAdmin:CreateMainSection()
       offY = -10
     },
     text = Locale["ma_gmingame"]
-  })  
-  
+  })
+
   FrameLib:BuildButton({
     name = "ma_gmlistbutton",
     group = "main",
@@ -777,8 +777,8 @@ function MangAdmin:CreateMainSection()
       offY = -32
     },
     text = Locale["ma_gmlist"]
-  })  
-  
+  })
+
   FrameLib:BuildButton({
     name = "ma_petcreatebutton",
     group = "main",
@@ -797,7 +797,7 @@ function MangAdmin:CreateMainSection()
       offY = -54
     },
     text = Locale["ma_petcreate"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_petlearnbutton",
@@ -817,7 +817,7 @@ function MangAdmin:CreateMainSection()
       offY = -75
     },
     text = Locale["ma_petlearn"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_petunlearnbutton",
@@ -837,7 +837,7 @@ function MangAdmin:CreateMainSection()
       offY = -97
     },
     text = Locale["ma_petunlearn"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_pettpbutton",
@@ -857,7 +857,7 @@ function MangAdmin:CreateMainSection()
       offY = -119
     },
     text = Locale["ma_pettp"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_lookuptaxibutton",
@@ -877,7 +877,7 @@ function MangAdmin:CreateMainSection()
       offY = -10
     },
     text = Locale["ma_lookuptaxi"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_gotaxinodebutton",
@@ -897,7 +897,7 @@ function MangAdmin:CreateMainSection()
       offY = -32
     },
     text = Locale["ma_gotaxinode"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_gotriggerbutton",
@@ -917,7 +917,7 @@ function MangAdmin:CreateMainSection()
       offY = -54
     },
     text = Locale["ma_gotrigger"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_goxybutton",
@@ -937,7 +937,7 @@ function MangAdmin:CreateMainSection()
       offY = -75
     },
     text = Locale["ma_goxy"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_goxyzbutton",
@@ -957,7 +957,7 @@ function MangAdmin:CreateMainSection()
       offY = -97
     },
     text = Locale["ma_goxyz"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_gozonexybutton",
@@ -977,7 +977,7 @@ function MangAdmin:CreateMainSection()
       offY = -119
     },
         text = Locale["ma_gozonexy"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_lookupzonebutton",
@@ -997,7 +997,7 @@ function MangAdmin:CreateMainSection()
       offY = -140
     },
         text = Locale["ma_lookupzone"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_castbutton",
@@ -1017,7 +1017,7 @@ function MangAdmin:CreateMainSection()
       offY = -10
     },
         text = Locale["ma_cast"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_castbackbutton",
@@ -1037,7 +1037,7 @@ function MangAdmin:CreateMainSection()
       offY = -32
     },
         text = Locale["ma_castback"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_castdistbutton",
@@ -1057,7 +1057,7 @@ function MangAdmin:CreateMainSection()
       offY = -54
     },
         text = Locale["ma_castdist"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_castselfbutton",
@@ -1077,7 +1077,7 @@ function MangAdmin:CreateMainSection()
       offY = -75
     },
         text = Locale["ma_castself"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_casttargetbutton",
@@ -1097,7 +1097,7 @@ function MangAdmin:CreateMainSection()
       offY = -97
     },
         text = Locale["ma_casttarget"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_listitembutton",
@@ -1117,7 +1117,7 @@ function MangAdmin:CreateMainSection()
       offY = -119
     },
         text = Locale["ma_listitem"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_gmclearbutton",
@@ -1137,7 +1137,7 @@ function MangAdmin:CreateMainSection()
       offY = -140
     },
         text = Locale["ma_GmClear"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_acctcreatebutton",
@@ -1157,7 +1157,7 @@ function MangAdmin:CreateMainSection()
       offY = -10
     },
         text = Locale["ma_acctcreate"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_acctdeletebutton",
@@ -1177,7 +1177,7 @@ function MangAdmin:CreateMainSection()
       offY = -32
     },
         text = Locale["ma_acctdelete"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_acctaddonbutton",
@@ -1197,7 +1197,7 @@ function MangAdmin:CreateMainSection()
       offY = -54
     },
         text = Locale["ma_acctaddon"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_acctgmlvlbutton",
@@ -1217,8 +1217,8 @@ function MangAdmin:CreateMainSection()
       offY = -75
     },
         text = Locale["ma_acctgmlvl"]
-  })  
-  
+  })
+
   FrameLib:BuildButton({
     name = "ma_acctpasswdbutton",
     group = "main",
@@ -1237,8 +1237,8 @@ function MangAdmin:CreateMainSection()
       offY = -97
     },
         text = Locale["ma_acctpasswd"]
-  })  
-  
+  })
+
   FrameLib:BuildButton({
     name = "ma_gmnotifybutton",
     group = "main",
@@ -1257,7 +1257,7 @@ function MangAdmin:CreateMainSection()
       offY = -119
     },
         text = Locale["ma_gmnotify"]
-  })  
+  })
 
   FrameLib:BuildButton({
     name = "ma_teleaddbutton",

@@ -1,5 +1,11 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 54 - 11/13/2018]=-
+- Fixed Tele Tab function with previous commit
+- Removed multiple files for non-existing tabs
+- Removed excessive spacing
+- Cleaned trailing whitespace
+
 ### -=[ Revision 53 - 10/19/2018]=-
 - NPC Corrections/Adjustments:
     - Changed button layout/corrected alignment
@@ -74,21 +80,21 @@ Touchups to r42 changes. Changed "Spawn on Move" to "Add on Move", then added "M
 can "move" gobs finally (it actually deletes and recreates the gob to get around the .gob move bug)
 
 ### -=[ Revision 42 - 1/15/2011]=-
-- Major changes to GOB tab: 
+- Major changes to GOB tab:
 - ADD Model viewer to see targeted model with rotate/zoom
 - ADD Move/spawn system for builders
 - ADD detailed gobject info displayed when you click OBJTarget
 - New file added, models.lua. Please close WoW and restart to load new file.
 Note: Displaying gobject models was NOT a straightforward thing. The Model widget is capable, if
 passed the path (in the MPQs) to the model. We get this path from the GameObjectDisplayInfo.dbc
-file. I created the models.lua file as a crossreference between DisplayID (of a gobject) and the 
-path (in the MPQs) where the model is... and this models.lua file is ginormous (I have 45,621 model 
+file. I created the models.lua file as a crossreference between DisplayID (of a gobject) and the
+path (in the MPQs) where the model is... and this models.lua file is ginormous (I have 45,621 model
 paths in this file). As a result, TrinityAdmin now takes up a tad over 8Mb of RAM. If this is unacceptable
 for you, open models.lua and delete all but the first line. You might get an occaisional error, but you
-can ignore them. Credits: I swiped most of the Spawn/Move code and some of the gobject model view code 
+can ignore them. Credits: I swiped most of the Spawn/Move code and some of the gobject model view code
 from an addon called Glitchy's Object Playground. Glitchy wrote OP for ArcEmu, and released it on MMOwned
 a long time ago. I updated and converted pieces of his code to make this work. Props to Glitchy.
-Note2: The Gob info boxes can become messy due to a race condition. Since WoW LUA has no Sleep() function, 
+Note2: The Gob info boxes can become messy due to a race condition. Since WoW LUA has no Sleep() function,
 I cannot prevent this. Click the Obj Target button to reset the info boxes.
 
 ### -=[ Revision 41 - 1/10/2011]=-
@@ -106,9 +112,9 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 
 ### -=[ Revision 39 - 1/8/2011]=-
 - ADD .bindsight to NPC tab
-- ADD .unbindsight to NPC tab. Note: this command is broken in core on my core revision. 
+- ADD .unbindsight to NPC tab. Note: this command is broken in core on my core revision.
 - ADD .bindsight to CHAR tab
-- ADD .unbindsight to CHAR tab. Note: this command is broken in core on my core revision. 
+- ADD .unbindsight to CHAR tab. Note: this command is broken in core on my core revision.
 - ADD .char rename, customize, changerace, and changefaction to CHAR tab
 - ADD enUS locale for the above items
 
@@ -119,7 +125,7 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - Rearranged GOB tab, added labels. Preparing to add more content here.
 - ADD .gob activate, add temp, info, phase to GOB tab
 - updated enUS locale for above adds
-- ADD/MOD added missing tables to Reload. Removed individual tables that are reloaded with an all_xxxx command... 
+- ADD/MOD added missing tables to Reload. Removed individual tables that are reloaded with an all_xxxx command...
 	so now the list fits the screen, but you may have to choose an all_xxxx command to reload the table you want.
 
 ### -=[ Revision 37 - 1/4/2011]=-
@@ -134,7 +140,7 @@ different machines get out of sync. Like trying to commit with conflicts o' plen
 - Numerous bugs fixed from issue tracker
 - New camera functions and rearrangement of model frame on Char and NPC tabs
 - Speed and Scale sliders now have Reset buttons
-- Tweak to DisplayID browser 
+- Tweak to DisplayID browser
 - Found some more .namego and .goname, changed to .appear and .summon
 
 ### -=[ Revision 23 - 12/12/2010]=-
@@ -156,8 +162,8 @@ different machines get out of sync. Like trying to commit with conflicts o' plen
 - FIX issue 35 TICKET - Online list not working
 - FIX issue with Nil object error in tele scrolling on startup
 - FIX Ticket scrolling issue reported by Kitharo
-- ADD MISC tab, checkbox for Chat Output. When off (default), TrinityAdmin does not display output of most 
-  commands in chat window (for example, .server info) but does display the results in the appropriate part 
+- ADD MISC tab, checkbox for Chat Output. When off (default), TrinityAdmin does not display output of most
+  commands in chat window (for example, .server info) but does display the results in the appropriate part
   of TrinityAdmin. When ON, both TrinityAdmin native AND chatwindow outputs are displayed.
 - ADD MISC tab, an editbox to specify how often the Diff graph (on Server tab) is updated. 4000 (~1 minute) is default.
 - It is reported that r19 with Chat Output ON allows all the chat window clickable links to work properly. Please verify.
@@ -194,10 +200,10 @@ Note: This version is compatible with TC2 revision 7757+
 
 ### -=[ Revision 13 - 2/24/2010 ]=-
 This is a major release, incorporating many, many fixes along with
-some major new features (Tickets, Who). This release would NOT have 
-happened without the generous and patient assistance of Kitharo (from 
+some major new features (Tickets, Who). This release would NOT have
+happened without the generous and patient assistance of Kitharo (from
 Land of Legends). All of us owe Kitharo a great debt for testing TrinityAdmin
-on one of the world's largest servers and providing detailed feedback 
+on one of the world's largest servers and providing detailed feedback
 so that I could make Tickets work again. Thank you, my friend!
 
 - Added 'GM Chat' command to GM tab

@@ -19,7 +19,7 @@
 -------------------------------------------------------------------------------------------------------------
 
 function TeleScrollUpdate()
-    if not ma_ZoneScrollBar then 
+    if not ma_ZoneScrollBar then
       MangAdmin:ChatMsg("Lost ma_ZoneScrollBar")
     end
     local cont_temp = MangAdmin.db.char.selectedCont
@@ -41,10 +41,10 @@ function TeleScrollUpdate()
       --MangAdmin:LogAction("added index: "..index)
       table.insert(TeleTable, {name = index, subzones = value})
     end
-    
+
     if zoneCount > -1 then
       --MangAdmin:ChatMsg("Zone count:" .. zoneCount)
-      if not ma_ZoneScrollBar then 
+      if not ma_ZoneScrollBar then
         MangAdmin:ChatMsg("Lost ma_ZoneScrollBar")
       end
 
@@ -87,8 +87,7 @@ function SubzoneScrollUpdate()
  else
     cont=cont_temp
  end
-    
-    
+
 --    cont = MangAdmin.db.char.selectedCont
   local TeleTable = {}
   local subzoneCount = 0

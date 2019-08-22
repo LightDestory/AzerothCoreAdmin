@@ -1,13 +1,13 @@
 ## Interface: 40300
 ## Title: TrinityAdmin
 ## Author: TrinityAdmin Dev team + Manground Dev Team
-## Version: 3.3.5a
-## Notes: This addon works with TrinityCore 4.3.4 & 3.3.5a clients.
+## Version: 4.3.4
+## Notes: This addon works with TrinityCore 4.3.4
 ## URL: http://code.google.com/p/trinityadmin/
 ## Name: TrinityAdmin
 ## License: GPLv3
 ## X-Date: 10 August 2010
-## X-eMail: 
+## X-eMail:
 ## X-Website: http://code.google.com/p/trinityadmin/
 ## OptionalDeps: AceLibrary,AceEvent-2.0,AceHook-2.1,AceDebug-2.0,AceLocale-2.2,AceConsole-2.0,AceAddon-2.0
 ## DefaultState: Enabled

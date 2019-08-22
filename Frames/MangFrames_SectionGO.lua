@@ -28,7 +28,7 @@ function MangAdmin:CreateGOSection()
     btn = MangAdmin.db.account.style.transparency.buttons,
     frm = MangAdmin.db.account.style.transparency.frames
   }
-  
+
   local color = {
     bg = MangAdmin.db.account.style.color.backgrounds,
     btn = MangAdmin.db.account.style.color.buttons,
@@ -135,7 +135,6 @@ function MangAdmin:CreateGOSection()
     text = Locale["ma_OBJDel"]
   })
 
-
   FrameLib:BuildButton({
     name = "ma_objnearbutton",
     group = "go",
@@ -174,7 +173,7 @@ function MangAdmin:CreateGOSection()
       offY = -12
     },
     text = Locale["ma_OBJTarget"]
-  })  
+  })
 
   FrameLib:BuildFontString({
     name = "ma_gobguidlabel",
@@ -199,7 +198,7 @@ function MangAdmin:CreateGOSection()
       offY = -37
     },
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_Obj_guidbutton",
@@ -218,7 +217,7 @@ function MangAdmin:CreateGOSection()
     multiline = false,
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_Obj_idbutton",
@@ -237,7 +236,7 @@ function MangAdmin:CreateGOSection()
     multiline = false,
     inherits = "InputBoxTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_gobactivatebutton",
     group = "go",
@@ -336,7 +335,7 @@ function MangAdmin:CreateGOSection()
     multiline = false,
     inherits = "InputBoxTemplate"
   })
-  
+
     FrameLib:BuildButton({
     name = "ma_gobmodelrotatelbutton",
     group = "go",
@@ -457,7 +456,6 @@ function MangAdmin:CreateGOSection()
     textcolor = {1, 1, 1, 1.0}
   })
 
-  
   FrameLib:BuildFrame({
     type = "EditBox",
     name = "ma_gobinfoinfo",

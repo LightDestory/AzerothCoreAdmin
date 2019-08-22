@@ -18,7 +18,6 @@
 -- Dev Blog: http://trinityadmin.blogspot.com/
 -------------------------------------------------------------------------------------------------------------
 
-
 local function RGBPercToHex(r, g, b)
 	r = r <= 1 and r >= 0 and r or 0
 	g = g <= 1 and g >= 0 and g or 0
@@ -153,7 +152,7 @@ function MangLinkifier_Link(orgtxt, id, type)
   elseif(type == "lookuptele") then
     link = "|cffffffff|Htele:" .. id .. "|h[" .. orgtxt .. "]|h|r"
     link = link .." - |cff" .. urlcolor .. "|Hlookupteledelete:" .. id .. "|h["..Locale["lfer_Delete"].."]|h|r "
-  else 
+  else
     link = orgtxt .." - |cffc20000"..Locale["lfer_Error"].." |r |cff008873" .. type .. "|r"
   end
   return link

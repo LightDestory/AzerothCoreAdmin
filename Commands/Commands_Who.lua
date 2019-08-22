@@ -63,7 +63,7 @@ function WhoDetail(tAcc, tChar, tMap, tZone)
 --   MangAdmin:ChatMsg(tNumber)
 --     tNumber=string.gsub(tNumber, "00", "")
 --   MangAdmin:ChatMsg(tNumber)
-    --x = x - 1 
+    --x = x - 1
 --    tNumber = string.match(tNumber, "%d+")
     MangAdmin:ChatMsg(".pinfo "..tChar)
     ma_whoid:SetText(tAcc)
@@ -95,7 +95,7 @@ function Who(value)
     MangAdmin:TogglePopup("mail", {recipient = ma_who:GetText(), subject = ""})
   elseif value == "whisper" then
    --ChatFrame1EditBox:Show()
-  -- ChatEdit_GetLastActiveWindow():Show() 
+  -- ChatEdit_GetLastActiveWindow():Show()
    --ChatEdit_ActivateChat(ChatEdit_GetActiveWindow());
 --   ChatFrame1EditBox:Insert("/w "..ma_who:GetText().." ".. string.char(10)..string.char(13));
 --   ChatEdit_FocusActiveWindow(1);
@@ -103,11 +103,11 @@ function Who(value)
        if not editbox then
          -- Support for 3.3.5 and newer
          editbox = ChatEdit_GetActiveWindow()
-       end 
+       end
        ChatEdit_ActivateChat(editbox);
        if editbox then
          editbox:Insert("/w "..ma_who:GetText().." ");
-       end 
+       end
   elseif value == "customize" then
     MangAdmin:ChatMsg(".character customize "..ma_who:GetText())
   elseif value == "chardelete" then
@@ -133,11 +133,7 @@ function Who(value)
     MangAdmin:ChatMsg(".recall "..cname)
     MangAdmin:LogAction("UnJailed player "..cname..".")
     MangAdmin:ChatMsg(".notify "..cname.." has been pardoned and released from jail.")
-  
-  
+
   end
-
-
-
 
 end

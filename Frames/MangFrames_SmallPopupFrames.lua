@@ -33,7 +33,7 @@ function MangAdmin:CreateSmallPopupFrames()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   -- [[popup2 Frame]]
   FrameLib:BuildFrame({
     name = "ma_popup2frame",
@@ -92,7 +92,7 @@ function MangAdmin:CreateSmallPopupFrames()
     },
     text = "X"
   })
-  
+
   FrameLib:BuildFontString({
     name = "ma_tpinfo_text",
     group = "popup2",
@@ -124,7 +124,7 @@ function MangAdmin:CreateSmallPopupFrames()
     },
     inherits = "FauxScrollFrameTemplate"
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_popup2ScrollBarEntry1",
     group = "popup2",
@@ -146,7 +146,7 @@ function MangAdmin:CreateSmallPopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_popup2ScrollBarEntry2",
     group = "popup2",
@@ -251,7 +251,7 @@ function MangAdmin:CreateSmallPopupFrames()
     },
     script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
-  
+
   FrameLib:BuildButton({
     name = "ma_popup2ScrollBarEntry7",
     group = "popup2",

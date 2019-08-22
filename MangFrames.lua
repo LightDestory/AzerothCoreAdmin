@@ -40,8 +40,8 @@ function MangAdmin:CreateFrames()
   self:CreateNpcSection()
   self:CreateGOSection()
   self:CreateWhoSection()
-  
-  
+
+
   --FrameLib:HandleGroup("bg", function(frame) frame:Hide() end)
   --FrameLib:HandleGroup("main", function(frame) frame:Hide() end)
   FrameLib:HandleGroup("char", function(frame) frame:Hide() end)

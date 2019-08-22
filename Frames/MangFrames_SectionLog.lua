@@ -33,7 +33,7 @@ function MangAdmin:CreateLogSection()
     btn = MangAdmin.db.account.style.color.buttons,
     frm = MangAdmin.db.account.style.color.frames
   }
-  
+
   FrameLib:BuildFrame({
     type = "ScrollingMessageFrame",
     name = "ma_logframe",
