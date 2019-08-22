@@ -524,7 +524,7 @@ function GroupGoButton()
   local cname = ma_charactertarget:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".groupsummon "..cname)
-  MangAdmin:LogAction("Teleported "..cname.." and his/her group TO me.")
+  MangAdmin:LogAction("Teleported "..cname.." and his/her group to me.")
 
 end
 
