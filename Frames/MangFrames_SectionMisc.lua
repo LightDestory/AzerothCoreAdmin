@@ -105,20 +105,6 @@ function MangAdmin:CreateMiscSection()
     inherits = "OptionsCheckButtonTemplate"
   })
 
-  FrameLib:BuildButton({  --Fucntion not implimented yet
-    type = "CheckButton",
-    name = "ma_windowismovable",
-    group = "misc",
-    parent = ma_midframe,
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 160,
-      offY = -124
-    },
-    text = "Movable",
-    inherits = "OptionsCheckButtonTemplate"
-  })
-
   FrameLib:BuildFontString({
     name = "ma_delayparamlabel2",
     group = "misc",
