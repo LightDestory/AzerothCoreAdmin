@@ -659,6 +659,7 @@ function Return_enUS()
     ["tt_ObjectButton"]               = "Toggle a popup with the function to search for objects and manage your favorites.",
     ["tt_SearchDefault"]              = "Now you can enter a keyword and start the search.",
     ["tt_SkillButton"]                = "Toggle a popup with the function to search for skills and manage your favorites.",
+    ["tt_CloseWindow"]                      = "Close TrinityAdmin",
   --[[Labels]]
     ["ma_ItemButton"]                 = "Item-Search",
     ["ma_ItemSetButton"]              = "ItemSet-Search",
