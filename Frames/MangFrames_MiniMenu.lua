@@ -309,7 +309,7 @@ function MangAdmin:CreateMiniMenu()
     text = "Wh"
   })
 
-  FrameLib:BuildButton({ --This button shops up in the center of the screen when you die!
+  FrameLib:BuildButton({ --This button shows up in the center of the screen when you die!
     name = "ma_mm_revivebutton",
     group = "noneyet",
     parent = UIParent,
