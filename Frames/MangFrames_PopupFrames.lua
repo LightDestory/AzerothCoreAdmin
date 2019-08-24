@@ -129,7 +129,7 @@ function MangAdmin:CreatePopupFrames()
     inherits = nil
   })
 
-  FrameLib:BuildButton({
+  FrameLib:BuildButton({ --Close Window button
     name = "ma_popupclosebutton",
     group = "popup",
     parent = ma_popuptopframe,
@@ -146,7 +146,7 @@ function MangAdmin:CreatePopupFrames()
       offX = -10,
       offY = 10
     },
-    text = "X"
+    text = Locale["ma_CloseWindow"] --"X"
   })
 
   FrameLib:BuildButton({

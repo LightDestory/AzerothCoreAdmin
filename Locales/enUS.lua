@@ -67,6 +67,8 @@ function Return_enUS()
     ["info_online"]                   = "|cFF00FF00Players Online:|r ",
     ["info_maxonline"]                = "|cFF00FF00Maximum Online:|r ",
     ["info_uptime"]                   = "|cFF00FF00Uptime:|r ",
+    ["ma_CloseWindow"]                = "X",
+    ["tt_CloseWindow"]                = "Close TrinityAdmin",
   --[[Other]]
     ["slashcmds"]                     = { "/trinityadmin", "/ta" },
     ["lang"]                          = "English",
@@ -659,7 +661,6 @@ function Return_enUS()
     ["tt_ObjectButton"]               = "Toggle a popup with the function to search for objects and manage your favorites.",
     ["tt_SearchDefault"]              = "Now you can enter a keyword and start the search.",
     ["tt_SkillButton"]                = "Toggle a popup with the function to search for skills and manage your favorites.",
-    ["tt_CloseWindow"]                = "Close TrinityAdmin",
   --[[Labels]]
     ["ma_ItemButton"]                 = "Item-Search",
     ["ma_ItemSetButton"]              = "ItemSet-Search",
