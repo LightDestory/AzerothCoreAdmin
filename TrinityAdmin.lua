@@ -902,7 +902,7 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
         self.db.char.requests.tpinfo = false
       end
     end
-    --check for info command to update informations in right bottom
+    --checking for .server info command to pull information for bottom right frame
     for revision in string.gmatch(text, Strings["ma_GmatchRevision"]) do
       ma_inforevisiontext:SetText(Locale["info_revision"]..revision)
       --ma_infoplatformtext:SetText(Locale["info_platform"]..platform)
@@ -1415,7 +1415,6 @@ function MangAdmin:NPC_GUID_Get_org()
     local str2 = ID_Setting_Read(1)
     ma_NPC_idbutton:SetText(str2)
     self:LogAction("NPC_EntryID_Get for val "..str2..".")
-
 end
 
 function MangAdmin:CreateGuild(leader, name)
@@ -1423,7 +1422,7 @@ function MangAdmin:CreateGuild(leader, name)
   self:LogAction("Created guild '"..name.."' with leader "..leader..".")
 end
 
-function MangAdmin:SendMail(recipient, subject, body)
+function MangAdmin:SendMail(recipient, subject, body)  --[TODO]:Mail Update this to allow sending of imtems with items(mail) command
   recipient = string.gsub(recipient, " ", "")
   subject = string.gsub(subject, " ", "")
   body = string.gsub(body, "\n", " ")
