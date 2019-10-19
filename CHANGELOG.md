@@ -1,5 +1,8 @@
 # TrinityAdmin Changelog
 
+### -=[ Revision 57 - 10/18/2019]=-
+- FIX Diff graph LUA error (Not actually updating)
+
 ### -=[ Revision 56 - 8/23/2019]=-
 - Added Tool Tip to WHO tap
 - FIXED server information tab now showing TrinityCore rev.
