@@ -1,5 +1,5 @@
 # TrinityAdmin Changelog
-### -=[ Revision 58 - 10/18/2019]=-
+### -=[ Revision 58 - 10/20/2019]=-
 - FIX: Typo in GM on/off command
 
 ### -=[ Revision 57 - 10/18/2019]=-
