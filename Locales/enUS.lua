@@ -30,7 +30,7 @@ How to add a localised string:
   ["strength"] = "Stärke",
 6. Some of these lines also contain color codes (example: |cFF00FF00 and |r) Don't alter these, please.
 
-TrinityAdmin Locale Team:
+AzerothCoreAdmin Locale Team:
 You have received this file which currently contains enUS strings, but will actually be the file for your
 selected language.
 1. Edit the first un-commented line below, which should resemble: function Return_enUS(). Change
@@ -60,9 +60,10 @@ function Return_enUS()
     ["tt_LanguageButton"]             = "Reload AzerothCoreAdmin.", --Removed locals. Updated tooltip to just reload
   --[[Control Labels]]
     ["ma_LanguageButton"]             = "Change language",
-    ["info_revision"]                 = "|cFF00FF00AzerothCoreAdmin rev:|r ", --Updated: Matched string output to TrinityCore
+    ["info_revision"]                 = "|cFF00FF00AzerothCore rev:|r ", --Updated: Matched string output to AzerothCore
     ["info_platform"]                 = "|cFF00FF00Server Platform:|r ",
     ["info_online"]                   = "|cFF00FF00Players Online:|r ",
+    ["info_online_world"]             = "|cFF00FF00Players in world:|r ",
     ["info_maxonline"]                = "|cFF00FF00Maximum Online:|r ",
     ["info_uptime"]                   = "|cFF00FF00Uptime:|r ",
     ["ma_CloseWindow"]                = "X",
@@ -87,7 +88,7 @@ function Return_enUS()
   --[[Name]]
     ["tabmenu_Main"]                  = "GM",
   --[[Tooltips]]
-    ["tt_MainButton"]                 = "Toggle TrinityAdmins Mainframe.",
+    ["tt_MainButton"]                 = "Toggle AzerothCoreAdmin Mainframe.",
     ["tt_DisplayAccountLevel"]        = "Display your account level",
     ["tt_GMOnButton"]                 = "Activate your GM-mode.",
     ["tt_GMOffButton"]                = "Deactivate your GM-mode.",
@@ -599,7 +600,7 @@ function Return_enUS()
 
 --[[Log Tab]]
     ["tabmenu_log"]                   = "LOG",
-    ["tt_LogButton"]                  = "Show the log of all actions done with TrinityAdmin.",
+    ["tt_LogButton"]                  = "Show the log of all actions done with AzerothCoreAdmin.",
   --[[Tooltips]]
   --[[Control Labels]]
   --[[Other]]

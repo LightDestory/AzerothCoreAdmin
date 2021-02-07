@@ -30,8 +30,8 @@ fID = 0
 gettingGOBinfo=0
 gettingGOBinfoinfo=0
 
-MAJOR_VERSION = "TrinityAdmin-3.3.5"
-MINOR_VERSION = "$Revision: 058 $"
+MAJOR_VERSION = "AzerothCoreAdmin"
+MINOR_VERSION = "$Revision: 001 $"
 ROOT_PATH     = "Interface\\AddOns\\AzerothCoreAdmin\\"
 local cont = ""
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
@@ -906,12 +906,15 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
     end
-    for users, maxusers in string.gmatch(text, Strings["ma_GmatchOnlinePlayers"]) do
+    for users, usersworld in string.gmatch(text, Strings["ma_GmatchOnlinePlayers"]) do
       ma_infoonlinetext:SetText(Locale["info_online"]..users)
-      ma_infomaxonlinetext:SetText(Locale["info_maxonline"]..maxusers)
+      ma_infoonlineworldtext:SetText(Locale["info_online_world"]..usersworld)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
+    end
+    for maxusers in string.gmatch(text, "Connection peak: (%d+).") do
+      ma_infomaxonlinetext:SetText(Locale["info_maxonline"]..maxusers)
     end
     for uptime in string.gmatch(text, Strings["ma_GmatchUptime"]) do
       ma_infouptimetext:SetText(Locale["info_uptime"]..uptime)
