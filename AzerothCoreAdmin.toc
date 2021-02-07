@@ -1,14 +1,14 @@
 ## Interface: 30300
-## Title: TrinityAdmin
-## Author: TrinityAdmin Dev team + Manground Dev Team
-## Version: 3.3.5
-## Notes: This addon works with TrinityCore 3.3.5
-## URL: http://code.google.com/p/trinityadmin/
-## Name: TrinityAdmin
+## Title: AzerothCoreAdmin
+## Author: Based on the work of TrinityAdmin Dev team and MangAdmin Dev Team
+## Version: 0.1
+## Notes: This add-on works with AzerothCore-based private servers
+## URL: https://github.com/LightDestory/AzerothCoreAdmin
+## Name: AzerothCoreAdmin
 ## License: GPLv3
-## X-Date: 10 August 2010
+## X-Date: 7 January 2021
 ## X-eMail:
-## X-Website: http://code.google.com/p/trinityadmin/
+## X-Website: https://github.com/LightDestory/AzerothCoreAdmin
 ## OptionalDeps: AceLibrary,AceEvent-2.0,AceHook-2.1,AceDebug-2.0,AceLocale-2.2,AceConsole-2.0,AceAddon-2.0
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
@@ -44,7 +44,7 @@ Commands\Commands_Who.lua
 dbc.lua
 TeleportTable.lua
 FunctionInit.lua
-TrinityAdmin.lua
+AzerothCoreAdmin.lua
 MangLinkifier.lua
 Frames\MangFrames_Start.lua
 Frames\MangFrames_Tabs.lua
