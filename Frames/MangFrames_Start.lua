@@ -205,7 +205,19 @@ function MangAdmin:CreateStartFrames()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -10
+      offY = -5
+    }
+  })
+
+  FrameLib:BuildFontString({
+    name = "ma_infoonlineworldtext",
+    group = "bg",
+    parent = ma_rightframe,
+    text = "Players in world: ...",
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 10,
+      offY = -25
     }
   })
 
@@ -217,7 +229,7 @@ function MangAdmin:CreateStartFrames()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -32
+      offY = -44
     }
   })
 
@@ -229,7 +241,7 @@ function MangAdmin:CreateStartFrames()
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -52
+      offY = -64
     }
   })
 
@@ -237,11 +249,11 @@ function MangAdmin:CreateStartFrames()
     name = "ma_inforevisiontext",
     group = "bg",
     parent = ma_rightframe,
-    text = "TrinityCore Revision: ...",
+    text = "AzerothCore Revision: ...",
     setpoint = {
       pos = "TOPLEFT",
       offX = 10,
-      offY = -72
+      offY = -82
     }
   })
 
