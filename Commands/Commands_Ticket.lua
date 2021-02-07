@@ -1,7 +1,6 @@
 ﻿-------------------------------------------------------------------------------------------------------------
 --
--- TrinityAdmin Version 3.x
--- TrinityAdmin is a derivative of MangAdmin.
+-- AzerothCoreAdmin is a derivative of TrinityAdminand MangAdmin.
 --
 -- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -12,10 +11,8 @@
 -- along with this program; if not, write to the Free Software
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
--- Official Forums: http://groups.google.com/group/trinityadmin
--- GoogleCode Website: http://code.google.com/p/trinityadmin/
--- Subversion Repository: http://trinityadmin.googlecode.com/svn/
--- Dev Blog: http://trinityadmin.blogspot.com/
+-- Official repository: https://github.com/LightDestory/AzerothCoreAdmin
+--
 -------------------------------------------------------------------------------------------------------------
 
 function ShowTicketTab()

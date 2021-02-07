@@ -4,7 +4,7 @@ about: Suggest an idea for this project
 
 ---
 
-**TrinityAdmin Information**
+**AzerothCoreAdmin Information**
   -Revision number: What version are you using ?
 
 **Is your feature request related to a problem? Please describe.**
