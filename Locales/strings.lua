@@ -1,6 +1,6 @@
 ﻿-------------------------------------------------------------------------------------------------------------
 --
--- AzerothCoreAdmin is a derivative of TrinityAdminand MangAdmin.
+-- AzerothCoreAdmin is a derivative of TrinityAdmin and MangAdmin.
 --
 -- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -17,7 +17,7 @@
 
 function ReturnStrings_enUS()
   return {
-    ["ma_GmatchRevision"] = "TrinityCore rev. (%S*)",
+    ["ma_GmatchRevision"] = "AzerothCoreAdmin rev. (%S*)",
     ["ma_GmatchGPS"] = "X: (.*) Y: (.*) Z",
     ["ma_GmatchItem"] = "%|cffffffff%|Hitem:(%d+).*%[(.*)%]%|h%|r",
     ["ma_GmatchQuest"] = ".-(%d+).*%[(.*)%]%|h%|r",

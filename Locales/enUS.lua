@@ -1,6 +1,6 @@
 ﻿-------------------------------------------------------------------------------------------------------------
 --
--- AzerothCoreAdmin is a derivative of TrinityAdminand MangAdmin.
+-- AzerothCoreAdmin is a derivative of TrinityAdmin and MangAdmin.
 --
 -- Copyright (C) 2018 Free Software Foundation, Inc.
 -- License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -55,18 +55,18 @@ function Return_enUS()
   return {
 --[[General]]
   --[[Tooltips]]
-    ["ma_IconHint"]                   = "|cffeda55fClick|r to open TrinityAdmin. |cffeda55fShift-Click|r to reload the user interface.",
+    ["ma_IconHint"]                   = "|cffeda55fClick|r to open AzerothCoreAdmin. |cffeda55fShift-Click|r to reload the user interface.",
     ["tt_Default"]                    = "Move your cursor over an element to toggle the tooltip!",
-    ["tt_LanguageButton"]             = "Reload TrinityAdmin.", --Removed locals. Updated tooltip to just reload
+    ["tt_LanguageButton"]             = "Reload AzerothCoreAdmin.", --Removed locals. Updated tooltip to just reload
   --[[Control Labels]]
     ["ma_LanguageButton"]             = "Change language",
-    ["info_revision"]                 = "|cFF00FF00TrinityCore rev:|r ", --Updated: Matched string output to TrinityCore
+    ["info_revision"]                 = "|cFF00FF00AzerothCoreAdmin rev:|r ", --Updated: Matched string output to TrinityCore
     ["info_platform"]                 = "|cFF00FF00Server Platform:|r ",
     ["info_online"]                   = "|cFF00FF00Players Online:|r ",
     ["info_maxonline"]                = "|cFF00FF00Maximum Online:|r ",
     ["info_uptime"]                   = "|cFF00FF00Uptime:|r ",
     ["ma_CloseWindow"]                = "X",
-    ["tt_CloseWindow"]                = "Close TrinityAdmin",
+    ["tt_CloseWindow"]                = "Close AzerothCoreAdmin",
   --[[Other]]
     ["slashcmds"]                     = { "/trinityadmin", "/ta" },
     ["lang"]                          = "English",
