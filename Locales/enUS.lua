@@ -69,7 +69,7 @@ function Return_enUS()
     ["ma_CloseWindow"]                = "X",
     ["tt_CloseWindow"]                = "Close AzerothCoreAdmin",
   --[[Other]]
-    ["slashcmds"]                     = { "/trinityadmin", "/ta" },
+    ["slashcmds"]                     = { "/azerothcoreadmin", "/acadmin" },
     ["lang"]                          = "English",
     ["realm"]                         = "|cFF00FF00Realm:|r "..GetCVar("realmName"), --do not change this line!
     ["char"]                          = "|cFF00FF00Char:|r "..UnitName("player"), --do not change this line!
