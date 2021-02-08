@@ -869,7 +869,6 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
     --checking for .server info command to pull information for bottom right frame
     for revision, platform in string.gmatch(text, Strings["ma_GmatchRevision"]) do
-      message(text)
       ma_inforevisiontext:SetText(Locale["info_revision"]..revision)
       ma_infoplatformtext:SetText(string.gsub(Locale["info_platform"], "_SERVER_PLAT_", platform))
         catchedSth = true

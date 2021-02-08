@@ -123,6 +123,13 @@ function Distance()
     MangAdmin:LogAction("Got distance to player "..player..".")
 end
 
+
+function KillSomething()
+  local target = UnitName("target") or UnitName("player")
+  MangAdmin:ChatMsg(".die")
+  MangAdmin:LogAction("Killed "..target..".")
+end
+
 function Recall()
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
     local player = UnitName("target") or UnitName("player")

@@ -88,9 +88,6 @@ function SetSpeed()
   local value = string.format("%.1f", ma_speedslider:GetValue())
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
     local player = UnitName("target") or UnitName("player")
-    --self:ChatMsg(".modify speed "..value)
-    --self:ChatMsg(".modify fly "..value)
-    --self:ChatMsg(".modify swim "..value)
     MangAdmin:ChatMsg(".modify speed "..value)
     MangAdmin:LogAction("Set speed of "..player.." to "..value..".")
   else
@@ -118,7 +115,7 @@ function Screenie()
 end
 
 function ShowBank()
-  MangAdmin:ChatMsg(".bank")
+  MangAdmin:ChatMsg(".character check bank")
 end
 
 function DismountPlayer()

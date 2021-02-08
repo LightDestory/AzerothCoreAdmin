@@ -162,7 +162,7 @@ function Return_enUS()
     ["ma_TaxiOnButton"]               = "Taxicheat on",
     ["ma_ShowMapsButton"]             = "Show Maps",
     ["ma_HideMapsButton"]             = "Hide Maps",
-    ["ma_instakill"]                  = "Insta-kill enemy creatures",
+    ["ma_instakill"]                  = "Insta-kill enemy creatures by targeting them",
     ["ma_ScreenshotButton"]           = "Screenshot",
     ["ma_BankButton"]                 = "Bank",
     ["ma_DismountButton"]             = "Dismount",
@@ -203,6 +203,7 @@ function Return_enUS()
     ["ma_acctaddon"]                  = "Acct Addon",
     ["ma_acctgmlvl"]                  = "Acct GMLvl",
     ["ma_acctpasswd"]                 = "Acct Passwd",
+    ["ma_gm4warning"]                 = "|cffFF0000Red buttons requires a GM level 4 to be executed!|r",
   --[[Other]]
 
 

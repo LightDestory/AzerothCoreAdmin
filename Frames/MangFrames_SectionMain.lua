@@ -521,11 +521,23 @@ function MangAdmin:CreateMainSection()
     parent = ma_midframe,
     setpoint = {
       pos = "TOPLEFT",
-      offX = 180,
-      offY = -10
+      offX = 10,
+      offY = -210
     },
     text = Locale["ma_instakill"],
     inherits = "OptionsCheckButtonTemplate"
+  })
+
+  FrameLib:BuildFontString({
+    name = "ma_gm4warningtext",
+    group = "main",
+    parent = ma_midframe,
+    text = Locale["ma_gm4warning"],
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 10,
+      offY = -235
+    }
   })
 
   FrameLib:BuildFrame({
@@ -733,7 +745,7 @@ function MangAdmin:CreateMainSection()
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 420,
       offY = -163
     },
     inherits = "InputBoxTemplate"
@@ -1145,7 +1157,7 @@ function MangAdmin:CreateMainSection()
     parent = ma_midframe,
     texture = {
       name = "ma_acctcreatebutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      color = {0.5, 0, 0, transparency.btn}
     },
     size = {
       width = 80,
@@ -1165,7 +1177,7 @@ function MangAdmin:CreateMainSection()
     parent = ma_midframe,
     texture = {
       name = "ma_acctdeletebutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      color = {0.5, 0, 0, transparency.btn}
     },
     size = {
       width = 80,
@@ -1205,7 +1217,7 @@ function MangAdmin:CreateMainSection()
     parent = ma_midframe,
     texture = {
       name = "ma_acctgmlvlbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      color = {0.5, 0, 0, transparency.btn}
     },
     size = {
       width = 80,
@@ -1225,7 +1237,7 @@ function MangAdmin:CreateMainSection()
     parent = ma_midframe,
     texture = {
       name = "ma_acctpasswdbutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      color = {0.5, 0, 0, transparency.btn}
     },
     size = {
       width = 80,
