@@ -141,47 +141,16 @@ MangAdmin:RegisterDefaults("account",
   }
 )
 
+--[[
+  To register a new translation refer to the Adding documentation
+]]
 -- Register Translations
 Locale:EnableDynamicLocales(true)
 --Locale:EnableDebugging()
 Locale:RegisterTranslations("enUS", function() return Return_enUS() end)
---Locale:RegisterTranslations("frFR", function() return Return_frFR() end)
---Locale:RegisterTranslations("svSV", function() return Return_svSV() end)
---Locale:RegisterTranslations("deDE", function() return Return_deDE() end)
---Locale:RegisterTranslations("ptBR", function() return Return_ptBR() end)
---Locale:RegisterTranslations("itIT", function() return Return_itIT() end)
---Locale:RegisterTranslations("fiFI", function() return Return_fiFI() end)
---Locale:RegisterTranslations("plPL", function() return Return_plPL() end)
---Locale:RegisterTranslations("liLI", function() return Return_liLI() end)
---Locale:RegisterTranslations("roRO", function() return Return_roRO() end)
---Locale:RegisterTranslations("csCZ", function() return Return_csCZ() end)
---Locale:RegisterTranslations("huHU", function() return Return_huHU() end)
---Locale:RegisterTranslations("esES", function() return Return_esES() end)
---Locale:RegisterTranslations("zhCN", function() return Return_zhCN() end)
---Locale:RegisterTranslations("ptPT", function() return Return_ptPT() end)
---Locale:RegisterTranslations("ruRU", function() return Return_ruRU() end)
---Locale:RegisterTranslations("nlNL", function() return Return_nlNL() end)
---Locale:RegisterTranslations("buBU", function() return Return_buBU() end)
 -- Register String Traslations
 Strings:EnableDynamicLocales(true)
 Strings:RegisterTranslations("enUS", function() return ReturnStrings_enUS() end)
---Strings:RegisterTranslations("frFR", function() return ReturnStrings_frFR() end)
---Strings:RegisterTranslations("svSV", function() return ReturnStrings_svSV() end)
---Strings:RegisterTranslations("deDE", function() return ReturnStrings_deDE() end)
---Strings:RegisterTranslations("ptBR", function() return ReturnStrings_ptBR() end)
---Strings:RegisterTranslations("itIT", function() return ReturnStrings_itIT() end)
---Strings:RegisterTranslations("fiFI", function() return ReturnStrings_fiFI() end)
---Strings:RegisterTranslations("plPL", function() return ReturnStrings_plPL() end)
---Strings:RegisterTranslations("liLI", function() return ReturnStrings_liLI() end)
---Strings:RegisterTranslations("roRO", function() return ReturnStrings_roRO() end)
---Strings:RegisterTranslations("csCZ", function() return ReturnStrings_csCZ() end)
---Strings:RegisterTranslations("huHU", function() return ReturnStrings_huHU() end)
---Strings:RegisterTranslations("esES", function() return ReturnStrings_esES() end)
---Strings:RegisterTranslations("zhCN", function() return ReturnStrings_zhCN() end)
---Strings:RegisterTranslations("ptPT", function() return ReturnStrings_ptPT() end)
---Strings:RegisterTranslations("ruRU", function() return ReturnStrings_ruRU() end)
---Strings:RegisterTranslations("nlNL", function() return ReturnStrings_nlNL() end)
---Strings:RegisterTranslations("buBU", function() return ReturnStrings_buBU() end)
 --Locale:Debug()
 --Locale:SetLocale("enUS")
 
@@ -899,9 +868,10 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
       end
     end
     --checking for .server info command to pull information for bottom right frame
-    for revision in string.gmatch(text, Strings["ma_GmatchRevision"]) do
+    for revision, platform in string.gmatch(text, Strings["ma_GmatchRevision"]) do
+      message(text)
       ma_inforevisiontext:SetText(Locale["info_revision"]..revision)
-      --ma_infoplatformtext:SetText(Locale["info_platform"]..platform)
+      ma_infoplatformtext:SetText(string.gsub(Locale["info_platform"], "_SERVER_PLAT_", platform))
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
