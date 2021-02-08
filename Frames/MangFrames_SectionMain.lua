@@ -375,11 +375,11 @@ function MangAdmin:CreateMainSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_accountlockonbutton",
+    name = "ma_accountlockiponbutton",
     group = "main",
     parent = ma_midframe,
     texture = {
-      name = "ma_accountlockonbutton_texture",
+      name = "ma_accountlockiponbutton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -391,15 +391,15 @@ function MangAdmin:CreateMainSection()
       offX = 10,
       offY = -190
     },
-    text = Locale["ma_accountlockbutton"]
+    text = Locale["ma_accountlockipbutton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_accountlockoffbutton",
+    name = "ma_accountlockipoffbutton",
     group = "main",
     parent = ma_midframe,
     texture = {
-      name = "ma_accountlockoffbutton_texture",
+      name = "ma_accountlockipoffbutton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {

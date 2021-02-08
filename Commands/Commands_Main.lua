@@ -124,13 +124,8 @@ function ShowBag()
 end
 
 function DismountPlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".dismount")
-    MangAdmin:LogAction("Dismounted player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionerror1"])
-  end
+    MangAdmin:LogAction("Dismounted player")
 end
 
 function SetJail_A()
@@ -186,18 +181,13 @@ function GridNavigate(x, y)
   end
 end
 
-function ToggleChat(value)
-  MangAdmin:ChatMsg(".gm chat "..value)
-  MangAdmin:LogAction("Turned GM-Chat to "..value..".")
-end
-
 function ToggleWaterwalk(value)
   MangAdmin:ChatMsg(".cheat waterwalk "..value)
   MangAdmin:LogAction("Turned Waterwalk to "..value..".")
 end
 
-function ToggleAccountlock(value)
-  MangAdmin:ChatMsg(".account lock "..value)
+function ToggleAccountlockIP(value)
+  MangAdmin:ChatMsg(".account lock ip "..value)
   MangAdmin:LogAction("Turned GM account lock to "..value..".")
 end
 
