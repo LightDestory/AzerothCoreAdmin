@@ -61,7 +61,7 @@ function Return_enUS()
   --[[Control Labels]]
     ["ma_LanguageButton"]             = "Change language",
     ["info_revision"]                 = "|cFF00FF00AzerothCore rev:|r ", --Updated: Matched string output to AzerothCore
-    ["info_platform"]                 = "|cFF00FF00Server Platform:|r ",
+    ["info_platform"]                 = "|cFF00FF00(_SERVER_PLAT_)|r ",
     ["info_online"]                   = "|cFF00FF00Players Online:|r ",
     ["info_online_world"]             = "|cFF00FF00Players in world:|r ",
     ["info_maxonline"]                = "|cFF00FF00Maximum Online:|r ",

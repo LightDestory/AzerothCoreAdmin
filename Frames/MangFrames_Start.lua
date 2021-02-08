@@ -69,7 +69,7 @@ function MangAdmin:CreateStartFrames()
     inherits = nil
   })
 
-  FrameLib:BuildFrame({ --Top Window Frame that has TrinityAdmin Logo
+  FrameLib:BuildFrame({ --Top Window Frame that has AzerothCoreAdmin Logo
     name = "ma_topframe",
     group = "bg",
     parent = ma_bgframe,
@@ -257,17 +257,17 @@ function MangAdmin:CreateStartFrames()
     }
   })
 
---  FrameLib:BuildFontString({
---    name = "ma_infoplatformtext",
---    group = "bg",
---    parent = ma_rightframe,
---    text = "Server Platform: ...",
---    setpoint = {
---      pos = "TOPLEFT",
---      offX = 10,
---      offY = -70
---    }
---  })
+  FrameLib:BuildFontString({
+    name = "ma_infoplatformtext",
+    group = "bg",
+    parent = ma_rightframe,
+    text = "(Unknown Server Platform)",
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 205,
+      offY = -82
+    }
+  })
 
   FrameLib:BuildButton({
     name = "ma_inforefreshbutton",

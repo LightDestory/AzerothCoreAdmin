@@ -17,7 +17,7 @@
 
 function ReturnStrings_enUS()
   return {
-    ["ma_GmatchRevision"] = "AzerothCore rev. (%S*)",
+    ["ma_GmatchRevision"] = "AzerothCore rev%. (%S*) %S+ %S+ %S+ %S+ %S+ %((%S*)%,",
     ["ma_GmatchGPS"] = "X: (.*) Y: (.*) Z",
     ["ma_GmatchItem"] = "%|cffffffff%|Hitem:(%d+).*%[(.*)%]%|h%|r",
     ["ma_GmatchQuest"] = ".-(%d+).*%[(.*)%]%|h%|r",
