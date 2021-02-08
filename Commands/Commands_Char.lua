@@ -142,12 +142,12 @@ end
 
 function Demorph()
     local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".demorph")
+    MangAdmin:ChatMsg(".morph reset")
     MangAdmin:LogAction("Demorphed player "..player..".")
 end
 
 function ToggleMapsChar(value)
-  MangAdmin:ChatMsg(".explorecheat "..value)
+  MangAdmin:ChatMsg(".cheat explore "..value)
   if value == 1 then
     MangAdmin:LogAction("Revealed all maps for selected player.")
   else
@@ -155,14 +155,10 @@ function ToggleMapsChar(value)
   end
 end
 
-function GPS()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
+function GetGPSInfo()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".gps")
     MangAdmin:LogAction("Got GPS coordinates for player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionerror1"])
-  end
 end
 
 function LearnSpell(value, state)
@@ -613,10 +609,10 @@ function MuteButton()
 end
 
 function CharMorphButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".modify morph "..cname)
-  MangAdmin:LogAction(".modify morph "..cname..".")
+  local player = UnitName("target") or UnitName("player")
+  local diplayID = ma_charactertarget:GetText()
+  MangAdmin:ChatMsg(".morph target "..diplayID)
+  MangAdmin:LogAction("Morph applied to "..player..".")
 
 end
 
