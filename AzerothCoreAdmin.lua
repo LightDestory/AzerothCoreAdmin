@@ -915,6 +915,9 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
     for maxusers in string.gmatch(text, "Connection peak: (%d+).") do
       ma_infomaxonlinetext:SetText(Locale["info_maxonline"]..maxusers)
+      catchedSth = true
+--        output = MangAdmin.db.account.style.showchat
+        output = MangAdmin.db.account.style.showchat
     end
     for uptime in string.gmatch(text, Strings["ma_GmatchUptime"]) do
       ma_infouptimetext:SetText(Locale["info_uptime"]..uptime)
