@@ -135,11 +135,11 @@ function MangAdmin:CreateMainSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_hoveronbutton",
+    name = "ma_godonbutton",
     group = "main",
     parent = ma_midframe,
     texture = {
-      name = "ma_hoveronbutton_texture",
+      name = "ma_godonbutton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -151,15 +151,15 @@ function MangAdmin:CreateMainSection()
       offX = 10,
       offY = -70
     },
-    text = Locale["ma_HoverOnButton"]
+    text = Locale["ma_GodOnButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_hoveroffbutton",
+    name = "ma_godoffbutton",
     group = "main",
     parent = ma_midframe,
     texture = {
-      name = "ma_hoveroffbutton_texture",
+      name = "ma_godoffbutton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {

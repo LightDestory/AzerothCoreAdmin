@@ -38,15 +38,9 @@ function ToggleFlyMode(value)
   end]]
 end
 
-function ToggleHoverMode(value)
-  MangAdmin:ChatMsg("hover command not used "..value) --TODO: Change to another function.
-  local status
-  if value == 1 then
-    status = "on"
-  else
-    status = "off"
-  end
-  MangAdmin:LogAction("Hover mode not an option "..status..".")
+function ToggleGodMode(value)
+  MangAdmin:ChatMsg(".cheat god "..value)
+  MangAdmin:LogAction("Turned God-mode to "..value..".")
 end
 
 function ToggleWhisper(value)
@@ -84,12 +78,6 @@ function ToggleMaps(value)
   else
     MangAdmin:LogAction("Hide all unexplored maps for selected player.")
   end
-end
-
-function KillSomething()
-  local target = UnitName("target") or UnitName("player")
-  MangAdmin:ChatMsg(".die")
-  MangAdmin:LogAction("Killed "..target..".")
 end
 
 function InstantKill()
