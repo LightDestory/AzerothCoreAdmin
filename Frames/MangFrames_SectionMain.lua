@@ -455,6 +455,26 @@ function MangAdmin:CreateMainSection()
   })
 
   FrameLib:BuildButton({
+    name = "ma_bagbutton",
+    group = "main",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_bagbutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 80,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 660,
+      offY = -54
+    },
+    text = Locale["ma_BagButton"]
+  })
+
+  FrameLib:BuildButton({
     name = "ma_dismountbutton",
     group = "main",
     parent = ma_midframe,
@@ -469,7 +489,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -54
+      offY = -75
     },
     text = Locale["ma_DismountButton"]
   })
@@ -489,7 +509,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -75
+      offY = -97
     },
     text = Locale["ma_SetJail_A_Button"]
   })
@@ -509,7 +529,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 660,
-      offY = -97
+      offY = -119
     },
     text = Locale["ma_SetJail_H_Button"]
   })

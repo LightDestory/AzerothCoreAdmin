@@ -118,6 +118,11 @@ function ShowBank()
   MangAdmin:ChatMsg(".character check bank")
 end
 
+function ShowBag()
+  local param = ma_parameter:GetText()
+  MangAdmin:ChatMsg(".character check bag "..param)
+end
+
 function DismountPlayer()
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
     local player = UnitName("target") or UnitName("player")
