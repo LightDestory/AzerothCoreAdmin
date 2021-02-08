@@ -327,9 +327,29 @@ function GmClear()
 end
 
 function AcctCreate()
-  local param = ma_parameter:GetText()
-  MangAdmin:ChatMsg(".account create "..param)
-  MangAdmin:LogAction("Created account: "..param)
+  local input = ma_parameter:GetText()
+  local params = {}
+  local fail = false
+  for w in input:gmatch("%S+") do table.insert(params, w) end
+  if(params[1] == nil or params[2] == nil) then
+    print("|cffFF0000You must enter 2 parameters!|r")
+    return
+  end
+  if (string.len(params[1]) <2 or string.len(params[1]) >12) then
+    print("|cffFF0000" .. params[1] .."|r is not a valid username\n|cff00FF00Account username must be betweem 2 and 12 characters!|r")
+    fail = true
+  end
+  if (string.len(params[2]) > 16 or string.len(params[2]) < 3) then
+    print("|cffFF0000" .. params[2] .."|r is not a valid password\n|cff00FF00Account password must be betweem 3 and 16 characters!|r")
+    fail = true
+  end
+  if(fail) then
+    print("|cffFF0000Creation aborted!|r")
+    return
+  end
+  MangAdmin:ChatMsg(".account create ".. params[1] .. " " .. params[2])
+  print("|cff00FF00Account created successfully|r")
+  MangAdmin:LogAction("Created account: ".. params[1] .. " " .. params[2])
 end
 
 function AcctDelete()
