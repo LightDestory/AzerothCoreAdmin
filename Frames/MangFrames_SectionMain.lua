@@ -872,11 +872,11 @@ function MangAdmin:CreateMainSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_pettpbutton",
+    name = "ma_pettalentslearnbutton",
     group = "main",
     parent = ma_midframe,
     texture = {
-      name = "ma_pettpbutton_texture",
+      name = "ma_pettalentslearnbutton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -888,7 +888,7 @@ function MangAdmin:CreateMainSection()
       offX = 578,
       offY = -119
     },
-    text = Locale["ma_pettp"]
+    text = Locale["ma_pettalentslearn"]
   })
 
   FrameLib:BuildButton({

@@ -228,10 +228,9 @@ function PetUnLearn()
   MangAdmin:LogAction("Un-taught pet spell "..param)
 end
 
-function PetTP()
-  local param = ma_parameter:GetText()
-  MangAdmin:ChatMsg(".pet tp "..param)
-  MangAdmin:LogAction("Modified pet training points by "..param)
+function PetTalentsLearn()
+  MangAdmin:ChatMsg(".learn all my pettalents")
+  MangAdmin:LogAction("Your pet is a genius (learnt all talents)")
 end
 
 function LookupTaxi()
