@@ -1,39 +1,179 @@
-# TrinityAdmin Changelog
-### -=[ Revision 58 - 10/20/2019]=-
+# Changelog of AzerothCoreAdmin
+
+**AzerothCodeAdmin is derived from TrinityAdmin v2.5, so you get trinityadmin's changelog too**
+
+- TrinityAdmin's changelogs start from _Revision 13_ to _Revision 58_
+- AzerothCoreAdmin's changelogs start from scratch: _Revision 01_
+
+## Table of Contents
+
+1. [AzerothCoreAdmin Changelogs](#AzerothCoreAdmin-Changelogs)
+    - [ACAdmin-Revision 01](#ACAdmin-Revision-01)
+2. [TrinityAdmin Changelogs](#TrinityAdmin-Changelogs)
+    - [TA-Revision 58](#TA-Revision-58)
+    - [TA-Revision 57](#TA-Revision-57)
+    - [TA-Revision 56](#TA-Revision-56)
+    - [TA-Revision 55](#TA-Revision-55)
+    - [TA-Revision 54](#TA-Revision-54)
+    - [TA-Revision 53](#TA-Revision-53)
+    - [TA-Revision 52](#TA-Revision-52)
+    - [TA-Revision 51](#TA-Revision-51)
+    - [TA-Revision 50](#TA-Revision-50)
+    - [TA-Revision 49](#TA-Revision-49)
+    - [TA-Revision 48](#TA-Revision-48)
+    - [TA-Revision 47](#TA-Revision-47)
+    - [TA-Revision 46](#TA-Revision-46)
+    - [TA-Revision 45](#TA-Revision-45)
+    - [TA-Revision 44](#TA-Revision-44)
+    - [TA-Revision 43](#TA-Revision-43)
+    - [TA-Revision 42](#TA-Revision-42)
+    - [TA-Revision 41](#TA-Revision-41)
+    - [TA-Revision 40](#TA-Revision-40)
+    - [TA-Revision 39](#TA-Revision-39)
+    - [TA-Revision 38](#TA-Revision-38)
+    - [TA-Revision 37](#TA-Revision-37)
+    - [TA-Revision 36](#TA-Revision-36)
+    - [TA-Revision 24](#TA-Revision-24)
+    - [TA-Revision 23](#TA-Revision-23)
+    - [TA-Revision 22](#TA-Revision-22)
+    - [TA-Revision 21](#TA-Revision-21)
+    - [TA-Revision 20](#TA-Revision-20)
+    - [TA-Revision 19](#TA-Revision-19)
+    - [TA-Revision 18](#TA-Revision-18)
+    - [TA-Revision 17](#TA-Revision-17)
+    - [TA-Revision 16](#TA-Revision-16)
+    - [TA-Revision 15](#TA-Revision-15)
+    - [TA-Revision 14](#TA-Revision-14)
+    - [TA-Revision 13](#TA-Revision-13)
+
+## AzerothCoreAdmin Changelogs
+
+### ACAdmin-Revision _01_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _02/08/2021_
+
+**Changelog:**
+
+- GENERAL:
+  - Applied AzerothCore branding
+  - Restyle of Adding documentation
+  - Restyle of Repository readme
+  - Restyle of Changelog section
+- CHAR-TAB:
+  - FIX: Morph and Demorph commands
+  - FIX: GPS command
+- GM-TAB:
+  - ADD: Server Platform info
+  - ADD: God-Mode cheat
+  - ADD: Bag command
+  - ADD: Pet Talents
+  - FIX: GM-tab commands
+  - FIX: Stats controls (AzerothCore revision, player counters)
+  - REWORKED: GM-tab UI
+  - REMOVED: Hover-mode command
+  - REMOVED: PET TP command
+- INTERFACE:
+  - FIX: Adjust tabs width
+  - ADD: Commands that requires GM level 4 are now "red"
+  - ADD: GM 4 level warning
+- DBC:
+  - UPDATE: DBC Map and Area up to v9
+
+## TrinityAdmin Changelogs
+
+### TA-Revision _58_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/20/2019_
+
+**Changelog:**
+
 - FIX: Typo in GM on/off command
 
-### -=[ Revision 57 - 10/18/2019]=-
+### TA-Revision _57_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/18/2019_
+
+**Changelog:**
+
 - FIX Diff graph LUA error (Not actually updating)
 
-### -=[ Revision 56 - 8/23/2019]=-
+### TA-Revision _56_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _8/23/2019_
+
+**Changelog:**
+
 - Added Tool Tip to WHO tap
 - FIXED server information tab now showing TrinityCore rev.
 - Removed Locale section from CHANGELOG
 - Converted CHANGELOG 4>2 spaces
 
-### -=[ Revision 55 - 8/21/2019]=-
+### TA-Revision _55_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _8/21/2019_
+
+**Changelog:**
+
 - Changed version specific build to 3.3.5
 - Updated TOC for version 3.3.5
 - updated README to reflect 3.3.5
 - Corrected flip flopped Emote buttons on the NPC Tab
 - Fixed a few spelling errors
 
-### -=[ Revision 54 - 11/13/2018]=-
+### TA-Revision _54_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _11/13/2018_
+
+**Changelog:**
+
 - Fixed Tele Tab function with previous commit
 - Removed multiple files for non-existing tabs
 - Removed excessive spacing
 - Cleaned trailing whitespace
 
-### -=[ Revision 53 - 10/19/2018]=-
+### TA-Revision _53_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/19/2018_
+
+**Changelog:**
+
 - NPC Corrections/Adjustments:
   - Changed button layout/corrected alignment
 
-### -=[ Revision 52 - 10/18/2018]=-
+### TA-Revision _52_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/18/2018_
+
+**Changelog:**
+
 - TAB Corrections/Adjustments:
   - Merged CHAR2 tab into CHAR
   - Removed NPC2 Tab
 
-### -=[ Revision 51 - 10/14/2018]=-
+### TA-Revision _51_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/14/2018_
+
+**Changelog:**
+
 - TAB Corrections/Adjustments:
   - Removed PvP Tab
   - Removed EVENT Tab
@@ -41,12 +181,26 @@
   - Removed VENDOR Tab
   - Removed AhBOT Tab
 
-### -=[ Revision 50 - 10/10/2018]=-
+### TA-Revision _50_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/10/2018_
+
+**Changelog:**
+
 - Char Corrections/Adjustments:
   - Merged CHAR2 tab into CHAR
   - Removed CHAR2 Tab
 
-### -=[ Revision 49 - 10/06/2018]=-
+### TA-Revision _49_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/06/2018_
+
+**Changelog:**
+
 - Char Corrections/Adjustments:
   - Changed button layout/Corrected alignment
   - Changed scale of 3D model view
@@ -56,7 +210,14 @@
   - Changed scale of 3D model view
   - Changed 3D model view control buttons
 
-### -=[ Revision 48 - 10/03/2018]=-
+### TA-Revision _48_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _10/03/2018_
+
+**Changelog:**
+
 - Nomalized TABS to use all UPPERCASE names
 - GM Corrections/Adjustments:
   - Changed button layout/Corrected alignment
@@ -75,11 +236,25 @@
   - FIX Textbox width to match button width
   - ADD 'Distance' discription text
 
-### -=[ Revision 47 - 9/24/2018]=-
+### TA-Revision _47_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _9/24/2018_
+
+**Changelog:**
+
 - Corrected layout alignment in the Server Tab:
   - FIXED Reload Scripts -> changed to .reload smart_scripts
 
-### -=[ Revision 46 - 9/23/2018]=-
+### TA-Revision _46_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _9/23/2018_
+
+**Changelog:**
+
 - MOD Main Window layout:
   - Moved Language dropdown closer to the change button
   - Realigned lower window frames
@@ -87,17 +262,45 @@
 - Corrected layout alignmnet the Misc Tab:
   - ADD Move checkbox to Misc Tab
 
-### -=[ Revision 45 - 1/18/2012]=-
+### TA-Revision _45_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/18/2012_
+
+**Changelog:**
+
 - Added "Reload" Linkifier button to the output of ".npc info" to reload the creature_template
 
-### -=[ Revision 44 - 1/15/2011]=-
+### TA-Revision _44_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/15/2011_
+
+**Changelog:**
+
 - Forgot to update internal revision string, fixed
 
-### -=[ Revision 43 - 1/15/2011]=-
+### TA-Revision _43_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/15/2011_
+
+**Changelog:**
+
 Touchups to r42 changes. Changed "Spawn on Move" to "Add on Move", then added "Move on Move" so you
 can "move" gobs finally (it actually deletes and recreates the gob to get around the .gob move bug)
 
-### -=[ Revision 42 - 1/15/2011]=-
+### TA-Revision _42_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/15/2011_
+
+**Changelog:**
+
 - Major changes to GOB tab:
 - ADD Model viewer to see targeted model with rotate/zoom
 - ADD Move/spawn system for builders
@@ -115,7 +318,14 @@ a long time ago. I updated and converted pieces of his code to make this work. P
 Note2: The Gob info boxes can become messy due to a race condition. Since WoW LUA has no Sleep() function,
 I cannot prevent this. Click the Obj Target button to reset the info boxes.
 
-### -=[ Revision 41 - 1/10/2011]=-
+### TA-Revision _41_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/10/2011_
+
+**Changelog:**
+
 - ADD new NPC2 tab - Please close WoW and restart to load new files!!!
 - Moved all NPC Waypoint/movement related buttons to NPC2
 - Fixed MvRandom, NPCStay, NPCStayDEl, and MvWaypt buttons
@@ -124,11 +334,25 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD .possess and .unpossess to NPC tab
 - ADD .recall and .repairitems to CHAR tab
 
-### -=[ Revision 40 - 1/8/2011]=-
+### TA-Revision _40_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/8/2011_
+
+**Changelog:**
+
 - ADD .cometome command to NPC tab
 - Added enUS locale for above
 
-### -=[ Revision 39 - 1/8/2011]=-
+### TA-Revision _39_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/8/2011_
+
+**Changelog:**
+
 - ADD .bindsight to NPC tab
 - ADD .unbindsight to NPC tab. Note: this command is broken in core on my core revision.
 - ADD .bindsight to CHAR tab
@@ -136,7 +360,14 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD .char rename, customize, changerace, and changefaction to CHAR tab
 - ADD enUS locale for the above items
 
-### -=[ Revision 38 - 1/8/2011]=-
+### TA-Revision _38_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/8/2011_
+
+**Changelog:**
+
 - Misc code formatting cleanup
 - ADD aspeed, arena, bwalk, drunk, fly, gender, honor, mount, phase, runicpower, speed, standstate, swim, and tp to Modify
 - Updated enUS locale for above adds
@@ -146,14 +377,35 @@ I cannot prevent this. Click the Obj Target button to reset the info boxes.
 - ADD/MOD added missing tables to Reload. Removed individual tables that are reloaded with an all_xxxx command...
   so now the list fits the screen, but you may have to choose an all_xxxx command to reload the table you want.
 
-### -=[ Revision 37 - 1/4/2011]=-
+### TA-Revision _37_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/4/2011_
+
+**Changelog:**
+
 - Wiki changes
 
-### -=[ Revision 36 - 1/4/2011]=-
+### TA-Revision _36_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/4/2011_
+
+**Changelog:**
+
 - You'd think after years of programming experience, I'd not get in this sort of mess. Like letting my code on two
 different machines get out of sync. Like trying to commit with conflicts o' plenty. Fixed. Ignore r25-r35.
 
-### -=[ Revision 24 - 1/4/2011]=-
+### TA-Revision _24_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _1/4/2011_
+
+**Changelog:**
+
 - Merry (Belated) Christmas!
 - Numerous bugs fixed from issue tracker
 - New camera functions and rearrangement of model frame on Char and NPC tabs
@@ -161,21 +413,56 @@ different machines get out of sync. Like trying to commit with conflicts o' plen
 - Tweak to DisplayID browser
 - Found some more .namego and .goname, changed to .appear and .summon
 
-### -=[ Revision 23 - 12/12/2010]=-
+### TA-Revision _23_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _12/12/2010_
+
+**Changelog:**
+
 - ADD NPC DisplayID broser
 
-### -=[ Revision 22 - 9/6/2010]=-
+### TA-Revision _22_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _9/6/2010_
+
+**Changelog:**
+
 - FIX version string
 
-### -=[ Revision 21 - 9/6/2010]=-
+### TA-Revision _21_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _9/6/2010_
+
+**Changelog:**
+
 - FIX for new .summon, .appear, .groupsummon commands
 
-### -=[ Revision 20 - 8/10/2010]=-
+### TA-Revision _20_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _8/10/2010_
+
+**Changelog:**
+
 - FIX Whisper issues with 3.3.5a client
 - MOD Revive button on Char tab is now always available
 - FIX Server Info spamming when Show Chat Output is ON.
 
-### -=[ Revision 19 - 4/13/2010]=-
+### TA-Revision _19_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _4/13/2010_
+
+**Changelog:**
+
 - FIX issue 36 WHO tab overlap
 - FIX issue 35 TICKET - Online list not working
 - FIX issue with Nil object error in tele scrolling on startup
@@ -187,8 +474,16 @@ different machines get out of sync. Like trying to commit with conflicts o' plen
 - It is reported that r19 with Chat Output ON allows all the chat window clickable links to work properly. Please verify.
 - It is also reported that deDe clients with deDe selected in TrintiyAdmin and deDe selected in Core is now working properly.
 
-### -=[ Revision 18 - 4/7/2010]=-
+### TA-Revision _18_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _4/7/2010_
+
+**Changelog:**
+
 Note: This version is compatible with TC2 revision 7757+
+
 - FIX: WHO tab functioning with new entries in Trinity_String (MANY thanks to TC Devs for the changes!!!)
 - ADD: Map-Zone to WHO tab. Note: this is NOT realtime since it pulls from the database after save
 - Fix: PairsbyKeys startup error
@@ -197,10 +492,24 @@ Note: This version is compatible with TC2 revision 7757+
 - MOD: In Item search frame, click= add item to target inventory, right-click= list item. Changed this to: click=add, r-click=remove. Multiple amounts work for removing too, can enter either a positive or negative munber to be removed.
 - FIX: Server info no longer spamming chat window
 
-### -=[ Revision 17 - 3/4/2010 ]=-
+### TA-Revision _17_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _3/4/2010_
+
+**Changelog:**
+
 - ADD: deDE localisation
 
-### -=[ Revision 16 - 2/26/2010 ]=-
+### TA-Revision _16_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _2/26/2010_
+
+**Changelog:**
+
 - UPDATE: svSV locale updated
 - UPDATE: Close Mail popup when send button clicked - Thanks, Shocker!
 - ADD: Ticket tab, new button to view tickets of online players only (.ticket onlinelist) Thanks, Shocker!
@@ -208,15 +517,36 @@ Note: This version is compatible with TC2 revision 7757+
 - UPDATE: Moved Tele Add and Tele Del buttons to GM tab, rather than Char2 tab.
 - ADD: On WHO tab: .char customize, .char delete, .char rename, .ban (1 day), .ban (perm), Jail (Alliance), Jail(Horde), UnJail
 
-### -=[ Revision 15 - 2/25/2010 ]=-
+### TA-Revision _15_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _2/25/2010_
+
+**Changelog:**
+
 - FIX: Issue #23 Ticket list not clearing when last ticket closed
 - FIX: Issue #24 Tickets with IDs containing '00' not displaying - ta.sql MUST be reapplied
 - The above two issues found and fixed by Shocker. Thanks m8!
 
-### -=[ Revision 14 - 2/24/2010 ]=-
+### TA-Revision _14_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _2/24/2010_
+
+**Changelog:**
+
 - Fixed internal revision number, forgotten at last commit.
 
-### -=[ Revision 13 - 2/24/2010 ]=-
+### TA-Revision _13_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _2/24/2010_
+
+**Changelog:**
+
 This is a major release, incorporating many, many fixes along with
 some major new features (Tickets, Who). This release would NOT have
 happened without the generous and patient assistance of Kitharo (from
@@ -252,7 +582,3 @@ so that I could make Tickets work again. Thank you, my friend!
 - Added .account create, .account delete, .account set addon, .account set gmlevel, .account set password
 - added .gmnotify
 - Logo updated (Thanks Lyrr123!!!)
-
-## Locale Team:
-### Supported Locales:
-- [x] enUS: iotech

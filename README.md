@@ -2,8 +2,6 @@
 
 AzerothCoreAdmin (_ACAdmin_) is a general interface add-on which will help admins and GMs in-game of AzerothCore-based private servers.
 
-** No GA release available yet!, Be aware that it is still early to actively use it**
-
 ## Take a look at the past
 
 This add-on is an adaption for AzerothCore-based servers of the TrinityAdmin add-on which supports only TrinityCore-based servers. Moreover, TrinityAdmin is derived from MangAdmin, which supports MaNGOS-based server.
@@ -27,18 +25,18 @@ _The adaption is based on the most updated fork available of TrinityAdmin for 3.
 8. Click the _Change Language button_ to reload the addon;
 9. Enjoy;
 
-## Tabs with refined layout
+## TO-DO (Adapted TABS)
 
 - [x] GM
-- [x] CHAR
-- [x] NPC
+- [ ] CHAR _(In progress..)_
+- [ ] NPC
 - [ ] GOB
-- [x] TELE
-- [x] TICKETS
-- [x] MISC
-- [x] SERVER
-- [x] LOG
-- [x] WHO
+- [ ] TELE
+- [ ] TICKETS
+- [ ] MISC
+- [ ] SERVER
+- [ ] LOG
+- [ ] WHO
 
 ## Credits
 
@@ -63,7 +61,6 @@ Moreover, thanks to:
 
 ## Screenshots
 
-![image](/Textures/TASS_Char.pg)
-![image](/Textures/TASS_GM.pg)
-![image](/Textures/TASS_Server.pg)
-![image](/Textures/TASS_Tele.pg)
+![image](/Textures/ACAdmin_GM.png)
+![image](/Textures/ACAdmin_CHAR.png)
+![image](/Textures/ACAdmin_WHO.png)
