@@ -371,6 +371,12 @@ function GMNotify()
   MangAdmin:LogAction("GM Notify: "..param)
 end
 
+function GMMessage()
+  local param = ma_parameter:GetText()
+  MangAdmin:ChatMsg(".gmnameannounce "..param)
+  MangAdmin:LogAction("GM Message: "..param)
+end
+
 function TeleAddButton()
   local cname = ma_parameter:GetText()
   MangAdmin:ChatMsg(".tele add "..cname)

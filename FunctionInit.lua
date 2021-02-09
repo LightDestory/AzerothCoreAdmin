@@ -79,6 +79,9 @@ function InitControls()
   MangAdmin:PrepareScript(ma_acctgmlvlbutton                 , Locale["tt_acctgmlvlbutton"]            , function() AcctGMLvl() end)
   MangAdmin:PrepareScript(ma_acctpasswdbutton                , Locale["tt_acctpasswdbutton"]           , function() AcctPasswd() end)
   MangAdmin:PrepareScript(ma_gmnotifybutton                  , Locale["tt_gmnotifybutton"]             , function() GMNotify() end)
+
+  MangAdmin:PrepareScript(ma_gmnameannouncebutton                  , Locale["tt_gmnameannouncebutton"]       , function() GMMessage() end)
+  
   MangAdmin:PrepareScript(ma_teleaddbutton                   , Locale["tt_teleaddbutton"]              , function() TeleAddButton() end)
   MangAdmin:PrepareScript(ma_teledelbutton                   , Locale["tt_teledelbutton"]              , function() TeleDelButton() end)
   MangAdmin:PrepareScript(ma_speedsliderreset_button         , Locale["tt_SpeedSliderReset"]           , function() ResetSpeed() end)

@@ -562,23 +562,6 @@ function MangAdmin:CreateMainSection()
     }
   )
 
-  -- Insta-kill checkbox
-  FrameLib:BuildButton(
-    {
-      type = "CheckButton",
-      name = "ma_instantkillbutton",
-      group = "main",
-      parent = ma_midframe,
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 300,
-        offY = -210
-      },
-      text = Locale["ma_instakill"],
-      inherits = "OptionsCheckButtonTemplate"
-    }
-  )
-
   -- GM 4 Level Warning
   FrameLib:BuildFontString(
     {
@@ -588,93 +571,9 @@ function MangAdmin:CreateMainSection()
       text = Locale["ma_gm4warning"],
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -235
+        offX = 310,
+        offY = 0
       }
-    }
-  )
-
-  -- Speed Slider
-  FrameLib:BuildFrame(
-    {
-      type = "Slider",
-      name = "ma_speedslider",
-      group = "main",
-      parent = ma_midframe,
-      size = {
-        width = 100
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 190,
-        offY = -50
-      },
-      inherits = "OptionsSliderTemplate"
-    }
-  )
-
-  -- Speed Reset
-  FrameLib:BuildButton(
-    {
-      name = "ma_speedsliderreset_button",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_speedsliderreset_button_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 45,
-        height = 15
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 217,
-        offY = -76
-      },
-      text = Locale["ma_resetSlider"]
-    }
-  )
-
-  -- Scale Slider
-  FrameLib:BuildFrame(
-    {
-      type = "Slider",
-      name = "ma_scaleslider",
-      group = "main",
-      parent = ma_midframe,
-      size = {
-        width = 100
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 190,
-        offY = -140
-      },
-      inherits = "OptionsSliderTemplate"
-    }
-  )
-
-  -- Scale Reset
-  FrameLib:BuildButton(
-    {
-      name = "ma_scalesliderreset_button",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_scalesliderreset_button_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 45,
-        height = 15
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 217,
-        offY = -166
-      },
-      text = Locale["ma_resetSlider"]
     }
   )
 
@@ -694,8 +593,8 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -10
+        offX = 200,
+        offY = -15
       },
       text = Locale["ma_acctcreate"]
     }
@@ -717,8 +616,8 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -33
+        offX = 200,
+        offY = -38
       },
       text = Locale["ma_acctdelete"]
     }
@@ -740,8 +639,8 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -56
+        offX = 200,
+        offY = -61
       },
       text = Locale["ma_acctgmlvl"]
     }
@@ -763,8 +662,8 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -79
+        offX = 200,
+        offY = -84
       },
       text = Locale["ma_acctpasswd"]
     }
@@ -786,21 +685,21 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -102
+        offX = 200,
+        offY = -107
       },
       text = Locale["ma_acctaddon"]
     }
   )
 
-  -- GM Notify
+  -- GM List
   FrameLib:BuildButton(
     {
-      name = "ma_gmnotifybutton",
+      name = "ma_gmlistbutton",
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmnotifybutton_texture",
+        name = "ma_gmlistbutton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -809,10 +708,10 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -125
+        offX = 200,
+        offY = -130
       },
-      text = Locale["ma_gmnotify"]
+      text = Locale["ma_gmlist"]
     }
   )
 
@@ -832,35 +731,58 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -148
+        offX = 200,
+        offY = -153
       },
       text = Locale["ma_gmingame"]
     }
   )
 
-  -- GM List
+  -- GM Notify
   FrameLib:BuildButton(
     {
-      name = "ma_gmlistbutton",
+      name = "ma_gmnotifybutton",
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmlistbutton_texture",
+        name = "ma_gmnotifybutton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 300,
-        offY = -171
+        offX = 200,
+        offY = -176
       },
-      text = Locale["ma_gmlist"]
+      text = Locale["ma_gmnotify"]
     }
   )
+
+ -- GM Message
+ FrameLib:BuildButton(
+  {
+    name = "ma_gmnameannouncebutton",
+    group = "main",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_gmnameannouncebutton_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 90,
+      height = 20
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 293,
+      offY = -15
+    },
+    text = Locale["ma_gmnameannounce"]
+  }
+)
 
   FrameLib:BuildButton(
     {
@@ -1586,6 +1508,107 @@ function MangAdmin:CreateMainSection()
         offY = -140
       },
       text = Locale["ma_teledelbutton"]
+    }
+  )
+
+  -- Insta-kill checkbox
+  FrameLib:BuildButton(
+    {
+      type = "CheckButton",
+      name = "ma_instantkillbutton",
+      group = "main",
+      parent = ma_midframe,
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 600,
+        offY = -210
+      },
+      text = Locale["ma_instakill"],
+      inherits = "OptionsCheckButtonTemplate"
+    }
+  )
+
+ -- Speed Slider
+ FrameLib:BuildFrame(
+  {
+    type = "Slider",
+    name = "ma_speedslider",
+    group = "main",
+    parent = ma_midframe,
+    size = {
+      width = 100
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 200,
+      offY = -215
+    },
+    inherits = "OptionsSliderTemplate"
+  }
+)
+
+-- Speed Reset
+FrameLib:BuildButton(
+  {
+    name = "ma_speedsliderreset_button",
+    group = "main",
+    parent = ma_midframe,
+    texture = {
+      name = "ma_speedsliderreset_button_texture",
+      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+    },
+    size = {
+      width = 45,
+      height = 15
+    },
+    setpoint = {
+      pos = "TOPLEFT",
+      offX = 225,
+      offY = -236
+    },
+    text = Locale["ma_resetSlider"]
+  }
+)
+
+  -- Scale Slider
+  FrameLib:BuildFrame(
+    {
+      type = "Slider",
+      name = "ma_scaleslider",
+      group = "main",
+      parent = ma_midframe,
+      size = {
+        width = 100
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 350,
+        offY = -215
+      },
+      inherits = "OptionsSliderTemplate"
+    }
+  )
+
+  -- Scale Reset
+  FrameLib:BuildButton(
+    {
+      name = "ma_scalesliderreset_button",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_scalesliderreset_button_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 45,
+        height = 15
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 375,
+        offY = -236
+      },
+      text = Locale["ma_resetSlider"]
     }
   )
 end
