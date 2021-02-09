@@ -593,7 +593,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -15
       },
       text = Locale["ma_acctcreate"]
@@ -616,7 +616,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -38
       },
       text = Locale["ma_acctdelete"]
@@ -639,7 +639,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -61
       },
       text = Locale["ma_acctgmlvl"]
@@ -662,7 +662,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -84
       },
       text = Locale["ma_acctpasswd"]
@@ -685,7 +685,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -107
       },
       text = Locale["ma_acctaddon"]
@@ -708,7 +708,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -130
       },
       text = Locale["ma_gmlist"]
@@ -731,7 +731,7 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -153
       },
       text = Locale["ma_gmingame"]
@@ -754,124 +754,382 @@ function MangAdmin:CreateMainSection()
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 200,
+        offX = 195,
         offY = -176
       },
       text = Locale["ma_gmnotify"]
     }
   )
 
- -- GM Message
- FrameLib:BuildButton(
-  {
-    name = "ma_gmnameannouncebutton",
-    group = "main",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_gmnameannouncebutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 90,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 293,
-      offY = -15
-    },
-    text = Locale["ma_gmnameannounce"]
-  }
-)
-
+  -- GM Message
   FrameLib:BuildButton(
     {
-      name = "ma_screenshotbutton",
+      name = "ma_gmnameannouncebutton",
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_screenshotbutton_texture",
+        name = "ma_gmnameannouncebutton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 660,
-        offY = -10
+        offX = 288,
+        offY = -15
       },
-      text = Locale["ma_ScreenshotButton"]
+      text = Locale["ma_gmnameannounce"]
     }
   )
 
+  -- Cast
   FrameLib:BuildButton(
     {
-      name = "ma_bankbutton",
+      name = "ma_castbutton",
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_bankbutton_texture",
+        name = "ma_castbutton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 660,
-        offY = -32
+        offX = 288,
+        offY = -38
       },
-      text = Locale["ma_BankButton"]
+      text = Locale["ma_cast"]
     }
   )
 
+  -- Cast Back
   FrameLib:BuildButton(
     {
-      name = "ma_bagbutton",
+      name = "ma_castbackbutton",
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_bagbutton_texture",
+        name = "ma_castbackbutton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 660,
-        offY = -54
+        offX = 288,
+        offY = -61
       },
-      text = Locale["ma_BagButton"]
+      text = Locale["ma_castback"]
     }
   )
 
+  -- Cast Distance
   FrameLib:BuildButton(
     {
-      name = "ma_dismountbutton",
+      name = "ma_castdistbutton",
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_dismountbutton_texture",
+        name = "ma_castdistbutton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 660,
-        offY = -75
+        offX = 288,
+        offY = -84
       },
-      text = Locale["ma_DismountButton"]
+      text = Locale["ma_castdist"]
     }
   )
 
+  -- Cast Self
+  FrameLib:BuildButton(
+    {
+      name = "ma_castselfbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_castselfbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 288,
+        offY = -107
+      },
+      text = Locale["ma_castself"]
+    }
+  )
+
+  -- Cast Target
+  FrameLib:BuildButton(
+    {
+      name = "ma_casttargetbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_casttargetbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 288,
+        offY = -130
+      },
+      text = Locale["ma_casttarget"]
+    }
+  )
+
+  -- Teleport Add
+  FrameLib:BuildButton(
+    {
+      name = "ma_teleaddbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_teleaddbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 288,
+        offY = -153
+      },
+      text = Locale["ma_teleaddbutton"]
+    }
+  )
+
+  -- Teleport Delete
+  FrameLib:BuildButton(
+    {
+      name = "ma_teledelbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_teledelbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 288,
+        offY = -176
+      },
+      text = Locale["ma_teledelbutton"]
+    }
+  )
+
+  -- List Item
+  FrameLib:BuildButton(
+    {
+      name = "ma_listitembutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_listitembutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -15
+      },
+      text = Locale["ma_listitem"]
+    }
+  )
+  
+  -- Lookup Taxi
+  FrameLib:BuildButton(
+    {
+      name = "ma_lookuptaxibutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_lookuptaxibutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -38
+      },
+      text = Locale["ma_lookuptaxi"]
+    }
+  )
+
+  -- Lookup Zone
+  FrameLib:BuildButton(
+    {
+      name = "ma_lookupzonebutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_lookupzonebutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -61
+      },
+      text = Locale["ma_lookupzone"]
+    }
+  )
+
+  -- GoTaxi
+  FrameLib:BuildButton(
+    {
+      name = "ma_gotaxinodebutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_gotaxinodebutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -84
+      },
+      text = Locale["ma_gotaxinode"]
+    }
+  )
+
+  -- GoTrigger
+  FrameLib:BuildButton(
+    {
+      name = "ma_gotriggerbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_gotriggerbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -107
+      },
+      text = Locale["ma_gotrigger"]
+    }
+  )
+
+  -- GoXY
+  FrameLib:BuildButton(
+    {
+      name = "ma_goxybutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_goxybutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -130
+      },
+      text = Locale["ma_goxy"]
+    }
+  )
+
+  -- GoXYZ
+  FrameLib:BuildButton(
+    {
+      name = "ma_goxyzbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_goxyzbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -153
+      },
+      text = Locale["ma_goxyz"]
+    }
+  )
+
+  --GoZoneXY
+  FrameLib:BuildButton(
+    {
+      name = "ma_gozonexybutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_gozonexybutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 381,
+        offY = -176
+      },
+      text = Locale["ma_gozonexy"]
+    }
+  )
+
+  -- SetJail Alliance
   FrameLib:BuildButton(
     {
       name = "ma_setjail_a_button",
@@ -882,18 +1140,19 @@ function MangAdmin:CreateMainSection()
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 660,
-        offY = -97
+        offX = 474,
+        offY = -15
       },
       text = Locale["ma_SetJail_A_Button"]
     }
   )
 
+  -- SetJail Horde
   FrameLib:BuildButton(
     {
       name = "ma_setjail_h_button",
@@ -904,18 +1163,203 @@ function MangAdmin:CreateMainSection()
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
+        width = 90,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 660,
-        offY = -119
+        offX = 474,
+        offY = -38
       },
       text = Locale["ma_SetJail_H_Button"]
     }
   )
 
+  -- Pet Create
+  FrameLib:BuildButton(
+    {
+      name = "ma_petcreatebutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_petcreatebutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 474,
+        offY = -61
+      },
+      text = Locale["ma_petcreate"]
+    }
+  )
+
+  -- Pet Learn
+  FrameLib:BuildButton(
+    {
+      name = "ma_petlearnbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_petlearnbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 474,
+        offY = -84
+      },
+      text = Locale["ma_petlearn"]
+    }
+  )
+
+  -- Pet UnLearn
+  FrameLib:BuildButton(
+    {
+      name = "ma_petunlearnbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_petunlearnbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 474,
+        offY = -107
+      },
+      text = Locale["ma_petunlearn"]
+    }
+  )
+
+  -- Pet Talents
+  FrameLib:BuildButton(
+    {
+      name = "ma_pettalentslearnbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_pettalentslearnbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 474,
+        offY = -130
+      },
+      text = Locale["ma_pettalentslearn"]
+    }
+  )
+
+  -- Bank
+  FrameLib:BuildButton(
+    {
+      name = "ma_bankbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_bankbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 474,
+        offY = -153
+      },
+      text = Locale["ma_BankButton"]
+    }
+  )
+
+  -- Bag
+  FrameLib:BuildButton(
+    {
+      name = "ma_bagbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_bagbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 474,
+        offY = -176
+      },
+      text = Locale["ma_BagButton"]
+    }
+  )
+
+  -- Screenshot
+  FrameLib:BuildButton(
+    {
+      name = "ma_screenshotbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_screenshotbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 567,
+        offY = -15
+      },
+      text = Locale["ma_ScreenshotButton"]
+    }
+  )
+
+  -- Dismount
+  FrameLib:BuildButton(
+    {
+      name = "ma_dismountbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_dismountbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 567,
+        offY = -38
+      },
+      text = Locale["ma_DismountButton"]
+    }
+  )
+
+  -- GridNagivator Title
   FrameLib:BuildFontString(
     {
       name = "ma_gridnavigatortext",
@@ -923,13 +1367,14 @@ function MangAdmin:CreateMainSection()
       parent = ma_midframe,
       text = Locale["gridnavigator"],
       setpoint = {
-        pos = "BOTTOMRIGHT",
-        offX = -5,
-        offY = 5
+        pos = "TOPRIGHT",
+        offX = -2,
+        offY = 0
       }
     }
   )
 
+  -- GridNavigator Input
   FrameLib:BuildFrame(
     {
       type = "EditBox",
@@ -941,15 +1386,16 @@ function MangAdmin:CreateMainSection()
         height = 20
       },
       setpoint = {
-        pos = "BOTTOMRIGHT",
+        pos = "TOPRIGHT",
         offX = -29,
-        offY = 41
+        offY = -41
       },
       maxLetters = 2,
       inherits = "InputBoxTemplate"
     }
   )
 
+  -- GridNavigator North
   FrameLib:BuildButton(
     {
       name = "ma_gridnaviaheadbutton",
@@ -964,14 +1410,15 @@ function MangAdmin:CreateMainSection()
         height = 20
       },
       setpoint = {
-        pos = "BOTTOMRIGHT",
+        pos = "TOPRIGHT",
         offX = -32,
-        offY = 62
+        offY = -62
       },
       text = Locale["N"]
     }
   )
 
+  -- GridNavigator South
   FrameLib:BuildButton(
     {
       name = "ma_gridnavibackbutton",
@@ -986,14 +1433,15 @@ function MangAdmin:CreateMainSection()
         height = 20
       },
       setpoint = {
-        pos = "BOTTOMRIGHT",
+        pos = "TOPRIGHT",
         offX = -32,
-        offY = 20
+        offY = -20
       },
       text = Locale["S"]
     }
   )
 
+  -- GridNavigator East
   FrameLib:BuildButton(
     {
       name = "ma_gridnavirightbutton",
@@ -1008,14 +1456,15 @@ function MangAdmin:CreateMainSection()
         height = 20
       },
       setpoint = {
-        pos = "BOTTOMRIGHT",
+        pos = "TOPRIGHT",
         offX = -55,
-        offY = 41
+        offY = -41
       },
       text = Locale["E"]
     }
   )
 
+  -- GridNavigator West
   FrameLib:BuildButton(
     {
       name = "ma_gridnavileftbutton",
@@ -1030,14 +1479,15 @@ function MangAdmin:CreateMainSection()
         height = 20
       },
       setpoint = {
-        pos = "BOTTOMRIGHT",
+        pos = "TOPRIGHT",
         offX = -8,
-        offY = 41
+        offY = -41
       },
       text = Locale["W"]
     }
   )
 
+  -- Parameters Text Info
   FrameLib:BuildFontString(
     {
       name = "ma_parametertext",
@@ -1046,405 +1496,13 @@ function MangAdmin:CreateMainSection()
       text = Locale["ma_parameters"],
       setpoint = {
         pos = "TOPLEFT",
-        offX = 334,
-        offY = -167
+        offX = 500,
+        offY = -210
       }
     }
   )
 
-  FrameLib:BuildFrame(
-    {
-      type = "EditBox",
-      name = "ma_parameter",
-      group = "main",
-      parent = ma_midframe,
-      size = {
-        width = 260,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 420,
-        offY = -163
-      },
-      inherits = "InputBoxTemplate"
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_petcreatebutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_petcreatebutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 578,
-        offY = -54
-      },
-      text = Locale["ma_petcreate"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_petlearnbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_petlearnbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 578,
-        offY = -75
-      },
-      text = Locale["ma_petlearn"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_petunlearnbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_petunlearnbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 578,
-        offY = -97
-      },
-      text = Locale["ma_petunlearn"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_pettalentslearnbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_pettalentslearnbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 578,
-        offY = -119
-      },
-      text = Locale["ma_pettalentslearn"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_lookuptaxibutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_lookuptaxibutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -10
-      },
-      text = Locale["ma_lookuptaxi"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_gotaxinodebutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_gotaxinodebutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -32
-      },
-      text = Locale["ma_gotaxinode"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_gotriggerbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_gotriggerbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -54
-      },
-      text = Locale["ma_gotrigger"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_goxybutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_goxybutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -75
-      },
-      text = Locale["ma_goxy"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_goxyzbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_goxyzbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -97
-      },
-      text = Locale["ma_goxyz"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_gozonexybutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_gozonexybutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -119
-      },
-      text = Locale["ma_gozonexy"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_lookupzonebutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_lookupzonebutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 497,
-        offY = -140
-      },
-      text = Locale["ma_lookupzone"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_castbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_castbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -10
-      },
-      text = Locale["ma_cast"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_castbackbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_castbackbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -32
-      },
-      text = Locale["ma_castback"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_castdistbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_castdistbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -54
-      },
-      text = Locale["ma_castdist"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_castselfbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_castselfbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -75
-      },
-      text = Locale["ma_castself"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_casttargetbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_casttargetbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -97
-      },
-      text = Locale["ma_casttarget"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_listitembutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_listitembutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -119
-      },
-      text = Locale["ma_listitem"]
-    }
-  )
-
+  -- Clear Button
   FrameLib:BuildButton(
     {
       name = "ma_gmclearbutton",
@@ -1455,59 +1513,35 @@ function MangAdmin:CreateMainSection()
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
-        width = 80,
-        height = 20
+        width = 90,
+        height = 15
       },
       setpoint = {
         pos = "TOPLEFT", ---Correct This Location
-        offX = 578,
-        offY = -140
+        offX = 620,
+        offY = -208
       },
-      text = Locale["ma_GmClear"]
+      text = Locale["ma_inputClear"]
     }
   )
 
-  FrameLib:BuildButton(
+  -- GM Parameters Input
+  FrameLib:BuildFrame(
     {
-      name = "ma_teleaddbutton",
+      type = "EditBox",
+      name = "ma_gmParametersInput",
       group = "main",
       parent = ma_midframe,
-      texture = {
-        name = "ma_teleaddbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
       size = {
-        width = 80,
+        width = 260,
         height = 20
       },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 333,
-        offY = -140
+        offX = 470,
+        offY = -225
       },
-      text = Locale["ma_teleaddbutton"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_teledelbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_teledelbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 415,
-        offY = -140
-      },
-      text = Locale["ma_teledelbutton"]
+      inherits = "InputBoxTemplate"
     }
   )
 
@@ -1520,55 +1554,55 @@ function MangAdmin:CreateMainSection()
       parent = ma_midframe,
       setpoint = {
         pos = "TOPLEFT",
-        offX = 600,
-        offY = -210
+        offX = 567,
+        offY = -174
       },
       text = Locale["ma_instakill"],
       inherits = "OptionsCheckButtonTemplate"
     }
   )
 
- -- Speed Slider
- FrameLib:BuildFrame(
-  {
-    type = "Slider",
-    name = "ma_speedslider",
-    group = "main",
-    parent = ma_midframe,
-    size = {
-      width = 100
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 200,
-      offY = -215
-    },
-    inherits = "OptionsSliderTemplate"
-  }
-)
+  -- Speed Slider
+  FrameLib:BuildFrame(
+    {
+      type = "Slider",
+      name = "ma_speedslider",
+      group = "main",
+      parent = ma_midframe,
+      size = {
+        width = 100
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 200,
+        offY = -215
+      },
+      inherits = "OptionsSliderTemplate"
+    }
+  )
 
--- Speed Reset
-FrameLib:BuildButton(
-  {
-    name = "ma_speedsliderreset_button",
-    group = "main",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_speedsliderreset_button_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 45,
-      height = 15
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 225,
-      offY = -236
-    },
-    text = Locale["ma_resetSlider"]
-  }
-)
+  -- Speed Reset
+  FrameLib:BuildButton(
+    {
+      name = "ma_speedsliderreset_button",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_speedsliderreset_button_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 45,
+        height = 15
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 225,
+        offY = -236
+      },
+      text = Locale["ma_resetSlider"]
+    }
+  )
 
   -- Scale Slider
   FrameLib:BuildFrame(

@@ -72,7 +72,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_castselfbutton                  , Locale["tt_castselfbutton"]             , function() CastSelf() end)
   MangAdmin:PrepareScript(ma_casttargetbutton                , Locale["tt_casttargetbutton"]           , function() CastTarget() end)
   MangAdmin:PrepareScript(ma_listitembutton                  , Locale["tt_listitembutton"]             , function() ListItem() end)
-  MangAdmin:PrepareScript(ma_gmclearbutton                   , Locale["tt_gmclearbutton"]              , function() GmClear() end)
+  MangAdmin:PrepareScript(ma_gmclearbutton                   , Locale["tt_clearbutton"]              , function() GmClear() end)
   MangAdmin:PrepareScript(ma_acctcreatebutton                , Locale["tt_acctcreatebutton"]           , function() AcctCreate() end)
   MangAdmin:PrepareScript(ma_acctdeletebutton                , Locale["tt_acctdeletebutton"]           , function() AcctDelete() end)
   MangAdmin:PrepareScript(ma_acctaddonbutton                 , Locale["tt_acctaddonbutton"]            , function() AcctAddon() end)
@@ -81,7 +81,7 @@ function InitControls()
   MangAdmin:PrepareScript(ma_gmnotifybutton                  , Locale["tt_gmnotifybutton"]             , function() GMNotify() end)
 
   MangAdmin:PrepareScript(ma_gmnameannouncebutton                  , Locale["tt_gmnameannouncebutton"]       , function() GMMessage() end)
-  
+
   MangAdmin:PrepareScript(ma_teleaddbutton                   , Locale["tt_teleaddbutton"]              , function() TeleAddButton() end)
   MangAdmin:PrepareScript(ma_teledelbutton                   , Locale["tt_teledelbutton"]              , function() TeleDelButton() end)
   MangAdmin:PrepareScript(ma_speedsliderreset_button         , Locale["tt_SpeedSliderReset"]           , function() ResetSpeed() end)
