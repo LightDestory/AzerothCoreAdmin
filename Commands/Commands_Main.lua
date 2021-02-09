@@ -80,6 +80,16 @@ function ToggleMaps(value)
   end
 end
 
+function ToggleNoCastTime(value)
+  MangAdmin:ChatMsg(".cheat casttime "..value)
+  MangAdmin:LogAction("Turned NoCastTime to "..value..".")
+end
+
+function ToggleNoCooldown(value)
+  MangAdmin:ChatMsg(".cheat cooldown "..value)
+  MangAdmin:LogAction("Turned NoCooldown to "..value..".")
+end
+
 function InstantKill()
   MangAdmin.db.char.instantKillMode = ma_instantkillbutton:GetChecked()
 end

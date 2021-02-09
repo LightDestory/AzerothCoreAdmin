@@ -33,6 +33,7 @@ function MangAdmin:CreateMainSection()
     frm = MangAdmin.db.account.style.color.frames
   }
 
+  -- DisplayAccountGMLevel
   FrameLib:BuildButton(
     {
       name = "ma_displaylevelbutton",
@@ -55,6 +56,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- GM-mode om
   FrameLib:BuildButton(
     {
       name = "ma_gmonbutton",
@@ -77,6 +79,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- GM-mode off
   FrameLib:BuildButton(
     {
       name = "ma_gmoffbutton",
@@ -99,6 +102,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Fly-mode on
   FrameLib:BuildButton(
     {
       name = "ma_flyonbutton",
@@ -121,6 +125,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Fly-mode off
   FrameLib:BuildButton(
     {
       name = "ma_flyoffbutton",
@@ -143,6 +148,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- God-mode on
   FrameLib:BuildButton(
     {
       name = "ma_godonbutton",
@@ -165,6 +171,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- God-mode off
   FrameLib:BuildButton(
     {
       name = "ma_godoffbutton",
@@ -187,6 +194,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Whispers on
   FrameLib:BuildButton(
     {
       name = "ma_whisperonbutton",
@@ -209,6 +217,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Whispers off
   FrameLib:BuildButton(
     {
       name = "ma_whisperoffbutton",
@@ -231,6 +240,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Invisibility on
   FrameLib:BuildButton(
     {
       name = "ma_invisibleonbutton",
@@ -253,6 +263,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Invisibility off
   FrameLib:BuildButton(
     {
       name = "ma_invisibleoffbutton",
@@ -275,6 +286,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Taxicheat on
   FrameLib:BuildButton(
     {
       name = "ma_taxicheatonbutton",
@@ -297,6 +309,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Taxicheat off
   FrameLib:BuildButton(
     {
       name = "ma_taxicheatoffbutton",
@@ -319,6 +332,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Explore cheat on
   FrameLib:BuildButton(
     {
       name = "ma_mapsonbutton",
@@ -341,6 +355,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Explore cheat off
   FrameLib:BuildButton(
     {
       name = "ma_mapsoffbutton",
@@ -363,6 +378,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Waterwalk on
   FrameLib:BuildButton(
     {
       name = "ma_waterwalkonbutton",
@@ -385,6 +401,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Waterwalk off
   FrameLib:BuildButton(
     {
       name = "ma_waterwalkoffbutton",
@@ -407,6 +424,99 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- No casting time on
+  FrameLib:BuildButton(
+    {
+      name = "ma_nocasttimeonbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_nocasttimeonbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 120,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 10,
+        offY = -190
+      },
+      text = Locale["ma_NoCastTimeOnButton"]
+    }
+  )
+
+  -- No casting time off
+  FrameLib:BuildButton(
+    {
+      name = "ma_nocasttimeoffbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_nocasttimeoffbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 40,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 134,
+        offY = -190
+      },
+      text = Locale["ma_OffButton"]
+    }
+  )
+
+  -- No cooldown on
+  FrameLib:BuildButton(
+    {
+      name = "ma_nocooldownonbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_nocooldownonbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 120,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 10,
+        offY = -210
+      },
+      text = Locale["ma_NoCooldownOnButton"]
+    }
+  )
+
+  -- No cooldown off
+  FrameLib:BuildButton(
+    {
+      name = "ma_nocooldownoffbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_cooldownoffbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 40,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 134,
+        offY = -210
+      },
+      text = Locale["ma_OffButton"]
+    }
+  )
+
+  -- Account IP Lock on
   FrameLib:BuildButton(
     {
       name = "ma_accountlockiponbutton",
@@ -423,12 +533,13 @@ function MangAdmin:CreateMainSection()
       setpoint = {
         pos = "TOPLEFT",
         offX = 10,
-        offY = -190
+        offY = -230
       },
       text = Locale["ma_accountlockipbutton"]
     }
   )
 
+  -- Account IP Lock off
   FrameLib:BuildButton(
     {
       name = "ma_accountlockipoffbutton",
@@ -445,12 +556,13 @@ function MangAdmin:CreateMainSection()
       setpoint = {
         pos = "TOPLEFT",
         offX = 134,
-        offY = -190
+        offY = -230
       },
       text = Locale["ma_OffButton"]
     }
   )
 
+  -- Insta-kill checkbox
   FrameLib:BuildButton(
     {
       type = "CheckButton",
@@ -459,7 +571,7 @@ function MangAdmin:CreateMainSection()
       parent = ma_midframe,
       setpoint = {
         pos = "TOPLEFT",
-        offX = 10,
+        offX = 300,
         offY = -210
       },
       text = Locale["ma_instakill"],
@@ -467,6 +579,22 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- GM 4 Level Warning
+  FrameLib:BuildFontString(
+    {
+      name = "ma_gm4warningtext",
+      group = "main",
+      parent = ma_midframe,
+      text = Locale["ma_gm4warning"],
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -235
+      }
+    }
+  )
+
+  -- Speed Slider
   FrameLib:BuildFrame(
     {
       type = "Slider",
@@ -485,6 +613,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Speed Reset
   FrameLib:BuildButton(
     {
       name = "ma_speedsliderreset_button",
@@ -507,6 +636,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Scale Slider
   FrameLib:BuildFrame(
     {
       type = "Slider",
@@ -525,6 +655,7 @@ function MangAdmin:CreateMainSection()
     }
   )
 
+  -- Scale Reset
   FrameLib:BuildButton(
     {
       name = "ma_scalesliderreset_button",
@@ -547,17 +678,187 @@ function MangAdmin:CreateMainSection()
     }
   )
 
-  FrameLib:BuildFontString(
+  -- Account Create
+  FrameLib:BuildButton(
     {
-      name = "ma_gm4warningtext",
+      name = "ma_acctcreatebutton",
       group = "main",
       parent = ma_midframe,
-      text = Locale["ma_gm4warning"],
+      texture = {
+        name = "ma_acctcreatebutton_texture",
+        color = {0.5, 0, 0, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
       setpoint = {
         pos = "TOPLEFT",
-        offX = 10,
-        offY = -235
-      }
+        offX = 300,
+        offY = -10
+      },
+      text = Locale["ma_acctcreate"]
+    }
+  )
+
+  -- Account Delete
+  FrameLib:BuildButton(
+    {
+      name = "ma_acctdeletebutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_acctdeletebutton_texture",
+        color = {0.5, 0, 0, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -33
+      },
+      text = Locale["ma_acctdelete"]
+    }
+  )
+
+  -- Account GM Level
+  FrameLib:BuildButton(
+    {
+      name = "ma_acctgmlvlbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_acctgmlvlbutton_texture",
+        color = {0.5, 0, 0, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -56
+      },
+      text = Locale["ma_acctgmlvl"]
+    }
+  )
+
+  -- Account Password
+  FrameLib:BuildButton(
+    {
+      name = "ma_acctpasswdbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_acctpasswdbutton_texture",
+        color = {0.5, 0, 0, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -79
+      },
+      text = Locale["ma_acctpasswd"]
+    }
+  )
+
+  -- Account Addon
+  FrameLib:BuildButton(
+    {
+      name = "ma_acctaddonbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_acctaddonbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -102
+      },
+      text = Locale["ma_acctaddon"]
+    }
+  )
+
+  -- GM Notify
+  FrameLib:BuildButton(
+    {
+      name = "ma_gmnotifybutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_gmnotifybutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -125
+      },
+      text = Locale["ma_gmnotify"]
+    }
+  )
+
+  -- GM In-Game
+  FrameLib:BuildButton(
+    {
+      name = "ma_gmingamebutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_gmingamebutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 90,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -148
+      },
+      text = Locale["ma_gmingame"]
+    }
+  )
+
+  -- GM List
+  FrameLib:BuildButton(
+    {
+      name = "ma_gmlistbutton",
+      group = "main",
+      parent = ma_midframe,
+      texture = {
+        name = "ma_gmlistbutton_texture",
+        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
+      },
+      size = {
+        width = 80,
+        height = 20
+      },
+      setpoint = {
+        pos = "TOPLEFT",
+        offX = 300,
+        offY = -171
+      },
+      text = Locale["ma_gmlist"]
     }
   )
 
@@ -845,50 +1146,6 @@ function MangAdmin:CreateMainSection()
         offY = -163
       },
       inherits = "InputBoxTemplate"
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_gmingamebutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_gmingamebutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 578,
-        offY = -10
-      },
-      text = Locale["ma_gmingame"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_gmlistbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_gmlistbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 578,
-        offY = -32
-      },
-      text = Locale["ma_gmlist"]
     }
   )
 
@@ -1285,138 +1542,6 @@ function MangAdmin:CreateMainSection()
         offY = -140
       },
       text = Locale["ma_GmClear"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_acctcreatebutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_acctcreatebutton_texture",
-        color = {0.5, 0, 0, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 333,
-        offY = -10
-      },
-      text = Locale["ma_acctcreate"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_acctdeletebutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_acctdeletebutton_texture",
-        color = {0.5, 0, 0, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 333,
-        offY = -32
-      },
-      text = Locale["ma_acctdelete"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_acctaddonbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_acctaddonbutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 333,
-        offY = -54
-      },
-      text = Locale["ma_acctaddon"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_acctgmlvlbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_acctgmlvlbutton_texture",
-        color = {0.5, 0, 0, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 333,
-        offY = -75
-      },
-      text = Locale["ma_acctgmlvl"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_acctpasswdbutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_acctpasswdbutton_texture",
-        color = {0.5, 0, 0, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 333,
-        offY = -97
-      },
-      text = Locale["ma_acctpasswd"]
-    }
-  )
-
-  FrameLib:BuildButton(
-    {
-      name = "ma_gmnotifybutton",
-      group = "main",
-      parent = ma_midframe,
-      texture = {
-        name = "ma_gmnotifybutton_texture",
-        color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-      },
-      size = {
-        width = 80,
-        height = 20
-      },
-      setpoint = {
-        pos = "TOPLEFT",
-        offX = 333,
-        offY = -119
-      },
-      text = Locale["ma_gmnotify"]
     }
   )
 
