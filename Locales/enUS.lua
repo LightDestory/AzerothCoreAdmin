@@ -16,12 +16,12 @@
 -------------------------------------------------------------------------------------------------------------
 
 --[[
-How to add a localised string:
+How to add a localized string:
 1. Look below and find the functional area(Tab) your string belongs in.
 2. In that section, find the appropriate type of string (Tooltip, Label, Other)
 3. Each line is an assignment equation. On the left side is the 'token' which represents the string. The token is used
   in the source code, and is replaced by the actual string at runtime. The token is quoted, and contained in square brackets ([]).
-  Eaxample: ["strength"]
+  Example: ["strength"]
 4. Now assign a value to the token for the language you are working with. For example, if I am editing the enUS file, I want to
   assign the value, in US English, to the token:
   ["strength"] = "Strength",
@@ -35,17 +35,17 @@ You have received this file which currently contains enUS strings, but will actu
 selected language.
 1. Edit the first un-commented line below, which should resemble: function Return_enUS(). Change
   the 'enUS' to the four letter code for your locale (example: deDE).
-2. Proceed to localisation by examining each line in the file, and altering the US English strings on
+2. Proceed to localization by examining each line in the file, and altering the US English strings on
   the RIGHT of each equation to your selected language. DO NOT alter anything on the LEFT sides
   (the tokens). Example: ["token_do_not_edit"] = "Edit this string to your language",
 3. Some text includes color codes:     ["info_revision"] = "|cFF00FF00Trinity Revision:|r ",
-  The Color code should NOT be localised/edited. The color code is a tag, with an opening element
+  The Color code should NOT be localized/edited. The color code is a tag, with an opening element
   and a closing element. The opening element is "|c" followed by 8 numbers. The closing element
   is "|r". In the example above, "|cFF00FF00" and "|r" are the color code and should NOT be changed.
   That leaves "Trinity Revision:" as the string to edit in the above example.
 4. Some strings may not be edited at all because they are used in code or contain code. They
   are marked.
-5. Please do not edit comments. In LUA, the programming language we use here, code comments are seperated from code by the
+5. Please do not edit comments. In LUA, the programming language we use here, code comments are separated from code by the
   use of "" (makes anything AFTER it a comment, to the end of the line) or comments can be enclosed between.
 
 If you have any questions, contact iotech.
@@ -58,6 +58,7 @@ function Return_enUS()
     ["ma_IconHint"]                   = "|cffeda55fClick|r to open AzerothCoreAdmin. |cffeda55fShift-Click|r to reload the user interface.",
     ["tt_Default"]                    = "Move your cursor over an element to toggle the tooltip!",
     ["tt_LanguageButton"]             = "Reload AzerothCoreAdmin.", --Removed locals. Updated tooltip to just reload
+    ["tt_CloseWindow"]                = "Close AzerothCoreAdmin",
   --[[Control Labels]]
     ["ma_LanguageButton"]             = "Change language",
     ["info_revision"]                 = "|cFF00FF00AzerothCore rev:|r ", --Updated: Matched string output to AzerothCore
@@ -66,8 +67,8 @@ function Return_enUS()
     ["info_online_world"]             = "|cFF00FF00Players in world:|r ",
     ["info_maxonline"]                = "|cFF00FF00Maximum Online:|r ",
     ["info_uptime"]                   = "|cFF00FF00Uptime:|r ",
-    ["ma_CloseWindow"]                = "X",
-    ["tt_CloseWindow"]                = "Close AzerothCoreAdmin",
+    ["ma_CloseWindow"]                = "Close",
+    ["ma_resetSlider"]                 = "RESET",
   --[[Other]]
     ["slashcmds"]                     = { "/azerothcoreadmin", "/acadmin" },
     ["lang"]                          = "English",
@@ -89,13 +90,13 @@ function Return_enUS()
     ["tabmenu_Main"]                  = "GM",
   --[[Tooltips]]
     ["tt_MainButton"]                 = "Toggle AzerothCoreAdmin Mainframe.",
-    ["tt_DisplayAccountLevel"]        = "Display your account level",
+    ["tt_DisplayAccountLevel"]        = "Display your account GM level",
     ["tt_GMOnButton"]                 = "Activate your GM-mode.",
     ["tt_GMOffButton"]                = "Deactivate your GM-mode.",
     ["tt_FlyOnButton"]                = "Activate the Fly-mode for the selected character.",
     ["tt_FlyOffButton"]               = "Deactivate the Fly-mode for the selected character.",
-    ["tt_GodOnButton"]              = "Activate your God-mode.",
-    ["tt_GodOffButton"]             = "Deactivate your God-mode.",
+    ["tt_GodOnButton"]                = "Activate your God-mode.",
+    ["tt_GodOffButton"]               = "Deactivate your God-mode.",
     ["tt_WhispOnButton"]              = "Accept whispers from other players.",
     ["tt_WhispOffButton"]             = "Do not accept whispers from other players.",
     ["tt_InvisOnButton"]              = "Make you invisible.",
@@ -104,9 +105,17 @@ function Return_enUS()
     ["tt_TaxiOffButton"]              = "Deactivate the taxi-cheat and restore the players known taxi-routes.",
     ["tt_ShowMapsButton"]             = "Reveals maps for the selected character.",
     ["tt_HideMapsButton"]             = "Hides maps for the selected character.",
+    ["tt_waterwalkonbutton"]          = "Turn Waterwalk ON for the selected creature"  ,
+    ["tt_watewrwalkoffbutton"]        = "Turn Waterwalk OFF for the selected creature",
+    ["tt_accountlockiponbutton"]      = "Lock your account by allowing only the last IP",
+    ["tt_accountlockipoffbutton"]     = "UnLock your account by allowing every IP",
+    ["tt_instakill"]                  = "When checked, clicking an enemy creature kills it.",
     ["tt_SpeedSlider"]                = "Increase or decrease the speed for the selected character.",
     ["tt_ScaleSlider"]                = "Increase or decrease the scale for the selected character.",
-    ["tt_instakill"]                  = "When checked, clicking an enemy creature kills it.",
+    ["tt_SpeedSliderReset"]           = "Reset Speed to 1.0",
+    ["tt_ScaleSliderReset"]           = "Reset Scale to 1.0",
+
+
     ["tt_ScreenButton"]               = "Make a screenshot.",
     ["tt_BankButton"]                 = "Show your bank.",
     ["tt_BagButton"]                  = "Show the bag of the selected character or yours [[Parameters: $bagSlot: 1-4]]",
@@ -117,13 +126,7 @@ function Return_enUS()
     ["tt_S"]                          = "Navigate South",
     ["tt_E"]                          = "Navigate East",
     ["tt_W"]                          = "Navigate West",
-    ["tt_waterwalkonbutton"]          = "Turn Waterwalk ON for the selected creature"  ,
-    ["tt_watewrwalkoffbutton"]        = "Turn Waterwalk OFF for the selected creature",
-    ["tt_accountlockiponbutton"]        = "Lock your account by allowing only the last IP",
-    ["tt_accountlockipoffbutton"]       = "UnLock your account by allowing every IP",
     ["tt_DisplayAccountLvl"]          = "Display your account level.",
-    ["tt_SpeedSliderReset"]           = "Reset Speed to 1.0",
-    ["tt_ScaleSliderReset"]           = "Reset Scale to 1.0",
     ["tt_gmnotifybutton"]             = "Sends message $message to all online GMs [[Parameters: $message]]",
     ["tt_gmingamebutton"]             = "Shows GMs who are logged in.",
     ["tt_gmlistbutton"]               = "Shows the GM accounts on this server",
@@ -152,16 +155,20 @@ function Return_enUS()
     ["tt_acctpasswdbutton"]           = "Sets $account $password [[Parameters: $accountname $password $password]]",
   --[[Control Labels]]
     ["ma_OffButton"]                  = "Off",
-    ["ma_displaylevelbutton"]         = "Display Account Level",
+    ["ma_displaylevelbutton"]         = "Display Account GM Level",
     ["ma_GMOnButton"]                 = "GM-mode on",
     ["ma_FlyOnButton"]                = "Fly-mode on",
-    ["ma_GodOnButton"]              = "God-mode on",
+    ["ma_GodOnButton"]                = "God-mode on",
     ["ma_WhisperOnButton"]            = "Whisper on",
     ["ma_InvisOnButton"]              = "Invisibility on",
     ["ma_TaxiOnButton"]               = "Taxicheat on",
-    ["ma_ShowMapsButton"]             = "Show Maps",
-    ["ma_HideMapsButton"]             = "Hide Maps",
-    ["ma_instakill"]                  = "Insta-kill enemy creatures by targeting them",
+    ["ma_mapsbutton"]                 = "View All Maps",
+    ["ma_waterwalkbutton"]            = "Waterwalk On",
+    ["ma_accountlockipbutton"]        = "Account IP Lock",
+    ["ma_instakill"]                  = "Insta-kill enemy creatures",
+    ["ma_gm4warning"]                 = "|cffFF0000Red buttons requires a GM level 4 to be executed!|r",
+
+    
     ["ma_ScreenshotButton"]           = "Screenshot",
     ["ma_BankButton"]                 = "Bank",
     ["ma_BagButton"]                  = "Bag",
@@ -174,9 +181,6 @@ function Return_enUS()
     ["E"]                             = "E", --Abbreviation for East
     ["W"]                             = "W", --Abbreviation for West
     ["ma_chatbutton"]                 = "GM Chat On",
-    ["ma_mapsbutton"]                 = "View All Maps",
-    ["ma_waterwalkbutton"]            = "Waterwalk On",
-    ["ma_accountlockipbutton"]          = "Account IP Lock",
     ["ma_gmnotify"]                   = "GM Notify",
     ["ma_gmingame"]                   = "GMs InGame",
     ["ma_gmlist"]                     = "GM List",
@@ -203,7 +207,8 @@ function Return_enUS()
     ["ma_acctaddon"]                  = "Acct Addon",
     ["ma_acctgmlvl"]                  = "Acct GMLvl",
     ["ma_acctpasswd"]                 = "Acct Passwd",
-    ["ma_gm4warning"]                 = "|cffFF0000Red buttons requires a GM level 4 to be executed!|r",
+    ["ma_ShowMapsButton"]             = "Show Maps",
+    ["ma_HideMapsButton"]             = "Hide Maps",
   --[[Other]]
 
 
