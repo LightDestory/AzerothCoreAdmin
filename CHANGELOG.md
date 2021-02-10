@@ -61,9 +61,6 @@
   - ADD: No Cast Time command
   - ADD: No cooldown command
   - ADD: GM announce command
-  - ADD: Pet Talents
-  - FIX: GM-tab commands
-  - FIX: Stats controls (AzerothCore revision, player counters)
   - REWORKED: GM-tab UI
 - INTERFACE:
   - FIX: UI components overlay when click on AzerothCoreAdmin icon
