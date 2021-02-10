@@ -229,6 +229,6 @@ function MangAdmin:CreateLookupButtons()
       offX = -10,
       offY = 10
     },
-    text = "X"
+    text = Locale["ma_CloseWindow"]
   })
 end

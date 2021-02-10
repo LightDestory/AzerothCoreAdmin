@@ -327,15 +327,13 @@ function MangAdmin:OnClick()
   elseif IsAltKeyDown() then
     self.db.char.newTicketQueue = 0
     MangAdmin:UpdateTooltip()
-  elseif ma_bgframe:IsVisible() and not ma_popupframe:IsVisible() then
-    FrameLib:HandleGroup("bg", function(frame) frame:Hide() end)
-  elseif ma_bgframe:IsVisible() and ma_popupframe:IsVisible() then
+  elseif (not ma_bgframe:IsVisible())  then
+    FrameLib:HandleGroup("bg", function(frame) frame:Show() end)
+    MangAdmin:ToggleTabButton("main")
+    MangAdmin:ToggleContentGroup("main")
+  else
     FrameLib:HandleGroup("bg", function(frame) frame:Hide() end)
     FrameLib:HandleGroup("popup", function(frame) frame:Hide() end)
-  elseif not ma_bgframe:IsVisible() and ma_popupframe:IsVisible() then
-    FrameLib:HandleGroup("bg", function(frame) frame:Show() end)
-  else
-    FrameLib:HandleGroup("bg", function(frame) frame:Show() end)
   end
 end
 
