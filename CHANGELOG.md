@@ -9,6 +9,7 @@
 
 1. [AzerothCoreAdmin Changelogs](#AzerothCoreAdmin-Changelogs)
     - [ACAdmin-Revision 01](#ACAdmin-Revision-01)
+    - [ACAdmin-Revision 02](#ACAdmin-Revision-02)
 2. [TrinityAdmin Changelogs](#TrinityAdmin-Changelogs)
     - [TA-Revision 58](#TA-Revision-58)
     - [TA-Revision 57](#TA-Revision-57)
@@ -47,6 +48,29 @@
     - [TA-Revision 13](#TA-Revision-13)
 
 ## AzerothCoreAdmin Changelogs
+
+### ACAdmin-Revision _02_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _02/10/2021_
+
+**Changelog:**
+
+- GM-TAB:
+  - ADD: No Cast Time command
+  - ADD: No cooldown command
+  - ADD: GM announce command
+  - ADD: Pet Talents
+  - FIX: GM-tab commands
+  - FIX: Stats controls (AzerothCore revision, player counters)
+  - REWORKED: GM-tab UI
+- INTERFACE:
+  - FIX: UI components overlay when click on AzerothCoreAdmin icon
+- CODE:
+  - Some cleanup
+- LOCALE enUS:
+  - Reviewed some text
 
 ### ACAdmin-Revision _01_
 
