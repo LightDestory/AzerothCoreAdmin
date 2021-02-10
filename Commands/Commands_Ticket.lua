@@ -105,7 +105,7 @@ end]]
   local ticketCount = 0
   table.foreachi(self.db.account.buffer.tickets, function() ticketCount = ticketCount + 1 end)
   --ma_lookupresulttext:SetText(Locale["ma_TicketCount"]..count)
-  ma_top2text:SetText(Locale["realm"].." "..Locale["tickets"]..self.db.account.tickets.count)
+  ma_top2text:SetText(Locale["label_infoRealm"].." "..label_infoTickets..self.db.account.tickets.count)
   local tnumber = self.db.account.tickets.count - ticketCount
   --self:LogAction("tNumber = "..tnumber..", Tc = "..ticketCount)
   if tnumber > 0 then

@@ -322,6 +322,6 @@ function MangAdmin:CreateStartFrames()
       offX = -10,
       offY = -14
     },
-    text = Locale["ma_LanguageButton"]
+    text = Locale["label_languageButton"]
   })
 end

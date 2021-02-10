@@ -67,7 +67,7 @@ function RevivePlayer()
     MangAdmin:ChatMsg(".revive")
     MangAdmin:LogAction("Revived player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -77,7 +77,7 @@ function SavePlayer()
     MangAdmin:ChatMsg(".save")
     MangAdmin:LogAction("Saved player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -87,7 +87,7 @@ function KickPlayer()
     MangAdmin:ChatMsg(".kick")
     MangAdmin:LogAction("Kicked player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -97,7 +97,7 @@ function Cooldown()
     MangAdmin:ChatMsg(".cooldown")
     MangAdmin:LogAction("Cooled player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -113,7 +113,7 @@ function Pinfo()
     MangAdmin:ChatMsg(".pinfo")
     MangAdmin:LogAction("Got Player Info for player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -136,7 +136,7 @@ function Recall()
     MangAdmin:ChatMsg(".recall")
     MangAdmin:LogAction("Recalled player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -198,7 +198,7 @@ function LearnSpell(value, state)
       end
     end
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -270,7 +270,7 @@ function Modify(case, value)
       MangAdmin:LogAction("Modified TalentPoints for "..player.." to "..value.." mana")
     end
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 
@@ -280,7 +280,7 @@ function Reset(value)
     MangAdmin:ChatMsg(".reset "..value)
     MangAdmin:LogAction("Reset "..value.."' for player "..player..".")
   else
-    MangAdmin:Print(Locale["selectionerror1"])
+    MangAdmin:Print(Locale["selectionError"])
   end
 end
 

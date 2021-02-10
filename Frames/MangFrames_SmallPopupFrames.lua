@@ -87,7 +87,7 @@ function MangAdmin:CreateSmallPopupFrames()
       offX = -10,
       offY = -10
     },
-    text = Locale["ma_CloseWindow"] --"X"
+    text = Locale["label_closeWindowButton"] --"X"
   })
 
   FrameLib:BuildFontString({

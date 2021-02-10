@@ -38,7 +38,6 @@ function ReturnStrings_enUS()
     ["ma_GmatchUptime"] = "Server uptime: (.*)",
     ["ma_GmatchActiveConnections"] = "Active connections.*",
     ["ma_GmatchWho"] = "%-%[(.*)%]%[(.*)%]%[(.*)%]%[(.*)%]%[(.*)%]%[(.*)%]%[(.*)%]-",
-
     --linkifier
     ----------====~~GO Target Command Match Text ~~====----------
     ["lfer_GOtargid1"] = "GUID: (%d+) ID: (%d+)",
@@ -46,10 +45,12 @@ function ReturnStrings_enUS()
     ["lfer_GOtargid3"] = "GUID: %1 ID: %2",
     ["lfer_GOtargguid1"] = "GUID: (%d+) ID",
     ["lfer_GOtargguid1"] = "GUID: (%d+) ",
-    ["lfer_GOtargguid3"] = "GUID: %1", "%1",
+    ["lfer_GOtargguid3"] = "GUID: %1",
+    "%1",
     ["lfer_GOtargxyz1"] = "X: ([%p%d.%d]+) Y: ([%p%d.%d]+) Z: ([%p%d.%d]+) MapId: (%d+)",
     ["lfer_GOtargxyz2"] = "X: ([%p%d.%d]+) Y: ([%p%d.%d]+) Z: ([%p%d.%d]+) MapId: (%d+)",
-    ["lfer_GOtargxyz3"] = "X: %1  Y: %2  Z: %3 MapId: %4", "%1 %2 %3 %4",
+    ["lfer_GOtargxyz3"] = "X: %1  Y: %2  Z: %3 MapId: %4",
+    "%1 %2 %3 %4",
     ----------====~~ NPC Info Command Match Text ~~====----------
     ["lfer_NPCInfoguid1"] = "GUID: (%d+)%.",
     ["lfer_NPCInfoguid2"] = "GUID: (%d+)%.",

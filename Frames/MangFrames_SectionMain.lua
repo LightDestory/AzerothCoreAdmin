@@ -967,7 +967,7 @@ function MangAdmin:CreateMainSection()
       text = Locale["ma_listitem"]
     }
   )
-  
+
   -- Lookup Taxi
   FrameLib:BuildButton(
     {
@@ -1493,7 +1493,7 @@ function MangAdmin:CreateMainSection()
       name = "ma_parametertext",
       group = "main",
       parent = ma_midframe,
-      text = Locale["ma_parameters"],
+      text = Locale["label_parameterText"],
       setpoint = {
         pos = "TOPLEFT",
         offX = 500,
@@ -1521,7 +1521,7 @@ function MangAdmin:CreateMainSection()
         offX = 620,
         offY = -208
       },
-      text = Locale["ma_inputClear"]
+      text = Locale["label_paramaterClearButton"]
     }
   )
 
@@ -1600,7 +1600,7 @@ function MangAdmin:CreateMainSection()
         offX = 225,
         offY = -236
       },
-      text = Locale["ma_resetSlider"]
+      text = Locale["label_resetSliderButton"]
     }
   )
 
@@ -1642,7 +1642,7 @@ function MangAdmin:CreateMainSection()
         offX = 375,
         offY = -236
       },
-      text = Locale["ma_resetSlider"]
+      text = Locale["label_resetSliderButton"]
     }
   )
 end

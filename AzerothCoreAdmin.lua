@@ -188,7 +188,7 @@ function MangAdmin:OnInitialize()
   -- initializing MangAdmin
   self:SetLanguage()
   self:CreateFrames()
-  self:RegisterChatCommand(Locale["slashcmds"], self.consoleOpts) -- this registers the chat commands
+  self:RegisterChatCommand(Locale["inLineCommands"], self.consoleOpts) -- this registers the chat commands
   self:InitButtons()  -- this prepares the actions and tooltips of nearly all MangAdmin buttons
   InitControls()
   self:SearchReset()
@@ -232,8 +232,8 @@ end
 
 function MangAdmin:OnEnable()
   self:SetDebugging(true) -- to have debugging through the whole app
-  ma_toptext:SetText(Locale["char"].." "..Locale["guid"]..tonumber(UnitGUID("player"),16))
-  ma_top2text:SetText(Locale["realm"])
+  ma_toptext:SetText(Locale["label_infoChar"].." "..Locale["label_infoGUID"]..tonumber(UnitGUID("player"),16))
+  ma_top2text:SetText(Locale["label_infoRealm"])
   self:SearchReset()
   -- refresh server information
   self:ChatMsg(".server info")
@@ -377,7 +377,7 @@ function MangAdmin:OnTooltipUpdate()
     end
     MangAdmin:SetIcon(ROOT_PATH.."Textures\\icon2.tga")
   end
-  Tablet:SetHint(Locale["ma_IconHint"])
+  Tablet:SetHint(Locale["tt_iconHint"])
 end
 
 function MangAdmin:ToggleTabButton(group)
@@ -659,6 +659,8 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
     -- hook .gps for gridnavigation
     for x, y in string.gmatch(text, Strings["ma_GmatchGPS"]) do
+      message(x)
+      message(y)
       for k,v in pairs(self.db.char.functionQueue) do
         if v == "GridNavigate" then
           GridNavigate(string.format("%.1f", x), string.format("%.1f", y), nil)
@@ -867,27 +869,27 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
     --checking for .server info command to pull information for bottom right frame
     for revision, platform in string.gmatch(text, Strings["ma_GmatchRevision"]) do
-      ma_inforevisiontext:SetText(Locale["info_revision"]..revision)
-      ma_infoplatformtext:SetText(string.gsub(Locale["info_platform"], "_SERVER_PLAT_", platform))
+      ma_inforevisiontext:SetText(Locale["label_infoRevision"]..revision)
+      ma_infoplatformtext:SetText(string.gsub(Locale["label_infoPlatform"], "_SERVER_PLAT_", platform))
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
     end
     for users, usersworld in string.gmatch(text, Strings["ma_GmatchOnlinePlayers"]) do
-      ma_infoonlinetext:SetText(Locale["info_online"]..users)
-      ma_infoonlineworldtext:SetText(Locale["info_online_world"]..usersworld)
+      ma_infoonlinetext:SetText(Locale["label_onlineCounter"]..users)
+      ma_infoonlineworldtext:SetText(Locale["label_onlineInWorldCounter"]..usersworld)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
     end
     for maxusers in string.gmatch(text, "Connection peak: (%d+).") do
-      ma_infomaxonlinetext:SetText(Locale["info_maxonline"]..maxusers)
+      ma_infomaxonlinetext:SetText(Locale["label_maxOnlineCounter"]..maxusers)
       catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
     end
     for uptime in string.gmatch(text, Strings["ma_GmatchUptime"]) do
-      ma_infouptimetext:SetText(Locale["info_uptime"]..uptime)
+      ma_infouptimetext:SetText(Locale["label_infoUptime"]..uptime)
         catchedSth = true
 --        output = MangAdmin.db.account.style.showchat
         output = MangAdmin.db.account.style.showchat
@@ -1046,7 +1048,7 @@ end
     -- getting GUID and setting db variables and logged text
     self.db.char.getValueCallHandler.calledGetGuid = true
     self.db.char.getValueCallHandler.realGuid = value
-    ma_toptext:SetText(Locale["char"]..Locale["guid"]..UnitGUID())
+    ma_toptext:SetText(Locale["label_infoChar"]..Locale["label_infoGUID"]..UnitGUID())
     return false
   elseif guid == realGuid then
     return true
@@ -1148,7 +1150,7 @@ function MangAdmin:SetSkill(value, skill, maxskill)
       end
     end
   else
-    self:Print(Locale["selectionerror1"])
+    self:Print(Locale["selectionError"])
   end
 end
 
@@ -1177,7 +1179,7 @@ function MangAdmin:Quest(value, state)
       self:LogAction(logcmd.." quest with id "..value.." "..logcmd2.." "..player..".")
     end
   else
-    self:Print(Locale["selectionerror1"])
+    self:Print(Locale["selectionError"])
   end
 end
 
@@ -1231,7 +1233,7 @@ function MangAdmin:AddItem(value, state)
       end
     end
   else
-    self:Print(Locale["selectionerror1"])
+    self:Print(Locale["selectionError"])
   end
 end
 
@@ -1241,7 +1243,7 @@ function MangAdmin:AddItemSet(value)
     self:ChatMsg(".additemset "..value)
     self:LogAction("Added itemset with id "..value.." to "..player..".")
   else
-    self:Print(Locale["selectionerror1"])
+    self:Print(Locale["selectionError"])
   end
 end
 
@@ -1588,7 +1590,7 @@ function MangAdmin:SearchReset()
   ma_searcheditbox:SetText("")
   ma_var1editbox:SetText("")
   ma_var2editbox:SetText("")
-  ma_lookupresulttext:SetText(Locale["searchResults"].."0")
+  ma_lookupresulttext:SetText(Locale["label_searchResults"].."0")
   self.db.char.requests.item = false
   self.db.char.requests.favitem = false
   self.db.char.requests.itemset = false
@@ -1639,7 +1641,7 @@ end
 --[[INITIALIZION FUNCTIONS]]
 function MangAdmin:InitButtons()
   -- start tab buttons
-  self:PrepareScript(ma_tabbutton_main       , Locale["tt_MainButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
+  self:PrepareScript(ma_tabbutton_main       , Locale["ttGM_tabButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
   self:PrepareScript(ma_tabbutton_char       , Locale["tt_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
   self:PrepareScript(ma_tabbutton_npc        , Locale["tt_NpcButton"]          , function() MangAdmin:InstantGroupToggle("npc"); end)
   self:PrepareScript(ma_tabbutton_go         , Locale["tt_GOButton"]           , function() MangAdmin:InstantGroupToggle("go"); end)
@@ -1651,7 +1653,7 @@ function MangAdmin:InitButtons()
   --end tab buttons
   -- start mini buttons
   self:PrepareScript(ma_mm_logoframe         , nil                             , function() MangAdmin:OnClick() end)
-  self:PrepareScript(ma_mm_mainbutton        , Locale["tt_MainButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
+  self:PrepareScript(ma_mm_mainbutton        , Locale["ttGM_tabButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
   self:PrepareScript(ma_mm_charbutton        , Locale["tt_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
   self:PrepareScript(ma_mm_npcbutton         , Locale["tt_NpcButton"]          , function() MangAdmin:InstantGroupToggle("npc") end)
   self:PrepareScript(ma_mm_gobutton          , Locale["tt_GOButton"]           , function() MangAdmin:InstantGroupToggle("go") end)
@@ -1662,7 +1664,7 @@ function MangAdmin:InitButtons()
   self:PrepareScript(ma_mm_logbutton         , Locale["tt_LogButton"]          , function() MangAdmin:InstantGroupToggle("log") end)
   self:PrepareScript(ma_mm_whobutton         , Locale["tt_whotabmenubutton"]   , function() MangAdmin:InstantGroupToggle("who") end)
   --end mini buttons
-  self:PrepareScript(ma_languagebutton       , Locale["tt_LanguageButton"]     , function() MangAdmin:ChangeLanguage(UIDropDownMenu_GetSelectedValue(ma_languagedropdown)) end)
+  self:PrepareScript(ma_languagebutton       , Locale["tt_languageButton"]     , function() MangAdmin:ChangeLanguage(UIDropDownMenu_GetSelectedValue(ma_languagedropdown)) end)
   self:PrepareScript(ma_itembutton           , Locale["tt_ItemButton"]         , function() MangAdmin:TogglePopup("search", {type = "item"}) end)
   self:PrepareScript(ma_itemsetbutton        , Locale["tt_ItemSetButton"]      , function() MangAdmin:TogglePopup("search", {type = "itemset"}) end)
   self:PrepareScript(ma_spellbutton          , Locale["tt_SpellButton"]        , function() MangAdmin:TogglePopup("search", {type = "spell"}) end)
@@ -1680,8 +1682,8 @@ function MangAdmin:InitButtons()
   self:PrepareScript(ma_searchbutton         , nil                             , function() MangAdmin:SearchStart("item", ma_searcheditbox:GetText()) end)
   self:PrepareScript(ma_resetsearchbutton    , nil                             , function() MangAdmin:SearchReset() end)
   self:PrepareScript(ma_closebutton          , nil                             , function() MangAdmin:CloseButton("bg") end)
-  self:PrepareScript(ma_popupclosebutton     , Locale["tt_CloseWindow"]        , function() MangAdmin:CloseButton("popup") end)
-  self:PrepareScript(ma_popup2closebutton    , Locale["tt_CloseWindow"]        , function() MangAdmin:CloseButton("popup2") end)
+  self:PrepareScript(ma_popupclosebutton     , Locale["tt_closeWindow"]        , function() MangAdmin:CloseButton("popup") end)
+  self:PrepareScript(ma_popup2closebutton    , Locale["tt_closeWindow"]        , function() MangAdmin:CloseButton("popup2") end)
   self:PrepareScript(ma_inforefreshbutton    , nil                             , function() MangAdmin:ChatMsg(".server info") end)
   self:PrepareScript(ma_frmtrslider          , Locale["tt_FrmTrSlider"]        , {{"OnMouseUp", function() MangAdmin:ChangeTransparency("frames") end},{"OnValueChanged", function() ma_frmtrsliderText:SetText(string.format("%.2f", ma_frmtrslider:GetValue())) end}})
   self:PrepareScript(ma_btntrslider          , Locale["tt_BtnTrSlider"]        , {{"OnMouseUp", function() MangAdmin:ChangeTransparency("buttons") end},{"OnValueChanged", function() ma_btntrsliderText:SetText(string.format("%.2f", ma_btntrslider:GetValue())) end}})
@@ -1992,7 +1994,7 @@ function MangAdmin:NoResults(var)
       end
     end
   elseif var == "search" then
-    ma_lookupresulttext:SetText(Locale["searchResults"].."0")
+    ma_lookupresulttext:SetText(Locale["label_searchResults"].."0")
     FauxScrollFrame_Update(ma_PopupScrollBar,7,7,30);
     for line = 1,7 do
       getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2057,7 +2059,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.items, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         lineplusoffset = line + FauxScrollFrame_GetOffset(ma_PopupScrollBar)
@@ -2120,7 +2122,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.itemsets, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2176,7 +2178,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.quests, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2232,7 +2234,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.creatures, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2288,7 +2290,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.spells, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2347,7 +2349,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.skills, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2403,7 +2405,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.objects, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()
@@ -2459,7 +2461,7 @@ function PopupScrollUpdate()
       table.foreachi(MangAdmin.db.account.favorites.teles, function() count = count + 1 end)
     end
     if count > 0 then
-      ma_lookupresulttext:SetText(Locale["searchResults"]..count)
+      ma_lookupresulttext:SetText(Locale["label_searchResults"]..count)
       FauxScrollFrame_Update(ma_PopupScrollBar,count,7,30);
       for line = 1,7 do
         getglobal("ma_PopupScrollBarEntryIcon"..line):Hide()

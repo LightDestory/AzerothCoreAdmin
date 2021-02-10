@@ -57,7 +57,7 @@ function MangAdmin:CreateTabs()
         offX = 0,
         offY = -4
       },
-      text = Locale["tabmenu_Main"]
+      text = Locale["tabname_GM"]
     }
   )
 

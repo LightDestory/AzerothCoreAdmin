@@ -143,7 +143,7 @@ function MangAdmin:CreatePopupFrames()
       offX = -10,
       offY = 10
     },
-    text = Locale["ma_CloseWindow"] --"X"
+    text = Locale["label_closeWindowButton"] --"X"
   })
 
   FrameLib:BuildButton({
@@ -204,7 +204,7 @@ function MangAdmin:CreatePopupFrames()
     name = "ma_lookupresulttext",
     group = "popup",
     parent = ma_popuptopframe,
-    text = Locale["searchResults"].."0",
+    text = Locale["label_searchResults"].."0",
     setpoint = {
       pos = "TOPRIGHT",
       offX = -10,
