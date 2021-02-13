@@ -51,6 +51,12 @@ GM_genericCommands = {
     [GENERICS_isValueNeeded] = true,
     [GENERICS_command] = ".gm visible ",
     [GENERICS_message] = "ma_InvisOnoutput"
+  },
+  [GM_cheatTaxi] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".cheat taxi ",
+    [GENERICS_message] = "ma_TaxiOnoutput"
   }
 }
 
@@ -58,18 +64,6 @@ function ToggleGMMode(value)
   MangAdmin:ChatMsg(".gm " .. value)
   MangAdmin:ChatMsg(".gm chat " .. value)
   MangAdmin:LogAction(genericLogGenerator("ma_GMOnoutput",value))
-end
-
-function ToggleTaxicheat(value)
-  if commandTargetCheck() then
-    MangAdmin:ChatMsg(".cheat taxi " .. value)
-    MangAdmin:LogAction(
-      (value == "on" and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
-        Locale["ma_TaxiOnoutput"] .. getCommandTargetName()
-    )
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
 end
 
 function ToggleMaps(value)

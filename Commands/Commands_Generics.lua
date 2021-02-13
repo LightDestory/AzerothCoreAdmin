@@ -34,12 +34,23 @@ end
 function genericCaller(dictionaryID, callID, value)
     local dictionary = getCallsDictionary(dictionaryID)
     local call = dictionary[callID]
-    local param = "";
+    local data = {
+        ["value"] = "",
+        ["target"] = nil
+    }
     if call[GENERICS_isValueNeeded] then
-        param = value
+        data['value'] = value
     elseif call[GENERICS_isParametersNeeded] then
-        param = dictionary[GENERICS_parametersGet]()
+        data['value'] = dictionary[GENERICS_parametersGet]()
     end
-    MangAdmin:ChatMsg(call[GENERICS_command].. param)
-    MangAdmin:LogAction(genericLogGenerator(call[GENERICS_message], param))
+    if call[GENERICS_isTargetCheckNeeded] then
+        if commandTargetCheck() then
+            data['target'] = getCommandTargetName()
+        else
+            MangAdmin:Print(Locale["selectionError"])
+            return
+        end
+    end
+    MangAdmin:ChatMsg(call[GENERICS_command].. data['value'])
+    MangAdmin:LogAction(genericLogGenerator(call[GENERICS_message], data))
 end

@@ -224,7 +224,7 @@ function Return_enUS()
     ["ma_GodOnoutput"] = "Turned God-mode to _V1_",
     ["ma_WhisperOnoutput"] = "Turned accepting whispers to _V1_",
     ["ma_InvisOnoutput"] = "Turned your visibility to _V1_",
-    ["ma_TaxiOnoutput"] = " taxi cheat to ",
+    ["ma_TaxiOnoutput"] = "Taxi chat for _T_ has been set to _V1_",
     ["ma_mapsoutput"] = " discover all maps cheat to ",
     ["ma_waterwalkoutput"] = " waterwalk cheat to",
     ["ma_NoCastTimeOnoutput"] = "Turned NoCastTime to ",
