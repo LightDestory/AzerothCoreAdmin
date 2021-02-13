@@ -16,40 +16,52 @@
 -- Subversion Repository: http://mangadmin.googlecode.com/svn/
 --
 -------------------------------------------------------------------------------------------------------------
+-- Generic Command Template
+--[[
+  [COMMAND_NAME_KEY] = {
+    [GENERICS_isValueNeeded] = false|true,
+    [GENERICS_isParametersNeeded] = false|true,
+    [GENERICS_command] = "command",
+    [GENERICS_message] = "messageID"
+  }
+]]
 
-function DisplayAccountLevel()
-  MangAdmin:ChatMsg(".account")
-  MangAdmin:LogAction(Locale["ma_displayleveloutput"])
-end
+GM_genericCommands = {
+  [GENERICS_parametersGet] = function() return ma_gmParametersInput:GetText() end,
+  [GM_displayAccountGMLevel] = {
+    [GENERICS_command] = ".account",
+    [GENERICS_message] = "ma_displayleveloutput"
+  },
+  [GM_flyMode] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".gm fly ",
+    [GENERICS_message] = "ma_FlyOnoutput"
+  },
+  [GM_godMode] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".cheat god ",
+    [GENERICS_message] = "ma_GodOnoutput"
+  },
+  [GM_acceptWhispers] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".whispers ",
+    [GENERICS_message] = "ma_WhisperOnoutput"
+  },
+  [GM_visibility] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".gm visible ",
+    [GENERICS_message] = "ma_InvisOnoutput"
+  }
+}
 
 function ToggleGMMode(value)
   MangAdmin:ChatMsg(".gm " .. value)
   MangAdmin:ChatMsg(".gm chat " .. value)
-  MangAdmin:LogAction(Locale["ma_GMOnoutput"] .. value)
-end
-
-function ToggleFlyMode(value)
-  MangAdmin:ChatMsg(".gm fly " .. value)
-  MangAdmin:LogAction(Locale["ma_FlyOnoutput"] .. value)
-end
-
-function ToggleGodMode(value)
-  MangAdmin:ChatMsg(".cheat god " .. value)
-  MangAdmin:LogAction(Locale["ma_GodOnoutput"] .. value)
-end
-
-function ToggleWhisper(value)
-  MangAdmin:ChatMsg(".whispers " .. value)
-  MangAdmin:LogAction(Locale["ma_WhisperOnoutput"] .. value)
-end
-
-function ToggleVisible(value)
-  MangAdmin:ChatMsg(".gm visible " .. value)
-  MangAdmin:LogAction(Locale["ma_InvisOnoutput"] .. value)
+  MangAdmin:LogAction(genericLogGenerator("ma_GMOnoutput",value))
 end
 
 function ToggleTaxicheat(value)
-  if commandTargetCheck(COMMAND_TARGET_PLAYERS_SELF_ONLY) then
+  if commandTargetCheck() then
     MangAdmin:ChatMsg(".cheat taxi " .. value)
     MangAdmin:LogAction(
       (value == "on" and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
@@ -61,7 +73,7 @@ function ToggleTaxicheat(value)
 end
 
 function ToggleMaps(value)
-  if commandTargetCheck(COMMAND_TARGET_PLAYERS_SELF_ONLY) then
+  if commandTargetCheck() then
     MangAdmin:ChatMsg(".cheat explore " .. value)
     MangAdmin:LogAction(
       (value == 1 and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
@@ -73,7 +85,7 @@ function ToggleMaps(value)
 end
 
 function ToggleWaterwalk(value)
-  if commandTargetCheck(COMMAND_TARGET_PLAYERS_SELF_ONLY) then
+  if commandTargetCheck() then
     MangAdmin:ChatMsg(".cheat waterwalk " .. value)
     MangAdmin:LogAction(
       (value == "on" and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
@@ -419,7 +431,7 @@ end
 
 function SetSpeed()
   local value = string.format("%.1f", ma_speedslider:GetValue())
-  if commandTargetCheck(COMMAND_TARGET_PLAYERS_SELF_ONLY) then
+  if commandTargetCheck() then
     MangAdmin:ChatMsg(".modify speed " .. value)
     MangAdmin:LogAction(getCommandTargetName() .. Locale["ma_gmSpeedOutput"] .. value)
   else
@@ -430,7 +442,7 @@ end
 
 function SetScale()
   local value = string.format("%.1f", ma_scaleslider:GetValue())
-  if commandTargetCheck(COMMAND_TARGET_PLAYERS_SELF_ONLY) then
+  if commandTargetCheck() then
     MangAdmin:ChatMsg(".modify scale " .. value)
     MangAdmin:LogAction(getCommandTargetName() .. Locale["ma_gmScaleOutput"] .. value)
   else
