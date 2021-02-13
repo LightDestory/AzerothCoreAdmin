@@ -30,11 +30,20 @@ The add-on uses two files containing strings:
 1. %Your-Language%.lua, which contains the actual text that will be displayed in-game
 2. strings.lua, which contains a set of patterns that will be used by the add-on to retrieve information. There patterns must match with the language that the servers uses to print system messages!
 
-In order to add a language support, three steps are required (in toc order):
+In order to add a language support, six steps are required (in toc order):
 
-1. Translate tooltips and button text into your desired language in a file located in ./Locales/xxxx.lua
-2. Inside ./Locales/strings.lua create a function that will return the internal-usage translated strings
-3. Inside AzerothCoreAdmin look up for the language registration section and add the following:
+1. Translate tooltips and button text into your desired language in a file located in ./Locales/xxxx.lua, **changing the function name into Return_%Your-Language%()**.
+2. If your server uses translated system messages, inside ./Locales/strings.lua create a function that will return the internal-usage translated strings patterns
+3. Inside AzerothCoreAdmin.toc file locate the line where is enUS.lua and add in the next line your new %Your-Language%.lua file
+4. Inside AzerothCoreAdmin look up for the language registration section and add the following:
 
-        Locale:RegisterTranslations("%Your-Language%", function() return Return_%Your-Language%() end)
+        Locale:RegisterTranslations("%Your-Language%", function() return Return_%Your-Language%() end)  
+
+5. If your server **DOES NOT** use translated system messages, add the following in the strings registration section:
+
+        Strings:RegisterTranslations("%Your-Language%", function() return ReturnStrings_enUS() end)
+
+   If your server **DOES** use translated system messages, add the following in the strings registration section:
+
         Strings:RegisterTranslations("%Your-Language%", function() return ReturnStrings_%Your-Language%() end)
+6. Inside AzerothCoreAdmin.lua, locate the function _LangDropDownInitialize()_ and uncomment your language from the list.
