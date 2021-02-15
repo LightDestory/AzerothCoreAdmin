@@ -15,20 +15,20 @@
 --
 -------------------------------------------------------------------------------------------------------------
 
-function clearParametersBox(caller)
+function genericClearParametersBox(caller)
     if (caller == "GM") then
         ma_gmParametersInput:SetText("")
     end
 end
 
-function ShowBag(caller)
+function genericBagCommand(caller)
     local player = UnitName("player") or UnitName("target")
     local param = nil
     if (caller == "GM") then
         param = ma_gmParametersInput:GetText()
     end
     MangAdmin:ChatMsg(".character check bag " .. param)
-    MangAdmin:LogAction(Locale["ma_gmBagOutput"] .. player .. " " .. param)
+    MangAdmin:LogAction(Locale["log_bag"] .. player .. " " .. param)
 end
 
 function genericCaller(dictionaryID, callID, value)

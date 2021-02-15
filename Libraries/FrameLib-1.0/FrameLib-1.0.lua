@@ -58,7 +58,7 @@ function FrameLib:BuildFrame(def)
   if def.size then
     if def.size.width then frame:SetWidth(def.size.width) end
     if def.size.height then frame:SetHeight(def.size.height) end
-    frame:SetScale(def.size.scale or 1)
+    frame:GM_setScaleCommand(def.size.scale or 1)
   end
   
   if def.hidden then frame:Hide() end

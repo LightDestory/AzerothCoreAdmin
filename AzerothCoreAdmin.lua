@@ -2588,7 +2588,7 @@ function MangAdmin:InitCheckButtons()
   else
     ma_checktransparencybutton:SetChecked(false)
   end
-  ma_instantkillbutton:SetChecked(self.db.char.instantKillMode)
+  GM_instantKillModeCheckBox:SetChecked(self.db.char.instantKillMode)
   ma_checklocalsearchstringsbutton:SetChecked(self.db.account.localesearchstring)
   ma_showminimenubutton:SetChecked(self.db.account.style.showminimenu)
   ma_showtooltipsbutton:SetChecked(self.db.account.style.showtooltips)
