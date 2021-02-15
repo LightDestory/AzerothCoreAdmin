@@ -25,93 +25,195 @@
     [GENERICS_message] = "messageID"
   }
 ]]
-
 GM_genericCommands = {
-  [GENERICS_parametersGet] = function() return ma_gmParametersInput:GetText() end,
-  [GM_displayAccountGMLevel] = {
+  [GENERICS_parametersGet] = function()
+    return ma_gmParametersInput:GetText()
+  end,
+  [GM_displayAccountGMLevelCommand] = {
     [GENERICS_command] = ".account",
-    [GENERICS_message] = "ma_displayleveloutput"
+    [GENERICS_message] = "logGM_displayAccountGMLevel"
   },
-  [GM_flyMode] = {
+  [GM_flyModeCommand] = {
     [GENERICS_isValueNeeded] = true,
     [GENERICS_command] = ".gm fly ",
-    [GENERICS_message] = "ma_FlyOnoutput"
+    [GENERICS_message] = "logGM_flyMode"
   },
-  [GM_godMode] = {
+  [GM_godModeCommand] = {
     [GENERICS_isValueNeeded] = true,
     [GENERICS_command] = ".cheat god ",
-    [GENERICS_message] = "ma_GodOnoutput"
+    [GENERICS_message] = "logGM_godMode"
   },
-  [GM_acceptWhispers] = {
+  [GM_acceptWhispersCommand] = {
     [GENERICS_isValueNeeded] = true,
     [GENERICS_command] = ".whispers ",
-    [GENERICS_message] = "ma_WhisperOnoutput"
+    [GENERICS_message] = "logGM_acceptWhispers"
   },
-  [GM_visibility] = {
+  [GM_visibilityCommand] = {
     [GENERICS_isValueNeeded] = true,
     [GENERICS_command] = ".gm visible ",
-    [GENERICS_message] = "ma_InvisOnoutput"
+    [GENERICS_message] = "logGM_visibility"
+  },
+  [GM_cheatTaxiCommand] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".cheat taxi ",
+    [GENERICS_message] = "logGM_cheatTaxi"
+  },
+  [GM_cheatExploreMapsCommand] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".cheat explore ",
+    [GENERICS_message] = "logGM_cheatExploreMaps"
+  },
+  [GM_cheatWaterWalkCommand] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".cheat waterwalk ",
+    [GENERICS_message] = "logGM_cheatWaterWalk"
+  },
+  [GM_cheatNoCastTimeCommand] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".cheat casttime ",
+    [GENERICS_message] = "logGM_cheatNoCastTime"
+  },
+  [GM_cheatNoCooldownCommand] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".cheat cooldown ",
+    [GENERICS_message] = "logGM_cheatNoCooldown"
+  },
+  [GM_accountIPLockCommand] = {
+    [GENERICS_isValueNeeded] = true,
+    [GENERICS_command] = ".account lock ip ",
+    [GENERICS_message] = "logGM_accountIPLock"
+  },
+  [GM_GMListCommand] = {
+    [GENERICS_command] = ".gm list",
+    [GENERICS_message] = "logGM_GMList"
+  },
+  [GM_GMInGameCommand] = {
+    [GENERICS_command] = ".gm ingame",
+    [GENERICS_message] = "logGM_GMInGame"
+  },
+  [GM_GMNotifyCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".gmnotify ",
+    [GENERICS_message] = "logGM_GMNotify"
+  },
+  [GM_GMMessageCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".gmnameannounce ",
+    [GENERICS_message] = "logGM_GMMessage"
+  },
+  [GM_castCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".cast ",
+    [GENERICS_message] = "logGM_cast"
+  },
+  [GM_castBackCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".cast back ",
+    [GENERICS_message] = "logGM_castBack"
+  },
+  [GM_castDistCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".cast dist ",
+    [GENERICS_message] = "logGM_castDist"
+  },
+  [GM_castSelfCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".cast self ",
+    [GENERICS_message] = "logGM_castSelf"
+  },
+  [GM_castTargetCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".cast target ",
+    [GENERICS_message] = "logGM_castTarget"
+  },
+  [GM_teleportAddCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".tele add ",
+    [GENERICS_message] = "logGM_teleportAdd"
+  },
+  [GM_teleportDelCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".tele del ",
+    [GENERICS_message] = "logGM_teleportDel"
+  },
+  [GM_listItemCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".list item ",
+    [GENERICS_message] = "logGM_listItem"
+  },
+  [GM_lookupTaxiCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".lookup taxi  ",
+    [GENERICS_message] = "logGM_lookupTaxi"
+  },
+  [GM_lookupZoneCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".lookup area ",
+    [GENERICS_message] = "logGM_lookupZone"
+  },
+  [GM_goTaxiNodeCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".go taxinode ",
+    [GENERICS_message] = "logGM_goTaxi"
+  },
+  [GM_goTriggerCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".go trigger ",
+    [GENERICS_message] = "logGM_goTrigger"
+  },
+  [GM_goXYCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".go xy ",
+    [GENERICS_message] = "logGM_goXY"
+  },
+  [GM_goXYZCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".go xyz ",
+    [GENERICS_message] = "logGM_goXYZ"
+  },
+  [GM_goZoneXYCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".go zonexy ",
+    [GENERICS_message] = "logGM_goZoneXY"
+  },
+  [GM_petCreateCommand] = {
+    [GENERICS_command] = ".pet create",
+    [GENERICS_message] = "logGM_petCreate"
+  },
+  [GM_petLearnCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".pet learn ",
+    [GENERICS_message] = "logGM_petLearn"
+  },
+  [GM_petUnLearnCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".pet unlearn ",
+    [GENERICS_message] = "logGM_petUnLearn"
+  },
+  [GM_petTalentsLearnCommand] = {
+    [GENERICS_command] = ".learn all my pettalents",
+    [GENERICS_message] = "logGM_petTalentsLearn"
+  },
+  [GM_bankCommand] = {
+    [GENERICS_command] = ".character check bank",
+    [GENERICS_message] = "logGM_bank"
+  },
+  [GM_dismountPlayerCommand] = {
+    [GENERICS_command] = ".dismount",
+    [GENERICS_message] = "logGM_dismountPlayer"
   }
 }
 
-function ToggleGMMode(value)
+function GM_GMModeCommand(value)
   MangAdmin:ChatMsg(".gm " .. value)
   MangAdmin:ChatMsg(".gm chat " .. value)
-  MangAdmin:LogAction(genericLogGenerator("ma_GMOnoutput",value))
+  MangAdmin:LogAction(genericLogGenerator("logGM_GMMode", {["value"] = value}))
 end
 
-function ToggleTaxicheat(value)
-  if commandTargetCheck() then
-    MangAdmin:ChatMsg(".cheat taxi " .. value)
-    MangAdmin:LogAction(
-      (value == "on" and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
-        Locale["ma_TaxiOnoutput"] .. getCommandTargetName()
-    )
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function ToggleMaps(value)
-  if commandTargetCheck() then
-    MangAdmin:ChatMsg(".cheat explore " .. value)
-    MangAdmin:LogAction(
-      (value == 1 and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
-        Locale["ma_mapsoutput"] .. getCommandTargetName()
-    )
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function ToggleWaterwalk(value)
-  if commandTargetCheck() then
-    MangAdmin:ChatMsg(".cheat waterwalk " .. value)
-    MangAdmin:LogAction(
-      (value == "on" and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
-        Locale["ma_waterwalkoutput"] .. getCommandTargetName()
-    )
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function ToggleNoCastTime(value)
-  MangAdmin:ChatMsg(".cheat casttime " .. value)
-  MangAdmin:LogAction(Locale["ma_NoCastTimeOnoutput"] .. value)
-end
-
-function ToggleNoCooldown(value)
-  MangAdmin:ChatMsg(".cheat cooldown " .. value)
-  MangAdmin:LogAction(Locale["ma_NoCooldownOnoutput"] .. value)
-end
-
-function ToggleAccountlockIP(value)
-  MangAdmin:ChatMsg(".account lock ip " .. value)
-  MangAdmin:LogAction(Locale["ma_accountlockipoutput"] .. value)
-end
-
-function AcctCreate()
+function GM_createAccountCommand()
   local input = ma_gmParametersInput:GetText()
   local params = {}
   local fail = false
@@ -123,11 +225,11 @@ function AcctCreate()
     return
   end
   if (string.len(params[1]) > 20) then
-    print("|cffFF0000" .. params[1] .. "|r" .. Locale["ma_invalidUsername"] .. "|r")
+    print("|cffFF0000" .. params[1] .. "|r" .. Locale["logGM_accountInvalidUsername"] .. "|r")
     fail = true
   end
   if (string.len(params[2]) > 16) then
-    print("|cffFF0000" .. params[2] .. "|r" .. Locale["ma_invalidPassword"] .. "|r")
+    print("|cffFF0000" .. params[2] .. "|r" .. Locale["logGM_createAccountInvalidPassword"] .. "|r")
     fail = true
   end
   if (fail) then
@@ -135,11 +237,11 @@ function AcctCreate()
     return
   end
   MangAdmin:ChatMsg(".account create " .. params[1] .. " " .. params[2])
-  MangAdmin:LogAction(Locale["ma_accountCreateCompleted"] .. params[1] .. " " .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_createAccountCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
-function AcctDelete()
+function GM_deleteAccountCommand()
   local input = ma_gmParametersInput:GetText()
   local params = {}
   local fail = false
@@ -151,16 +253,16 @@ function AcctDelete()
     return
   end
   if (string.len(params[1]) > 20) then
-    print("|cffFF0000" .. params[1] .. "|r" .. Locale["ma_invalidUsername"] .. "|r")
+    print("|cffFF0000" .. params[1] .. "|r" .. Locale["logGM_accountInvalidUsername"] .. "|r")
     print(Locale["operationAborted"])
     return
   end
   MangAdmin:ChatMsg(".account delete " .. params[1])
-  MangAdmin:LogAction(Locale["ma_accountDeleteCompleted"] .. params[1])
+  MangAdmin:LogAction(genericLogGenerator("logGM_deleteAccountCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
-function AcctGMLvl()
+function GM_setAccountGMLevelCommand()
   local input = ma_gmParametersInput:GetText()
   local params = {}
   local fail = false
@@ -172,11 +274,11 @@ function AcctGMLvl()
     return
   end
   if (string.len(params[1]) > 20) then
-    print("|cffFF0000" .. params[1] .. "|r" .. Locale["ma_invalidUsername"] .. "|r")
+    print("|cffFF0000" .. params[1] .. "|r" .. Locale["logGM_accountInvalidUsername"] .. "|r")
     fail = true
   end
   if (params[2] ~= "0" and params[2] ~= "1" and params[2] ~= "2" and params[2] ~= "3") then
-    print("|cffFF0000" .. params[2] .. "|r" .. Locale["ma_invalidGMLvlID"] .. "|r")
+    print("|cffFF0000" .. params[2] .. "|r" .. Locale["logGM_setAccountGMLevelInvalidID"] .. "|r")
     fail = true
   end
   if (fail) then
@@ -184,11 +286,11 @@ function AcctGMLvl()
     return
   end
   MangAdmin:ChatMsg(".account set gmlevel " .. params[1] .. " " .. params[2] .. " -1")
-  MangAdmin:LogAction(params[1] .. Locale["ma_accountGMLevelCompleted"] .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_setAccountGMLevelCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
-function AcctPasswd()
+function GM_setAccountPasswordCommand()
   local input = ma_gmParametersInput:GetText()
   local params = {}
   local fail = false
@@ -200,15 +302,15 @@ function AcctPasswd()
     return
   end
   if (string.len(params[1]) > 20) then
-    print("|cffFF0000" .. params[1] .. "|r" .. Locale["ma_invalidUsername"] .. "|r")
+    print("|cffFF0000" .. params[1] .. "|r" .. Locale["logGM_accountInvalidUsername"] .. "|r")
     fail = true
   end
   if (string.len(params[2]) > 16) then
-    print("|cffFF0000" .. params[2] .. "|r" .. Locale["ma_invalidPassword"] .. "|r")
+    print("|cffFF0000" .. params[2] .. "|r" .. Locale["logGM_createAccountInvalidPassword"] .. "|r")
     fail = true
   end
   if (not (params[2] == params[3])) then
-    print("|cffFF0000" .. Locale["ma_invalidPasswordEQUCheck"] .. "|r")
+    print("|cffFF0000" .. Locale["logGM_setAccountPasswordInvalidEquality"] .. "|r")
     fail = true
   end
   if (fail) then
@@ -216,11 +318,11 @@ function AcctPasswd()
     return
   end
   MangAdmin:ChatMsg(".account set password " .. params[1] .. " " .. params[2] .. " " .. params[3])
-  MangAdmin:LogAction(params[1] .. Locale["ma_accountPasswordChangeCompleted"] .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_setAccountPasswordCompleted", {["value"] = params[1] .. " " .. params[2]}))
   print(Locale["operationCompleted"])
 end
 
-function AcctAddon()
+function GM_setAccountAddonCommand()
   local input = ma_gmParametersInput:GetText()
   local params = {}
   local fail = false
@@ -232,11 +334,11 @@ function AcctAddon()
     return
   end
   if (string.len(params[1]) > 20) then
-    print("|cffFF0000" .. params[1] .. "|r" .. Locale["ma_invalidUsername"] .. "|r")
+    print("|cffFF0000" .. params[1] .. "|r" .. Locale["logGM_accountInvalidUsername"] .. "|r")
     fail = true
   end
   if (params[2] ~= "0" and params[2] ~= "1" and params[2] ~= "2") then
-    print("|cffFF0000" .. params[2] .. "|r" .. Locale["ma_invalidAddonID"] .. "|r")
+    print("|cffFF0000" .. params[2] .. "|r" .. Locale["logGM_setAccountAddonInvalidID"] .. "|r")
     fail = true
   end
   if (fail) then
@@ -244,123 +346,11 @@ function AcctAddon()
     return
   end
   MangAdmin:ChatMsg(".account set addon " .. params[1] .. " " .. params[2])
-  MangAdmin:LogAction(params[1] .. Locale["ma_accountAddonChangeCompleted"] .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_setAccountAddonCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
-function GMList()
-  MangAdmin:ChatMsg(".gm list")
-  MangAdmin:LogAction(Locale["ma_gmListoutput"])
-end
-
-function GMInGame()
-  MangAdmin:ChatMsg(".gm ingame")
-  MangAdmin:LogAction(Locale["ma_gmInGameoutput"])
-end
-
-function GMNotify()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".gmnotify " .. param)
-  MangAdmin:LogAction(Locale["ma_gmNotifyOutput"] .. param)
-end
-
-function GMMessage()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".gmnameannounce " .. param)
-  MangAdmin:LogAction(Locale["ma_gmMessageOutput"] .. param)
-end
-
-function Cast()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".cast " .. param)
-  MangAdmin:LogAction(Locale["ma_gmCastSpellOutput"] .. param)
-end
-
-function CastBack()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".cast back " .. param)
-  MangAdmin:LogAction(Locale["ma_gmCastBackSpellOutput"] .. param)
-end
-
-function CastDist()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".cast dist " .. param)
-  MangAdmin:LogAction(Locale["ma_gmCastDistSpellOutput"] .. param)
-end
-
-function CastSelf()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".cast self " .. param)
-  MangAdmin:LogAction(Locale["ma_gmCastSelfSpellOutput"] .. param)
-end
-
-function CastTarget()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".cast target " .. param)
-  MangAdmin:LogAction(Locale["ma_gmCastTargetSpellOutput"] .. param)
-end
-
-function TeleAddButton()
-  local cname = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".tele add " .. cname)
-  MangAdmin:LogAction(cname .. Locale["ma_gmTeleAddOutput"])
-end
-
-function TeleDelButton()
-  local cname = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".tele del " .. cname)
-  MangAdmin:LogAction(cname .. Locale["ma_gmTeleDelOutput"])
-end
-
-function ListItem()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".list item " .. param)
-  MangAdmin:LogAction(Locale["ma_gmListItemOutput"] .. param)
-end
-
-function LookupTaxi()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".lookup taxi  " .. param)
-  MangAdmin:LogAction(Locale["ma_gmLookTaxiOutput"] .. param)
-end
-
-function LookupZone()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".lookup area " .. param)
-  MangAdmin:LogAction(Locale["ma_gmLookZoneOutput"] .. param)
-end
-
-function GoTaxiNode()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".go taxinode " .. param)
-  MangAdmin:LogAction(Locale["ma_gmGoTaxiOutput"] .. param)
-end
-
-function GoTrigger()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".go trigger " .. param)
-  MangAdmin:LogAction(Locale["ma_gmGoTriggerOutput"] .. param)
-end
-
-function GoXY()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".go xy " .. param)
-  MangAdmin:LogAction(Locale["ma_gmGoXYOutput"] .. param)
-end
-
-function GoXYZ()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".go xyz " .. param)
-  MangAdmin:LogAction(Locale["ma_gmGoXYZOutput"] .. param)
-end
-
-function GoZoneXY()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".go zonexy " .. param)
-  MangAdmin:LogAction(Locale["ma_gmZoneXYOutput"] .. param)
-end
-
-function SetJail_A()
+function setJailAllianceCommand()
   MangAdmin:ChatMsg(".tele del ma_AllianceJail")
   local i = 1
   while i < 100 do
@@ -368,10 +358,10 @@ function SetJail_A()
     MangAdmin:ChatMsg(".")
   end
   MangAdmin:ChatMsg(".tele add ma_AllianceJail")
-  MangAdmin:LogAction(Locale["ma_gmSetJailAOutput"])
+  MangAdmin:LogAction(Locale["logGM_setJailAlliance"])
 end
 
-function SetJail_H()
+function setJailHordeCommand()
   MangAdmin:ChatMsg(".tele del ma_HordeJail")
   local i = 1
   while i < 100 do
@@ -379,75 +369,43 @@ function SetJail_H()
     MangAdmin:ChatMsg(".")
   end
   MangAdmin:ChatMsg(".tele add ma_HordeJail")
-  MangAdmin:LogAction(Locale["ma_gmSetJailHOutput"])
+  MangAdmin:LogAction(Locale["logGM_setJailHorde"])
 end
 
-function PetCreate()
-  MangAdmin:ChatMsg(".pet create")
-  MangAdmin:LogAction(Locale["ma_gmPetCreateOutput"])
-end
-
-function PetLearn()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".pet learn " .. param)
-  MangAdmin:LogAction(Locale["ma_gmPetLearnOutput"] .. param)
-end
-
-function PetUnLearn()
-  local param = ma_gmParametersInput:GetText()
-  MangAdmin:ChatMsg(".pet unlearn " .. param)
-  MangAdmin:LogAction(Locale["ma_gmPetUnlearnOutput"] .. param)
-end
-
-function PetTalentsLearn()
-  MangAdmin:ChatMsg(".learn all my pettalents")
-  MangAdmin:LogAction(Locale["ma_gmPetTalentsOutput"])
-end
-
-function ShowBank()
-  MangAdmin:ChatMsg(".character check bank")
-  MangAdmin:LogAction(Locale["ma_gmBankOutput"])
-end
-
-function Screenie()
+function screen()
   UIParent:Hide()
   Screenshot()
   UIParent:Show()
-  MangAdmin:LogAction(Locale["ma_gmScreenieOutput"])
+  MangAdmin:LogAction(Locale["logGM_screen"])
 end
 
-function DismountPlayer()
-  MangAdmin:ChatMsg(".dismount")
-  MangAdmin:LogAction(Locale["ma_gmDismountOutput"])
-end
-
-function InstantKill()
-  MangAdmin.db.char.instantKillMode = ma_instantkillbutton:GetChecked()
+function GM_instantKillModeCommand()
+  MangAdmin.db.char.instantKillMode = GM_instantKillModeCheckBox:GetChecked()
   MangAdmin:LogAction(
-    (ma_instantkillbutton:GetChecked() and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
-      Locale["ma_gmInstaKillOutput"]
+    (GM_instantKillModeCheckBox:GetChecked() and Locale["genericEnabledText"] or Locale["genericDisabledText"]) ..
+      Locale["logGM_instantKillMode"]
   )
 end
 
-function SetSpeed()
-  local value = string.format("%.1f", ma_speedslider:GetValue())
+function GM_setSpeedCommand()
+  local value = string.format("%.1f", GM_setSpeedSlider:GetValue())
   if commandTargetCheck() then
     MangAdmin:ChatMsg(".modify speed " .. value)
-    MangAdmin:LogAction(getCommandTargetName() .. Locale["ma_gmSpeedOutput"] .. value)
+    MangAdmin:LogAction(getCommandTargetName() .. Locale["logGM_setSpeed"] .. value)
   else
     MangAdmin:Print(Locale["selectionError"])
-    ma_speedslider:SetValue(1)
+    GM_setSpeedSlider:SetValue(1)
   end
 end
 
-function SetScale()
-  local value = string.format("%.1f", ma_scaleslider:GetValue())
+function GM_setScaleCommand()
+  local value = string.format("%.1f", GM_setScaleSlider:GetValue())
   if commandTargetCheck() then
     MangAdmin:ChatMsg(".modify scale " .. value)
-    MangAdmin:LogAction(getCommandTargetName() .. Locale["ma_gmScaleOutput"] .. value)
+    MangAdmin:LogAction(getCommandTargetName() .. Locale["logGM_setScale"] .. value)
   else
     MangAdmin:Print(Locale["selectionError"])
-    ma_scaleslider:SetValue(1)
+    GM_setScaleSlider:SetValue(1)
   end
 end
 
@@ -481,23 +439,23 @@ function GridNavigate(x, y)
         newx = x
       end
       MangAdmin:ChatMsg(".go xy " .. newx .. " " .. newy)
-      MangAdmin:LogAction(Locale["ma_gmGridXYOutput"] .. newx .. " " .. newy)
+      MangAdmin:LogAction(genericLogGenerator("logGM_gridNavigator", {["value"] = newx .. " " .. newy}))
     else
       MangAdmin:Print(Locale["mustBeANumber"])
     end
   end
 end
 
-function ResetSpeed()
-  ma_speedslider:SetValue(1)
-  ma_speedsliderText:SetText("Speed: 1.0")
+function GM_resetSpeed()
+  GM_setSpeedSlider:SetValue(1)
+  GM_setSpeedSliderText:SetText("Speed: 1.0")
   MangAdmin:ChatMsg(".mod speed 1")
   MangAdmin:LogAction(Locale["log_resetSlider"])
 end
 
-function ResetScale()
-  ma_scaleslider:SetValue(1)
-  ma_scalesliderText:SetText("Scale: 1.0")
+function GM_resetScale()
+  GM_setScaleSlider:SetValue(1)
+  GM_setScaleSliderText:SetText("Scale: 1.0")
   MangAdmin:ChatMsg(".mod scale 1")
   MangAdmin:LogAction(Locale["log_resetSlider"])
 end

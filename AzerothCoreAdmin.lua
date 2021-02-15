@@ -659,8 +659,6 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
     -- hook .gps for gridnavigation
     for x, y in string.gmatch(text, Strings["ma_GmatchGPS"]) do
-      message(x)
-      message(y)
       for k,v in pairs(self.db.char.functionQueue) do
         if v == "GridNavigate" then
           GridNavigate(string.format("%.1f", x), string.format("%.1f", y), nil)
@@ -2588,7 +2586,7 @@ function MangAdmin:InitCheckButtons()
   else
     ma_checktransparencybutton:SetChecked(false)
   end
-  ma_instantkillbutton:SetChecked(self.db.char.instantKillMode)
+  GM_instantKillModeCheckBox:SetChecked(self.db.char.instantKillMode)
   ma_checklocalsearchstringsbutton:SetChecked(self.db.account.localesearchstring)
   ma_showminimenubutton:SetChecked(self.db.account.style.showminimenu)
   ma_showtooltipsbutton:SetChecked(self.db.account.style.showtooltips)

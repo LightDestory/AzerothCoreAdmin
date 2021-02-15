@@ -15,31 +15,43 @@
 --
 -------------------------------------------------------------------------------------------------------------
 
-function clearParametersBox(caller)
+function genericClearParametersBox(caller)
     if (caller == "GM") then
         ma_gmParametersInput:SetText("")
     end
 end
 
-function ShowBag(caller)
+function genericBagCommand(caller)
     local player = UnitName("player") or UnitName("target")
     local param = nil
     if (caller == "GM") then
         param = ma_gmParametersInput:GetText()
     end
+    param = (param == nil or param == "" and "0" or param)
     MangAdmin:ChatMsg(".character check bag " .. param)
-    MangAdmin:LogAction(Locale["ma_gmBagOutput"] .. player .. " " .. param)
+    MangAdmin:LogAction(genericLogGenerator("log_bag", {['value'] = param, ['target'] = player}))
 end
 
 function genericCaller(dictionaryID, callID, value)
     local dictionary = getCallsDictionary(dictionaryID)
     local call = dictionary[callID]
-    local param = "";
+    local data = {
+        ["value"] = "",
+        ["target"] = nil
+    }
     if call[GENERICS_isValueNeeded] then
-        param = value
+        data['value'] = value
     elseif call[GENERICS_isParametersNeeded] then
-        param = dictionary[GENERICS_parametersGet]()
+        data['value'] = dictionary[GENERICS_parametersGet]()
     end
-    MangAdmin:ChatMsg(call[GENERICS_command].. param)
-    MangAdmin:LogAction(genericLogGenerator(call[GENERICS_message], param))
+    if call[GENERICS_isTargetCheckNeeded] then
+        if commandTargetCheck() then
+            data['target'] = getCommandTargetName()
+        else
+            MangAdmin:Print(Locale["selectionError"])
+            return
+        end
+    end
+    MangAdmin:ChatMsg(call[GENERICS_command].. data['value'])
+    MangAdmin:LogAction(genericLogGenerator(call[GENERICS_message], data))
 end

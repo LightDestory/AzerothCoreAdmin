@@ -23,21 +23,30 @@ function getCommandTargetName()
     return (UnitName("target") or UnitName("player"))
 end
 
-function genericLogGenerator(textID, values)
+function genericLogGenerator(textID, data)
     local log = Locale[textID]
     local params = {}
-    for w in values:gmatch("%w+") do
-        table.insert(params, w)
-      end
-    for i=#params, 1, -1 do
+    if(textID ~= "logGM_GMNotify" and textID ~= "logGM_GMMessage") then
+        for w in data['value']:gmatch("%w+") do
+            table.insert(params, w)
+        end
+    else
+        params[1] = data['value']
+    end
+    for i = #params, 1, -1 do
         local pattern = "_V" .. i .. "_"
         log = string.gsub(log, pattern, params[i])
+    end
+    if data['target'] ~=nil then
+        log = string.gsub(log, "_T_", data['target'])
     end
     return log
 end
 
 function getCallsDictionary(ID)
-    if ID == GM_KEY then return GM_genericCommands
-    else return nil
+    if ID == GM_KEY then
+        return GM_genericCommands
+    else
+        return nil
     end
 end

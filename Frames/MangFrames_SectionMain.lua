@@ -36,7 +36,7 @@ function MangAdmin:CreateMainSection()
   -- DisplayAccountGMLevel
   FrameLib:BuildButton(
     {
-      name = "ma_displaylevelbutton",
+      name = "GM_displayAccountGMLevelButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -52,14 +52,14 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -10
       },
-      text = Locale["ma_displaylevelbutton"]
+      text = Locale["labelGM_displayAccountGMLevelButton"]
     }
   )
 
   -- GM-mode om
   FrameLib:BuildButton(
     {
-      name = "ma_gmonbutton",
+      name = "GM_GMModeOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -82,7 +82,7 @@ function MangAdmin:CreateMainSection()
   -- GM-mode off
   FrameLib:BuildButton(
     {
-      name = "ma_gmoffbutton",
+      name = "GM_GMModeOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -98,14 +98,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -30
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Fly-mode on
   FrameLib:BuildButton(
     {
-      name = "ma_flyonbutton",
+      name = "GM_flyModeOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -128,7 +128,7 @@ function MangAdmin:CreateMainSection()
   -- Fly-mode off
   FrameLib:BuildButton(
     {
-      name = "ma_flyoffbutton",
+      name = "GM_flyModeOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -144,14 +144,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -50
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- God-mode on
   FrameLib:BuildButton(
     {
-      name = "ma_godonbutton",
+      name = "GM_godModeOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -174,7 +174,7 @@ function MangAdmin:CreateMainSection()
   -- God-mode off
   FrameLib:BuildButton(
     {
-      name = "ma_godoffbutton",
+      name = "GM_godModeOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -190,14 +190,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -70
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Whispers on
   FrameLib:BuildButton(
     {
-      name = "ma_whisperonbutton",
+      name = "GM_acceptWhispersOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -220,7 +220,7 @@ function MangAdmin:CreateMainSection()
   -- Whispers off
   FrameLib:BuildButton(
     {
-      name = "ma_whisperoffbutton",
+      name = "GM_acceptWhispersOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -236,14 +236,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -90
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Invisibility on
   FrameLib:BuildButton(
     {
-      name = "ma_invisibleonbutton",
+      name = "GM_visibilityOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -266,7 +266,7 @@ function MangAdmin:CreateMainSection()
   -- Invisibility off
   FrameLib:BuildButton(
     {
-      name = "ma_invisibleoffbutton",
+      name = "GM_visibilityOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -282,14 +282,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -110
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Taxicheat on
   FrameLib:BuildButton(
     {
-      name = "ma_taxicheatonbutton",
+      name = "GM_cheatTaxiOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -312,7 +312,7 @@ function MangAdmin:CreateMainSection()
   -- Taxicheat off
   FrameLib:BuildButton(
     {
-      name = "ma_taxicheatoffbutton",
+      name = "GM_cheatTaxiOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -328,14 +328,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -130
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Explore cheat on
   FrameLib:BuildButton(
     {
-      name = "ma_mapsonbutton",
+      name = "GM_cheatExploreMapsOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -358,7 +358,7 @@ function MangAdmin:CreateMainSection()
   -- Explore cheat off
   FrameLib:BuildButton(
     {
-      name = "ma_mapsoffbutton",
+      name = "GM_cheatExploreMapsOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -374,14 +374,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -150
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Waterwalk on
   FrameLib:BuildButton(
     {
-      name = "ma_waterwalkonbutton",
+      name = "GM_cheatWaterWalkOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -404,7 +404,7 @@ function MangAdmin:CreateMainSection()
   -- Waterwalk off
   FrameLib:BuildButton(
     {
-      name = "ma_waterwalkoffbutton",
+      name = "GM_cheatWaterWalkOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -420,14 +420,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -170
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- No casting time on
   FrameLib:BuildButton(
     {
-      name = "ma_nocasttimeonbutton",
+      name = "GM_cheatNoCastTimeOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -450,7 +450,7 @@ function MangAdmin:CreateMainSection()
   -- No casting time off
   FrameLib:BuildButton(
     {
-      name = "ma_nocasttimeoffbutton",
+      name = "GM_cheatNoCastTimeOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -466,14 +466,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -190
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- No cooldown on
   FrameLib:BuildButton(
     {
-      name = "ma_nocooldownonbutton",
+      name = "GM_cheatNoCooldownOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -496,7 +496,7 @@ function MangAdmin:CreateMainSection()
   -- No cooldown off
   FrameLib:BuildButton(
     {
-      name = "ma_nocooldownoffbutton",
+      name = "GM_cheatNoCooldownOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -512,14 +512,14 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -210
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
   -- Account IP Lock on
   FrameLib:BuildButton(
     {
-      name = "ma_accountlockiponbutton",
+      name = "GM_accountIPLockOnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -542,7 +542,7 @@ function MangAdmin:CreateMainSection()
   -- Account IP Lock off
   FrameLib:BuildButton(
     {
-      name = "ma_accountlockipoffbutton",
+      name = "GM_accountIPLockOffButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -558,7 +558,7 @@ function MangAdmin:CreateMainSection()
         offX = 134,
         offY = -230
       },
-      text = Locale["ma_OffButton"]
+      text = Locale["labelGM_offButton"]
     }
   )
 
@@ -580,7 +580,7 @@ function MangAdmin:CreateMainSection()
   -- Account Create
   FrameLib:BuildButton(
     {
-      name = "ma_acctcreatebutton",
+      name = "GM_createAccountButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -603,7 +603,7 @@ function MangAdmin:CreateMainSection()
   -- Account Delete
   FrameLib:BuildButton(
     {
-      name = "ma_acctdeletebutton",
+      name = "GM_deleteAccountButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -626,7 +626,7 @@ function MangAdmin:CreateMainSection()
   -- Account GM Level
   FrameLib:BuildButton(
     {
-      name = "ma_acctgmlvlbutton",
+      name = "GM_setAccountGMLevelButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -649,7 +649,7 @@ function MangAdmin:CreateMainSection()
   -- Account Password
   FrameLib:BuildButton(
     {
-      name = "ma_acctpasswdbutton",
+      name = "GM_setAccountPasswordButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -672,7 +672,7 @@ function MangAdmin:CreateMainSection()
   -- Account Addon
   FrameLib:BuildButton(
     {
-      name = "ma_acctaddonbutton",
+      name = "GM_setAccountAddonButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -695,7 +695,7 @@ function MangAdmin:CreateMainSection()
   -- GM List
   FrameLib:BuildButton(
     {
-      name = "ma_gmlistbutton",
+      name = "GM_GMListButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -718,7 +718,7 @@ function MangAdmin:CreateMainSection()
   -- GM In-Game
   FrameLib:BuildButton(
     {
-      name = "ma_gmingamebutton",
+      name = "GM_GMInGameButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -741,7 +741,7 @@ function MangAdmin:CreateMainSection()
   -- GM Notify
   FrameLib:BuildButton(
     {
-      name = "ma_gmnotifybutton",
+      name = "GM_GMNotifyButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -764,7 +764,7 @@ function MangAdmin:CreateMainSection()
   -- GM Message
   FrameLib:BuildButton(
     {
-      name = "ma_gmnameannouncebutton",
+      name = "GM_GMMessageButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -787,7 +787,7 @@ function MangAdmin:CreateMainSection()
   -- Cast
   FrameLib:BuildButton(
     {
-      name = "ma_castbutton",
+      name = "GM_castButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -810,7 +810,7 @@ function MangAdmin:CreateMainSection()
   -- Cast Back
   FrameLib:BuildButton(
     {
-      name = "ma_castbackbutton",
+      name = "GM_castBackButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -833,7 +833,7 @@ function MangAdmin:CreateMainSection()
   -- Cast Distance
   FrameLib:BuildButton(
     {
-      name = "ma_castdistbutton",
+      name = "GM_castDistButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -856,7 +856,7 @@ function MangAdmin:CreateMainSection()
   -- Cast Self
   FrameLib:BuildButton(
     {
-      name = "ma_castselfbutton",
+      name = "GM_castSelfButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -879,7 +879,7 @@ function MangAdmin:CreateMainSection()
   -- Cast Target
   FrameLib:BuildButton(
     {
-      name = "ma_casttargetbutton",
+      name = "GM_castTargetButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -902,7 +902,7 @@ function MangAdmin:CreateMainSection()
   -- Teleport Add
   FrameLib:BuildButton(
     {
-      name = "ma_teleaddbutton",
+      name = "GM_teleportAddButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -925,7 +925,7 @@ function MangAdmin:CreateMainSection()
   -- Teleport Delete
   FrameLib:BuildButton(
     {
-      name = "ma_teledelbutton",
+      name = "GM_teleportDelButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -948,7 +948,7 @@ function MangAdmin:CreateMainSection()
   -- List Item
   FrameLib:BuildButton(
     {
-      name = "ma_listitembutton",
+      name = "GM_listItemButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -971,7 +971,7 @@ function MangAdmin:CreateMainSection()
   -- Lookup Taxi
   FrameLib:BuildButton(
     {
-      name = "ma_lookuptaxibutton",
+      name = "GM_lookupTaxiButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -994,7 +994,7 @@ function MangAdmin:CreateMainSection()
   -- Lookup Zone
   FrameLib:BuildButton(
     {
-      name = "ma_lookupzonebutton",
+      name = "GM_lookupZoneButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1017,7 +1017,7 @@ function MangAdmin:CreateMainSection()
   -- GoTaxi
   FrameLib:BuildButton(
     {
-      name = "ma_gotaxinodebutton",
+      name = "GM_goTaxiButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1040,7 +1040,7 @@ function MangAdmin:CreateMainSection()
   -- GoTrigger
   FrameLib:BuildButton(
     {
-      name = "ma_gotriggerbutton",
+      name = "GM_goTriggerButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1063,7 +1063,7 @@ function MangAdmin:CreateMainSection()
   -- GoXY
   FrameLib:BuildButton(
     {
-      name = "ma_goxybutton",
+      name = "GM_goXYButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1086,7 +1086,7 @@ function MangAdmin:CreateMainSection()
   -- GoXYZ
   FrameLib:BuildButton(
     {
-      name = "ma_goxyzbutton",
+      name = "GM_goXYZButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1109,7 +1109,7 @@ function MangAdmin:CreateMainSection()
   --GoZoneXY
   FrameLib:BuildButton(
     {
-      name = "ma_gozonexybutton",
+      name = "GM_goZoneXYButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1132,7 +1132,7 @@ function MangAdmin:CreateMainSection()
   -- SetJail Alliance
   FrameLib:BuildButton(
     {
-      name = "ma_setjail_a_button",
+      name = "GM_setJailAllianceButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1155,7 +1155,7 @@ function MangAdmin:CreateMainSection()
   -- SetJail Horde
   FrameLib:BuildButton(
     {
-      name = "ma_setjail_h_button",
+      name = "GM_setJailHordeButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1178,7 +1178,7 @@ function MangAdmin:CreateMainSection()
   -- Pet Create
   FrameLib:BuildButton(
     {
-      name = "ma_petcreatebutton",
+      name = "GM_petCreateButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1201,7 +1201,7 @@ function MangAdmin:CreateMainSection()
   -- Pet Learn
   FrameLib:BuildButton(
     {
-      name = "ma_petlearnbutton",
+      name = "GM_petLearnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1224,7 +1224,7 @@ function MangAdmin:CreateMainSection()
   -- Pet UnLearn
   FrameLib:BuildButton(
     {
-      name = "ma_petunlearnbutton",
+      name = "GM_petUnLearnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1247,7 +1247,7 @@ function MangAdmin:CreateMainSection()
   -- Pet Talents
   FrameLib:BuildButton(
     {
-      name = "ma_pettalentslearnbutton",
+      name = "GM_petTalentsLearnButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1270,7 +1270,7 @@ function MangAdmin:CreateMainSection()
   -- Bank
   FrameLib:BuildButton(
     {
-      name = "ma_bankbutton",
+      name = "GM_bankButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1293,7 +1293,7 @@ function MangAdmin:CreateMainSection()
   -- Bag
   FrameLib:BuildButton(
     {
-      name = "ma_bagbutton",
+      name = "GM_bagButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1316,7 +1316,7 @@ function MangAdmin:CreateMainSection()
   -- Screenshot
   FrameLib:BuildButton(
     {
-      name = "ma_screenshotbutton",
+      name = "GM_screenButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1339,7 +1339,7 @@ function MangAdmin:CreateMainSection()
   -- Dismount
   FrameLib:BuildButton(
     {
-      name = "ma_dismountbutton",
+      name = "GM_dismountPlayerButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1398,7 +1398,7 @@ function MangAdmin:CreateMainSection()
   -- GridNavigator North
   FrameLib:BuildButton(
     {
-      name = "ma_gridnaviaheadbutton",
+      name = "GM_gridNavigatorAheadButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1421,7 +1421,7 @@ function MangAdmin:CreateMainSection()
   -- GridNavigator South
   FrameLib:BuildButton(
     {
-      name = "ma_gridnavibackbutton",
+      name = "GM_gridNavigatorBackButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1444,7 +1444,7 @@ function MangAdmin:CreateMainSection()
   -- GridNavigator East
   FrameLib:BuildButton(
     {
-      name = "ma_gridnavirightbutton",
+      name = "GM_gridNavigatorRightButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1467,7 +1467,7 @@ function MangAdmin:CreateMainSection()
   -- GridNavigator West
   FrameLib:BuildButton(
     {
-      name = "ma_gridnavileftbutton",
+      name = "GM_gridNavigatorLeftButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1505,7 +1505,7 @@ function MangAdmin:CreateMainSection()
   -- Clear Button
   FrameLib:BuildButton(
     {
-      name = "ma_gmclearbutton",
+      name = "GM_clearParameterBoxButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1549,7 +1549,7 @@ function MangAdmin:CreateMainSection()
   FrameLib:BuildButton(
     {
       type = "CheckButton",
-      name = "ma_instantkillbutton",
+      name = "GM_instantKillModeCheckBox",
       group = "main",
       parent = ma_midframe,
       setpoint = {
@@ -1566,7 +1566,7 @@ function MangAdmin:CreateMainSection()
   FrameLib:BuildFrame(
     {
       type = "Slider",
-      name = "ma_speedslider",
+      name = "GM_setSpeedSlider",
       group = "main",
       parent = ma_midframe,
       size = {
@@ -1584,7 +1584,7 @@ function MangAdmin:CreateMainSection()
   -- Speed Reset
   FrameLib:BuildButton(
     {
-      name = "ma_speedsliderreset_button",
+      name = "GM_resetSpeedButton",
       group = "main",
       parent = ma_midframe,
       texture = {
@@ -1608,7 +1608,7 @@ function MangAdmin:CreateMainSection()
   FrameLib:BuildFrame(
     {
       type = "Slider",
-      name = "ma_scaleslider",
+      name = "GM_setScaleSlider",
       group = "main",
       parent = ma_midframe,
       size = {
@@ -1626,7 +1626,7 @@ function MangAdmin:CreateMainSection()
   -- Scale Reset
   FrameLib:BuildButton(
     {
-      name = "ma_scalesliderreset_button",
+      name = "GM_resetScaleButton",
       group = "main",
       parent = ma_midframe,
       texture = {
