@@ -27,8 +27,9 @@ function genericBagCommand(caller)
     if (caller == "GM") then
         param = ma_gmParametersInput:GetText()
     end
+    param = (param == nil or param == "" and "0" or param)
     MangAdmin:ChatMsg(".character check bag " .. param)
-    MangAdmin:LogAction(Locale["log_bag"] .. player .. " " .. param)
+    MangAdmin:LogAction(genericLogGenerator("log_bag", {['value'] = param, ['target'] = player}))
 end
 
 function genericCaller(dictionaryID, callID, value)

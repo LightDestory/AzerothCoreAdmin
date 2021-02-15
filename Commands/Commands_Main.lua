@@ -237,7 +237,7 @@ function GM_createAccountCommand()
     return
   end
   MangAdmin:ChatMsg(".account create " .. params[1] .. " " .. params[2])
-  MangAdmin:LogAction(Locale["logGM_createAccountCompleted"] .. params[1] .. " " .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_createAccountCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
@@ -258,7 +258,7 @@ function GM_deleteAccountCommand()
     return
   end
   MangAdmin:ChatMsg(".account delete " .. params[1])
-  MangAdmin:LogAction(Locale["logGM_deleteAccountCompleted"] .. params[1])
+  MangAdmin:LogAction(genericLogGenerator("logGM_deleteAccountCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
@@ -286,7 +286,7 @@ function GM_setAccountGMLevelCommand()
     return
   end
   MangAdmin:ChatMsg(".account set gmlevel " .. params[1] .. " " .. params[2] .. " -1")
-  MangAdmin:LogAction(params[1] .. Locale["logGM_setAccountGMLevelCompleted"] .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_setAccountGMLevelCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
@@ -318,7 +318,7 @@ function GM_setAccountPasswordCommand()
     return
   end
   MangAdmin:ChatMsg(".account set password " .. params[1] .. " " .. params[2] .. " " .. params[3])
-  MangAdmin:LogAction(params[1] .. Locale["logGM_setAccountPasswordCompleted"] .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_setAccountPasswordCompleted", {["value"] = params[1] .. " " .. params[2]}))
   print(Locale["operationCompleted"])
 end
 
@@ -346,7 +346,7 @@ function GM_setAccountAddonCommand()
     return
   end
   MangAdmin:ChatMsg(".account set addon " .. params[1] .. " " .. params[2])
-  MangAdmin:LogAction(params[1] .. Locale["logGM_setAccountAddonCompleted"] .. params[2])
+  MangAdmin:LogAction(genericLogGenerator("logGM_setAccountAddonCompleted", {["value"] = input}))
   print(Locale["operationCompleted"])
 end
 
@@ -439,7 +439,7 @@ function GridNavigate(x, y)
         newx = x
       end
       MangAdmin:ChatMsg(".go xy " .. newx .. " " .. newy)
-      MangAdmin:LogAction(Locale["logGM_gridNavigator"] .. newx .. " " .. newy)
+      MangAdmin:LogAction(genericLogGenerator("logGM_gridNavigator", {["value"] = newx .. " " .. newy}))
     else
       MangAdmin:Print(Locale["mustBeANumber"])
     end

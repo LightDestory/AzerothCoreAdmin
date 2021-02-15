@@ -26,8 +26,12 @@ end
 function genericLogGenerator(textID, data)
     local log = Locale[textID]
     local params = {}
-    for w in data['value']:gmatch("%w+") do
-        table.insert(params, w)
+    if(textID ~= "logGM_GMNotify" and textID ~= "logGM_GMMessage") then
+        for w in data['value']:gmatch("%w+") do
+            table.insert(params, w)
+        end
+    else
+        params[1] = data['value']
     end
     for i = #params, 1, -1 do
         local pattern = "_V" .. i .. "_"
