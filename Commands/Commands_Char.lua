@@ -14,6 +14,27 @@
 -- Official repository: https://github.com/LightDestory/AzerothCoreAdmin
 --
 -------------------------------------------------------------------------------------------------------------
+-- Generic Command Template
+--[[
+  [COMMAND_NAME_KEY] = {
+    [GENERICS_isValueNeeded] = false|true,
+    [GENERICS_isParametersNeeded] = false|true,
+    [GENERICS_isTargetCheckNeeded] = false|true,
+    [GENERICS_command] = "command",
+    [GENERICS_message] = "messageID"
+  }
+]]
+CHAR_genericCommands = {
+  [GENERICS_parametersGet] = function()
+    return ma_charactertarget:GetText()
+  end,
+}
+function InitModelFrame()
+  ma_modelframe:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
+  ma_modelframe.rotation = 0.61;
+  ma_modelframe:SetRotation(ma_modelframe.rotation)
+  ma_modelframe:SetUnit("player")
+end
 
 function ModelRotateLeft()
   ma_modelframe.rotation = ma_modelframe.rotation - 0.03
@@ -27,12 +48,20 @@ function ModelRotateRight()
   PlaySound("igInventoryRotateCharacter")
 end
 
-function InitModelFrame()
-  ma_modelframe:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
-  ma_modelframe.rotation = 0.61;
-  ma_modelframe:SetRotation(ma_modelframe.rotation)
-  ma_modelframe:SetUnit("player")
+function CharModelZoomIn()
+  ma_modelframe:SetCamera(0)
+  --ma_modelframe:SetModelScale(ma_modelframe:GetModelScale() + .1)
+  --ma_modelframe:SetPosition(1,ma_modelframe:GetModelScale()*3,0)
+  --ma_modelframe:RefreshUnit()
+end
 
+function CharModelZoomOut()
+  ma_modelframe:SetCamera(1)
+  ma_modelframe:RefreshUnit()
+ -- ma_modelframe:SetCamera(2)
+  --ma_modelframe:SetModelScale(ma_modelframe:GetModelScale() * .5)
+  --ma_modelframe:SetPosition(0,0,0)
+  --ma_modelframe:RefreshUnit()
 end
 
 function MangAdminModelOnUpdate(elapsedTime)
@@ -380,22 +409,6 @@ function ResetDropDownInitialize()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
-end
-
-function CharModelZoomIn()
-    ma_modelframe:SetCamera(0)
-    --ma_modelframe:SetModelScale(ma_modelframe:GetModelScale() + .1)
-    --ma_modelframe:SetPosition(1,ma_modelframe:GetModelScale()*3,0)
-    --ma_modelframe:RefreshUnit()
-end
-
-function CharModelZoomOut()
-    ma_modelframe:SetCamera(1)
-    ma_modelframe:RefreshUnit()
-   -- ma_modelframe:SetCamera(2)
-    --ma_modelframe:SetModelScale(ma_modelframe:GetModelScale() * .5)
-    --ma_modelframe:SetPosition(0,0,0)
-    --ma_modelframe:RefreshUnit()
 end
 
 function CharBindSight()

@@ -162,7 +162,7 @@ function Return_enUS()
     --[[GM-Control Labels]]
     ["labelGM_offButton"] = "Off",
     ["labelGM_displayAccountGMLevelButton"] = "Display Account GM Level",
-    ["ma_GMOnButton"] = "GM-mode on",
+    ["labelGM_GMOnButton"] = "GM-mode on",
     ["ma_FlyOnButton"] = "Fly-mode on",
     ["ma_GodOnButton"] = "God-mode on",
     ["ma_WhisperOnButton"] = "Whisper on",

@@ -21,13 +21,14 @@
   [COMMAND_NAME_KEY] = {
     [GENERICS_isValueNeeded] = false|true,
     [GENERICS_isParametersNeeded] = false|true,
+    [GENERICS_isTargetCheckNeeded] = false|true,
     [GENERICS_command] = "command",
     [GENERICS_message] = "messageID"
   }
 ]]
 GM_genericCommands = {
   [GENERICS_parametersGet] = function()
-    return ma_gmParametersInput:GetText()
+    return GM_parameterInput:GetText()
   end,
   [GM_displayAccountGMLevelCommand] = {
     [GENERICS_command] = ".account",
@@ -214,7 +215,7 @@ function GM_GMModeCommand(value)
 end
 
 function GM_createAccountCommand()
-  local input = ma_gmParametersInput:GetText()
+  local input = GM_genericCommands[GENERICS_parametersGet]()
   local params = {}
   local fail = false
   for w in input:gmatch("%w+") do
@@ -242,7 +243,7 @@ function GM_createAccountCommand()
 end
 
 function GM_deleteAccountCommand()
-  local input = ma_gmParametersInput:GetText()
+  local input = GM_genericCommands[GENERICS_parametersGet]()
   local params = {}
   local fail = false
   for w in input:gmatch("%w+") do
@@ -263,7 +264,7 @@ function GM_deleteAccountCommand()
 end
 
 function GM_setAccountGMLevelCommand()
-  local input = ma_gmParametersInput:GetText()
+  local input = GM_genericCommands[GENERICS_parametersGet]()
   local params = {}
   local fail = false
   for w in input:gmatch("%w+") do
@@ -291,7 +292,7 @@ function GM_setAccountGMLevelCommand()
 end
 
 function GM_setAccountPasswordCommand()
-  local input = ma_gmParametersInput:GetText()
+  local input = GM_genericCommands[GENERICS_parametersGet]()
   local params = {}
   local fail = false
   for w in input:gmatch("%w+") do
@@ -323,7 +324,7 @@ function GM_setAccountPasswordCommand()
 end
 
 function GM_setAccountAddonCommand()
-  local input = ma_gmParametersInput:GetText()
+  local input = GM_genericCommands[GENERICS_parametersGet]()
   local params = {}
   local fail = false
   for w in input:gmatch("%w+") do

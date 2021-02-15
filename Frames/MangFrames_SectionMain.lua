@@ -40,7 +40,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_displaylevelbutton_texture",
+        name = "GM_displayAccountGMLevelButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -63,7 +63,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmonbutton_texture",
+        name = "GM_GMModeOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -75,7 +75,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -30
       },
-      text = Locale["ma_GMOnButton"]
+      text = Locale["labelGM_GMOnButton"]
     }
   )
 
@@ -86,7 +86,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmoffbutton_texture",
+        name = "GM_GMModeOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -109,7 +109,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_flyonbutton_texture",
+        name = "GM_flyModeOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -132,7 +132,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_flyoffbutton_texture",
+        name = "GM_flyModeOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -155,7 +155,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_godonbutton_texture",
+        name = "GM_godModeOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -178,7 +178,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_godoffbutton_texture",
+        name = "GM_godModeOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -201,7 +201,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_whisperonbutton_texture",
+        name = "GM_acceptWhispersOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -224,7 +224,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_whisperoffbutton_texture",
+        name = "GM_acceptWhispersOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -247,7 +247,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_invisibleonbutton_texture",
+        name = "GM_visibilityOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -270,7 +270,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_invisibleoffbutton_texture",
+        name = "GM_visibilityOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -293,7 +293,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_taxicheatonbutton_texture",
+        name = "GM_cheatTaxiOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -316,7 +316,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_taxicheatoffbutton_texture",
+        name = "GM_cheatTaxiOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -339,7 +339,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_mapsonbutton_texture",
+        name = "GM_cheatExploreMapsOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -362,7 +362,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_mapsoffbutton_texture",
+        name = "GM_cheatExploreMapsOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -385,7 +385,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_waterwalkonbutton_texture",
+        name = "GM_cheatWaterWalkOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -408,7 +408,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_waterwalkoffbutton_texture",
+        name = "GM_cheatWaterWalkOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -431,7 +431,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_nocasttimeonbutton_texture",
+        name = "GM_cheatNoCastTimeOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -454,7 +454,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_nocasttimeoffbutton_texture",
+        name = "GM_cheatNoCastTimeOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -477,7 +477,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_nocooldownonbutton_texture",
+        name = "GM_cheatNoCooldownOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -500,7 +500,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_cooldownoffbutton_texture",
+        name = "GM_cheatNoCooldownOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -523,7 +523,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_accountlockiponbutton_texture",
+        name = "GM_accountIPLockOnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -546,7 +546,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_accountlockipoffbutton_texture",
+        name = "GM_accountIPLockOffButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -584,7 +584,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_acctcreatebutton_texture",
+        name = "GM_createAccountButton_texture",
         color = {0.5, 0, 0, transparency.btn}
       },
       size = {
@@ -607,7 +607,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_acctdeletebutton_texture",
+        name = "GM_deleteAccountButton_texture",
         color = {0.5, 0, 0, transparency.btn}
       },
       size = {
@@ -630,7 +630,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_acctgmlvlbutton_texture",
+        name = "GM_setAccountGMLevelButton_texture",
         color = {0.5, 0, 0, transparency.btn}
       },
       size = {
@@ -653,7 +653,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_acctpasswdbutton_texture",
+        name = "GM_setAccountPasswordButton_texture",
         color = {0.5, 0, 0, transparency.btn}
       },
       size = {
@@ -676,7 +676,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_acctaddonbutton_texture",
+        name = "GM_setAccountAddonButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -699,7 +699,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmlistbutton_texture",
+        name = "GM_GMListButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -722,7 +722,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmingamebutton_texture",
+        name = "GM_GMInGameButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -745,7 +745,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmnotifybutton_texture",
+        name = "GM_GMNotifyButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -768,7 +768,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmnameannouncebutton_texture",
+        name = "GM_GMMessageButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -791,7 +791,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_castbutton_texture",
+        name = "GM_castButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -814,7 +814,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_castbackbutton_texture",
+        name = "GM_castBackButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -837,7 +837,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_castdistbutton_texture",
+        name = "GM_castDistButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -860,7 +860,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_castselfbutton_texture",
+        name = "GM_castSelfButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -883,7 +883,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_casttargetbutton_texture",
+        name = "GM_castTargetButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -906,7 +906,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_teleaddbutton_texture",
+        name = "GM_teleportAddButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -929,7 +929,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_teledelbutton_texture",
+        name = "GM_teleportDelButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -952,7 +952,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_listitembutton_texture",
+        name = "GM_listItemButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -975,7 +975,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_lookuptaxibutton_texture",
+        name = "GM_lookupTaxiButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -998,7 +998,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_lookupzonebutton_texture",
+        name = "GM_lookupZoneButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1021,7 +1021,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gotaxinodebutton_texture",
+        name = "GM_goTaxiButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1044,7 +1044,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gotriggerbutton_texture",
+        name = "GM_goTriggerButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1067,7 +1067,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_goxybutton_texture",
+        name = "GM_goXYButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1090,7 +1090,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_goxyzbutton_texture",
+        name = "GM_goXYZButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1113,7 +1113,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gozonexybutton_texture",
+        name = "GM_goZoneXYButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1136,7 +1136,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_setjail_a_button_texture",
+        name = "GM_setJailAllianceButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1159,7 +1159,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_setjail_h_button_texture",
+        name = "GM_setJailHordeButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1182,7 +1182,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_petcreatebutton_texture",
+        name = "GM_petCreateButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1205,7 +1205,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_petlearnbutton_texture",
+        name = "GM_petLearnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1228,7 +1228,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_petunlearnbutton_texture",
+        name = "GM_petUnLearnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1251,7 +1251,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_pettalentslearnbutton_texture",
+        name = "GM_petTalentsLearnButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1274,7 +1274,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_bankbutton_texture",
+        name = "GM_bankButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1297,7 +1297,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_bagbutton_texture",
+        name = "GM_bagButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1320,7 +1320,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_screenshotbutton_texture",
+        name = "GM_screenButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1343,7 +1343,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_dismountbutton_texture",
+        name = "GM_dismountPlayerButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1402,7 +1402,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gridnaviaheadbutton_texture",
+        name = "GM_gridNavigatorAheadButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1425,7 +1425,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gridnavibackbutton_texture",
+        name = "GM_gridNavigatorBackButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1448,7 +1448,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gridnavirightbutton_texture",
+        name = "GM_gridNavigatorRightButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1471,7 +1471,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gridnavileftbutton_texture",
+        name = "GM_gridNavigatorLeftButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1509,7 +1509,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_gmclearbutton_texture",
+        name = "GM_clearParameterBoxButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1529,7 +1529,7 @@ function MangAdmin:CreateMainSection()
   FrameLib:BuildFrame(
     {
       type = "EditBox",
-      name = "ma_gmParametersInput",
+      name = "GM_parameterInput",
       group = "main",
       parent = ma_midframe,
       size = {
@@ -1588,7 +1588,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_speedsliderreset_button_texture",
+        name = "GM_resetSpeedButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
@@ -1630,7 +1630,7 @@ function MangAdmin:CreateMainSection()
       group = "main",
       parent = ma_midframe,
       texture = {
-        name = "ma_scalesliderreset_button_texture",
+        name = "GM_resetScaleButton_texture",
         color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
       },
       size = {
