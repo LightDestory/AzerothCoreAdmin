@@ -1914,7 +1914,7 @@ function OpenSlider(self, parent)
 		sliderFrame = CreateFrame("Frame", nil, nil)
 		sliderFrame:SetWidth(100)
 		sliderFrame:SetHeight(170)
-		sliderFrame:GM_setScaleCommand(UIParent:GetScale())
+		sliderFrame:SetScale(UIParent:GetScale())
 		sliderFrame:SetBackdrop(tmp(
 			'bgFile', "Interface\\Tooltips\\UI-Tooltip-Background",
 			'edgeFile', "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2337,7 +2337,7 @@ function OpenEditBox(self, parent)
 		editBoxFrame = CreateFrame("Frame", nil, nil)
 		editBoxFrame:SetWidth(200)
 		editBoxFrame:SetHeight(40)
-		editBoxFrame:GM_setScaleCommand(UIParent:GetScale())
+		editBoxFrame:SetScale(UIParent:GetScale())
 		editBoxFrame:SetBackdrop(tmp(
 			'bgFile', "Interface\\Tooltips\\UI-Tooltip-Background",
 			'edgeFile', "Interface\\Tooltips\\UI-Tooltip-Border",
