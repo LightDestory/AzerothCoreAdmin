@@ -659,8 +659,6 @@ function MangAdmin:AddMessage(frame, text, r, g, b, id)
     end
     -- hook .gps for gridnavigation
     for x, y in string.gmatch(text, Strings["ma_GmatchGPS"]) do
-      message(x)
-      message(y)
       for k,v in pairs(self.db.char.functionQueue) do
         if v == "GridNavigate" then
           GridNavigate(string.format("%.1f", x), string.format("%.1f", y), nil)
