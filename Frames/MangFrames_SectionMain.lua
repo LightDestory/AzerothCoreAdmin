@@ -121,7 +121,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -50
       },
-      text = Locale["ma_FlyOnButton"]
+      text = Locale["labelGM_flyModeOnButton"]
     }
   )
 
@@ -167,7 +167,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -70
       },
-      text = Locale["ma_GodOnButton"]
+      text = Locale["labelGM_godModeOnButton"]
     }
   )
 
@@ -213,7 +213,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -90
       },
-      text = Locale["ma_WhisperOnButton"]
+      text = Locale["labelGM_acceptWhispersOnButton"]
     }
   )
 
@@ -259,7 +259,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -110
       },
-      text = Locale["ma_InvisOnButton"]
+      text = Locale["labelGM_visibilityOffButton"]
     }
   )
 
@@ -305,7 +305,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -130
       },
-      text = Locale["ma_TaxiOnButton"]
+      text = Locale["labelGM_cheatTaxiOnButton"]
     }
   )
 
@@ -351,7 +351,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -150
       },
-      text = Locale["ma_mapsbutton"]
+      text = Locale["labelGM_cheatExploreMapsOnButton"]
     }
   )
 
@@ -397,7 +397,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -170
       },
-      text = Locale["ma_waterwalkbutton"]
+      text = Locale["labelGM_cheatWaterWalkOnButton"]
     }
   )
 
@@ -443,7 +443,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -190
       },
-      text = Locale["ma_NoCastTimeOnButton"]
+      text = Locale["labelGM_cheatNoCastTimeOnButton"]
     }
   )
 
@@ -489,7 +489,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -210
       },
-      text = Locale["ma_NoCooldownOnButton"]
+      text = Locale["labelGM_cheatNoCooldownOnButton"]
     }
   )
 
@@ -535,7 +535,7 @@ function MangAdmin:CreateMainSection()
         offX = 10,
         offY = -230
       },
-      text = Locale["ma_accountlockipbutton"]
+      text = Locale["labelGM_accountIPLockOnButton"]
     }
   )
 
@@ -568,7 +568,7 @@ function MangAdmin:CreateMainSection()
       name = "ma_gm4warningtext",
       group = "main",
       parent = ma_midframe,
-      text = Locale["ma_gm4warning"],
+      text = Locale["labelGM_GMLevel4Warning"],
       setpoint = {
         pos = "TOPLEFT",
         offX = 310,
@@ -596,7 +596,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -15
       },
-      text = Locale["ma_acctcreate"]
+      text = Locale["labelGM_createAccountButton"]
     }
   )
 
@@ -619,7 +619,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -38
       },
-      text = Locale["ma_acctdelete"]
+      text = Locale["labelGM_deleteAccountButton"]
     }
   )
 
@@ -642,7 +642,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -61
       },
-      text = Locale["ma_acctgmlvl"]
+      text = Locale["labelGM_setAccountGMLevelButton"]
     }
   )
 
@@ -665,7 +665,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -84
       },
-      text = Locale["ma_acctpasswd"]
+      text = Locale["labelGM_setAccountPasswordButton"]
     }
   )
 
@@ -688,7 +688,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -107
       },
-      text = Locale["ma_acctaddon"]
+      text = Locale["labelGM_setAccountAddonButton"]
     }
   )
 
@@ -711,7 +711,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -130
       },
-      text = Locale["ma_gmlist"]
+      text = Locale["labelGM_GMListButton"]
     }
   )
 
@@ -734,7 +734,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -153
       },
-      text = Locale["ma_gmingame"]
+      text = Locale["labelGM_GMInGameButton"]
     }
   )
 
@@ -757,7 +757,7 @@ function MangAdmin:CreateMainSection()
         offX = 195,
         offY = -176
       },
-      text = Locale["ma_gmnotify"]
+      text = Locale["labelGM_GMNotifyButton"]
     }
   )
 
@@ -780,7 +780,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -15
       },
-      text = Locale["ma_gmnameannounce"]
+      text = Locale["labelGM_GMMessageButton"]
     }
   )
 
@@ -803,7 +803,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -38
       },
-      text = Locale["ma_cast"]
+      text = Locale["labelGM_castButton"]
     }
   )
 
@@ -826,7 +826,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -61
       },
-      text = Locale["ma_castback"]
+      text = Locale["labelGM_castBackButton"]
     }
   )
 
@@ -849,7 +849,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -84
       },
-      text = Locale["ma_castdist"]
+      text = Locale["labelGM_castDistButton"]
     }
   )
 
@@ -872,7 +872,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -107
       },
-      text = Locale["ma_castself"]
+      text = Locale["labelGM_castSelfButton"]
     }
   )
 
@@ -895,7 +895,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -130
       },
-      text = Locale["ma_casttarget"]
+      text = Locale["labelGM_castTargetButton"]
     }
   )
 
@@ -918,7 +918,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -153
       },
-      text = Locale["ma_teleaddbutton"]
+      text = Locale["labelGM_teleportAddButton"]
     }
   )
 
@@ -941,7 +941,7 @@ function MangAdmin:CreateMainSection()
         offX = 288,
         offY = -176
       },
-      text = Locale["ma_teledelbutton"]
+      text = Locale["labelGM_teleportDelButton"]
     }
   )
 
@@ -964,7 +964,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -15
       },
-      text = Locale["ma_listitem"]
+      text = Locale["labelGM_listItemButton"]
     }
   )
 
@@ -987,7 +987,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -38
       },
-      text = Locale["ma_lookuptaxi"]
+      text = Locale["labelGM_lookupTaxiButton"]
     }
   )
 
@@ -1010,7 +1010,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -61
       },
-      text = Locale["ma_lookupzone"]
+      text = Locale["labelGM_lookupZoneButton"]
     }
   )
 
@@ -1033,7 +1033,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -84
       },
-      text = Locale["ma_gotaxinode"]
+      text = Locale["labelGM_goTaxiButton"]
     }
   )
 
@@ -1056,7 +1056,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -107
       },
-      text = Locale["ma_gotrigger"]
+      text = Locale["labelGM_goTriggerButton"]
     }
   )
 
@@ -1079,7 +1079,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -130
       },
-      text = Locale["ma_goxy"]
+      text = Locale["labelGM_goXYButton"]
     }
   )
 
@@ -1102,7 +1102,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -153
       },
-      text = Locale["ma_goxyz"]
+      text = Locale["labelGM_goXYZButton"]
     }
   )
 
@@ -1125,7 +1125,7 @@ function MangAdmin:CreateMainSection()
         offX = 381,
         offY = -176
       },
-      text = Locale["ma_gozonexy"]
+      text = Locale["labelGM_goZoneXYButton"]
     }
   )
 
@@ -1148,7 +1148,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -15
       },
-      text = Locale["ma_SetJail_A_Button"]
+      text = Locale["labelGM_setJailAllianceButton"]
     }
   )
 
@@ -1171,7 +1171,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -38
       },
-      text = Locale["ma_SetJail_H_Button"]
+      text = Locale["labelGM_setJailHordeButton"]
     }
   )
 
@@ -1194,7 +1194,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -61
       },
-      text = Locale["ma_petcreate"]
+      text = Locale["labelGM_petCreateButton"]
     }
   )
 
@@ -1217,7 +1217,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -84
       },
-      text = Locale["ma_petlearn"]
+      text = Locale["labelGM_petLearnButton"]
     }
   )
 
@@ -1240,7 +1240,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -107
       },
-      text = Locale["ma_petunlearn"]
+      text = Locale["labelGM_petUnLearnButton"]
     }
   )
 
@@ -1263,7 +1263,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -130
       },
-      text = Locale["ma_pettalentslearn"]
+      text = Locale["labelGM_petTalentsLearnButton"]
     }
   )
 
@@ -1286,7 +1286,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -153
       },
-      text = Locale["ma_BankButton"]
+      text = Locale["labelGM_bankButton"]
     }
   )
 
@@ -1309,7 +1309,7 @@ function MangAdmin:CreateMainSection()
         offX = 474,
         offY = -176
       },
-      text = Locale["ma_BagButton"]
+      text = Locale["label_bagButton"]
     }
   )
 
@@ -1332,7 +1332,7 @@ function MangAdmin:CreateMainSection()
         offX = 567,
         offY = -15
       },
-      text = Locale["ma_ScreenshotButton"]
+      text = Locale["labelGM_screenButton"]
     }
   )
 
@@ -1355,7 +1355,7 @@ function MangAdmin:CreateMainSection()
         offX = 567,
         offY = -38
       },
-      text = Locale["ma_DismountButton"]
+      text = Locale["labelGM_dismountPlayerButton"]
     }
   )
 
@@ -1365,7 +1365,7 @@ function MangAdmin:CreateMainSection()
       name = "ma_gridnavigatortext",
       group = "main",
       parent = ma_midframe,
-      text = Locale["gridnavigator"],
+      text = Locale["labelGM_gridNavigatorText"],
       setpoint = {
         pos = "TOPRIGHT",
         offX = -2,
@@ -1414,7 +1414,7 @@ function MangAdmin:CreateMainSection()
         offX = -32,
         offY = -62
       },
-      text = Locale["N"]
+      text = Locale["labelGM_northGridNavigator"]
     }
   )
 
@@ -1437,7 +1437,7 @@ function MangAdmin:CreateMainSection()
         offX = -32,
         offY = -20
       },
-      text = Locale["S"]
+      text = Locale["labelGM_southGridNavigator"]
     }
   )
 
@@ -1460,7 +1460,7 @@ function MangAdmin:CreateMainSection()
         offX = -55,
         offY = -41
       },
-      text = Locale["E"]
+      text = Locale["labelGM_eastGridNavigator"]
     }
   )
 
@@ -1483,7 +1483,7 @@ function MangAdmin:CreateMainSection()
         offX = -8,
         offY = -41
       },
-      text = Locale["W"]
+      text = Locale["labelGM_westGridNavigator"]
     }
   )
 
@@ -1557,7 +1557,7 @@ function MangAdmin:CreateMainSection()
         offX = 567,
         offY = -174
       },
-      text = Locale["ma_instakill"],
+      text = Locale["labelGM_instantKillModeCheckBox"],
       inherits = "OptionsCheckButtonTemplate"
     }
   )
