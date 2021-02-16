@@ -1428,7 +1428,7 @@ function MangAdmin:CreateCharSection()
 
   FrameLib:BuildFrame({
     type = "EditBox",
-    name = "ma_charactertarget",
+    name = "CHAR_parameterInput",
     group = "char",
     parent = ma_midframe,
     size = {

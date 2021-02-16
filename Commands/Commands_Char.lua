@@ -26,8 +26,78 @@
 ]]
 CHAR_genericCommands = {
   [GENERICS_parametersGet] = function()
-    return ma_charactertarget:GetText()
+    return CHAR_parameterInput:GetText()
   end,
+  [CHAR_reviveCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".revive",
+    [GENERICS_message] = "logCHAR_revive"
+  },
+  [CHAR_saveCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".save",
+    [GENERICS_message] = "logCHAR_save"
+  },
+  [CHAR_kickCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".kick",
+    [GENERICS_message] = "logCHAR_kick"
+  },
+  [CHAR_cooldownCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".cooldown",
+    [GENERICS_message] = "logCHAR_cooldown"
+  },
+  [CHAR_GUIDCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".guid",
+    [GENERICS_message] = "logCHAR_guid"
+  },
+  [CHAR_playerInfoCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".pinfo",
+    [GENERICS_message] = "logCHAR_playerInfo"
+  },
+  [CHAR_distanceCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".distance",
+    [GENERICS_message] = "logCHAR_distance"
+  },
+  [CHAR_dieCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".die",
+    [GENERICS_message] = "logCHAR_die"
+  },
+  [CHAR_recallCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".recall",
+    [GENERICS_message] = "logCHAR_recall"
+  },
+  [CHAR_morphCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".morph target ",
+    [GENERICS_message] = "logCHAR_morph"
+  },
+  [CHAR_morphResetCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".morph reset",
+    [GENERICS_message] = "logCHAR_morphReset"
+  },
+  [CHAR_gpsCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".gps",
+    [GENERICS_message] = "logCHAR_gps"
+  },
+  [CHAR_bindSightCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".bindsight",
+    [GENERICS_message] = "logCHAR_bindSight"
+  },
+  [CHAR_unBindSightCommand] = {
+    [GENERICS_command] = ".unbindsight",
+    [GENERICS_message] = "logCHAR_unBindSight"
+  },
 }
 function InitModelFrame()
   ma_modelframe:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
@@ -88,106 +158,6 @@ function ModelChanged()
     ma_modelframe:SetUnit("player")
   end
   ma_modelframe:RefreshUnit()
-end
-
-function RevivePlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".revive")
-    MangAdmin:LogAction("Revived player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function SavePlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".save")
-    MangAdmin:LogAction("Saved player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function KickPlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".kick")
-    MangAdmin:LogAction("Kicked player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function Cooldown()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".cooldown")
-    MangAdmin:LogAction("Cooled player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function ShowGUID()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".guid")
-    MangAdmin:LogAction("Got GUID for player "..player..".")
-end
-
-function Pinfo()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".pinfo")
-    MangAdmin:LogAction("Got Player Info for player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function Distance()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".distance")
-    MangAdmin:LogAction("Got distance to player "..player..".")
-end
-
-
-function KillSomething()
-  local target = UnitName("target") or UnitName("player")
-  MangAdmin:ChatMsg(".die")
-  MangAdmin:LogAction("Killed "..target..".")
-end
-
-function Recall()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".recall")
-    MangAdmin:LogAction("Recalled player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function Demorph()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".morph reset")
-    MangAdmin:LogAction("Demorphed player "..player..".")
-end
-
-function ToggleMapsChar(value)
-  MangAdmin:ChatMsg(".cheat explore "..value)
-  if value == 1 then
-    MangAdmin:LogAction("Revealed all maps for selected player.")
-  else
-    MangAdmin:LogAction("Hide all unexplored maps for selected player.")
-  end
-end
-
-function GetGPSInfo()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".gps")
-    MangAdmin:LogAction("Got GPS coordinates for player "..player..".")
 end
 
 function LearnSpell(value, state)
@@ -410,39 +380,26 @@ function ResetDropDownInitialize()
     end
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
 end
-
-function CharBindSight()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".bindsight")
-    MangAdmin:LogAction("Sight bound to "..cname)
-end
-
-function CharUnBindSight()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".unbindsight")
-    MangAdmin:LogAction("Sight unbound to "..cname)
-end
-
 function CharRename()
-    local cname = ma_charactertarget:GetText()
+    local cname = CHAR_parameterInput:GetText()
     MangAdmin:ChatMsg(".character rename")
     MangAdmin:LogAction("Forced rename of "..cname)
 end
 
 function CharCustomize()
-    local cname = ma_charactertarget:GetText()
+    local cname = CHAR_parameterInput:GetText()
     MangAdmin:ChatMsg(".character customize")
     MangAdmin:LogAction("Forced customization of "..cname)
 end
 
 function CharChangeRace()
-    local cname = ma_charactertarget:GetText()
+    local cname = CHAR_parameterInput:GetText()
     MangAdmin:ChatMsg(".character changerace")
     MangAdmin:LogAction("Forced race change of "..cname)
 end
 
 function CharChangeFaction()
-    local cname = ma_charactertarget:GetText()
+    local cname = CHAR_parameterInput:GetText()
     MangAdmin:ChatMsg(".character changefaction")
     MangAdmin:LogAction("Forced faction change of "..cname)
 end
@@ -502,7 +459,7 @@ end
 
 --[[CHAR2 TAB Copy Over]]
 function BanButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".ban "..cname)
   MangAdmin:LogAction("Banned player: "..cname..".")
@@ -510,7 +467,7 @@ function BanButton()
 end
 
 function GoNameButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".appear "..cname)
   MangAdmin:LogAction("Teleported TO player: "..cname..".")
@@ -518,7 +475,7 @@ function GoNameButton()
 end
 
 function CreateGuildButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".guild create "..cname)
   MangAdmin:LogAction("Created Guild: "..cname..".")
@@ -526,7 +483,7 @@ function CreateGuildButton()
 end
 
 function BanInfoButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".baninfo "..cname)
   MangAdmin:LogAction("Listed .baninfo: "..cname..".")
@@ -534,7 +491,7 @@ function BanInfoButton()
 end
 
 function GroupGoButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".groupsummon "..cname)
   MangAdmin:LogAction("Teleported "..cname.." and his/her group to me.")
@@ -542,7 +499,7 @@ function GroupGoButton()
 end
 
 function GuildInviteButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".guild invite "..cname)
   MangAdmin:LogAction("Guild invitation: "..cname..".")
@@ -550,7 +507,7 @@ function GuildInviteButton()
 end
 
 function BanlistButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".banlist "..cname)
   MangAdmin:LogAction("Listed bans matching: "..cname..".")
@@ -558,7 +515,7 @@ function BanlistButton()
 end
 
 function NameGoButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".summon "..cname)
   MangAdmin:LogAction("Teleported "..cname.." TO me.")
@@ -566,7 +523,7 @@ function NameGoButton()
 end
 
 function GuildRankButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".guild rank "..cname)
   MangAdmin:LogAction("Guild rank change: "..cname..".")
@@ -574,7 +531,7 @@ function GuildRankButton()
 end
 
 function TeleGroupButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".tele group "..cname)
   MangAdmin:LogAction("Group teleported: "..cname..".")
@@ -582,7 +539,7 @@ function TeleGroupButton()
 end
 
 function UnBanButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".unban "..cname)
   MangAdmin:LogAction("Unbanned "..cname..".")
@@ -590,7 +547,7 @@ function UnBanButton()
 end
 
 function GuildDeleteButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".guild delete "..cname)
   MangAdmin:LogAction("Deleted guild: "..cname..".")
@@ -598,7 +555,7 @@ function GuildDeleteButton()
 end
 
 function GuildUninviteButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".guild uninvite "..cname)
   MangAdmin:LogAction("Removed from guild: "..cname..".")
@@ -606,7 +563,7 @@ function GuildUninviteButton()
 end
 
 function TeleNameButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
     self:ChatMsg(".tele name "..cname)
     self:LogAction("Teleported: "..cname..".")
@@ -614,23 +571,15 @@ function TeleNameButton()
 end
 
 function MuteButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".mute "..cname)
   MangAdmin:LogAction("Muted "..cname..".")
 
 end
 
-function CharMorphButton()
-  local player = UnitName("target") or UnitName("player")
-  local diplayID = ma_charactertarget:GetText()
-  MangAdmin:ChatMsg(".morph target "..diplayID)
-  MangAdmin:LogAction("Morph applied to "..player..".")
-
-end
-
 function CharAuraButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".aura "..cname)
   MangAdmin:LogAction(".aura "..cname..".")
@@ -638,7 +587,7 @@ function CharAuraButton()
 end
 
 function CharUnAuraButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".unaura "..cname)
   MangAdmin:LogAction(".unaura "..cname..".")
@@ -646,14 +595,14 @@ function CharUnAuraButton()
 end
 
 function JailA()
-    cname=ma_charactertarget:GetText()
+    cname=CHAR_parameterInput:GetText()
     MangAdmin:ChatMsg(".tele name "..cname.." ma_AllianceJail")
     MangAdmin:LogAction("Jailed player "..cname..".")
     MangAdmin:ChatMsg(".notify "..cname.." has been found guilty and jailed.")
 end
 
 function JailH()
-    cname=ma_charactertarget:GetText()
+    cname=CHAR_parameterInput:GetText()
     --self:ChatMsg("Selected "..cname)
     MangAdmin:ChatMsg(".tele name "..cname.." ma_HordeJail")
     MangAdmin:LogAction("Jailed player "..cname..".")
@@ -661,14 +610,14 @@ function JailH()
 end
 
 function UnJail()
-    cname=ma_charactertarget:GetText()
+    cname=CHAR_parameterInput:GetText()
     MangAdmin:ChatMsg(".recall "..cname)
     MangAdmin:LogAction("UnJailed player "..cname..".")
     MangAdmin:ChatMsg(".notify "..cname.." has been pardoned and released from jail.")
 end
 
 function UnMuteButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".unmute "..cname)
   MangAdmin:LogAction(".unmute "..cname..".")
@@ -676,7 +625,7 @@ function UnMuteButton()
 end
 
 function QuestAddButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".quest add "..cname)
   MangAdmin:LogAction(".quest add "..cname..".")
@@ -684,7 +633,7 @@ function QuestAddButton()
 end
 
 function QuestCompleteButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".quest complete "..cname)
   MangAdmin:LogAction(".quest complete "..cname..".")
@@ -692,7 +641,7 @@ function QuestCompleteButton()
 end
 
 function QuestRemoveButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".quest remove "..cname)
   MangAdmin:LogAction(".quest remove "..cname..".")
@@ -700,7 +649,7 @@ function QuestRemoveButton()
 end
 
 function DamageButton ()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".damage "..cname)
   MangAdmin:LogAction(".damage "..cname..".")
@@ -708,28 +657,28 @@ function DamageButton ()
 end
 
 function HideAreaButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".hidearea "..cname)
   MangAdmin:LogAction(".hidearea "..cname..".")
 end
 
 function ShowAreaButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".showarea "..cname)
   MangAdmin:LogAction(".showarea "..cname..".")
 end
 
 function HonorAddButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".honor add "..cname)
   MangAdmin:LogAction(".honor add "..cname..".")
 end
 
 function HonorUpdateButton()
-  local cname = ma_charactertarget:GetText()
+  local cname = CHAR_parameterInput:GetText()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".honor update ")
   MangAdmin:LogAction(".honor update.")
