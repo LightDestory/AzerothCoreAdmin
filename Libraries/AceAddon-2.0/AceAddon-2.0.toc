@@ -1,4 +1,8 @@
-## Interface: 30000
+## Interface: 30300
+## X-Curse-Packaged-Version: r1101
+## X-Curse-Project-Name: Ace2
+## X-Curse-Project-ID: ace2
+## X-Curse-Repository-ID: wow/ace2/mainline
 
 ## Title: Lib: AceAddon-2.0
 ## Notes: AddOn development framework
@@ -10,3 +14,4 @@
 ## Dependencies: AceLibrary, AceOO-2.0
  
 AceAddon-2.0.lua
+

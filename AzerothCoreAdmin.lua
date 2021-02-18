@@ -41,7 +41,7 @@ MangAdmin    = AceLibrary("AceAddon-2.0"):new("AceConsole-2.0", "AceDB-2.0", "Ac
 Locale       = AceLibrary("AceLocale-2.2"):new("MangAdmin")
 Strings      = AceLibrary("AceLocale-2.2"):new("TEST")
 FrameLib     = AceLibrary("FrameLib-1.0")
-Graph        = AceLibrary("Graph-1.0")
+Graph        = AceLibrary("LibGraph-2.0")
 local Tablet = AceLibrary("Tablet-2.0")
 
 MangAdmin:RegisterDB("MangAdminDb", "MangAdminDbPerChar")

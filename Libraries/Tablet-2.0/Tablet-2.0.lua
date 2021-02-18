@@ -1,6 +1,6 @@
 --[[
 Name: Tablet-2.0
-Revision: $Rev: 64130 $
+Revision: $Rev: 216 $
 Author(s): ckknight (ckknight@gmail.com)
 Website: http://ckknight.wowinterface.com/
 Documentation: http://www.wowace.com/index.php/Tablet-2.0
@@ -11,7 +11,7 @@ License: LGPL v2.1
 ]]
 
 local MAJOR_VERSION = "Tablet-2.0"
-local MINOR_VERSION = tonumber(("$Revision: 64130 $"):sub(12, -3))
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 216 $"):match("(%d+)"))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -116,6 +116,20 @@ elseif GetLocale() == "esES" then
 	COLOR_DESC = "Establece el color de fondo"
 	LOCK = "Bloquear"
 	LOCK_DESC = "Bloquea el tooltip  en su posici\195\179n actual. Clic+Alt para el men\195\186 y arrastra+Alt para arrastrarlo cuando est\195\161 bloqueado"
+elseif GetLocale() == "ruRU" then
+	SCROLL_UP = "Прокрутка вверх"
+	SCROLL_DOWN = "Прокрутка вниз"
+	HINT = "Совет"
+	DETACH = "Отделить"
+	DETACH_DESC = "Отделить планшет от его источника."
+	SIZE = "Размер"
+	SIZE_DESC = "Масштаб планшета."
+	CLOSE_MENU = "Закрыть меню"
+	CLOSE_MENU_DESC = "Закрыть меню."
+	COLOR = "Цвет фона"
+	COLOR_DESC = "Установить цвет фона."
+	LOCK = "Зафиксировать"
+	LOCK_DESC = "Зафиксировать планшет в его текущем позиции. Alt+ПКМ для меню или Alt+перетаскивание для перетаскивания когда планшет зафиксирован."
 end
 
 local start = GetTime()

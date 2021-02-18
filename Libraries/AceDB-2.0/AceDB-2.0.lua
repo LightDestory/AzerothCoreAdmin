@@ -1,6 +1,6 @@
 ﻿--[[
 Name: AceDB-2.0
-Revision: $Rev: 1091 $
+Revision: $Rev: 1094 $
 Developed by: The Ace Development Team (http://www.wowace.com/index.php/The_Ace_Development_Team)
 Inspired By: Ace 1.x by Turan (turan@gryphon.com)
 Website: http://www.wowace.com/
@@ -13,7 +13,7 @@ License: LGPL v2.1
 ]]
 
 local MAJOR_VERSION = "AceDB-2.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 1091 $"):match("(%d+)"))
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 1094 $"):match("(%d+)"))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -203,7 +203,7 @@ elseif GetLocale() == "esES" then
 elseif GetLocale() == "ruRU" then
 	DELETE_PROFILE = "Удалить"
 	DELETE_PROFILE_DESC = "Удалить профиль. Изначально проверьте не используется ли этот профиль другими персонажами, чтобы не натворить себе неудобств."
-	DELETE_PROFILE_USAGE = "<название профиляe>"
+	DELETE_PROFILE_USAGE = "<название профиля>"
 
 	ACTIVE = "Активный"
 	ENABLED = "Включён"
@@ -216,8 +216,8 @@ elseif GetLocale() == "ruRU" then
 	PLAYER_OF_REALM = "%s из %s"
 	CHOOSE_PROFILE_DESC = "Выберите профиль."
 	CHOOSE_PROFILE_GUI = "Выбор"
-	COPY_PROFILE_DESC = "Скопировать настройки с другого профиля."
-	COPY_PROFILE_GUI = "Скопировать с"
+	COPY_PROFILE_DESC = "Скопировать настройки из другого профиля."
+	COPY_PROFILE_GUI = "Скопировать из"
 	OTHER_PROFILE_DESC = "Выбрать другой профиль."
 	OTHER_PROFILE_GUI = "Другое"
 	OTHER_PROFILE_USAGE = "<название профиля>"
@@ -228,7 +228,7 @@ elseif GetLocale() == "ruRU" then
 	REALM_COLON = "Сервер: "
 	CLASS_COLON = "Класс: "
 
-	DEFAULT = "По умолчанию"
+	DEFAULT = "По-умолчанию"
 	ALTERNATIVE = "Альтернатива"
 else -- enUS
 	ACTIVE = "Active"
