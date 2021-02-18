@@ -1,6 +1,6 @@
 ﻿--[[
 Name: AceConsole-2.0
-Revision: $Rev: 1091 $
+Revision: $Rev: 1094 $
 Developed by: The Ace Development Team (http://www.wowace.com/index.php/The_Ace_Development_Team)
 Inspired By: Ace 1.x by Turan (turan@gryphon.com)
 Website: http://www.wowace.com/
@@ -14,7 +14,7 @@ License: LGPL v2.1
 ]]
 
 local MAJOR_VERSION = "AceConsole-2.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 1091 $"):match("(%d+)"))
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 1094 $"):match("(%d+)"))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary.") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -106,17 +106,17 @@ elseif GetLocale() == "esES" then
 	DEFAULT_CONFIRM_MESSAGE = "Are you sure you want to perform `%s'?" -- fix
 elseif GetLocale() == "ruRU" then
 	MAP_ONOFF = { [false] = "|cffff0000Off|r", [true] = "|cff00ff00On|r" }
-	USAGE = "Используйте"
+	USAGE = "Использование"
 	IS_CURRENTLY_SET_TO = "|cffffff7f%s|r в настоящее время установлен на |cffffff7f[|r%s|cffffff7f]|r"
-	IS_NOW_SET_TO = "|cffffff7f%s|r тереь установлен |cffffff7f[|r%s|cffffff7f]|r"
-	IS_NOT_A_VALID_OPTION_FOR = "[|cffffff7f%s|r] не действительная опция для |cffffff7f%s|r"
-	IS_NOT_A_VALID_VALUE_FOR = "[|cffffff7f%s|r] не действительное значение для |cffffff7f%s|r"
-	NO_OPTIONS_AVAILABLE = "Нет доступных опцийe"
+	IS_NOW_SET_TO = "|cffffff7f%s|r теперь установлен |cffffff7f[|r%s|cffffff7f]|r"
+	IS_NOT_A_VALID_OPTION_FOR = "[|cffffff7f%s|r] - недействительная опция для |cffffff7f%s|r"
+	IS_NOT_A_VALID_VALUE_FOR = "[|cffffff7f%s|r] - недействительное значение для |cffffff7f%s|r"
+	NO_OPTIONS_AVAILABLE = "Нет доступных опций"
 	OPTION_HANDLER_NOT_FOUND = "Оператор опции |cffffff7f%q|r не найден."
-	OPTION_HANDLER_NOT_VALID = "Оператор опции не действительный."
+	OPTION_HANDLER_NOT_VALID = "Оператор опции недействителен."
 	OPTION_IS_DISABLED = "Опция |cffffff7f%s|r отключена."
 	KEYBINDING_USAGE = "<ALT-CTRL-SHIFT-КЛАВИША>"
-	DEFAULT_CONFIRM_MESSAGE = "Вы уверены что вы хотите выполнить `%s'?"
+	DEFAULT_CONFIRM_MESSAGE = "Вы уверены, что хотите выполнить `%s'?"
 else -- enUS
 	MAP_ONOFF = { [false] = "|cffff0000Off|r", [true] = "|cff00ff00On|r" }
 	USAGE = "Usage"

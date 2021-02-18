@@ -1,6 +1,6 @@
 ﻿--[[
 Name: AceAddon-2.0
-Revision: $Rev: 1091 $
+Revision: $Rev: 1100 $
 Developed by: The Ace Development Team (http://www.wowace.com/index.php/The_Ace_Development_Team)
 Inspired By: Ace 1.x by Turan (turan@gryphon.com)
 Website: http://www.wowace.com/
@@ -12,7 +12,7 @@ License: LGPL v2.1
 ]]
 
 local MAJOR_VERSION = "AceAddon-2.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 1091 $"):match("(%d+)"))
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 1100 $"):match("(%d+)"))
 
 -- This ensures the code is only executed if the libary doesn't already exist, or is a newer version
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary.") end
@@ -371,8 +371,8 @@ elseif GetLocale() == "esES" then
 elseif GetLocale() == "ruRU" then
 	STANDBY = "|cffff5050(в режиме ожидания)|r"
 
-	TITLE = "Заглавие"
-	NOTES = "Заметки"
+	TITLE = "Название"
+	NOTES = "Описание"
 	VERSION = "Версия"
 	AUTHOR = "Автор"
 	DATE = "Дата"
@@ -382,12 +382,12 @@ elseif GetLocale() == "ruRU" then
 	CREDITS = "Титры"
 	LICENSE = "Лицензия"
 
-	ABOUT = "О аддоне"
-	PRINT_ADDON_INFO = "Показать информацию о аддоне."
+	ABOUT = "Об аддоне"
+	PRINT_ADDON_INFO = "Показать информацию об аддоне."
 	DONATE = "Пожертвовать"
-	DONATE_DESC = "Отблагодарить Автора за разработку аддона."
-	HOWTO_DONATE_WINDOWS = "Для выбора всей ссылки нажмите Ctrl-A, потом для её копирования Ctrl-C, чтобы свернуть игру Alt-Tab, откройте ваш браузер, и вставьте ссылку в строку адреса Ctrl-V"
-	HOWTO_DONATE_MAC = "Для выбора всей ссылки нажмите Cmd-A, потом для её копирования Ctrl-C, чтобы свернуть игру Cmd-Tab, откройте ваш браузер, и вставьте ссылку в строку адреса Cmd-V"
+	DONATE_DESC = "Отблагодарить автора за разработку аддона."
+	HOWTO_DONATE_WINDOWS = "Для выделения всей ссылки нажмите Ctrl-A, потом для её копирования Ctrl-C, чтобы свернуть игру - Alt-Tab, откройте ваш браузер и вставьте ссылку в адресную строку - Ctrl-V"
+	HOWTO_DONATE_MAC = "Для выделения всей ссылки нажмите Cmd-A, потом для её копирования Ctrl-C, чтобы свернуть игру -  Cmd-Tab, откройте ваш браузер и вставьте ссылку в адресную строку Cmd-V"
 
 	CATEGORIES = {
 		["Action Bars"] = "Панели команд",
@@ -423,7 +423,7 @@ elseif GetLocale() == "ruRU" then
 		["Quest"] = "Задания",
 		["Raid"] = "Рейд",
 		["Tradeskill"] = "Умения",
-		["UnitFrame"] = "Фрейми персонажа",
+		["UnitFrame"] = "Фреймы персонажей",
 	}
 else -- enUS
 	STANDBY = "|cffff5050(standby)|r"
@@ -543,10 +543,7 @@ function AceAddon:ADDON_LOADED(name)
 end
 
 local function RegisterOnEnable(self)
-	if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.defaultLanguage then -- HACK
-		AceAddon.playerLoginFired = true
-	end
-	if AceAddon.playerLoginFired then
+	if IsLoggedIn() then
 		AceAddon.addonsStarted[self] = true
 		if (type(self.IsActive) ~= "function" or self:IsActive()) and (not AceModuleCore or not AceModuleCore:IsModule(self) or AceModuleCore:IsModuleActive(self)) then
 			AceAddon:ManualEnable(self)
@@ -974,7 +971,6 @@ function AceAddon:GetAceOptionsDataTable(target)
 end
 
 function AceAddon:PLAYER_LOGIN()
-	self.playerLoginFired = true
 	if self.addonsToOnEnable then
 		while #self.addonsToOnEnable > 0 do
 			local addon = table.remove(self.addonsToOnEnable, 1)
@@ -1434,7 +1430,6 @@ end
 local function activate(self, oldLib, oldDeactivate)
 	AceAddon = self
 
-	self.playerLoginFired = oldLib and oldLib.playerLoginFired or DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.defaultLanguage
 	self.addonsToOnEnable = oldLib and oldLib.addonsToOnEnable
 	self.addons = oldLib and oldLib.addons or {}
 	self.nextAddon = oldLib and oldLib.nextAddon or {}

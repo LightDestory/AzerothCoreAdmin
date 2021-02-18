@@ -1,6 +1,6 @@
 --[[
 Name: AceEvent-2.0
-Revision: $Rev: 1091 $
+Revision: $Rev: 1097 $
 Developed by: The Ace Development Team (http://www.wowace.com/index.php/The_Ace_Development_Team)
 Inspired By: Ace 1.x by Turan (turan@gryphon.com)
 Website: http://www.wowace.com/
@@ -13,7 +13,7 @@ License: LGPL v2.1
 ]]
 
 local MAJOR_VERSION = "AceEvent-2.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 1091 $"):match("(%d+)"))
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 1097 $"):match("(%d+)"))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -984,7 +984,7 @@ local function activate(self, oldLib, oldDeactivate)
 	self:RegisterEvent("PLAYER_REGEN_ENABLED")
 	self:RegisterEvent("PLAYER_REGEN_DISABLED")
 	self:RegisterEvent("LOOT_OPENED", function()
-		SendAddonMessage("LOOT_OPENED", "", "RAID")
+		if GetRealNumRaidMembers() > 0 or GetRealNumPartyMembers() > 0 then SendAddonMessage("LOOT_OPENED", "", "RAID") end
 	end)
 	inCombat = InCombatLockdown()
 	registeringFromAceEvent = nil

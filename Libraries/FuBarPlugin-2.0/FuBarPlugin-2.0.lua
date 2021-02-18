@@ -1,6 +1,6 @@
 --[[
 Name: FuBarPlugin-2.0
-Revision: $Rev: 48629 $
+Revision: $Rev: 80867 $
 Author: Cameron Kenneth Knight (ckknight@gmail.com)
 Website: http://wiki.wowace.com/index.php/FuBarPlugin-2.0
 Documentation: http://wiki.wowace.com/index.php/FuBarPlugin-2.0
@@ -14,7 +14,7 @@ Notes: When embeding this library, FuBar should be set as an optional dependency
 
 local MAJOR_VERSION = "FuBarPlugin-2.0"
 local MINIMAPCONTAINER_MAJOR_VERSION = "FuBarPlugin-MinimapContainer-2.0"
-local MINOR_VERSION = "$Revision: 48629 $"
+local MINOR_VERSION = "$Revision: 80867 $"
 
 -- This ensures the code is only executed if the libary doesn't already exist, or is a newer version
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary.") end
@@ -127,32 +127,35 @@ elseif GetLocale() == "frFR" then
 	CLOSE_DESC = "Ferme le menu."
 elseif GetLocale() == "zhCN" then
 	SHOW_ICON = "显示图标"
-	SHOW_ICON_DESC = "在面板上显示插件图标."
+	SHOW_ICON_DESC = "在面板上显示插件图标。"
 	SHOW_TEXT = "显示文字"
-	SHOW_TEXT_DESC = "在面板上显示文字标题."
+	SHOW_TEXT_DESC = "在面板上显示文字标题。"
 	SHOW_COLORED_TEXT = "显示彩色文字"
-	SHOW_COLORED_TEXT_DESC = "允许插件显示彩色文字."
+	SHOW_COLORED_TEXT_DESC = "允许插件显示彩色文字。"
 	DETACH_TOOLTIP = "独立提示信息"
-	DETACH_TOOLTIP_DESC = "从面板上独立提示信息."
+	DETACH_TOOLTIP_DESC = "从面板上独立提示信息。"
 	LOCK_TOOLTIP = "锁定提示信息"
-	LOCK_TOOLTIP_DESC = "锁定提示信息位置."
+	LOCK_TOOLTIP_DESC = "锁定提示信息位置。"
 	POSITION = "位置"
-	POSITION_DESC = "插件在面板上的位置."
+	POSITION_DESC = "插件在面板上的位置。"
 	POSITION_LEFT = "居左"
 	POSITION_RIGHT = "居右"
 	POSITION_CENTER = "居中"
 	ATTACH_TO_MINIMAP = "依附在小地图"
-	ATTACH_TO_MINIMAP_DESC = "插件图标依附在小地图而不显示在面板上."
-	HIDE_FUBAR_PLUGIN = "隐藏FuBar插件"
-	HIDE_FUBAR_PLUGIN_CMD = "Hidden"
-	HIDE_FUBAR_PLUGIN_DESC = "在面板上隐藏该插件."
+	ATTACH_TO_MINIMAP_DESC = "插件图标依附在小地图而不显示在面板上。"
+	HIDE_FUBAR_PLUGIN = "隐藏 FuBar 插件"
+	HIDE_FUBAR_PLUGIN_CMD = "隐藏"
+	HIDE_FUBAR_PLUGIN_DESC = "在面板上隐藏该插件。"
+	OTHER = "其他"
+	CLOSE = "关闭"
+	CLOSE_DESC = "关闭菜单"
 elseif GetLocale() == "zhTW" then
 	SHOW_ICON = "顯示圖示"
 	SHOW_ICON_DESC = "在面板上顯示插件圖示。"
 	SHOW_TEXT = "顯示文字"
-	SHOW_TEXT_DESC = "在面板上顯示文字。"
-	SHOW_COLORED_TEXT = "顯示彩色文字"
-	SHOW_COLORED_TEXT_DESC = "允許插件顯示彩色文字。"
+	SHOW_TEXT_DESC = "在面板上顯示插件文字。"
+	SHOW_COLORED_TEXT = "允許彩色文字"
+	SHOW_COLORED_TEXT_DESC = "允許插件在面板上使用彩色文字。"
 	DETACH_TOOLTIP = "獨立提示訊息"
 	DETACH_TOOLTIP_DESC = "從面板上獨立提示訊息。"
 	LOCK_TOOLTIP = "鎖定提示訊息"
@@ -166,7 +169,7 @@ elseif GetLocale() == "zhTW" then
 	ATTACH_TO_MINIMAP_DESC = "插件圖標依附在小地圖而不顯示在面板上。"
 	HIDE_FUBAR_PLUGIN = "隱藏插件"
 	HIDE_FUBAR_PLUGIN_CMD = "隱藏"
-	HIDE_FUBAR_PLUGIN_DESC = "在面板上隱藏該插件，但保持運行狀態。"
+	HIDE_FUBAR_PLUGIN_DESC = "在面板或小地圖上隱藏該插件，但保持執行狀態。"
 	OTHER = "其他"
 	CLOSE = "關閉"
 	CLOSE_DESC = "關閉選單。"
@@ -194,6 +197,30 @@ elseif GetLocale() == "esES" then
 	OTHER = "Otros"
 	CLOSE = "Cerrar"
 	CLOSE_DESC = "Cierra el men\195\186."
+elseif GetLocale() == "ruRU" then
+	SHOW_ICON = "Показывать иконку"
+	SHOW_ICON_DESC = "Показывать иконку плагина на панели."
+	SHOW_TEXT = "Показывать текст"
+	SHOW_TEXT_DESC = "Показывать текст плагина на панели."
+	SHOW_COLORED_TEXT = "Показывать цветной текст"
+	SHOW_COLORED_TEXT_DESC = "Позволить плагину использовать его цвета в тексте."
+	DETACH_TOOLTIP = "Отделить подсказку"
+	DETACH_TOOLTIP_DESC = "Отделить всплывающую подсказку от панели."
+	LOCK_TOOLTIP = "Закрепить подсказку"
+	LOCK_TOOLTIP_DESC = "Закрепить позицию всплывающей подсказки. Когда всплывающая подсказка закреплена, используйте Alt для отображения ее у мыши."
+	POSITION = "Позиция"
+	POSITION_DESC = "Позиция плагина на панели."
+	POSITION_LEFT = "Слева"
+	POSITION_RIGHT = "Справа"
+	POSITION_CENTER = "По центру"
+	ATTACH_TO_MINIMAP = "Закрепить у мини-карты"
+	ATTACH_TO_MINIMAP_DESC = "Закрепить плагин у мини-карты, вместо панели."
+	HIDE_FUBAR_PLUGIN = "Скрыть плагин"
+	HIDE_FUBAR_PLUGIN_CMD = "Скрыть"
+	HIDE_FUBAR_PLUGIN_DESC = "Скрыть плагин с панели или мини-карты, но оставить аддон в рабочем состоянии."
+	OTHER = "Другое"
+	CLOSE = "Закрыть"
+	CLOSE_DESC = "Закрыть меню."
 end
 
 local AceOO = AceLibrary("AceOO-2.0")
@@ -1674,39 +1701,47 @@ function MinimapContainer:ReadjustLocation(plugin)
 				round = false
 			end
 		elseif minimapShape == "SIDE-TOP" then
-			if sin > 0 then
-				round = false
-			end
-		elseif minimapShape == "SIDE-BOTTOM" then
 			if sin < 0 then
 				round = false
 			end
+		elseif minimapShape == "SIDE-BOTTOM" then
+			if sin > 0 then
+				round = false
+			end
 		elseif minimapShape == "TRICORNER-TOPRIGHT" then
-			if cos < 0 and sin > 0 then
-				round = false
-			end
-		elseif minimapShape == "TRICORNER-TOPLEFT" then
-			if cos > 0 and sin > 0 then
-				round = false
-			end
-		elseif minimapShape == "TRICORNER-BOTTOMRIGHT" then
 			if cos < 0 and sin < 0 then
 				round = false
 			end
-		elseif minimapShape == "TRICORNER-BOTTOMLEFT" then
+		elseif minimapShape == "TRICORNER-TOPLEFT" then
 			if cos > 0 and sin < 0 then
 				round = false
 			end
+		elseif minimapShape == "TRICORNER-BOTTOMRIGHT" then
+			if cos < 0 and sin > 0 then
+				round = false
+			end
+		elseif minimapShape == "TRICORNER-BOTTOMLEFT" then
+			if cos > 0 and sin > 0 then
+				round = false
+			end
 		end
-		
+
 		if round then
 			x = cos * 80
 			y = sin * 80
 		else
-			x = 110 * cos
-			y = 110 * sin
-			x = math.max(-82, math.min(x, 84))
-			y = math.max(-86, math.min(y, 82))
+			x = 80 * 2^0.5 * cos
+			y = 80 * 2^0.5 * sin
+			if x < -80 then
+				x = -80
+			elseif x > 80 then
+				x = 80
+			end
+			if y < -80 then
+				y = -80
+			elseif y > 80 then
+				y = 80
+			end
 		end
 		frame:SetPoint("CENTER", Minimap, "CENTER", x, y)
 	end

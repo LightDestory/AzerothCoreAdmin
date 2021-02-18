@@ -1,6 +1,6 @@
 --[[
 Name: AceLocale-2.2
-Revision: $Rev: 1091 $
+Revision: $Rev: 1094 $
 Developed by: The Ace Development Team (http://www.wowace.com/index.php/The_Ace_Development_Team)
 Inspired By: Ace 1.x by Turan (turan@gryphon.com)
 Website: http://www.wowace.com/
@@ -13,7 +13,7 @@ License: LGPL v2.1
 ]]
 
 local MAJOR_VERSION = "AceLocale-2.2"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 1091 $"):match("(%d+)"))
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 1094 $"):match("(%d+)"))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary.") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -423,7 +423,7 @@ function AceLocale.prototype:Debug()
 		return
 	end
 	local words = {}
-	local locales = {"enUS", "deDE", "frFR", "koKR", "zhCN", "zhTW", "esES"}
+	local locales = {"enUS", "deDE", "frFR", "koKR", "zhCN", "zhTW", "esES", "ruRU"}
 	local localizations = {}
 	DEFAULT_CHAT_FRAME:AddMessage("--- AceLocale Debug ---")
 	for _,locale in ipairs(locales) do

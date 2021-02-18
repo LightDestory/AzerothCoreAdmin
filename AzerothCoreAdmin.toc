@@ -27,7 +27,7 @@ Libraries\Tablet-2.0\Tablet-2.0.lua
 Libraries\DewDrop-2.0\DewDrop-2.0.lua
 Libraries\FrameLib-1.0\FrameLib-1.0.lua
 Libraries\FuBarPlugin-2.0\FuBarPlugin-2.0.lua
-Libraries\Graph-1.0\Graph-1.0.lua
+Libraries\LibGraph-2.0\LibGraph-2.0.lua
 Locales\enUS.lua
 Locales\strings.lua
 models.lua
