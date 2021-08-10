@@ -83,7 +83,7 @@ function genericCaller(dictionaryID, callID, value)
         data['value'] = dictionary[GENERICS_parametersGet]()
     end
     if call[GENERICS_isTargetCheckNeeded] then
-        if commandTargetCheck() then
+        if commandTargetCheck() or call[GENERICS_canTargetBeACreature] then
             data['target'] = getCommandTargetName()
         else
             MangAdmin:Print(Locale["selectionError"])

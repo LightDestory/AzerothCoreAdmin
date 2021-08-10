@@ -129,11 +129,11 @@ function MangAdmin:CreateCharSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_killbutton",
+    name = "CHAR_killButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_killbutton_texture",
+      name = "CHAR_killButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -145,15 +145,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -30 --charRowOne
     },
-    text = Locale["ma_KillButton"]
+    text = Locale["labelCHAR_killButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_revivebutton",
+    name = "CHAR_reviveButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_revivebutton_texture",
+      name = "CHAR_reviveButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -165,15 +165,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -52 --charRowTwo
     },
-    text = Locale["ma_ReviveButton"]
+    text = Locale["labelCHAR_reviveButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_savebutton",
+    name = "CHAR_saveButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_savebutton_texture",
+      name = "CHAR_saveButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -185,15 +185,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -74  --charRowThree
     },
-    text = Locale["ma_SaveButton"]
+    text = Locale["labelCHAR_saveButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_kickbutton",
+    name = "CHAR_kickButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_kickbutton_texture",
+      name = "CHAR_kickButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -205,15 +205,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -95 --charRowFour
     },
-    text = Locale["ma_KickButton"]
+    text = Locale["labelCHAR_kickButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_cooldownbutton",
+    name = "CHAR_cooldownButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_cooldownbutton_texture",
+      name = "CHAR_cooldownButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -225,7 +225,7 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -117 --charRowFive
     },
-    text = Locale["ma_CooldownButton"]
+    text = Locale["labelCHAR_cooldownButton"]
   })
 
   FrameLib:BuildButton({
@@ -309,11 +309,11 @@ function MangAdmin:CreateCharSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_guidbutton",
+    name = "CHAR_guidButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_guidbutton_texture",
+      name = "CHAR_guidButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -325,15 +325,15 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -30 --charRowOne
     },
-    text = Locale["ma_GUIDButton"]
+    text = Locale["labelCHAR_guidButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_pinfobutton",
+    name = "CHAR_pInfoButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_pinfobutton_texture",
+      name = "CHAR_pInfoButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -345,15 +345,15 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -52 --charRowTwo
     },
-    text = Locale["ma_PinfoButton"]
+    text = Locale["labelCHAR_pInfoButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_distancebutton",
+    name = "CHAR_distanceButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_distancebutton_texture",
+      name = "CHAR_distanceButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -365,15 +365,15 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -74 --charRowThree
     },
-    text = Locale["ma_DistanceButton"]
+    text = Locale["labelCHAR_distanceButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_recallbutton",
+    name = "CHAR_recallButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_recallbutton_texture",
+      name = "CHAR_recallButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -385,7 +385,7 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -95 --charRowFour
     },
-    text = Locale["ma_RecallButton"]
+    text = Locale["labelCHAR_recallButton"]
   })
 
   FrameLib:BuildFrame({

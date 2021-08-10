@@ -20,6 +20,7 @@
     [GENERICS_isValueNeeded] = false|true,
     [GENERICS_isParametersNeeded] = false|true,
     [GENERICS_isTargetCheckNeeded] = false|true,
+    [GENERICS_canTargetBeACreature] = false|true,
     [GENERICS_command] = "command",
     [GENERICS_message] = "messageID"
   }
@@ -50,23 +51,26 @@ CHAR_genericCommands = {
   },
   [CHAR_GUIDCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_canTargetBeACreature] = true,
     [GENERICS_command] = ".guid",
     [GENERICS_message] = "logCHAR_guid"
   },
   [CHAR_playerInfoCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_command] = ".pinfo",
-    [GENERICS_message] = "logCHAR_playerInfo"
+    [GENERICS_message] = "logCHAR_pInfo"
   },
   [CHAR_distanceCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_canTargetBeACreature] = true,
     [GENERICS_command] = ".distance",
     [GENERICS_message] = "logCHAR_distance"
   },
-  [CHAR_dieCommand] = {
+  [CHAR_killCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_canTargetBeACreature] = true,
     [GENERICS_command] = ".die",
-    [GENERICS_message] = "logCHAR_die"
+    [GENERICS_message] = "logCHAR_kill"
   },
   [CHAR_recallCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
@@ -164,89 +168,37 @@ end
 
 -- Delete
 
-function RevivePlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".revive")
-    MangAdmin:LogAction("Revived player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function SavePlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".save")
-    MangAdmin:LogAction("Saved player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function KickPlayer()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".kick")
-    MangAdmin:LogAction("Kicked player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function Cooldown()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".cooldown")
-    MangAdmin:LogAction("Cooled player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function ShowGUID()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".guid")
-    MangAdmin:LogAction("Got GUID for player "..player..".")
-end
-
-function Pinfo()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".pinfo")
-    MangAdmin:LogAction("Got Player Info for player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
-
-function Distance()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".distance")
-    MangAdmin:LogAction("Got distance to player "..player..".")
-end
-
-
-function KillSomething()
-  local target = UnitName("target") or UnitName("player")
-  MangAdmin:ChatMsg(".die")
-  MangAdmin:LogAction("Killed "..target..".")
-end
-
-function Recall()
-  if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".recall")
-    MangAdmin:LogAction("Recalled player "..player..".")
-  else
-    MangAdmin:Print(Locale["selectionError"])
-  end
-end
 
 function Demorph()
     local player = UnitName("target") or UnitName("player")
     MangAdmin:ChatMsg(".morph reset")
     MangAdmin:LogAction("Demorphed player "..player..".")
+end
+
+function CharMorphButton()
+  local player = UnitName("target") or UnitName("player")
+  local diplayID = ma_charactertarget:GetText()
+  MangAdmin:ChatMsg(".morph target "..diplayID)
+  MangAdmin:LogAction("Morph applied to "..player..".")
+
+end
+
+function GetGPSInfo()
+  local player = UnitName("target") or UnitName("player")
+  MangAdmin:ChatMsg(".gps")
+  MangAdmin:LogAction("Got GPS coordinates for player "..player..".")
+end
+
+function CharBindSight()
+  local cname = ma_charactertarget:GetText()
+  MangAdmin:ChatMsg(".bindsight")
+  MangAdmin:LogAction("Sight bound to "..cname)
+end
+
+function CharUnBindSight()
+  local cname = ma_charactertarget:GetText()
+  MangAdmin:ChatMsg(".unbindsight")
+  MangAdmin:LogAction("Sight unbound to "..cname)
 end
 
 --
@@ -260,11 +212,7 @@ function ToggleMapsChar(value)
   end
 end
 
-function GetGPSInfo()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".gps")
-    MangAdmin:LogAction("Got GPS coordinates for player "..player..".")
-end
+
 
 function LearnSpell(value, state)
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
@@ -487,17 +435,6 @@ function ResetDropDownInitialize()
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
 end
 
-function CharBindSight()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".bindsight")
-    MangAdmin:LogAction("Sight bound to "..cname)
-end
-
-function CharUnBindSight()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".unbindsight")
-    MangAdmin:LogAction("Sight unbound to "..cname)
-end
 
 function CharRename()
     local cname = ma_charactertarget:GetText()
@@ -694,14 +631,6 @@ function MuteButton()
   local npccname = ma_npccharactertarget:GetText()
   MangAdmin:ChatMsg(".mute "..cname)
   MangAdmin:LogAction("Muted "..cname..".")
-
-end
-
-function CharMorphButton()
-  local player = UnitName("target") or UnitName("player")
-  local diplayID = ma_charactertarget:GetText()
-  MangAdmin:ChatMsg(".morph target "..diplayID)
-  MangAdmin:LogAction("Morph applied to "..player..".")
 
 end
 

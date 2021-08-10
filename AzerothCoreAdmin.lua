@@ -276,33 +276,33 @@ function MangAdmin:PLAYER_TARGET_CHANGED()
   ModelChanged()
   NpcModelChanged()
   if UnitIsPlayer("target") then
-    ma_savebutton:Enable()
+    CHAR_saveButton:Enable()
     if UnitIsDead("target") then
-      ma_revivebutton:Enable()
-      ma_killbutton:Disable()
+      CHAR_reviveButton:Enable()
+      CHAR_killButton:Disable()
     else
       --ma_revivebutton:Disable()
-      ma_killbutton:Enable()
+      CHAR_killButton:Enable()
     end
     if not UnitIsUnit("target", "player") then
-      ma_kickbutton:Enable()
+      CHAR_kickButton:Enable()
     else
-      ma_kickbutton:Disable()
+      CHAR_kickButton:Disable()
     end
     --ma_respawnbutton:Disable()
   elseif not UnitName("target") then
-    ma_savebutton:Enable()
+    CHAR_saveButton:Enable()
     --ma_revivebutton:Disable()
-    ma_killbutton:Disable()
-    ma_kickbutton:Disable()
+    CHAR_killButton:Disable()
+    CHAR_kickButton:Disable()
     --ma_respawnbutton:Disable()
   else
-    ma_savebutton:Disable()
+    CHAR_saveButton:Disable()
     --ma_revivebutton:Disable()
-    ma_kickbutton:Disable()
+    CHAR_kickButton:Disable()
     if UnitIsDead("target") then
       --ma_respawnbutton:Enable()
-      ma_killbutton:Disable()
+      CHAR_killButton:Disable()
     else
       if self.db.char.instantKillMode then
         if not UnitIsFriend("player", "target") then
@@ -310,7 +310,7 @@ function MangAdmin:PLAYER_TARGET_CHANGED()
         end
       end
       --ma_respawnbutton:Disable()
-      ma_killbutton:Enable()
+      CHAR_killButton:Enable()
     end
   end
 end
@@ -1640,7 +1640,7 @@ end
 function MangAdmin:InitButtons()
   -- start tab buttons
   self:PrepareScript(ma_tabbutton_main       , Locale["ttGM_tabButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
-  self:PrepareScript(ma_tabbutton_char       , Locale["tt_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
+  self:PrepareScript(ma_tabbutton_char       , Locale["ttCHAR_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
   self:PrepareScript(ma_tabbutton_npc        , Locale["tt_NpcButton"]          , function() MangAdmin:InstantGroupToggle("npc"); end)
   self:PrepareScript(ma_tabbutton_go         , Locale["tt_GOButton"]           , function() MangAdmin:InstantGroupToggle("go"); end)
   self:PrepareScript(ma_tabbutton_tele       , Locale["tt_TeleButton"]         , function() MangAdmin:InstantGroupToggle("tele"); end)
@@ -1652,7 +1652,7 @@ function MangAdmin:InitButtons()
   -- start mini buttons
   self:PrepareScript(ma_mm_logoframe         , nil                             , function() MangAdmin:OnClick() end)
   self:PrepareScript(ma_mm_mainbutton        , Locale["ttGM_tabButton"]         , function() MangAdmin:InstantGroupToggle("main") end)
-  self:PrepareScript(ma_mm_charbutton        , Locale["tt_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
+  self:PrepareScript(ma_mm_charbutton        , Locale["ttCHAR_CharButton"]         , function() MangAdmin:InstantGroupToggle("char") end)
   self:PrepareScript(ma_mm_npcbutton         , Locale["tt_NpcButton"]          , function() MangAdmin:InstantGroupToggle("npc") end)
   self:PrepareScript(ma_mm_gobutton          , Locale["tt_GOButton"]           , function() MangAdmin:InstantGroupToggle("go") end)
   self:PrepareScript(ma_mm_telebutton        , Locale["tt_TeleButton"]         , function() MangAdmin:InstantGroupToggle("tele") end)

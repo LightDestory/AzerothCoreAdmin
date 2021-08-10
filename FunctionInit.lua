@@ -550,66 +550,66 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_killbutton,
-            Locale["tt_killbutton"],
+            CHAR_killButton,
+            Locale["ttCHAR_kill"],
             function()
-                KillSomething()
+                genericCaller(CHAR_KEY, CHAR_killCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_revivebutton,
-            Locale["tt_reviveplayer"],
+            CHAR_reviveButton,
+            Locale["ttCHAR_reviveplayer"],
             function()
-                RevivePlayer()
+                genericCaller(CHAR_KEY, CHAR_reviveCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_savebutton,
-            Locale["tt_saveplayer"],
+            CHAR_saveButton,
+            Locale["ttCHAR_saveplayer"],
             function()
-                SavePlayer()
+                genericCaller(CHAR_KEY, CHAR_saveCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_kickbutton,
-            Locale["tt_KickButton"],
+            CHAR_kickButton,
+            Locale["ttCHAR_kick"],
             function()
-                KickPlayer()
+                genericCaller(CHAR_KEY, CHAR_kickCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_cooldownbutton,
-            Locale["tt_CooldownButton"],
+            CHAR_cooldownButton,
+            Locale["ttCHAR_cooldown"],
             function()
-                Cooldown()
+                genericCaller(CHAR_KEY, CHAR_cooldownCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_guidbutton,
-            Locale["tt_GUIDButton"],
+            CHAR_guidButton,
+            Locale["ttCHAR_guid"],
             function()
-                ShowGUID()
+                genericCaller(CHAR_KEY, CHAR_GUIDCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_pinfobutton,
-            Locale["tt_PinfoButton"],
+            CHAR_pInfoButton,
+            Locale["ttCHAR_pInfo"],
             function()
-                Pinfo()
+                genericCaller(CHAR_KEY, CHAR_playerInfoCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_distancebutton,
-            Locale["tt_DistanceButton"],
+            CHAR_distanceButton,
+            Locale["ttCHAR_distance"],
             function()
-                Distance()
+                genericCaller(CHAR_KEY, CHAR_distanceCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_recallbutton,
-            Locale["tt_RecallButton"],
+            CHAR_recallButton,
+            Locale["ttCHAR_recall"],
             function()
-                Recall()
+                genericCaller(CHAR_KEY, CHAR_recallCommand)
             end
     )
     MangAdmin:PrepareScript(
