@@ -80,7 +80,14 @@ function genericCaller(dictionaryID, callID, value)
     if call[GENERICS_isValueNeeded] then
         data['value'] = value
     elseif call[GENERICS_isParametersNeeded] then
-        data['value'] = dictionary[GENERICS_parametersGet]()
+        local v = dictionary[GENERICS_parametersGet]()
+        if (not v  or v == '') then
+            MangAdmin:Print(Locale["paramError"])
+            return
+
+        else
+            data['value'] = v
+        end
     end
     if call[GENERICS_isTargetCheckNeeded] then
         if commandTargetCheck() or call[GENERICS_canTargetBeACreature] then

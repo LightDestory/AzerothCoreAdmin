@@ -81,6 +81,7 @@ function Return_enUS()
     --[[General-Other]]
     ["inLineCommands"] = {"/azerothcoreadmin", "/acadmin"},
     ["selectionError"] = "Please select only yourself, another player or nothing!",
+    ["paramError"] = "Parameter(s) are required for the selected action!",
     ["genericEnabledText"] = "Enabled",
     ["genericDisabledText"] = "Disabled",
     ["invalidParams1"] = "|cffFF0000You must enter 1 parameters!|r",
@@ -284,7 +285,11 @@ function Return_enUS()
     ["ttCHAR_pInfo"] = "Get information on the selected PLAYER",
     ["ttCHAR_distance"] = "Get distance to the selected character/creature",
     ["ttCHAR_recall"] = "Recalls selected player to location before last teleport",
-
+    ["ttCHAR_morph"] = "Morph you or the selected player with the entered effect [[Parameters: $DisplayID]]",
+    ["ttCHAR_demorph"] = "Removes any morphs on  you or the selected character",
+    ["ttCHAR_unbindSight"] = "UnBinds your vision from the selected Unit",
+    ["ttCHAR_bindSight"] = "Binds your vision to the selected Unit",
+    ["ttCHAR_gps"] = "Shows coordinates for the selected character/creature",
     --[[CHAR-Control-Labels]]
     ["labelCHAR_killButton"] = "Kill",
     ["labelCHAR_reviveButton"] = "Revive",
@@ -295,6 +300,12 @@ function Return_enUS()
     ["labelCHAR_pInfoButton"] = "PLAYER Info",
     ["labelCHAR_distanceButton"] = "Distance",
     ["labelCHAR_recallButton"] = "Recall",
+    ["labelCHAR_morphButton"] = "Morph",
+    ["labelCHAR_demorphButton"] = "Demorph",
+    ["labelCHAR_bindSightButton"] = "Bindsight",
+    ["labelCHAR_unbindSightButton"] = "UnBindsight",
+    ["labelCHAR_gpsButton"] = "GPS",
+
     --[[CHAR-Commands Output]]
     ["logCHAR_kill"] = "_T_ has been killed",
     ["logCHAR_revive"] = "_T_ has been revived",
@@ -305,10 +316,15 @@ function Return_enUS()
     ["logCHAR_pInfo"] = "Displayed information of _T_",
     ["logCHAR_distance"] = "Displayed the distance from yourself and _T_",
     ["logCHAR_recall"] = "Recalled _T_ to location before last teleport",
+    ["logCHAR_morph"] = "_T_ has been morphed with the following display ID: _V1_",
+    ["logCHAR_demorph"] = "_T_ has been cleaned from morph effect",
+    ["logCHAR_unbindSight"] = "Unbind your vision from _T_",
+    ["logCHAR_bindSight"] = "Bind your vision to _T_",
+    ["logCHAR_gps"] = "Shows coordinates for the _T_",
 
     ["tt_RotateLeft"] = "Rotate left.",
     ["tt_RotateRight"] = "Rotate right.",
-    ["tt_DemorphButton"] = "Removes any morphs on the selected character.",
+
     ["tt_ShowMapsCharButton"] = "Reveals maps for the selected character.",
     ["tt_HideMapsCharButton"] = "Hides maps for the selected character.",
     ["tt_learnlangbutton"] = "Learn selected langauge(s)",
@@ -316,8 +332,7 @@ function Return_enUS()
     ["tt_resetbutton"] = "Reset the selected attribute",
     ["tt_modelzoominbutton"] = "Zoom in the selected model",
     ["tt_modelzoomoutbutton"] = "Zoom out the selected model",
-    ["tt_charbindsight"] = "Binds your vision to the selected Unit",
-    ["tt_charunbindsight"] = "UnBinds your vision to the selected Unit (BROKEN in CORE - right-click gear icon in buffs area)",
+
     ["tt_charrename"] = "Toggles selected character for rename at next login",
     ["tt_charcustomize"] = "Toggles selected character for customization at next login",
     ["tt_charchangerace"] = "Toggles selected character for race change at next login",
@@ -341,13 +356,12 @@ function Return_enUS()
     ["tt_namegobutton"] = "Parameter= $charactername   [[Teleports the specified character to your location]]",
     ["tt_guildrankbutton"] = "Parameters= $charactername #ranknumber   [[Sets the character specified to the rank specified in his/her guild]]",
     ["tt_telegroupbutton"] = "Parameter= $telename  [[Teleports the **selected** character and his/her group to the .tele location named $telename]]",
-    ["tt_GPSButton"] = "Shows coordinates for the selected character.",
+
     ["tt_unbanbutton"] = "Parameters= <account|ip|character> $NameOrIp  [[Unbans the specified acct/IP/character]]",
     ["tt_guilddeletebutton"] = "Parameter= $guildname  [[Deletes the specified Guild]]",
     ["tt_guilduninvitebutton"] = "Parameter= $charactername  [[Kicks the specified character out of his/her guild]]",
     ["tt_telenamebutton"] = "Parameters= $charactername $telename  [[Teleports $charactername to $telename]]",
     ["tt_mutebutton"] = "Parameters= $charactername #minutes  [[Disables chat for $charactername's entire account for #minutes]]",
-    ["tt_charmorphbutton"] = "Parameters = #DisplayID [[Enter the DisplayID of the morph you want to apply]]",
     ["tt_charaurabutton"] = "Parameters = #AuraID [[Enter the AuraID of the aura you want to apply]]",
     ["tt_charunaurabutton"] = "Parameters = #AuraID [[Enter the AuraID of the aura you want to remove]]",
     ["tt_JailAButton"] = "Parameter= $charactername [[Sends the character whose name appears in this box to the Alliance Jail]]",
@@ -365,15 +379,14 @@ function Return_enUS()
 
     ["ma_ShowMapsButton"] = "Show Maps",
     ["ma_HideMapsButton"] = "Hide Maps",
-    ["ma_DemorphButton"] = "Demorph",
+
     ["ma_ShowMapsCharButton"] = "Show Maps",
     ["ma_HideMapsCharButton"] = "Hide Maps",
     ["ma_LearnLangButton"] = "All languages",
     ["ma_Learn"] = "Learn",
     ["ma_Modify"] = "Modify",
     ["ma_Reset"] = "Reset",
-    ["ma_CharBindsight"] = "Bindsight",
-    ["ma_CharUnBindsight"] = "UnBindsight",
+
     ["ma_charrename"] = "Rename",
     ["ma_charcustomize"] = "Customize",
     ["ma_charchangerace"] = "Chng Race",
@@ -398,14 +411,14 @@ function Return_enUS()
     ["ma_guildrankbutton"] = "G Rank",
     ["ma_telegroupbutton"] = "TeleGroup",
     ["ma_unbanbutton"] = "UnBan",
-    ["ma_GPSButton"] = "GPS",
+
     ["ma_guilddeletebutton"] = "G Delete",
     ["ma_guilduninvitebutton"] = "G UnInv",
     ["ma_telenamebutton"] = "TeleName",
     ["ma_mutebutton"] = "Mute",
     ["ma_Aura"] = "Aura",
     ["ma_UnAura"] = "UnAura",
-    ["ma_Morph"] = "Morph",
+
     ["ma_JailAButton"] = "Jail (A)",
     ["ma_JailHButton"] = "Jail (H)",
     ["ma_UnJailButton"] = "UnJail",

@@ -613,10 +613,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_demorphbutton,
-            Locale["tt_DemorphButton"],
+            CHAR_demorphButton,
+            Locale["ttCHAR_demorph"],
             function()
-                Demorph()
+                genericCaller(CHAR_KEY, CHAR_morphResetCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -634,10 +634,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_gpsbutton,
-            Locale["tt_GPSButton"],
+            CHAR_gpsButton,
+            Locale["ttCHAR_gps"],
             function()
-                GetGPSInfo()
+                genericCaller(CHAR_KEY, CHAR_gpsCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -676,17 +676,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_charbindsight,
-            Locale["tt_charbindsight"],
+            CHAR_bindSightButton,
+            Locale["ttCHAR_bindSight"],
             function()
-                CharBindSight()
+                genericCaller(CHAR_KEY, CHAR_bindSightCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charunbindsight,
-            Locale["tt_charunbindsight"],
+            CHAR_unbindSightButton,
+            Locale["ttCHAR_unbindSight"],
             function()
-                CharUnBindSight()
+                genericCaller(CHAR_KEY, CHAR_unbindSightCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -900,10 +900,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_charmorphbutton,
-            Locale["tt_charmorphbutton"],
+            CHAR_morphButton,
+            Locale["ttCHAR_morph"],
             function()
-                CharMorphButton()
+                genericCaller(CHAR_KEY, CHAR_morphCommand)
             end
     )
     MangAdmin:PrepareScript(

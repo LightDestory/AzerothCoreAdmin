@@ -229,11 +229,11 @@ function MangAdmin:CreateCharSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_demorphbutton",
+    name = "CHAR_demorphButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_demorphbutton_texture",
+      name = "CHAR_demorphButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -245,7 +245,7 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -117 --charRowFive
     },
-    text = Locale["ma_DemorphButton"]
+    text = Locale["labelCHAR_demorphButton"]
   })
 
   FrameLib:BuildButton({
@@ -289,11 +289,11 @@ function MangAdmin:CreateCharSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_gpsbutton",
+    name = "CHAR_gpsButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_gpsbutton_texture",
+      name = "CHAR_gpsButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -305,7 +305,7 @@ function MangAdmin:CreateCharSection()
       offX = 303, --charColThree
       offY = -74 --charRowThree
     },
-    text = Locale["ma_GPSButton"]
+    text = Locale["labelCHAR_gpsButton"]
   })
 
   FrameLib:BuildButton({
@@ -514,11 +514,11 @@ function MangAdmin:CreateCharSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_charbindsight",
+    name = "CHAR_bindSightButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charbindsight_texture",
+      name = "CHAR_bindSightButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -530,15 +530,15 @@ function MangAdmin:CreateCharSection()
       offX = 303, --charColThree
       offY = -95 --charRowFour
     },
-    text = Locale["ma_CharBindsight"]
+    text = Locale["labelCHAR_bindSightButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charunbindsight",
+    name = "CHAR_unbindSightButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charunbindsight_texture",
+      name = "CHAR_unbindSightButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -550,7 +550,7 @@ function MangAdmin:CreateCharSection()
       offX = 303, --charColThree
       offY = -117 --charRowFive
     },
-    text = Locale["ma_CharUnBindsight"]
+    text = Locale["labelCHAR_unbindSightButton"]
   })
 
   FrameLib:BuildButton({
@@ -835,11 +835,11 @@ function MangAdmin:CreateCharSection()
     })
 
  FrameLib:BuildButton({
-    name = "ma_charmorphbutton",
+    name = "CHAR_morphButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charmorphbutton_texture",
+      name = "CHAR_morphButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -851,7 +851,7 @@ function MangAdmin:CreateCharSection()
       offX = 385, --charColFour
       offY = -139 --charRowSix
     },
-    text = Locale["ma_Morph"]
+    text = Locale["labelCHAR_morphButton"]
     })
 
  FrameLib:BuildButton({
@@ -1428,7 +1428,7 @@ function MangAdmin:CreateCharSection()
 
   FrameLib:BuildFrame({
     type = "EditBox",
-    name = "ma_charactertarget",
+    name = "CHAR_parameterInput",
     group = "char",
     parent = ma_midframe,
     size = {
