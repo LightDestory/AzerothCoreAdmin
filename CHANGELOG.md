@@ -10,6 +10,7 @@
 1. [AzerothCoreAdmin Changelogs](#AzerothCoreAdmin-Changelogs)
     - [ACAdmin-Revision 01](#ACAdmin-Revision-01)
     - [ACAdmin-Revision 02](#ACAdmin-Revision-02)
+    - [ACAdmin-Revision 03](#ACAdmin-Revision-03)
 2. [TrinityAdmin Changelogs](#TrinityAdmin-Changelogs)
     - [TA-Revision 58](#TA-Revision-58)
     - [TA-Revision 57](#TA-Revision-57)
@@ -48,6 +49,24 @@
     - [TA-Revision 13](#TA-Revision-13)
 
 ## AzerothCoreAdmin Changelogs
+
+### ACAdmin-Revision _03_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _08/10/2021_
+
+**Changelog:**
+
+- GM-TAB:
+    - REWORK: Speed and Scale command slider's control
+- CHAR-TAB:
+    - FIX: morph and demorph
+    - REWORK: Ported to GenericCaller() several CHAR's command
+- INTERFACE:
+    - FIX: Close button was too small for text
+- CODE:
+    - Some cleanup
 
 ### ACAdmin-Revision _02_
 
