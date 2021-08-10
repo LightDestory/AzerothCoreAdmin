@@ -1,4 +1,4 @@
-# ![GitHub Logo](/Textures/logo.png)
+# ![GitHub Logo](https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/Textures/logo.png)
 
 AzerothCoreAdmin (_ACAdmin_) is a general interface add-on which will help admins and GMs in-game of AzerothCore-based private servers.
 
@@ -31,11 +31,11 @@ _The adaption is based on the most updated fork available of TrinityAdmin for 3.
 - [ ] CHAR _(In progress..)_
 - [ ] NPC
 - [ ] GOB
-- [ ] TELE
+- [x] TELE
 - [ ] TICKETS
 - [ ] MISC
 - [ ] SERVER
-- [ ] LOG
+- [x] LOG
 - [ ] WHO
 
 ## Credits
@@ -61,6 +61,6 @@ Moreover, thanks to:
 
 ## Screenshots
 
-![image](/Textures/ACAdmin_GM.png)
-![image](/Textures/ACAdmin_CHAR.png)
-![image](/Textures/ACAdmin_WHO.png)
+![image](https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/Textures/ACAdmin_GM.png)
+![image](https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/Textures/ACAdmin_CHAR.png)
+![image](https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/Textures/ACAdmin_WHO.png)
