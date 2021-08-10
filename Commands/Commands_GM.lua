@@ -205,6 +205,22 @@ GM_genericCommands = {
   [GM_dismountPlayerCommand] = {
     [GENERICS_command] = ".dismount",
     [GENERICS_message] = "logGM_dismountPlayer"
+  },
+  [GM_playerSpeedCommand] = {
+    [GENERICS_command] = ".modify speed",
+    [GENERICS_message] = "logGM_setSpeed"
+  },
+  [GM_playerScaleCommand] = {
+    [GENERICS_command] = ".modify scale",
+    [GENERICS_message] = "logGM_setScale"
+  },
+  [GM_AllianceJailCommand] = {
+    [GENERICS_command] = "ma_AllianceJail",
+    [GENERICS_message] = "logGM_setJailAlliance"
+  },
+  [GM_HordeJailCommand] = {
+    [GENERICS_command] = "ma_HordeJail",
+    [GENERICS_message] = "logGM_setJailHorde"
   }
 }
 
@@ -351,26 +367,16 @@ function GM_setAccountAddonCommand()
   print(Locale["operationCompleted"])
 end
 
-function setJailAllianceCommand()
-  MangAdmin:ChatMsg(".tele del ma_AllianceJail")
+function GM_setJailCommand(factionCommand)
+  local command = GM_genericCommands[factionCommand][GENERICS_command]
+  MangAdmin:ChatMsg(".tele del " .. command)
   local i = 1
   while i < 100 do
     i = i + 1
     MangAdmin:ChatMsg(".")
   end
-  MangAdmin:ChatMsg(".tele add ma_AllianceJail")
-  MangAdmin:LogAction(Locale["logGM_setJailAlliance"])
-end
-
-function setJailHordeCommand()
-  MangAdmin:ChatMsg(".tele del ma_HordeJail")
-  local i = 1
-  while i < 100 do
-    i = i + 1
-    MangAdmin:ChatMsg(".")
-  end
-  MangAdmin:ChatMsg(".tele add ma_HordeJail")
-  MangAdmin:LogAction(Locale["logGM_setJailHorde"])
+  MangAdmin:ChatMsg(".tele add " .. command)
+  MangAdmin:LogAction(Locale[GM_genericCommands[factionCommand][GENERICS_message]])
 end
 
 function screen()
@@ -388,26 +394,25 @@ function GM_instantKillModeCommand()
   )
 end
 
-function GM_setSpeedCommand()
-  local value = string.format("%.1f", GM_setSpeedSlider:GetValue())
+function GM_setSpeedOrScaleCommand(sliderControl, sliderCommand)
+  local command = GM_genericCommands[sliderCommand][GENERICS_command]
+  local value = string.format("%.1f", sliderControl:GetValue())
   if commandTargetCheck() then
-    MangAdmin:ChatMsg(".modify speed " .. value)
-    MangAdmin:LogAction(getCommandTargetName() .. Locale["logGM_setSpeed"] .. value)
+    MangAdmin:ChatMsg(command .. " " .. value)
+    MangAdmin:LogAction(getCommandTargetName() .. Locale[GM_genericCommands[sliderCommand][GENERICS_message]] .. value)
   else
     MangAdmin:Print(Locale["selectionError"])
-    GM_setSpeedSlider:SetValue(1)
+    sliderControl:SetValue(1)
   end
 end
 
-function GM_setScaleCommand()
-  local value = string.format("%.1f", GM_setScaleSlider:GetValue())
-  if commandTargetCheck() then
-    MangAdmin:ChatMsg(".modify scale " .. value)
-    MangAdmin:LogAction(getCommandTargetName() .. Locale["logGM_setScale"] .. value)
-  else
-    MangAdmin:Print(Locale["selectionError"])
-    GM_setScaleSlider:SetValue(1)
-  end
+function GM_resetSpeedOrScaleSlider(sliderControl, sliderText, sliderCommand)
+  local command = GM_genericCommands[sliderCommand][GENERICS_command]
+  local title = (command:find('scale') and "Scale" or "Speed")
+  sliderControl:SetValue(1)
+  sliderText:SetText(title .. ": 1.0")
+  MangAdmin:ChatMsg(command .." 1")
+  MangAdmin:LogAction(Locale["log_resetSlider"])
 end
 
 function GridNavigate(x, y)
@@ -445,18 +450,4 @@ function GridNavigate(x, y)
       MangAdmin:Print(Locale["mustBeANumber"])
     end
   end
-end
-
-function GM_resetSpeed()
-  GM_setSpeedSlider:SetValue(1)
-  GM_setSpeedSliderText:SetText("Speed: 1.0")
-  MangAdmin:ChatMsg(".mod speed 1")
-  MangAdmin:LogAction(Locale["log_resetSlider"])
-end
-
-function GM_resetScale()
-  GM_setScaleSlider:SetValue(1)
-  GM_setScaleSliderText:SetText("Scale: 1.0")
-  MangAdmin:ChatMsg(".mod scale 1")
-  MangAdmin:LogAction(Locale["log_resetSlider"])
 end

@@ -4,8 +4,9 @@ OFF_OPTION = "off"
 
 -- Role identity Keys
 GM_KEY = "GM"
+CHAR_KEY = "CHAR"
 
--- Generic Spells Action Keys
+-- Generic Commands Action Keys
 GENERICS_parametersGet = "parametersGet"
 GENERICS_isValueNeeded = "isValueNeeded"
 GENERICS_isParametersNeeded = "isParametersNeeded"
@@ -50,3 +51,20 @@ GM_petUnLearnCommand = "petUnLearn"
 GM_petTalentsLearnCommand = "petTalentsLearn"
 GM_bankCommand = "bank"
 GM_dismountPlayerCommand = "dismountPlayer"
+GM_playerSpeedCommand = "playerSpeed"
+GM_playerScaleCommand = "playerScale"
+GM_AllianceJailCommand = "allianceJail"
+GM_HordeJailCommand = "hordeJail"
+
+CHAR_reviveCommand = "revive"
+CHAR_saveCommand = "save"
+CHAR_kickCommand = "kick"
+CHAR_cooldownCommand = "cooldown"
+CHAR_GUIDCommand = "GUID"
+CHAR_playerInfoCommand = "playerInfo"
+CHAR_distanceCommand = "distance"
+CHAR_dieCommand = "die"
+CHAR_recallCommand = "recall"
+CHAR_morphCommand = "morph"
+CHAR_morphResetCommand = "morphReset"
+
