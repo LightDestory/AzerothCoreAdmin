@@ -221,8 +221,8 @@ function MangAdmin:CreateLookupButtons()
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
-      width = 10,
-      height = 10
+      width = 40,
+      height = 20
     },
     setpoint = {
       pos = "BOTTOMRIGHT",
