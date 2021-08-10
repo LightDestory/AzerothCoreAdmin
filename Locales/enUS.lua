@@ -271,11 +271,10 @@ function Return_enUS()
     ["logGM_setSpeed"] = "'s speed has been set to ",
     ["logGM_setScale"] = "'s scale has been set to ",
     ["logGM_gridNavigator"] = "Teleported to the following grid-coordinates X: _V1_ and Y: _V2_",
-    --[[Char Tab]]
-    --[[Name]]
+    --[[CHAR-Name]]
     ["tabmenu_Char"] = "CHAR",
     ["tt_CharButton"] = "Toggle a window with character-specific actions.",
-    --[[Tooltips]]
+    --[[CHAR-Tooltips]]
     ["tt_RotateLeft"] = "Rotate left.",
     ["tt_RotateRight"] = "Rotate right.",
     ["tt_killbutton"] = "Kills selected creature/player",
@@ -341,7 +340,7 @@ function Return_enUS()
     ["tt_ShowAreaButton"] = "Shows #areaid to **selected** player.",
     ["tt_HonorAddButton"] = "Adds #honorpoints to **selected** player.",
     ["tt_HonorUpdateButton"] = "No parameter required. Saves Honor for **selected** player.",
-    --[[Control Labels]]
+    --[[CHAR-Control-Labels]]
     ["ma_ShowMapsButton"] = "Show Maps",
     ["ma_HideMapsButton"] = "Hide Maps",
     ["ma_KillButton"] = "Kill",

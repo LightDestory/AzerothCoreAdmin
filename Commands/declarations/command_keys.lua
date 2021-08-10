@@ -67,4 +67,7 @@ CHAR_dieCommand = "die"
 CHAR_recallCommand = "recall"
 CHAR_morphCommand = "morph"
 CHAR_morphResetCommand = "morphReset"
+CHAR_gpsCommand = "gps"
+CHAR_bindSightCommand = "bindSight"
+CHAR_unbindSightCommand = "unbindSight"
 

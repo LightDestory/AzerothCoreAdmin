@@ -26,9 +26,80 @@
 ]]
 CHAR_genericCommands = {
   [GENERICS_parametersGet] = function()
-    return ma_charactertarget:GetText()
+    return CHAR_parameterInput:GetText()
   end,
+  [CHAR_reviveCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".revive",
+    [GENERICS_message] = "logCHAR_revive"
+  },
+  [CHAR_saveCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".save",
+    [GENERICS_message] = "logCHAR_save"
+  },
+  [CHAR_kickCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".kick",
+    [GENERICS_message] = "logCHAR_kick"
+  },
+  [CHAR_cooldownCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".cooldown",
+    [GENERICS_message] = "logCHAR_cooldown"
+  },
+  [CHAR_GUIDCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".guid",
+    [GENERICS_message] = "logCHAR_guid"
+  },
+  [CHAR_playerInfoCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".pinfo",
+    [GENERICS_message] = "logCHAR_playerInfo"
+  },
+  [CHAR_distanceCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".distance",
+    [GENERICS_message] = "logCHAR_distance"
+  },
+  [CHAR_dieCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".die",
+    [GENERICS_message] = "logCHAR_die"
+  },
+  [CHAR_recallCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".recall",
+    [GENERICS_message] = "logCHAR_recall"
+  },
+  [CHAR_morphCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".morph target ",
+    [GENERICS_message] = "logCHAR_morph"
+  },
+  [CHAR_morphResetCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".morph reset",
+    [GENERICS_message] = "logCHAR_morphReset"
+  },
+  [CHAR_gpsCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".gps",
+    [GENERICS_message] = "logCHAR_gps"
+  },
+  [CHAR_bindSightCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".bindsight",
+    [GENERICS_message] = "logCHAR_bindSight"
+  },
+  [CHAR_unbindSightCommand] = {
+    [GENERICS_command] = ".unbindsight",
+    [GENERICS_message] = "logCHAR_unBindSight"
+  }
 }
+
 function InitModelFrame()
   ma_modelframe:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
   ma_modelframe.rotation = 0.61;
@@ -89,6 +160,9 @@ function ModelChanged()
   end
   ma_modelframe:RefreshUnit()
 end
+
+
+-- Delete
 
 function RevivePlayer()
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
@@ -174,6 +248,8 @@ function Demorph()
     MangAdmin:ChatMsg(".morph reset")
     MangAdmin:LogAction("Demorphed player "..player..".")
 end
+
+--
 
 function ToggleMapsChar(value)
   MangAdmin:ChatMsg(".cheat explore "..value)
