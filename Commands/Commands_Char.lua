@@ -81,26 +81,31 @@ CHAR_genericCommands = {
     [GENERICS_isParametersNeeded] = true,
     [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_command] = ".morph target ",
+    [GENERICS_canTargetBeACreature] = true,
     [GENERICS_message] = "logCHAR_morph"
   },
   [CHAR_morphResetCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_command] = ".morph reset",
-    [GENERICS_message] = "logCHAR_morphReset"
+    [GENERICS_canTargetBeACreature] = true,
+    [GENERICS_message] = "logCHAR_demorph"
   },
   [CHAR_gpsCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_command] = ".gps",
+    [GENERICS_canTargetBeACreature] = true,
     [GENERICS_message] = "logCHAR_gps"
   },
   [CHAR_bindSightCommand] = {
     [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_command] = ".bindsight",
+    [GENERICS_canTargetBeACreature] = true,
     [GENERICS_message] = "logCHAR_bindSight"
   },
   [CHAR_unbindSightCommand] = {
     [GENERICS_command] = ".unbindsight",
-    [GENERICS_message] = "logCHAR_unBindSight"
+    [GENERICS_canTargetBeACreature] = true,
+    [GENERICS_message] = "logCHAR_unbindSight"
   }
 }
 
