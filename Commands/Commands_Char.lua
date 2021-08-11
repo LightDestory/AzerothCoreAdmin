@@ -159,9 +159,100 @@ CHAR_genericCommands = {
     [GENERICS_canTargetBeACreature] = true,
     [GENERICS_command] = ".unpossess",
     [GENERICS_message] = "logCHAR_unpossess"
-  }
+  },
+  [CHAR_repairItemsCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".repairitems",
+    [GENERICS_message] = "logCHAR_repairItems"
+  },
+  [CHAR_banCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".ban ",
+    [GENERICS_message] = "logCHAR_ban"
+  },
+  [CHAR_unbanCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".unban ",
+    [GENERICS_message] = "logCHAR_unban"
+  },
+  [CHAR_banInfoCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".baninfo ",
+    [GENERICS_message] = "logCHAR_banInfo"
+  },
+  [CHAR_banListCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".banlist ",
+    [GENERICS_message] = "logCHAR_banList"
+  },
+  [CHAR_appearCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".appear ",
+    [GENERICS_message] = "logCHAR_appear"
+  },
+  [CHAR_summonCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".summon ",
+    [GENERICS_message] = "logCHAR_summon"
+  },
+  [CHAR_groupSummonCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".groupsummon ",
+    [GENERICS_message] = "logCHAR_groupSummon"
+  },
+  [CHAR_teleportNameCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".teleport name ",
+    [GENERICS_message] = "logCHAR_teleportName"
+  },
+  [CHAR_teleportGroupCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".teleport group ",
+    [GENERICS_message] = "logCHAR_teleportGroup"
+  },
 }
 -- Delete
+
+function CreateGuildButton()
+  local cname = ma_charactertarget:GetText()
+  local npccname = ma_npccharactertarget:GetText()
+  MangAdmin:ChatMsg(".guild create "..cname)
+  MangAdmin:LogAction("Created Guild: "..cname..".")
+
+end
+
+function GuildInviteButton()
+  local cname = ma_charactertarget:GetText()
+  local npccname = ma_npccharactertarget:GetText()
+  MangAdmin:ChatMsg(".guild invite "..cname)
+  MangAdmin:LogAction("Guild invitation: "..cname..".")
+
+end
+
+function GuildRankButton()
+  local cname = ma_charactertarget:GetText()
+  local npccname = ma_npccharactertarget:GetText()
+  MangAdmin:ChatMsg(".guild rank "..cname)
+  MangAdmin:LogAction("Guild rank change: "..cname..".")
+
+end
+
+function GuildDeleteButton()
+  local cname = ma_charactertarget:GetText()
+  local npccname = ma_npccharactertarget:GetText()
+  MangAdmin:ChatMsg(".guild delete "..cname)
+  MangAdmin:LogAction("Deleted guild: "..cname..".")
+
+end
+
+function GuildUninviteButton()
+  local cname = ma_charactertarget:GetText()
+  local npccname = ma_npccharactertarget:GetText()
+  MangAdmin:ChatMsg(".guild uninvite "..cname)
+  MangAdmin:LogAction("Removed from guild: "..cname..".")
+
+end
 
 --
 
@@ -456,130 +547,6 @@ function ResetDropDownInitialize()
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
 end
 
-function CharRecall()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".recall")
-    MangAdmin:LogAction("Recalled "..player)
-end
-
-function CharRepair()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".repairitems")
-    MangAdmin:LogAction("Repaired  "..player.."'s items")
-end
-
---[[CHAR2 TAB Copy Over]]
-function BanButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".ban "..cname)
-  MangAdmin:LogAction("Banned player: "..cname..".")
-
-end
-
-function GoNameButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".appear "..cname)
-  MangAdmin:LogAction("Teleported TO player: "..cname..".")
-
-end
-
-function CreateGuildButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild create "..cname)
-  MangAdmin:LogAction("Created Guild: "..cname..".")
-
-end
-
-function BanInfoButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".baninfo "..cname)
-  MangAdmin:LogAction("Listed .baninfo: "..cname..".")
-
-end
-
-function GroupGoButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".groupsummon "..cname)
-  MangAdmin:LogAction("Teleported "..cname.." and his/her group to me.")
-
-end
-
-function GuildInviteButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild invite "..cname)
-  MangAdmin:LogAction("Guild invitation: "..cname..".")
-
-end
-
-function BanlistButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".banlist "..cname)
-  MangAdmin:LogAction("Listed bans matching: "..cname..".")
-
-end
-
-function NameGoButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".summon "..cname)
-  MangAdmin:LogAction("Teleported "..cname.." TO me.")
-
-end
-
-function GuildRankButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild rank "..cname)
-  MangAdmin:LogAction("Guild rank change: "..cname..".")
-
-end
-
-function TeleGroupButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".tele group "..cname)
-  MangAdmin:LogAction("Group teleported: "..cname..".")
-
-end
-
-function UnBanButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".unban "..cname)
-  MangAdmin:LogAction("Unbanned "..cname..".")
-
-end
-
-function GuildDeleteButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild delete "..cname)
-  MangAdmin:LogAction("Deleted guild: "..cname..".")
-
-end
-
-function GuildUninviteButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild uninvite "..cname)
-  MangAdmin:LogAction("Removed from guild: "..cname..".")
-
-end
-
-function TeleNameButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-    self:ChatMsg(".tele name "..cname)
-    self:LogAction("Teleported: "..cname..".")
-
-end
 
 function MuteButton()
   local cname = ma_charactertarget:GetText()

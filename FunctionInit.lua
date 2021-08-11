@@ -767,17 +767,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_charrecallbutton,
-            Locale["tt_charrecall"],
+            CHAR_repairItemsButton,
+            Locale["ttCHAR_repairItems"],
             function()
-                CharRecall()
-            end
-    )
-    MangAdmin:PrepareScript(
-            ma_charrepairitemsbutton,
-            Locale["tt_charrepair"],
-            function()
-                CharRepair()
+                genericCaller(CHAR_KEY, CHAR_repairItemsCommand)
             end
     )
 
@@ -795,17 +788,17 @@ function InitControls()
     UIDropDownMenu_SetButtonWidth(ma_resetdropdown, 20)
 
     MangAdmin:PrepareScript(
-            ma_banbutton,
-            Locale["tt_banbutton"],
+            CHAR_banButton,
+            Locale["ttCHAR_ban"],
             function()
-                BanButton()
+                genericCaller(CHAR_KEY, CHAR_banCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_gonamebutton,
-            Locale["tt_gonamebutton"],
+            CHAR_appearButton,
+            Locale["ttCHAR_appear"],
             function()
-                GoNameButton()
+                genericCaller(CHAR_KEY, CHAR_appearCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -816,17 +809,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_baninfobutton,
-            Locale["tt_baninfobutton"],
+            CHAR_banInfoButton,
+            Locale["ttCHAR_banInfo"],
             function()
-                BanInfoButton()
+                genericCaller(CHAR_KEY, CHAR_banInfoCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_groupgobutton,
-            Locale["tt_groupgobutton"],
+            CHAR_groupSummonButton,
+            Locale["ttCHAR_groupSummon"],
             function()
-                GroupGoButton()
+                genericCaller(CHAR_KEY, CHAR_groupSummonCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -837,17 +830,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_banlistbutton,
-            Locale["tt_banlistbutton"],
+            CHAR_banListButton,
+            Locale["ttCHAR_banList"],
             function()
-                BanlistButton()
+                genericCaller(CHAR_KEY, CHAR_banListCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_namegobutton,
-            Locale["tt_namegobutton"],
+            CHAR_summonButton,
+            Locale["ttCHAR_summon"],
             function()
-                NameGoButton()
+                genericCaller(CHAR_KEY, CHAR_summonCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -858,17 +851,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_telegroupbutton,
-            Locale["tt_telegroupbutton"],
+            CHAR_teleportGroupButton,
+            Locale["ttCHAR_teleportGroup"],
             function()
-                TeleGroupButton()
+                genericCaller(CHAR_KEY, CHAR_teleportGroupCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_unbanbutton,
-            Locale["tt_unbanbutton"],
+            CHAR_unbanButton,
+            Locale["ttCHAR_unban"],
             function()
-                UnBanButton()
+                genericCaller(CHAR_KEY, CHAR_unbanCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -886,10 +879,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_telenamebutton,
-            Locale["tt_telenamebutton"],
+            CHAR_teleportNameButton,
+            Locale["ttCHAR_teleportName"],
             function()
-                TeleNameButton()
+                genericCaller(CHAR_KEY, CHAR_teleportNameCommand)
             end
     )
     MangAdmin:PrepareScript(
