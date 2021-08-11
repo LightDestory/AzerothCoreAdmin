@@ -1074,11 +1074,11 @@ function MangAdmin:CreateCharSection()
     })
 
     FrameLib:BuildButton({
-        name = "ma_mutebutton",
+        name = "CHAR_muteButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_mutebutton_texture",
+            name = "CHAR_muteButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1090,15 +1090,15 @@ function MangAdmin:CreateCharSection()
             offX = 630, --charColSeven
             offY = -74  --charRowThree
         },
-        text = Locale["ma_mutebutton"]
+        text = Locale["labelCHAR_muteButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_charaurabutton",
+        name = "CHAR_auraButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_charaurabutton_texture",
+            name = "CHAR_auraButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1110,15 +1110,15 @@ function MangAdmin:CreateCharSection()
             offX = 467, --charColFive
             offY = -139 --charRowSix
         },
-        text = Locale["ma_Aura"]
+        text = Locale["labelCHAR_auraButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_charunaurabutton",
+        name = "CHAR_unauraButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_charunaurabutton_texture",
+            name = "CHAR_unauraButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1130,15 +1130,15 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -139 --charRowSix
         },
-        text = Locale["ma_UnAura"]
+        text = Locale["labelCHAR_unauraButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_jailabutton",
+        name = "CHAR_jailAllianceButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_jailabutton_texture",
+            name = "CHAR_jailAllianceButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1150,15 +1150,15 @@ function MangAdmin:CreateCharSection()
             offX = 385, --charColFour
             offY = -160 --charRowSeven
         },
-        text = Locale["ma_JailAButton"]
+        text = Locale["labelCHAR_jailAllianceButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_jailhbutton",
+        name = "CHAR_jailHordeButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_jailhbutton_texture",
+            name = "CHAR_jailHordeButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1170,15 +1170,15 @@ function MangAdmin:CreateCharSection()
             offX = 467, --charColFive
             offY = -160 --charRowSeven
         },
-        text = Locale["ma_JailHButton"]
+        text = Locale["labelCHAR_jailHordeButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_unjailbutton",
+        name = "CHAR_unjailButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_unjailbutton_texture",
+            name = "CHAR_unjailButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1190,15 +1190,15 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -160 --charRowSeven
         },
-        text = Locale["ma_UnJailButton"]
+        text = Locale["labelCHAR_unjailButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_unmutebutton",
+        name = "CHAR_unmuteButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_unmutebutton_texture",
+            name = "CHAR_unmuteButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1210,15 +1210,15 @@ function MangAdmin:CreateCharSection()
             offX = 630, --charColSeven
             offY = -95 --charRowFour
         },
-        text = Locale["ma_UnMuteButton"]
+        text = Locale["labelCHAR_unmuteButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_questaddbutton",
+        name = "CHAR_questAddButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_questaddbutton_texture",
+            name = "CHAR_questAddButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1230,15 +1230,15 @@ function MangAdmin:CreateCharSection()
             offX = 385, --charColFour
             offY = -182 --charRowEight
         },
-        text = Locale["ma_QuestAddButton"]
+        text = Locale["labelCHAR_questAddButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_questcompletebutton",
+        name = "CHAR_questCompleteButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_questcompletebutton_texture",
+            name = "CHAR_questCompleteButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1250,15 +1250,15 @@ function MangAdmin:CreateCharSection()
             offX = 467, --charColFive
             offY = -182 --charRowEight
         },
-        text = Locale["ma_QuestCompleteButton"]
+        text = Locale["labelCHAR_questCompleteButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_questremovebutton",
+        name = "CHAR_questRemoveButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_questremovebutton_texture",
+            name = "CHAR_questRemoveButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1270,15 +1270,15 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -182 --charRowEight
         },
-        text = Locale["ma_QuestRemoveButton"]
+        text = Locale["labelCHAR_questRemoveButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_damagebutton",
+        name = "CHAR_damageButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_damagebutton_texture",
+            name = "CHAR_damageButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1290,7 +1290,7 @@ function MangAdmin:CreateCharSection()
             offX = 385, --charColFour
             offY = -204 --charRowNine
         },
-        text = Locale["ma_DamageButton"]
+        text = Locale["labelCHAR_damageButton"]
     })
 
     FrameLib:BuildButton({

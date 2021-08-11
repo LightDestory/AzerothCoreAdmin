@@ -84,7 +84,6 @@ function genericCaller(dictionaryID, callID, value)
         if (not v  or v == '') then
             MangAdmin:Print(Locale["paramError"])
             return
-
         else
             data['value'] = v
         end

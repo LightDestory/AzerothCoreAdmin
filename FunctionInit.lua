@@ -886,10 +886,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_mutebutton,
-            Locale["tt_mutebutton"],
+            CHAR_muteButton,
+            Locale["ttCHAR_mute"],
             function()
-                MuteButton()
+                genericCaller(CHAR_KEY, CHAR_muteCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -900,73 +900,73 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_charaurabutton,
-            Locale["tt_charaurabutton"],
+            CHAR_auraButton,
+            Locale["ttCHAR_aura"],
             function()
-                CharAuraButton()
+                genericCaller(CHAR_KEY, CHAR_auraCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charunaurabutton,
-            Locale["tt_charunaurabutton"],
+            CHAR_unauraButton,
+            Locale["ttCHAR_unaura"],
             function()
-                CharUnAuraButton()
+                genericCaller(CHAR_KEY, CHAR_unauraCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_jailabutton,
-            Locale["tt_JailAButton"],
+            CHAR_jailAllianceButton,
+            Locale["ttCHAR_jailAlliance"],
             function()
-                JailA()
+                teleportToJail(CHAR_jailAllianceCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_jailhbutton,
-            Locale["tt_JailHButton"],
+            CHAR_jailHordeButton,
+            Locale["ttCHAR_jailHorde"],
             function()
-                JailH()
+                teleportToJail(CHAR_jailHordeCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_unjailbutton,
-            Locale["tt_UnJailButton"],
+            CHAR_unjailButton,
+            Locale["ttCHAR_unjail"],
             function()
-                UnJail()
+                genericCaller(CHAR_KEY, CHAR_unjailCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_unmutebutton,
-            Locale["tt_UnMuteButton"],
+            CHAR_unmuteButton,
+            Locale["ttCHAR_unmute"],
             function()
-                UnMuteButton()
+                genericCaller(CHAR_KEY, CHAR_unmuteCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_questaddbutton,
-            Locale["tt_QuestAddButton"],
+            CHAR_questAddButton,
+            Locale["ttCHAR_questAdd"],
             function()
-                QuestAddButton()
+                genericCaller(CHAR_KEY, CHAR_questAddCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_questcompletebutton,
-            Locale["tt_QuestCompleteButton"],
+            CHAR_questCompleteButton,
+            Locale["ttCHAR_questComplete"],
             function()
-                QuestCompleteButton()
+                genericCaller(CHAR_KEY, CHAR_questCompleteCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_questremovebutton,
-            Locale["tt_QuestRemoveButton"],
+            CHAR_questRemoveButton,
+            Locale["ttCHAR_questRemove"],
             function()
-                QuestRemoveButton()
+                genericCaller(CHAR_KEY, CHAR_questRemoveCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_damagebutton,
-            Locale["tt_DamageButton"],
+            CHAR_damageButton,
+            Locale["ttCHAR_damage"],
             function()
-                DamageButton()
+                genericCaller(CHAR_KEY, CHAR_damageCommand)
             end
     )
     MangAdmin:PrepareScript(
