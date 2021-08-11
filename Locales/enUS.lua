@@ -59,6 +59,8 @@ function Return_enUS()
     ["tt_closeWindow"] = "Close AzerothCoreAdmin",
     ["tt_clearParameterBox"] = "Clears the parameter box.",
     ["tt_bag"] = "Show the bag of the selected character or yours [[Parameters: $bagSlot: 0-4]]",
+    ["tt_cheatExploreMapsOn"] = "Reveals maps for the selected character.",
+    ["tt_cheatExploreMapsOff"] = "Hides maps for the selected character.",
     --[[General-Control Labels]]
     ["label_languageButton"] = "Change language",
     ["label_infoRevision"] = "|cFF00FF00AzerothCore rev:|r ", --Updated: Matched string output to AzerothCore
@@ -91,6 +93,7 @@ function Return_enUS()
     ["mustBeANumber"] = "Value must be a number!",
     ["log_resetSlider"] = "Reset slider to 1.0",
     ["log_bag"] = "Opened _T_'s bag on slot _V1_ ",
+    ["log_cheatExploreMaps"] = "Explore maps cheat for _T_ has been set to _V1_",
     --[[GM-Name]]
     ["tabname_GM"] = "GM",
     --[[GM-Tooltips]]
@@ -108,8 +111,6 @@ function Return_enUS()
     ["ttGM_visibilityOff"] = "Make you visible.",
     ["ttGM_cheatTaxiOn"] = "Show all taxi-routes to the selected player. This cheat will be deactivated on logout.",
     ["ttGM_cheatTaxiOff"] = "Deactivate the taxi-cheat and restore the players known taxi-routes.",
-    ["ttGM_cheatExploreMapsOn"] = "Reveals maps for the selected character.",
-    ["ttGM_cheatExploreMapsOff"] = "Hides maps for the selected character.",
     ["ttGM_cheatWaterWalkOn"] = "Turn Waterwalk ON for the selected character",
     ["ttGM_cheatWaterWalkOff"] = "Turn Waterwalk OFF for the selected character",
     ["ttGM_cheatNoCastTimeOn"] = "Disable spell's casting time",
@@ -231,7 +232,6 @@ function Return_enUS()
     ["logGM_acceptWhispers"] = "Turned accepting whispers to _V1_",
     ["logGM_visibility"] = "Turned your visibility to _V1_",
     ["logGM_cheatTaxi"] = "Taxi cheat for _T_ has been set to _V1_",
-    ["logGM_cheatExploreMaps"] = "Explore maps cheat for _T_ has been set to _V1_",
     ["logGM_cheatWaterWalk"] = "WaterWalk cheat for _T_ has been set to _V1_",
     ["logGM_cheatNoCastTime"] = "Turned NoCastTime to _V1_",
     ["logGM_cheatNoCooldown"] = "Turned NoCooldown to _V1_",

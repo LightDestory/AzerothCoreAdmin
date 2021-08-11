@@ -3,6 +3,7 @@ ON_OPTION = "on"
 OFF_OPTION = "off"
 
 -- Role identity Keys
+GENERAL_KEY = "GENERAL"
 GM_KEY = "GM"
 CHAR_KEY = "CHAR"
 
@@ -16,6 +17,8 @@ GENERICS_command = "command"
 GENERICS_message = "message"
 
 -- Spells Keys
+--General
+cheatExploreMapsCommand = "cheatExploreMaps"
 -- GM
 GM_displayAccountGMLevelCommand = "displayAccountLevel"
 GM_flyModeCommand = "flyMode"
@@ -23,7 +26,6 @@ GM_godModeCommand = "godMode"
 GM_acceptWhispersCommand = "acceptWhispers"
 GM_visibilityCommand = "visibility"
 GM_cheatTaxiCommand = "cheatTaxi"
-GM_cheatExploreMapsCommand = "cheatExploreMaps"
 GM_cheatWaterWalkCommand = "cheatWaterWalk"
 GM_cheatNoCastTimeCommand = "cheatNoCastTime"
 GM_cheatNoCooldownCommand = "cheatNoCooldown"

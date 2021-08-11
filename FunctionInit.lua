@@ -113,16 +113,16 @@ function InitControls()
     )
     MangAdmin:PrepareScript(
             GM_cheatExploreMapsOnButton,
-            Locale["ttGM_cheatExploreMapsOn"],
+            Locale["tt_cheatExploreMapsOn"],
             function()
-                genericCaller(GM_KEY, GM_cheatExploreMapsCommand, "1")
+                genericCaller(GENERAL_KEY, cheatExploreMapsCommand, "1")
             end
     )
     MangAdmin:PrepareScript(
             GM_cheatExploreMapsOffButton,
-            Locale["ttGM_cheatExploreMapsOff"],
+            Locale["tt_cheatExploreMapsOff"],
             function()
-                genericCaller(GM_KEY, GM_cheatExploreMapsCommand, "0")
+                genericCaller(GENERAL_KEY, cheatExploreMapsCommand, "0")
             end
     )
     MangAdmin:PrepareScript(

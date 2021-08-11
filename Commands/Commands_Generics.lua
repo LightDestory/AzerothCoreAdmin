@@ -15,6 +15,14 @@
 --
 -------------------------------------------------------------------------------------------------------------
 
+genericCommands = {
+    [cheatExploreMapsCommand] = {
+        [GENERICS_isValueNeeded] = true,
+        [GENERICS_isTargetCheckNeeded] = true,
+        [GENERICS_command] = ".cheat explore ",
+        [GENERICS_message] = "log_cheatExploreMaps"
+    },
+}
 function commandTargetCheck()
     return (MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none"))
 end
@@ -28,8 +36,8 @@ function getCallsDictionary(ID)
         return GM_genericCommands
     elseif ID == CHAR_KEY then
         return CHAR_genericCommands
-    else
-        return nil
+    elseif ID == GENERAL_KEY then
+        return genericCommands
     end
 end
 

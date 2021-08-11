@@ -60,12 +60,6 @@ GM_genericCommands = {
     [GENERICS_command] = ".cheat taxi ",
     [GENERICS_message] = "logGM_cheatTaxi"
   },
-  [GM_cheatExploreMapsCommand] = {
-    [GENERICS_isValueNeeded] = true,
-    [GENERICS_isTargetCheckNeeded] = true,
-    [GENERICS_command] = ".cheat explore ",
-    [GENERICS_message] = "logGM_cheatExploreMaps"
-  },
   [GM_cheatWaterWalkCommand] = {
     [GENERICS_isValueNeeded] = true,
     [GENERICS_isTargetCheckNeeded] = true,
