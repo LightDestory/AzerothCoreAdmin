@@ -132,6 +132,7 @@ GM_genericCommands = {
   },
   [GM_teleportToCommand] = {
     [GENERICS_isParametersNeeded] = true,
+    [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_command] = ".teleport ",
     [GENERICS_message] = "logGM_teleportTo"
   },
