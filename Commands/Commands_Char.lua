@@ -104,10 +104,66 @@ CHAR_genericCommands = {
   },
   [CHAR_unbindSightCommand] = {
     [GENERICS_command] = ".unbindsight",
+    [GENERICS_isTargetCheckNeeded] = true,
     [GENERICS_canTargetBeACreature] = true,
     [GENERICS_message] = "logCHAR_unbindSight"
+  },
+  [CHAR_renameCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".character rename",
+    [GENERICS_message] = "logCHAR_rename"
+  },
+  [CHAR_customizeCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".character customize",
+    [GENERICS_message] = "logCHAR_customize"
+  },
+  [CHAR_changeRaceCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".character changerace",
+    [GENERICS_message] = "logCHAR_changeRace"
+  },
+  [CHAR_changeFactionCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".character changefaction",
+    [GENERICS_message] = "logCHAR_changeFaction"
+  },
+  [CHAR_combatStopCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".combatstop",
+    [GENERICS_message] = "logCHAR_combatStop"
+  },
+  [CHAR_maxSkillCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".maxskill",
+    [GENERICS_message] = "logCHAR_maxSkill"
+  },
+  [CHAR_freezeCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".freeze",
+    [GENERICS_message] = "logCHAR_freeze"
+  },
+  [CHAR_unfreezeCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".unfreeze",
+    [GENERICS_message] = "logCHAR_unfreeze"
+  },
+  [CHAR_possessCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_command] = ".possess",
+    [GENERICS_canTargetBeACreature] = true,
+    [GENERICS_message] = "logCHAR_possess"
+  },
+  [CHAR_unpossessCommand] = {
+    [GENERICS_isTargetCheckNeeded] = true,
+    [GENERICS_canTargetBeACreature] = true,
+    [GENERICS_command] = ".unpossess",
+    [GENERICS_message] = "logCHAR_unpossess"
   }
 }
+-- Delete
+
+--
 
 function InitModelFrame()
   ma_modelframe:SetScript("OnUpdate", function() MangAdminModelOnUpdate(arg1) end)
@@ -170,44 +226,6 @@ function ModelChanged()
   ma_modelframe:RefreshUnit()
 end
 
-
--- Delete
-
-
-function Demorph()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".morph reset")
-    MangAdmin:LogAction("Demorphed player "..player..".")
-end
-
-function CharMorphButton()
-  local player = UnitName("target") or UnitName("player")
-  local diplayID = ma_charactertarget:GetText()
-  MangAdmin:ChatMsg(".morph target "..diplayID)
-  MangAdmin:LogAction("Morph applied to "..player..".")
-
-end
-
-function GetGPSInfo()
-  local player = UnitName("target") or UnitName("player")
-  MangAdmin:ChatMsg(".gps")
-  MangAdmin:LogAction("Got GPS coordinates for player "..player..".")
-end
-
-function CharBindSight()
-  local cname = ma_charactertarget:GetText()
-  MangAdmin:ChatMsg(".bindsight")
-  MangAdmin:LogAction("Sight bound to "..cname)
-end
-
-function CharUnBindSight()
-  local cname = ma_charactertarget:GetText()
-  MangAdmin:ChatMsg(".unbindsight")
-  MangAdmin:LogAction("Sight unbound to "..cname)
-end
-
---
-
 function ToggleMapsChar(value)
   MangAdmin:ChatMsg(".cheat explore "..value)
   if value == 1 then
@@ -216,8 +234,6 @@ function ToggleMapsChar(value)
     MangAdmin:LogAction("Hide all unexplored maps for selected player.")
   end
 end
-
-
 
 function LearnSpell(value, state)
   if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
@@ -438,72 +454,6 @@ function ResetDropDownInitialize()
       UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
-end
-
-
-function CharRename()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".character rename")
-    MangAdmin:LogAction("Forced rename of "..cname)
-end
-
-function CharCustomize()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".character customize")
-    MangAdmin:LogAction("Forced customization of "..cname)
-end
-
-function CharChangeRace()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".character changerace")
-    MangAdmin:LogAction("Forced race change of "..cname)
-end
-
-function CharChangeFaction()
-    local cname = ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".character changefaction")
-    MangAdmin:LogAction("Forced faction change of "..cname)
-end
-
-function CharCombatStop()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".combatstop")
-    MangAdmin:LogAction("Forced combat stop on "..player)
-end
-
-function CharMaxSkill()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".maxskill")
-    MangAdmin:LogAction("Set player MaxSkill for "..player)
-end
-
-function CharFreeze()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".freeze")
-    MangAdmin:LogAction("Set Freeze for "..player)
-end
-
-function CharUnFreeze()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".unfreeze")
-    MangAdmin:LogAction("UnFroze "..player)
-end
-
-function CharListFreeze()
-    MangAdmin:ChatMsg(".listfreeze")
-    MangAdmin:LogAction("Listed Frozen players")
-end
-
-function CharPossess()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".possess")
-    MangAdmin:LogAction("Possessed "..player)
-end
-
-function CharUnPossess()
-    local player = UnitName("target") or UnitName("player")
-    MangAdmin:ChatMsg(".unpossess")
-    MangAdmin:LogAction("UnPossessed "..player)
 end
 
 function CharRecall()

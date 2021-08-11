@@ -554,11 +554,11 @@ function MangAdmin:CreateCharSection()
   })
 
   FrameLib:BuildButton({
-    name = "ma_charrenamebutton",
+    name = "CHAR_renameButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charrenamebutton_texture",
+      name = "CHAR_renameButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -570,15 +570,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -139 --charRowSix
     },
-    text = Locale["ma_charrename"]
+    text = Locale["labelCHAR_renameButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charcustomizebutton",
+    name = "CHAR_customizeButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charcustomizebutton_texture",
+      name = "CHAR_customizeButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -590,15 +590,15 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -139 --charRowSix
     },
-    text = Locale["ma_charcustomize"]
+    text = Locale["labelCHAR_customizeButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charchangeracebutton",
+    name = "CHAR_changeRaceButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charchangeracebutton_texture",
+      name = "CHAR_changeRaceButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -610,15 +610,15 @@ function MangAdmin:CreateCharSection()
       offX = 303, --charColThree
       offY = -139 --charRowSix
     },
-    text = Locale["ma_charchangerace"]
+    text = Locale["labelCHAR_changeRaceButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charchangefactionbutton",
+    name = "CHAR_changeFactionButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charchangefactionbutton_texture",
+      name = "CHAR_changeFactionButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -630,15 +630,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -160 --charRowSeven
     },
-    text = Locale["ma_charchnagefaction"]
+    text = Locale["labelCHAR_changeFactionButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charcombatstopbutton",
+    name = "CHAR_combatStopButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charcombatstopbutton_texture",
+      name = "CHAR_combatStopButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -650,15 +650,15 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -160 --charRowSeven
     },
-    text = Locale["ma_charcombatstop"]
+    text = Locale["labelCHAR_combatStopButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charmaxskillbutton",
+    name = "CHAR_maxSkillButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charmaxskillbutton_texture",
+      name = "CHAR_maxSkillButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -670,15 +670,15 @@ function MangAdmin:CreateCharSection()
       offX = 303, --charColThree
       offY = -160 --charRowSeven
     },
-    text = Locale["ma_charmaxskill"]
+    text = Locale["labelCHAR_maxSkillButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charfreezebutton",
+    name = "CHAR_freezeButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charfreezebutton_texture",
+      name = "CHAR_freezeButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -690,15 +690,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -182 --charRowEight
     },
-    text = Locale["ma_charfreeze"]
+    text = Locale["labelCHAR_freezeButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charunfreezebutton",
+    name = "CHAR_unfreezeButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charunfreezebutton_texture",
+      name = "CHAR_unfreezeButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -710,35 +710,15 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -182 --charRowEight
     },
-    text = Locale["ma_charunfreeze"]
+    text = Locale["labelCHAR_unfreezeButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charlistfreezebutton",
+    name = "CHAR_possessButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charlistfreezebutton_texture",
-      color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
-    },
-    size = {
-      width = 80,
-      height = 20
-    },
-    setpoint = {
-      pos = "TOPLEFT",
-      offX = 303, --charColThree
-      offY = -182 --charRowEight
-    },
-    text = Locale["ma_charlistfreeze"]
-  })
-
-  FrameLib:BuildButton({
-    name = "ma_charpossessbutton",
-    group = "char",
-    parent = ma_midframe,
-    texture = {
-      name = "ma_charpossessbutton_texture",
+      name = "CHAR_possessButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -750,15 +730,15 @@ function MangAdmin:CreateCharSection()
       offX = 140, --charColOne
       offY = -204 --charRowNine
     },
-    text = Locale["ma_charpossess"]
+    text = Locale["labelCHAR_possessButton"]
   })
 
   FrameLib:BuildButton({
-    name = "ma_charunpossessbutton",
+    name = "CHAR_unpossessButton",
     group = "char",
     parent = ma_midframe,
     texture = {
-      name = "ma_charunpossessbutton_texture",
+      name = "CHAR_unpossessButton_texture",
       color = {color.btn.r, color.btn.g, color.btn.b, transparency.btn}
     },
     size = {
@@ -770,7 +750,7 @@ function MangAdmin:CreateCharSection()
       offX = 222, --charColTwo
       offY = -204 --charRowNine
     },
-    text = Locale["ma_charunpossess"]
+    text = Locale["labelCHAR_unpossessButton"]
   })
 
   FrameLib:BuildButton({

@@ -16,6 +16,7 @@ GENERICS_command = "command"
 GENERICS_message = "message"
 
 -- Spells Keys
+-- GM
 GM_displayAccountGMLevelCommand = "displayAccountLevel"
 GM_flyModeCommand = "flyMode"
 GM_godModeCommand = "godMode"
@@ -56,7 +57,7 @@ GM_playerSpeedCommand = "playerSpeed"
 GM_playerScaleCommand = "playerScale"
 GM_AllianceJailCommand = "allianceJail"
 GM_HordeJailCommand = "hordeJail"
-
+--CHAR
 CHAR_reviveCommand = "revive"
 CHAR_saveCommand = "save"
 CHAR_kickCommand = "kick"
@@ -71,4 +72,14 @@ CHAR_morphResetCommand = "morphReset"
 CHAR_gpsCommand = "gps"
 CHAR_bindSightCommand = "bindSight"
 CHAR_unbindSightCommand = "unbindSight"
+CHAR_renameCommand = "rename"
+CHAR_customizeCommand = "customize"
+CHAR_changeRaceCommand = "changeRace"
+CHAR_changeFactionCommand = "changeFaction"
+CHAR_combatStopCommand = "combatStop"
+CHAR_maxSkillCommand = "maxSkill"
+CHAR_freezeCommand = "freeze"
+CHAR_unfreezeCommand = "unfreeze"
+CHAR_possessCommand = "possess"
+CHAR_unpossessCommand = "unpossess"
 

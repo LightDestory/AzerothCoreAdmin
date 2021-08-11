@@ -690,80 +690,73 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_charrenamebutton,
-            Locale["tt_charrename"],
+            CHAR_renameButton,
+            Locale["ttCHAR_rename"],
             function()
-                CharRename()
+                genericCaller(CHAR_KEY, CHAR_renameCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charcustomizebutton,
-            Locale["tt_charcustomize"],
+            CHAR_customizeButton,
+            Locale["ttCHAR_customize"],
             function()
-                CharCustomize()
+                genericCaller(CHAR_KEY, CHAR_customizeCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charchangeracebutton,
-            Locale["tt_charchangerace"],
+            CHAR_changeRaceButton,
+            Locale["ttCHAR_changeRace"],
             function()
-                CharChangeRace()
+                genericCaller(CHAR_KEY, CHAR_changeRaceCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charchangefactionbutton,
-            Locale["tt_charchnagefaction"],
+            CHAR_changeFactionButton,
+            Locale["ttCHAR_changeFaction"],
             function()
-                CharChangeFaction()
+                genericCaller(CHAR_KEY, CHAR_changeFactionCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charcombatstopbutton,
-            Locale["tt_charcombatstop"],
+            CHAR_combatStopButton,
+            Locale["ttCHAR_combatStop"],
             function()
-                CharCombatStop()
+                genericCaller(CHAR_KEY, CHAR_combatStopCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charmaxskillbutton,
-            Locale["tt_charmaxskill"],
+            CHAR_maxSkillButton,
+            Locale["ttCHAR_maxSkill"],
             function()
-                CharMaxSkill()
+                genericCaller(CHAR_KEY, CHAR_maxSkillCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charfreezebutton,
-            Locale["tt_charfreeze"],
+            CHAR_freezeButton,
+            Locale["ttCHAR_freeze"],
             function()
-                CharFreeze()
+                genericCaller(CHAR_KEY, CHAR_freezeCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charunfreezebutton,
-            Locale["tt_charunfreeze"],
+            CHAR_unfreezeButton,
+            Locale["ttCHAR_unfreeze"],
             function()
-                CharUnFreeze()
+                genericCaller(CHAR_KEY, CHAR_unfreezeCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charlistfreezebutton,
-            Locale["tt_charlistfreeze"],
+            CHAR_unpossessButton,
+            Locale["ttCHAR_unpossess"],
             function()
-                CharListFreeze()
+                genericCaller(CHAR_KEY, CHAR_unpossessCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_charpossessbutton,
-            Locale["tt_charpossess"],
+            CHAR_possessButton,
+            Locale["ttCHAR_possess"],
             function()
-                CharPossess()
-            end
-    )
-    MangAdmin:PrepareScript(
-            ma_charunpossessbutton,
-            Locale["tt_charunpossess"],
-            function()
-                CharUnPossess()
+                genericCaller(CHAR_KEY, CHAR_possessCommand)
             end
     )
     MangAdmin:PrepareScript(
