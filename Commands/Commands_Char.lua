@@ -211,48 +211,33 @@ CHAR_genericCommands = {
     [GENERICS_command] = ".teleport group ",
     [GENERICS_message] = "logCHAR_teleportGroup"
   },
+  [CHAR_createGuildCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".guild create ",
+    [GENERICS_message] = "logCHAR_createGuild"
+  },
+  [CHAR_deleteGuildCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".guild delete ",
+    [GENERICS_message] = "logCHAR_deleteGuild"
+  },
+  [CHAR_inviteGuildCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".guild invite ",
+    [GENERICS_message] = "logCHAR_inviteGuild"
+  },
+  [CHAR_uninviteGuildCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".guild uninvite ",
+    [GENERICS_message] = "logCHAR_uninviteGuild"
+  },
+  [CHAR_rankGuildCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".guild rank ",
+    [GENERICS_message] = "logCHAR_rankGuild"
+  },
 }
 -- Delete
-
-function CreateGuildButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild create "..cname)
-  MangAdmin:LogAction("Created Guild: "..cname..".")
-
-end
-
-function GuildInviteButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild invite "..cname)
-  MangAdmin:LogAction("Guild invitation: "..cname..".")
-
-end
-
-function GuildRankButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild rank "..cname)
-  MangAdmin:LogAction("Guild rank change: "..cname..".")
-
-end
-
-function GuildDeleteButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild delete "..cname)
-  MangAdmin:LogAction("Deleted guild: "..cname..".")
-
-end
-
-function GuildUninviteButton()
-  local cname = ma_charactertarget:GetText()
-  local npccname = ma_npccharactertarget:GetText()
-  MangAdmin:ChatMsg(".guild uninvite "..cname)
-  MangAdmin:LogAction("Removed from guild: "..cname..".")
-
-end
 
 --
 

@@ -802,10 +802,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_createguildbutton,
-            Locale["tt_createguildbutton"],
+            CHAR_createGuildButton,
+            Locale["ttCHAR_createGuild"],
             function()
-                CreateGuildButton()
+                genericCaller(CHAR_KEY, CHAR_createGuildCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -823,10 +823,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_guildinvitebutton,
-            Locale["tt_guildinvitebutton"],
+            CHAR_inviteGuildButton,
+            Locale["ttCHAR_inviteGuild"],
             function()
-                GuildInviteButton()
+                genericCaller(CHAR_KEY, CHAR_inviteGuildCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -844,10 +844,10 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_guildrankbutton,
-            Locale["tt_guildrankbutton"],
+            CHAR_rankGuildButton,
+            Locale["ttCHAR_rankGuild"],
             function()
-                GuildRankButton()
+                genericCaller(CHAR_KEY, CHAR_rankGuildCommand)
             end
     )
     MangAdmin:PrepareScript(
@@ -865,17 +865,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_guilddeletebutton,
-            Locale["tt_guilddeletebutton"],
+            CHAR_deleteGuildButton,
+            Locale["ttCHAR_deleteGuild"],
             function()
-                GuildDeleteButton()
+                genericCaller(CHAR_KEY, CHAR_deleteGuildCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_guilduninvitebutton,
-            Locale["tt_guilduninvitebutton"],
+            CHAR_uninviteGuildButton,
+            Locale["ttCHAR_uninviteGuild"],
             function()
-                GuildUninviteButton()
+                genericCaller(CHAR_KEY, CHAR_uninviteGuildCommand)
             end
     )
     MangAdmin:PrepareScript(

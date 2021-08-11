@@ -312,6 +312,11 @@ function Return_enUS()
     ["ttCHAR_groupSummon"] = "Teleports the specified character and his/her group to your location [[Parameters: $charactername]]",
     ["ttCHAR_teleportName"] = "Teleports the specified character to the specified location [[Parameters: $charactername $telename]]",
     ["ttCHAR_teleportGroup"] = "Teleports the **selected** character and his/her group to the specified location [[Parameters: $telename]]",
+    ["ttCHAR_createGuild"] = "Creates a guild named with the specified name with the specified leader. Guild name must in quotes. [[Parameters: $GuildLeaderName $GuildName]]",
+    ["ttCHAR_deleteGuild"] = "Deletes the specifies guild. Guild name must in quotes. [[Parameters: $GuildName]]",
+    ["ttCHAR_inviteGuild"] = "Adds the specified character to the specified guild. Guild name must in quotes. [[Parameters: $charactername $guildname]]",
+    ["ttCHAR_uninviteGuild"] = "Kicks the specified character from his/her guild [[Parameters: $charactername]]",
+    ["ttCHAR_rankGuild"] = "Sets to the specified character the specified guild rank [[Parameters: $charactername #ranknumber]]",
 
     --[[CHAR-Control-Labels]]
     ["labelCHAR_killButton"] = "Kill",
@@ -348,6 +353,11 @@ function Return_enUS()
     ["labelCHAR_groupSummonButton"] = "GroupSumm",
     ["labelCHAR_teleportNameButton"] = "TeleName",
     ["labelCHAR_teleportGroupButton"] = "TeleGroup",
+    ["labelCHAR_createGuildButton"] = "G Create",
+    ["labelCHAR_deleteGuildButton"] = "G Delete",
+    ["labelCHAR_inviteGuildButton"] = "G Invite",
+    ["labelCHAR_uninviteGuildButton"] = "G UnInv",
+    ["labelCHAR_rankGuildButton"] = "G Rank",
 
     --[[CHAR-Commands Output]]
     ["logCHAR_kill"] = "_T_ has been killed",
@@ -384,6 +394,11 @@ function Return_enUS()
     ["logCHAR_groupSummon"] = "Teleported _V1_ and his/her group to you",
     ["logCHAR_teleportName"] = "Teleported _V1_ to _V2_",
     ["logCHAR_teleportGroup"] = "Teleported _T_ and his/her group to _V1_",
+    ["logCHAR_createGuild"] = "Created a guild named _V2_ lead by _V1_",
+    ["logCHAR_deleteGuild"] = "Deleted the guild _V1_",
+    ["logCHAR_inviteGuild"] = "Added _V1_ to the guild _V2_",
+    ["logCHAR_uninviteGuild"] = "Kicked _V1_ from his/her guild",
+    ["logCHAR_rankGuild"] = "Set rank _V2_ to _V1_",
 
     ["tt_RotateLeft"] = "Rotate left.",
     ["tt_RotateRight"] = "Rotate right.",
@@ -394,12 +409,7 @@ function Return_enUS()
     ["tt_resetbutton"] = "Reset the selected attribute",
     ["tt_modelzoominbutton"] = "Zoom in the selected model",
     ["tt_modelzoomoutbutton"] = "Zoom out the selected model",
-    ["tt_createguildbutton"] = "Parameters= $GuildLeaderName $GuildName  [[Creates a guild named $GuildName, with $GuildLeaderName as leader]]",
-    ["tt_guildinvitebutton"] = "Parameters= $charactername $guildname   [[Adds $charactername to the guild $guildname]]",
-    ["tt_guildrankbutton"] = "Parameters= $charactername #ranknumber   [[Sets the character specified to the rank specified in his/her guild]]",
 
-    ["tt_guilddeletebutton"] = "Parameter= $guildname  [[Deletes the specified Guild]]",
-    ["tt_guilduninvitebutton"] = "Parameter= $charactername  [[Kicks the specified character out of his/her guild]]",
     ["tt_mutebutton"] = "Parameters= $charactername #minutes  [[Disables chat for $charactername's entire account for #minutes]]",
     ["tt_charaurabutton"] = "Parameters = #AuraID [[Enter the AuraID of the aura you want to apply]]",
     ["tt_charunaurabutton"] = "Parameters = #AuraID [[Enter the AuraID of the aura you want to remove]]",
@@ -425,15 +435,6 @@ function Return_enUS()
     ["ma_Learn"] = "Learn",
     ["ma_Modify"] = "Modify",
     ["ma_Reset"] = "Reset",
-
-    ["ma_createguildbutton"] = "G Create",
-    ["ma_guildinvitebutton"] = "G Invite",
-
-    ["ma_guildrankbutton"] = "G Rank",
-
-    ["ma_guilddeletebutton"] = "G Delete",
-    ["ma_guilduninvitebutton"] = "G UnInv",
-
     ["ma_mutebutton"] = "Mute",
     ["ma_Aura"] = "Aura",
     ["ma_UnAura"] = "UnAura",

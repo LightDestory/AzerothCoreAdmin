@@ -834,11 +834,11 @@ function MangAdmin:CreateCharSection()
     })
 
     FrameLib:BuildButton({
-        name = "ma_createguildbutton",
+        name = "CHAR_createGuildButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_createguildbutton_texture",
+            name = "CHAR_createGuildButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -850,7 +850,7 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -52 --charRowTwo
         },
-        text = Locale["ma_createguildbutton"]
+        text = Locale["labelCHAR_createGuildButton"]
     })
 
     FrameLib:BuildButton({
@@ -894,11 +894,11 @@ function MangAdmin:CreateCharSection()
     })
 
     FrameLib:BuildButton({
-        name = "ma_guildinvitebutton",
+        name = "CHAR_inviteGuildButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_guildinvitebutton_texture",
+            name = "CHAR_inviteGuildButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -910,7 +910,7 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -74  --charRowThree
         },
-        text = Locale["ma_guildinvitebutton"]
+        text = Locale["labelCHAR_inviteGuildButton"]
     })
 
     FrameLib:BuildButton({
@@ -954,11 +954,11 @@ function MangAdmin:CreateCharSection()
     })
 
     FrameLib:BuildButton({
-        name = "ma_guildrankbutton",
+        name = "CHAR_rankGuildButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_guildrankbutton_texture",
+            name = "CHAR_rankGuildButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -970,7 +970,7 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -95 --charRowFour
         },
-        text = Locale["ma_guildrankbutton"]
+        text = Locale["labelCHAR_rankGuildButton"]
     })
 
     FrameLib:BuildButton({
@@ -1014,11 +1014,11 @@ function MangAdmin:CreateCharSection()
     })
 
     FrameLib:BuildButton({
-        name = "ma_guilddeletebutton",
+        name = "CHAR_deleteGuildButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_guilddeletebutton_texture",
+            name = "CHAR_deleteGuildButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1030,15 +1030,15 @@ function MangAdmin:CreateCharSection()
             offX = 467, --charColFive
             offY = -117 --charRowFive
         },
-        text = Locale["ma_guilddeletebutton"]
+        text = Locale["labelCHAR_deleteGuildButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_guilduninvitebutton",
+        name = "CHAR_uninviteGuildButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_guilduninvitebutton_texture",
+            name = "CHAR_uninviteGuildButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1050,7 +1050,7 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -117 --charRowFive
         },
-        text = Locale["ma_guilduninvitebutton"]
+        text = Locale["labelCHAR_uninviteGuildButton"]
     })
 
     FrameLib:BuildButton({
