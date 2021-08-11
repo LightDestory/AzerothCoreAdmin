@@ -130,14 +130,19 @@ GM_genericCommands = {
     [GENERICS_command] = ".cast target ",
     [GENERICS_message] = "logGM_castTarget"
   },
+  [GM_teleportToCommand] = {
+    [GENERICS_isParametersNeeded] = true,
+    [GENERICS_command] = ".teleport ",
+    [GENERICS_message] = "logGM_teleportTo"
+  },
   [GM_teleportAddCommand] = {
     [GENERICS_isParametersNeeded] = true,
-    [GENERICS_command] = ".tele add ",
+    [GENERICS_command] = ".teleport add ",
     [GENERICS_message] = "logGM_teleportAdd"
   },
   [GM_teleportDelCommand] = {
     [GENERICS_isParametersNeeded] = true,
-    [GENERICS_command] = ".tele del ",
+    [GENERICS_command] = ".teleport del ",
     [GENERICS_message] = "logGM_teleportDel"
   },
   [GM_listItemCommand] = {

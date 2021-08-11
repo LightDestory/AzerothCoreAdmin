@@ -280,6 +280,13 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
+            GM_teleportToButton,
+            Locale["ttGM_teleportTo"],
+            function()
+                genericCaller(GM_KEY, GM_teleportToCommand)
+            end
+    )
+    MangAdmin:PrepareScript(
             GM_teleportAddButton,
             Locale["ttGM_teleportAdd"],
             function()
