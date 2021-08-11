@@ -298,9 +298,31 @@ CHAR_genericCommands = {
         [GENERICS_command] = ".damage ",
         [GENERICS_message] = "logCHAR_damage"
     },
+    [CHAR_showAreaCommand] = {
+        [GENERICS_isParametersNeeded] = true,
+        [GENERICS_isTargetCheckNeeded] = true,
+        [GENERICS_command] = ".showarea ",
+        [GENERICS_message] = "logCHAR_showArea"
+    },
+    [CHAR_hideAreaCommand] = {
+        [GENERICS_isParametersNeeded] = true,
+        [GENERICS_isTargetCheckNeeded] = true,
+        [GENERICS_command] = ".hidearea ",
+        [GENERICS_message] = "logCHAR_hideArea"
+    },
+    [CHAR_honorAddCommand] = {
+        [GENERICS_isParametersNeeded] = true,
+        [GENERICS_isTargetCheckNeeded] = true,
+        [GENERICS_command] = ".honor add ",
+        [GENERICS_message] = "logCHAR_honorAdd"
+    },
+    [CHAR_honorUpdateCommand] = {
+        [GENERICS_isTargetCheckNeeded] = true,
+        [GENERICS_command] = ".honor update ",
+        [GENERICS_message] = "logCHAR_honorUpdate"
+    },
 }
 -- Delete
-
 --
 
 function InitModelFrame()
@@ -614,32 +636,4 @@ function ResetDropDownInitialize()
         UIDropDownMenu_AddButton(info, level)
     end
     UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "talents")
-end
-
-function HideAreaButton()
-    local cname = ma_charactertarget:GetText()
-    local npccname = ma_npccharactertarget:GetText()
-    MangAdmin:ChatMsg(".hidearea " .. cname)
-    MangAdmin:LogAction(".hidearea " .. cname .. ".")
-end
-
-function ShowAreaButton()
-    local cname = ma_charactertarget:GetText()
-    local npccname = ma_npccharactertarget:GetText()
-    MangAdmin:ChatMsg(".showarea " .. cname)
-    MangAdmin:LogAction(".showarea " .. cname .. ".")
-end
-
-function HonorAddButton()
-    local cname = ma_charactertarget:GetText()
-    local npccname = ma_npccharactertarget:GetText()
-    MangAdmin:ChatMsg(".honor add " .. cname)
-    MangAdmin:LogAction(".honor add " .. cname .. ".")
-end
-
-function HonorUpdateButton()
-    local cname = ma_charactertarget:GetText()
-    local npccname = ma_npccharactertarget:GetText()
-    MangAdmin:ChatMsg(".honor update ")
-    MangAdmin:LogAction(".honor update.")
 end

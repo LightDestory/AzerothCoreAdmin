@@ -58,7 +58,7 @@ function Return_enUS()
     ["tt_languageButton"] = "Reload AzerothCoreAdmin.", --Removed locals. Updated tooltip to just reload
     ["tt_closeWindow"] = "Close AzerothCoreAdmin",
     ["tt_clearParameterBox"] = "Clears the parameter box.",
-    ["tt_bag"] = "Show the bag of the selected character or yours [[Parameters: $bagSlot: 1-4]]",
+    ["tt_bag"] = "Show the bag of the selected character or yours [[Parameters: $bagSlot: 0-4]]",
     --[[General-Control Labels]]
     ["label_languageButton"] = "Change language",
     ["label_infoRevision"] = "|cFF00FF00AzerothCore rev:|r ", --Updated: Matched string output to AzerothCore
@@ -328,6 +328,10 @@ function Return_enUS()
     ["ttCHAR_questRemove"] = "Removes the specified quest from **selected** player [[Parameters: $questID]]",
     ["ttCHAR_questComplete"] = "Marks the specified quest as complete for **selected** player [[Parameters: $questID]]",
     ["ttCHAR_damage"] = "Applies the specified amount of damage to the selected Unit [[Parameters: #damageAmount]]",
+    ["ttCHAR_showArea"] = "Shows the specified area to the **selected** player [[Parameters: $areaID]]",
+    ["ttCHAR_hideArea"] = "Hides the specified area to the **selected** player [[Parameters: $areaID]]",
+    ["ttCHAR_honorAdd"] = "Adds the specified amount of honor points to the **selected** player [[ParameterS: $pointsAmount]]",
+    ["ttCHAR_honorUpdate"] = "Saves Honor for **selected** player",
 
     --[[CHAR-Control-Labels]]
     ["labelCHAR_killButton"] = "Kill",
@@ -380,6 +384,10 @@ function Return_enUS()
     ["labelCHAR_questRemoveButton"] = "QuestRem",
     ["labelCHAR_questCompleteButton"] = "QuestCompl",
     ["labelCHAR_damageButton"] = "Damage",
+    ["labelCHAR_showAreaButton"] = "ShowArea",
+    ["labelCHAR_hideAreaButton"] = "HideArea",
+    ["labelCHAR_honorAddButton"] = "HonorAdd",
+    ["labelCHAR_honorUpdateButton"] = "HonorUpdt",
 
     --[[CHAR-Commands Output]]
     ["logCHAR_kill"] = "_T_ has been killed",
@@ -433,6 +441,11 @@ function Return_enUS()
     ["logCHAR_questComplete"] = "Set questID _V1_ as completed to _T_",
     ["logCHAR_damage"] = "Applied _V1_ damage to _T_",
 
+    ["logCHAR_showArea"] = "Showed areaID _V1_ to _T_",
+    ["logCHAR_hideArea"] = "Hide areaID _V1_ to _T_",
+    ["logCHAR_honorAdd"] = "Added _V1_ honor points to _T_",
+    ["logCHAR_honorUpdate"] = "Updated honor of _T_",
+
     ["tt_RotateLeft"] = "Rotate left.",
     ["tt_RotateRight"] = "Rotate right.",
     ["tt_ShowMapsCharButton"] = "Reveals maps for the selected character.",
@@ -442,10 +455,6 @@ function Return_enUS()
     ["tt_resetbutton"] = "Reset the selected attribute",
     ["tt_modelzoominbutton"] = "Zoom in the selected model",
     ["tt_modelzoomoutbutton"] = "Zoom out the selected model",
-    ["tt_HideAreaButton"] = "Hides #areaid from **selected** player.",
-    ["tt_ShowAreaButton"] = "Shows #areaid to **selected** player.",
-    ["tt_HonorAddButton"] = "Adds #honorpoints to **selected** player.",
-    ["tt_HonorUpdateButton"] = "No parameter required. Saves Honor for **selected** player.",
 
     ["ma_ShowMapsButton"] = "Show Maps",
     ["ma_HideMapsButton"] = "Hide Maps",
@@ -456,12 +465,6 @@ function Return_enUS()
     ["ma_Modify"] = "Modify",
     ["ma_Reset"] = "Reset",
 
-
-
-    ["ma_HideAreaButton"] = "HideArea",
-    ["ma_ShowAreaButton"] = "ShowArea",
-    ["ma_HonorAddButton"] = "HonorAdd",
-    ["ma_HonorUpdateButton"] = "HonorUpdt",
     --[[Other]]
     ["ma_LevelUp"] = "Level up",
     ["ma_LevelDown"] = "Level down",

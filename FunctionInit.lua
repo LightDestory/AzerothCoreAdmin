@@ -970,31 +970,31 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_hideareabutton,
-            Locale["tt_HideAreaButton"],
+            CHAR_hideAreaButton,
+            Locale["ttCHAR_hideArea"],
             function()
-                HideAreaButton()
+                genericCaller(CHAR_KEY, CHAR_hideAreaCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_showareabutton,
-            Locale["tt_ShowAreaButton"],
+            CHAR_showAreaButton,
+            Locale["ttCHAR_showArea"],
             function()
-                ShowAreaButton()
+                genericCaller(CHAR_KEY, CHAR_showAreaCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_honoraddbutton,
-            Locale["tt_HonorAddButton"],
+            CHAR_honorAddButton,
+            Locale["ttCHAR_honorAdd"],
             function()
-                HonorAddButton()
+                genericCaller(CHAR_KEY, CHAR_honorAddCommand)
             end
     )
     MangAdmin:PrepareScript(
-            ma_honorupdatebutton,
-            Locale["tt_HonorUpdateButton"],
+            CHAR_honorUpdateButton,
+            Locale["ttCHAR_honorUpdate"],
             function()
-                HonorUpdateButton()
+                genericCaller(CHAR_KEY, CHAR_honorUpdateCommand)
             end
     )
 

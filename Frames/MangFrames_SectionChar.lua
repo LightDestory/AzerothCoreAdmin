@@ -1294,11 +1294,11 @@ function MangAdmin:CreateCharSection()
     })
 
     FrameLib:BuildButton({
-        name = "ma_hideareabutton",
+        name = "CHAR_hideAreaButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_hideareabutton_texture",
+            name = "CHAR_hideAreaButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1310,15 +1310,15 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -30 --charRowOne
         },
-        text = Locale["ma_HideAreaButton"]
+        text = Locale["labelCHAR_hideAreaButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_showareabutton",
+        name = "CHAR_showAreaButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_showareabutton_texture",
+            name = "CHAR_showAreaButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1330,15 +1330,15 @@ function MangAdmin:CreateCharSection()
             offX = 467, --charColFive
             offY = -30 --charRowOne
         },
-        text = Locale["ma_ShowAreaButton"]
+        text = Locale["labelCHAR_showAreaButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_honoraddbutton",
+        name = "CHAR_honorAddButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_honoraddbutton_texture",
+            name = "CHAR_honorAddButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1350,15 +1350,15 @@ function MangAdmin:CreateCharSection()
             offX = 467, --charColFive
             offY = -204 --charRowNine
         },
-        text = Locale["ma_HonorAddButton"]
+        text = Locale["labelCHAR_honorAddButton"]
     })
 
     FrameLib:BuildButton({
-        name = "ma_honorupdatebutton",
+        name = "CHAR_honorUpdateButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_honorupdatebutton_texture",
+            name = "CHAR_honorUpdateButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1370,7 +1370,7 @@ function MangAdmin:CreateCharSection()
             offX = 548, --charColSix
             offY = -204 --charRowNine
         },
-        text = Locale["ma_HonorUpdateButton"]
+        text = Locale["labelCHAR_honorUpdateButton"]
     })
 
     FrameLib:BuildFontString({
@@ -1396,7 +1396,7 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "BOTTOMLEFT",
-            offX = 292,
+            offX = 305,
             offY = 4
         },
         inherits = "InputBoxTemplate"

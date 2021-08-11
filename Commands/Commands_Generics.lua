@@ -34,8 +34,10 @@ function getCallsDictionary(ID)
 end
 
 function genericClearParametersBox(caller)
-    if (caller == "GM") then
+    if (caller == GM_KEY) then
         GM_parameterInput:SetText("")
+    elseif (caller == CHAR_KEY) then
+        CHAR_parameterInput:setText("")
     end
 end
 
