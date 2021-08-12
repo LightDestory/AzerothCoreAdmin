@@ -460,7 +460,6 @@ function Return_enUS()
     ["ma_Learn"] = "Learn",
     ["ma_Modify"] = "Modify",
     ["ma_Reset"] = "Reset",
-
     --[[Other]]
     ["ma_LevelUp"] = "Level up",
     ["ma_LevelDown"] = "Level down",
@@ -475,8 +474,6 @@ function Return_enUS()
     ["ma_Honor"] = "Honor",
     ["ma_Level"] = "Level",
     ["ma_AllLang"] = "All Languages",
-    ["ma_resetallspells"] = "Spells for ALL",
-    ["ma_resetalltalents"] = "Talents for ALL",
     ["ma_achievements"] = "Achievements",
     ["ma_AllSpeeds"] = "AllSpeeds",
     ["ma_Arena"] = "Arena",
@@ -488,7 +485,6 @@ function Return_enUS()
     ["ma_MountSpeed"] = "MountSpeed",
     ["ma_Phase"] = "Phase",
     ["ma_RunicPower"] = "RunicPower",
-    ["ma_Speed"] = "Speed",
     ["ma_StandSate"] = "StandState",
     ["ma_SwimSpeed"] = "SwimSpeed",
     ["ma_TalentPoints"] = "TalentPoints",
