@@ -321,6 +321,12 @@ CHAR_genericCommands = {
         [GENERICS_command] = ".honor update ",
         [GENERICS_message] = "logCHAR_honorUpdate"
     },
+    [CHAR_resetCommand] = {
+        [GENERICS_isValueNeeded] = true,
+        [GENERICS_isTargetCheckNeeded] = true,
+        [GENERICS_command] = ".reset ",
+        [GENERICS_message] = "logCHAR_reset"
+    },
 }
 -- Delete
 --
@@ -441,7 +447,11 @@ function LearnSpell(value, state)
 end
 
 function Modify(case, value)
-    if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
+    if (not value or value == '') then
+        MangAdmin:Print(Locale["paramError"])
+        return
+    end
+    if commandTargetCheck() then
         local player = UnitName("target") or UnitName("player")
         if case == "money" then
             MangAdmin:ChatMsg(".modify money " .. value)
@@ -509,16 +519,6 @@ function Modify(case, value)
     end
 end
 
-function Reset(value)
-    if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
-        local player = UnitName("target") or UnitName("player")
-        MangAdmin:ChatMsg(".reset " .. value)
-        MangAdmin:LogAction("Reset " .. value .. "' for player " .. player .. ".")
-    else
-        MangAdmin:Print(Locale["selectionError"])
-    end
-end
-
 -- LEARN LANG
 function LearnLangDropDownInitialize()
     local level = 1
@@ -559,39 +559,39 @@ function ModifyDropDownInitialize()
     local level = 1
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
-        { Locale["ma_AllSpeeds"], "aspeed" },
-        { Locale["ma_Arena"], "arena" },
-        { Locale["ma_BackWalk"], "bwalk" },
-        { Locale["ma_Drunk"], "drunk" },
-        { Locale["ma_Energy"], "energy" },
-        { Locale["ma_FlySpeed"], "fly" },
-        { Locale["ma_Gender"], "gender" },
-        { Locale["ma_Healthpoints"], "health" },
-        { Locale["ma_Honor"], "honor" },
-        { Locale["ma_LevelUp"], "levelup" },
-        { Locale["ma_LevelDown"], "leveldown" },
-        { Locale["ma_Mana"], "mana" },
-        { Locale["ma_Money"], "money" },
-        { Locale["ma_MountSpeed"], "mount" },
-        { Locale["ma_Phase"], "phase" },
-        { Locale["ma_Rage"], "rage" },
-        { Locale["ma_RunicPower"], "runicpower" },
-        { Locale["ma_StandSate"], "standstate" },
-        { Locale["ma_SwimSpeed"], "swim" },
-        { Locale["ma_TalentPoints"], "tp" }
+        { Locale["labelCHAR_modifyAllSpeedsOption"], "aspeed" },
+        { Locale["labelCHAR_modifyArenaOption"], "arena" },
+        { Locale["labelCHAR_modifyBackWalkOption"], "bwalk" },
+        { Locale["labelCHAR_modifyDrunkOption"], "drunk" },
+        { Locale["labelCHAR_modifyEnergyOption"], "energy" },
+        { Locale["labelCHAR_modifyFlySpeedOption"], "fly" },
+        { Locale["labelCHAR_modifyGenderOption"], "gender" },
+        { Locale["labelCHAR_modifyHealthPointsOption"], "health" },
+        { Locale["labelCHAR_modifyHonorOption"], "honor" },
+        { Locale["labelCHAR_modifyLevelUPOption"], "levelup" },
+        { Locale["labelCHAR_modifyLevelDownOption"], "leveldown" },
+        { Locale["labelCHAR_modifyManaOption"], "mana" },
+        { Locale["labelCHAR_modifyMoneyOption"], "money" },
+        { Locale["labelCHAR_modifyMountSpeedOption"], "mount" },
+        { Locale["labelCHAR_modifyPhaseOption"], "phase" },
+        { Locale["labelCHAR_modifyRageOption"], "rage" },
+        { Locale["labelCHAR_modifyRunicPowerOption"], "runicpower" },
+        { Locale["labelCHAR_modifyStandSateOption"], "standstate" },
+        { Locale["labelCHAR_modifySwimSpeedOption"], "swim" },
+        { Locale["labelCHAR_resetTalentsOption"], "tp" }
     }
     for k, v in pairs(buttons) do
         info.text = v[1]
         info.value = v[2]
         info.func = function()
-            UIDropDownMenu_SetSelectedValue(ma_modifydropdown, this.value)
+            UIDropDownMenu_SetSelectedValue(CHAR_modifyDropdown, this.value)
         end
         info.checked = nil
         info.icon = nil
         info.keepShownOnClick = nil
         UIDropDownMenu_AddButton(info, level)
     end
-    UIDropDownMenu_SetSelectedValue(ma_modifydropdown, "levelup")
+    UIDropDownMenu_SetSelectedValue(CHAR_modifyDropdown, "levelup")
 end
 
 -- RESET
@@ -599,23 +599,23 @@ function ResetDropDownInitialize()
     local level = 1
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
-        { Locale["ma_achievements"], "achievements" },
-        { Locale["ma_Honor"], "honor" },
-        { Locale["ma_Level"], "level" },
-        { Locale["ma_Spells"], "spells" },
-        { Locale["ma_Stats"], "stats" },
-        { Locale["ma_Talents"], "talents" }
+        { Locale["labelCHAR_resetAchievementsOption"], "achievements" },
+        { Locale["labelCHAR_resetHonorOption"], "honor" },
+        { Locale["labelCHAR_resetLevelOption"], "level" },
+        { Locale["labelCHAR_resetSpellsOption"], "spells" },
+        { Locale["labelCHAR_resetStatsOption"], "stats" },
+        { Locale["labelCHAR_resetTalentsOption"], "talents" }
     }
     for k, v in pairs(buttons) do
         info.text = v[1]
         info.value = v[2]
         info.func = function()
-            UIDropDownMenu_SetSelectedValue(ma_resetdropdown, this.value)
+            UIDropDownMenu_SetSelectedValue(CHAR_resetDropdown, this.value)
         end
         info.checked = nil
         info.icon = nil
         info.keepShownOnClick = nil
         UIDropDownMenu_AddButton(info, level)
     end
-    UIDropDownMenu_SetSelectedValue(ma_resetdropdown, "achievements")
+    UIDropDownMenu_SetSelectedValue(CHAR_resetDropdown, "achievements")
 end

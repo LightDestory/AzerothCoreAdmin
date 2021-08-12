@@ -763,17 +763,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_modifybutton,
-            Locale["tt_modifybutton"],
+            CHAR_modifyButton,
+            Locale["ttCHAR_modify"],
             function()
-                Modify(UIDropDownMenu_GetSelectedValue(ma_modifydropdown), ma_modifyeditbox:GetText())
+                Modify(UIDropDownMenu_GetSelectedValue(CHAR_modifyDropdown), CHAR_modifyInputBox:GetText())
             end
     )
     MangAdmin:PrepareScript(
-            ma_resetbutton,
-            Locale["tt_resetbutton"],
+            CHAR_resetButton,
+            Locale["ttCHAR_reset"],
             function()
-                Reset(UIDropDownMenu_GetSelectedValue(ma_resetdropdown))
+                genericCaller(CHAR_KEY, CHAR_resetCommand, UIDropDownMenu_GetSelectedValue(CHAR_resetDropdown))
             end
     )
     LearnLangDropDownInitialize()
@@ -781,13 +781,13 @@ function InitControls()
     UIDropDownMenu_SetWidth(ma_learnlangdropdown, 100)
     UIDropDownMenu_SetButtonWidth(ma_learnlangdropdown, 20)
     ModifyDropDownInitialize()
-    UIDropDownMenu_Initialize(ma_modifydropdown, ModifyDropDownInitialize)
-    UIDropDownMenu_SetWidth(ma_modifydropdown, 100)
-    UIDropDownMenu_SetButtonWidth(ma_modifydropdown, 20)
+    UIDropDownMenu_Initialize(CHAR_modifyDropdown, ModifyDropDownInitialize)
+    UIDropDownMenu_SetWidth(CHAR_modifyDropdown, 100)
+    UIDropDownMenu_SetButtonWidth(CHAR_modifyDropdown, 20)
     ResetDropDownInitialize()
-    UIDropDownMenu_Initialize(ma_resetdropdown, ResetDropDownInitialize)
-    UIDropDownMenu_SetWidth(ma_resetdropdown, 100)
-    UIDropDownMenu_SetButtonWidth(ma_resetdropdown, 20)
+    UIDropDownMenu_Initialize(CHAR_resetDropdown, ResetDropDownInitialize)
+    UIDropDownMenu_SetWidth(CHAR_resetDropdown, 100)
+    UIDropDownMenu_SetButtonWidth(CHAR_resetDropdown, 20)
 
     MangAdmin:PrepareScript(
             CHAR_banButton,

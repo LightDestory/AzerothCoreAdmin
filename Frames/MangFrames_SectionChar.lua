@@ -1304,9 +1304,9 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["ma_Learn"]
     })
-
+    -- Modify Dropdown
     FrameLib:BuildFrame({
-        name = "ma_modifydropdown",
+        name = "CHAR_modifyDropdown",
         group = "char",
         parent = ma_midframe,
         size = {
@@ -1320,10 +1320,10 @@ function MangAdmin:CreateCharSection()
         },
         inherits = "UIDropDownMenuTemplate"
     })
-
+    -- Modify Input Box
     FrameLib:BuildFrame({
         type = "EditBox",
-        name = "ma_modifyeditbox",
+        name = "CHAR_modifyInputBox",
         group = "char",
         parent = ma_midframe,
         size = {
@@ -1337,13 +1337,13 @@ function MangAdmin:CreateCharSection()
         },
         inherits = "InputBoxTemplate"
     })
-
+    -- Modify Button
     FrameLib:BuildButton({
-        name = "ma_modifybutton",
+        name = "CHAR_modifyButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_modifybutton_texture",
+            name = "CHAR_modifyButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1355,11 +1355,11 @@ function MangAdmin:CreateCharSection()
             offX = 485,
             offY = -4
         },
-        text = Locale["ma_Modify"]
+        text = Locale["labelCHAR_modifyButton"]
     })
-
+    -- Reset Dropdown
     FrameLib:BuildFrame({
-        name = "ma_resetdropdown",
+        name = "CHAR_resetDropdown",
         group = "char",
         parent = ma_midframe,
         size = {
@@ -1373,13 +1373,13 @@ function MangAdmin:CreateCharSection()
         },
         inherits = "UIDropDownMenuTemplate"
     })
-
+    -- Reset Button
     FrameLib:BuildButton({
-        name = "ma_resetbutton",
+        name = "CHAR_resetButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_resetbutton_texture",
+            name = "CHAR_resetButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -1391,19 +1391,8 @@ function MangAdmin:CreateCharSection()
             offX = 285,
             offY = -4
         },
-        text = Locale["ma_Reset"]
+        text = Locale["labelCHAR_resetButton"]
     })
-
-
-
-
-
-
-
-
-
-
-
     -- Input Box Label
     FrameLib:BuildFontString({
         name = "ma_parameterboxtext",
