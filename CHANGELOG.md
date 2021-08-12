@@ -11,6 +11,7 @@
     - [ACAdmin-Revision 01](#ACAdmin-Revision-01)
     - [ACAdmin-Revision 02](#ACAdmin-Revision-02)
     - [ACAdmin-Revision 03](#ACAdmin-Revision-03)
+    - [ACAdmin-Revision 04](#ACAdmin-Revision-04)
 2. [TrinityAdmin Changelogs](#TrinityAdmin-Changelogs)
     - [TA-Revision 58](#TA-Revision-58)
     - [TA-Revision 57](#TA-Revision-57)
@@ -49,6 +50,28 @@
     - [TA-Revision 13](#TA-Revision-13)
 
 ## AzerothCoreAdmin Changelogs
+
+### ACAdmin-Revision _04_
+
+[Back to Top](#Table-of-Contents)
+
+**Release date:** _08/12/2021_
+
+**Changelog:**
+
+- GM-TAB:
+    - ADD: Teleport command
+    - FIX: Missing target check on teleport
+- CHAR-TAB:
+    - ADD: Learn and Unlearn Command
+    - ADD: Preset Learn dropdown
+    - FIX: modify and reset dropdowns
+    - REMOVE: TrinityCore's commands customizations not bliz-like
+    - REWORK: Ported to GenericCaller() all CHAR commands
+    - REWORK: CHAR UI
+- CODE:
+    - Some cleanup
+
 
 ### ACAdmin-Revision _03_
 

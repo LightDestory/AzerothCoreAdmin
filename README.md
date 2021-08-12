@@ -28,7 +28,7 @@ _The adaption is based on the most updated fork available of TrinityAdmin for 3.
 ## TO-DO (Adapted TABS)
 
 - [x] GM
-- [ ] CHAR _(In progress..)_
+- [x] CHAR
 - [ ] NPC
 - [ ] GOB
 - [x] TELE

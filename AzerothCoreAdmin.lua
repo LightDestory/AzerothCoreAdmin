@@ -31,7 +31,7 @@ gettingGOBinfo=0
 gettingGOBinfoinfo=0
 
 MAJOR_VERSION = "AzerothCoreAdmin"
-MINOR_VERSION = "$Revision: 003 $"
+MINOR_VERSION = "$Revision: 004 $"
 ROOT_PATH     = "Interface\\AddOns\\AzerothCoreAdmin\\"
 local cont = ""
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
