@@ -627,17 +627,17 @@ function InitControls()
             end
     )
     MangAdmin:PrepareScript(
-            ma_showmapsbutton,
-            Locale["tt_ShowMapsCharButton"],
+            CHAR_showMapsButton,
+            Locale["tt_cheatExploreMapsOn"],
             function()
-                ToggleMapsChar(1)
+                genericCaller(GENERAL_KEY, cheatExploreMapsCommand, "1")
             end
     )
     MangAdmin:PrepareScript(
-            ma_hidemapsbutton,
-            Locale["tt_HideMapsCharButton"],
+            CHAR_hideMapsButton,
+            Locale["tt_cheatExploreMapsOff"],
             function()
-                ToggleMapsChar(0)
+                genericCaller(GENERAL_KEY, cheatExploreMapsCommand, "0")
             end
     )
     MangAdmin:PrepareScript(
@@ -645,27 +645,6 @@ function InitControls()
             Locale["ttCHAR_gps"],
             function()
                 genericCaller(CHAR_KEY, CHAR_gpsCommand)
-            end
-    )
-    MangAdmin:PrepareScript(
-            ma_learnlangbutton,
-            Locale["tt_learnlangbutton"],
-            function()
-                LearnSpell(UIDropDownMenu_GetSelectedValue(ma_learnlangdropdown))
-            end
-    )
-    MangAdmin:PrepareScript(
-            ma_modifybutton,
-            Locale["tt_modifybutton"],
-            function()
-                Modify(UIDropDownMenu_GetSelectedValue(ma_modifydropdown), ma_modifyeditbox:GetText())
-            end
-    )
-    MangAdmin:PrepareScript(
-            ma_resetbutton,
-            Locale["tt_resetbutton"],
-            function()
-                Reset(UIDropDownMenu_GetSelectedValue(ma_resetdropdown))
             end
     )
     MangAdmin:PrepareScript(
@@ -774,6 +753,29 @@ function InitControls()
             end
     )
 
+
+    MangAdmin:PrepareScript(
+            ma_learnlangbutton,
+            Locale["tt_learnlangbutton"],
+            function(self, button, down)
+                MangAdmin:Print(button)
+                LearnSpell(UIDropDownMenu_GetSelectedValue(ma_learnlangdropdown), button)
+            end
+    )
+    MangAdmin:PrepareScript(
+            ma_modifybutton,
+            Locale["tt_modifybutton"],
+            function()
+                Modify(UIDropDownMenu_GetSelectedValue(ma_modifydropdown), ma_modifyeditbox:GetText())
+            end
+    )
+    MangAdmin:PrepareScript(
+            ma_resetbutton,
+            Locale["tt_resetbutton"],
+            function()
+                Reset(UIDropDownMenu_GetSelectedValue(ma_resetdropdown))
+            end
+    )
     LearnLangDropDownInitialize()
     UIDropDownMenu_Initialize(ma_learnlangdropdown, LearnLangDropDownInitialize)
     UIDropDownMenu_SetWidth(ma_learnlangdropdown, 100)
@@ -998,6 +1000,20 @@ function InitControls()
             end
     )
 
+    MangAdmin:PrepareScript(
+            CHAR_clearParameterBoxButton,
+            Locale["tt_clearParameterBox"],
+            function()
+                genericClearParametersBox(CHAR_KEY)
+            end
+    )
+    MangAdmin:PrepareScript(
+            CHAR_bagButton,
+            Locale["tt_bag"],
+            function()
+                genericBagCommand(CHAR_KEY)
+            end
+    )
     --[[NPC Tab]]
     InitModelFrameNPC()
     MangAdmin:PrepareScript(

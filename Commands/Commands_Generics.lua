@@ -45,7 +45,7 @@ function genericClearParametersBox(caller)
     if (caller == GM_KEY) then
         GM_parameterInput:SetText("")
     elseif (caller == CHAR_KEY) then
-        CHAR_parameterInput:setText("")
+        CHAR_parameterInput:SetText("")
     end
 end
 
@@ -72,8 +72,10 @@ end
 function genericBagCommand(caller)
     local player = UnitName("player") or UnitName("target")
     local param = nil
-    if (caller == "GM") then
+    if (caller == GM_KEY) then
         param = GM_genericCommands[GENERICS_parametersGet]()
+    elseif (caller == CHAR_KEY) then
+        param = CHAR_genericCommands[GENERICS_parametersGet]()
     end
     param = (param == nil or param == "" and "0" or param)
     MangAdmin:ChatMsg(".character check bag " .. param)

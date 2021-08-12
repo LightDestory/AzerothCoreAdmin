@@ -395,20 +395,8 @@ function teleportToJail(jailCommand)
         MangAdmin:Print(Locale["paramError"])
         return
     end
-    local data = {
-        ["value"] = character
-    }
     MangAdmin:ChatMsg(string.gsub(command[GENERICS_command], "_C_", characterer))
-    MangAdmin:LogAction(genericLogGenerator(command[GENERICS_message], data))
-end
-
-function ToggleMapsChar(value)
-    MangAdmin:ChatMsg(".cheat explore " .. value)
-    if value == 1 then
-        MangAdmin:LogAction("Revealed all maps for selected player.")
-    else
-        MangAdmin:LogAction("Hide all unexplored maps for selected player.")
-    end
+    MangAdmin:LogAction(genericLogGenerator(command[GENERICS_message], { ['value'] = character }))
 end
 
 function LearnSpell(value, state)

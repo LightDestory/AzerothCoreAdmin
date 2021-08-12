@@ -388,6 +388,8 @@ function Return_enUS()
     ["labelCHAR_hideAreaButton"] = "HideArea",
     ["labelCHAR_honorAddButton"] = "HonorAdd",
     ["labelCHAR_honorUpdateButton"] = "HonorUpdt",
+    ["labelCHAR_showMapsButton"] = "Show Maps",
+    ["labelCHAR_hideMapsButton"] = "Hide Maps",
 
     --[[CHAR-Commands Output]]
     ["logCHAR_kill"] = "_T_ has been killed",
@@ -448,18 +450,12 @@ function Return_enUS()
 
     ["tt_RotateLeft"] = "Rotate left.",
     ["tt_RotateRight"] = "Rotate right.",
-    ["tt_ShowMapsCharButton"] = "Reveals maps for the selected character.",
-    ["tt_HideMapsCharButton"] = "Hides maps for the selected character.",
     ["tt_learnlangbutton"] = "Learn selected langauge(s)",
     ["tt_modifybutton"] = "Modify the selected attribute by the entered amount",
     ["tt_resetbutton"] = "Reset the selected attribute",
     ["tt_modelzoominbutton"] = "Zoom in the selected model",
     ["tt_modelzoomoutbutton"] = "Zoom out the selected model",
 
-    ["ma_ShowMapsButton"] = "Show Maps",
-    ["ma_HideMapsButton"] = "Hide Maps",
-    ["ma_ShowMapsCharButton"] = "Show Maps",
-    ["ma_HideMapsCharButton"] = "Hide Maps",
     ["ma_LearnLangButton"] = "All languages",
     ["ma_Learn"] = "Learn",
     ["ma_Modify"] = "Modify",

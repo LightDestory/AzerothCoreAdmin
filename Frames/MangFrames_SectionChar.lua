@@ -128,6 +128,7 @@ function MangAdmin:CreateCharSection()
         text = "-"
     })
 
+    -- Kill Button
     FrameLib:BuildButton({
         name = "CHAR_killButton",
         group = "char",
@@ -147,7 +148,7 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["labelCHAR_killButton"]
     })
-
+    -- Revive Button
     FrameLib:BuildButton({
         name = "CHAR_reviveButton",
         group = "char",
@@ -167,7 +168,7 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["labelCHAR_reviveButton"]
     })
-
+    -- Save Button
     FrameLib:BuildButton({
         name = "CHAR_saveButton",
         group = "char",
@@ -187,7 +188,7 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["labelCHAR_saveButton"]
     })
-
+    -- Kick Button
     FrameLib:BuildButton({
         name = "CHAR_kickButton",
         group = "char",
@@ -203,17 +204,17 @@ function MangAdmin:CreateCharSection()
         setpoint = {
             pos = "TOPLEFT",
             offX = 140, --charColOne
-            offY = -95 --charRowFour
+            offY = -96 --charRowFour
         },
         text = Locale["labelCHAR_kickButton"]
     })
-
+    -- Ban Button
     FrameLib:BuildButton({
-        name = "CHAR_cooldownButton",
+        name = "CHAR_banButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "CHAR_cooldownButton_texture",
+            name = "CHAR_banButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -222,12 +223,192 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 140, --charColOne
-            offY = -117 --charRowFive
+            offX = 140, --charColFour
+            offY = -118 --charRowTwo
         },
-        text = Locale["labelCHAR_cooldownButton"]
+        text = Locale["labelCHAR_banButton"]
     })
-
+    -- Unban Button
+    FrameLib:BuildButton({
+        name = "CHAR_unbanButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unbanButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 140, --charColFour
+            offY = -140 --charRowFive
+        },
+        text = Locale["labelCHAR_unbanButton"]
+    })
+    -- BanInfo Button
+    FrameLib:BuildButton({
+        name = "CHAR_banInfoButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_banInfoButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 140, --charColFour
+            offY = -162  --charRowThree
+        },
+        text = Locale["labelCHAR_banInfoButton"]
+    })
+    -- Ban List Button
+    FrameLib:BuildButton({
+        name = "CHAR_banListButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_banListButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 140, --charColFour
+            offY = -184 --charRowFour
+        },
+        text = Locale["labelCHAR_banListButton"]
+    })
+    -- CombatStop Button
+    FrameLib:BuildButton({
+        name = "CHAR_combatStopButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_combatStopButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 140, --charColTwo
+            offY = -206 --charRowSeven
+        },
+        text = Locale["labelCHAR_combatStopButton"]
+    })
+    -- Rename Button
+    FrameLib:BuildButton({
+        name = "CHAR_renameButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_renameButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 222, --charColOne
+            offY = -30 --charRowSix
+        },
+        text = Locale["labelCHAR_renameButton"]
+    })
+    -- Customize Button
+    FrameLib:BuildButton({
+        name = "CHAR_customizeButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_customizeButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 222, --charColTwo
+            offY = -52 --charRowSix
+        },
+        text = Locale["labelCHAR_customizeButton"]
+    })
+    -- Change Race Button
+    FrameLib:BuildButton({
+        name = "CHAR_changeRaceButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_changeRaceButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 222, --charColThree
+            offY = -74 --charRowSix
+        },
+        text = Locale["labelCHAR_changeRaceButton"]
+    })
+    -- Change Faction Button
+    FrameLib:BuildButton({
+        name = "CHAR_changeFactionButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_changeFactionButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 222, --charColOne
+            offY = -96 --charRowSeven
+        },
+        text = Locale["labelCHAR_changeFactionButton"]
+    })
+    -- Morph Button
+    FrameLib:BuildButton({
+        name = "CHAR_morphButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_morphButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 222, --charColFour
+            offY = -118 --charRowSix
+        },
+        text = Locale["labelCHAR_morphButton"]
+    })
+    -- Demorph Button
     FrameLib:BuildButton({
         name = "CHAR_demorphButton",
         group = "char",
@@ -243,17 +424,17 @@ function MangAdmin:CreateCharSection()
         setpoint = {
             pos = "TOPLEFT",
             offX = 222, --charColTwo
-            offY = -117 --charRowFive
+            offY = -140 --charRowFive
         },
         text = Locale["labelCHAR_demorphButton"]
     })
-
+    -- Freeze Button
     FrameLib:BuildButton({
-        name = "ma_showmapsbutton",
+        name = "CHAR_freezeButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_showmapsbutton_texture",
+            name = "CHAR_freezeButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -262,58 +443,18 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -30 --charRowOne
+            offX = 222, --charColOne
+            offY = -162 --charRowEight
         },
-        text = Locale["ma_ShowMapsCharButton"]
+        text = Locale["labelCHAR_freezeButton"]
     })
-
+    -- Unfreeze Button
     FrameLib:BuildButton({
-        name = "ma_hidemapsbutton",
+        name = "CHAR_unfreezeButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_hidemapsbutton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour offX = 303, --charColThree
-            offY = -30 --charRowOne offY = -52 --charRowTwo
-        },
-        text = Locale["ma_HideMapsButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_gpsButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_gpsButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -74 --charRowThree
-        },
-        text = Locale["labelCHAR_gpsButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_guidButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_guidButton_texture",
+            name = "CHAR_unfreezeButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
@@ -323,11 +464,31 @@ function MangAdmin:CreateCharSection()
         setpoint = {
             pos = "TOPLEFT",
             offX = 222, --charColTwo
-            offY = -30 --charRowOne
+            offY = -184 --charRowEight
         },
-        text = Locale["labelCHAR_guidButton"]
+        text = Locale["labelCHAR_unfreezeButton"]
     })
-
+    -- Cooldown Button
+    FrameLib:BuildButton({
+        name = "CHAR_cooldownButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_cooldownButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 222, --charColOne
+            offY = -206 --charRowFive
+        },
+        text = Locale["labelCHAR_cooldownButton"]
+    })
+    -- PlayerInfo Button
     FrameLib:BuildButton({
         name = "CHAR_pInfoButton",
         group = "char",
@@ -342,12 +503,532 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -52 --charRowTwo
+            offX = 304, --charColTwo
+            offY = -30 --charRowTwo
         },
         text = Locale["labelCHAR_pInfoButton"]
     })
-
+    -- GUID Button
+    FrameLib:BuildButton({
+        name = "CHAR_guidButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_guidButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColTwo
+            offY = -52 --charRowOne
+        },
+        text = Locale["labelCHAR_guidButton"]
+    })
+    -- GPS Button
+    FrameLib:BuildButton({
+        name = "CHAR_gpsButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_gpsButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColThree
+            offY = -74 --charRowThree
+        },
+        text = Locale["labelCHAR_gpsButton"]
+    })
+    -- Bindsight Button
+    FrameLib:BuildButton({
+        name = "CHAR_bindSightButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_bindSightButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColThree
+            offY = -96 --charRowFour
+        },
+        text = Locale["labelCHAR_bindSightButton"]
+    })
+    -- Unbindsight Button
+    FrameLib:BuildButton({
+        name = "CHAR_unbindSightButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unbindSightButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColThree
+            offY = -118 --charRowFive
+        },
+        text = Locale["labelCHAR_unbindSightButton"]
+    })
+    -- Possess Button
+    FrameLib:BuildButton({
+        name = "CHAR_possessButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_possessButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColOne
+            offY = -140 --charRowNine
+        },
+        text = Locale["labelCHAR_possessButton"]
+    })
+    -- Unpossess Button
+    FrameLib:BuildButton({
+        name = "CHAR_unpossessButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unpossessButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColTwo
+            offY = -162 --charRowNine
+        },
+        text = Locale["labelCHAR_unpossessButton"]
+    })
+    --  MaxSkill Button
+    FrameLib:BuildButton({
+        name = "CHAR_maxSkillButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_maxSkillButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColThree
+            offY = -184 --charRowSeven
+        },
+        text = Locale["labelCHAR_maxSkillButton"]
+    })
+    -- Repair Items Button
+    FrameLib:BuildButton({
+        name = "CHAR_repairItemsButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_repairItemsButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 304, --charColThree
+            offY = -206 --charRowTwo [[offY = -225 --charRowTen]]
+        },
+        text = Locale["labelCHAR_repairItemsButton"]
+    })
+    -- Show Maps Button
+    FrameLib:BuildButton({
+        name = "CHAR_showMapsButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_showMapsButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColThree
+            offY = -30 --charRowOne
+        },
+        text = Locale["labelCHAR_showMapsButton"]
+    })
+    -- Hide Maps Button
+    FrameLib:BuildButton({
+        name = "CHAR_hideMapsButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_hideMapsButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColFour offX = 303, --charColThree
+            offY = -52 --charRowOne offY = -52 --charRowTwo
+        },
+        text = Locale["labelCHAR_hideMapsButton"]
+    })
+    -- Show Area Button
+    FrameLib:BuildButton({
+        name = "CHAR_showAreaButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_showAreaButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColFive
+            offY = -74 --charRowOne
+        },
+        text = Locale["labelCHAR_showAreaButton"]
+    })
+    -- Hide Area Button
+    FrameLib:BuildButton({
+        name = "CHAR_hideAreaButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_hideAreaButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColSix
+            offY = -96 --charRowOne
+        },
+        text = Locale["labelCHAR_hideAreaButton"]
+    })
+    -- Guild Create Button
+    FrameLib:BuildButton({
+        name = "CHAR_createGuildButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_createGuildButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColSix
+            offY = -118 --charRowTwo
+        },
+        text = Locale["labelCHAR_createGuildButton"]
+    })
+    -- Guild Delete Button
+    FrameLib:BuildButton({
+        name = "CHAR_deleteGuildButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_deleteGuildButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColFive
+            offY = -140 --charRowFive
+        },
+        text = Locale["labelCHAR_deleteGuildButton"]
+    })
+    -- Guild Invite Button
+    FrameLib:BuildButton({
+        name = "CHAR_inviteGuildButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_inviteGuildButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColSix
+            offY = -162  --charRowThree
+        },
+        text = Locale["labelCHAR_inviteGuildButton"]
+    })
+    -- Guild Uninvite Button
+    FrameLib:BuildButton({
+        name = "CHAR_uninviteGuildButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_uninviteGuildButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColSix
+            offY = -184 --charRowFive
+        },
+        text = Locale["labelCHAR_uninviteGuildButton"]
+    })
+    -- Build Rank Button
+    FrameLib:BuildButton({
+        name = "CHAR_rankGuildButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_rankGuildButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 386, --charColSix
+            offY = -206 --charRowFour
+        },
+        text = Locale["labelCHAR_rankGuildButton"]
+    })
+    -- Appear Button
+    FrameLib:BuildButton({
+        name = "CHAR_appearButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_appearButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColFive
+            offY = -30 --charRowTwo
+        },
+        text = Locale["labelCHAR_appearButton"]
+    })
+    -- Summon Button
+    FrameLib:BuildButton({
+        name = "CHAR_summonButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_summonButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColFive
+            offY = -52 --charRowFour
+        },
+        text = Locale["labelCHAR_summonButton"]
+    })
+    -- Group Summon Button
+    FrameLib:BuildButton({
+        name = "CHAR_groupSummonButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_groupSummonButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColFive
+            offY = -74  --charRowThree
+        },
+        text = Locale["labelCHAR_groupSummonButton"]
+    })
+    -- Teleport Name Button
+    FrameLib:BuildButton({
+        name = "CHAR_teleportNameButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_teleportNameButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColSeven
+            offY = -96 --charRowTwo
+        },
+        text = Locale["labelCHAR_teleportNameButton"]
+    })
+    -- Teleport Group Button
+    FrameLib:BuildButton({
+        name = "CHAR_teleportGroupButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_teleportGroupButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColSeven
+            offY = -118 --charRowOne
+        },
+        text = Locale["labelCHAR_teleportGroupButton"]
+    })
+    -- Jail Alliance Button
+    FrameLib:BuildButton({
+        name = "CHAR_jailAllianceButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_jailAllianceButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColFour
+            offY = -140 --charRowSeven
+        },
+        text = Locale["labelCHAR_jailAllianceButton"]
+    })
+    -- Jail Horde Button
+    FrameLib:BuildButton({
+        name = "CHAR_jailHordeButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_jailHordeButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColFive
+            offY = -162 --charRowSeven
+        },
+        text = Locale["labelCHAR_jailHordeButton"]
+    })
+    -- Unjail Button
+    FrameLib:BuildButton({
+        name = "CHAR_unjailButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unjailButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColSix
+            offY = -184 --charRowSeven
+        },
+        text = Locale["labelCHAR_unjailButton"]
+    })
+    -- Damage Button
+    FrameLib:BuildButton({
+        name = "CHAR_damageButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_damageButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 468, --charColFour
+            offY = -206 --charRowNine
+        },
+        text = Locale["labelCHAR_damageButton"]
+    })
+    -- Distance Button
     FrameLib:BuildButton({
         name = "CHAR_distanceButton",
         group = "char",
@@ -362,12 +1043,12 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -74 --charRowThree
+            offX = 550, --charColTwo
+            offY = -30 --charRowThree
         },
         text = Locale["labelCHAR_distanceButton"]
     })
-
+    -- Recall Button
     FrameLib:BuildButton({
         name = "CHAR_recallButton",
         group = "char",
@@ -382,10 +1063,210 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -95 --charRowFour
+            offX = 550, --charColTwo
+            offY = -52 --charRowFour
         },
         text = Locale["labelCHAR_recallButton"]
+    })
+    -- Mute Button
+    FrameLib:BuildButton({
+        name = "CHAR_muteButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_muteButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColSeven
+            offY = -74  --charRowThree
+        },
+        text = Locale["labelCHAR_muteButton"]
+    })
+    -- Unmute Button
+    FrameLib:BuildButton({
+        name = "CHAR_unmuteButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unmuteButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColSeven
+            offY = -96 --charRowFour
+        },
+        text = Locale["labelCHAR_unmuteButton"]
+    })
+    -- Aura Button
+    FrameLib:BuildButton({
+        name = "CHAR_auraButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_auraButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColFive
+            offY = -118 --charRowSix
+        },
+        text = Locale["labelCHAR_auraButton"]
+    })
+    -- unAura Button
+    FrameLib:BuildButton({
+        name = "CHAR_unauraButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unauraButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColSix
+            offY = -140 --charRowSix
+        },
+        text = Locale["labelCHAR_unauraButton"]
+    })
+    -- Quest Add Button
+    FrameLib:BuildButton({
+        name = "CHAR_questAddButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_questAddButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColFour
+            offY = -162 --charRowEight
+        },
+        text = Locale["labelCHAR_questAddButton"]
+    })
+    -- Quest Remove Button
+    FrameLib:BuildButton({
+        name = "CHAR_questRemoveButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_questRemoveButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColSix
+            offY = -184 --charRowEight
+        },
+        text = Locale["labelCHAR_questRemoveButton"]
+    })
+    -- Quest Complete Button
+    FrameLib:BuildButton({
+        name = "CHAR_questCompleteButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_questCompleteButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 550, --charColFive
+            offY = -206 --charRowEight
+        },
+        text = Locale["labelCHAR_questCompleteButton"]
+    })
+    -- Honor Add Button
+    FrameLib:BuildButton({
+        name = "CHAR_honorAddButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_honorAddButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 632, --charColFive
+            offY = -30 --charRowNine
+        },
+        text = Locale["labelCHAR_honorAddButton"]
+    })
+    -- Honor Update Button
+    FrameLib:BuildButton({
+        name = "CHAR_honorUpdateButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_honorUpdateButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 632, --charColSix
+            offY = -52 --charRowNine
+        },
+        text = Locale["labelCHAR_honorUpdateButton"]
+    })
+    -- Bag Button
+    FrameLib:BuildButton({
+        name = "CHAR_bagButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_bagButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 632, --charColSix
+            offY = -74 --charRowNine
+        },
+        text = Locale["label_bagButton"]
     })
 
     FrameLib:BuildFrame({
@@ -513,866 +1394,17 @@ function MangAdmin:CreateCharSection()
         text = Locale["ma_Reset"]
     })
 
-    FrameLib:BuildButton({
-        name = "CHAR_bindSightButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_bindSightButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -95 --charRowFour
-        },
-        text = Locale["labelCHAR_bindSightButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_unbindSightButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unbindSightButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -117 --charRowFive
-        },
-        text = Locale["labelCHAR_unbindSightButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_renameButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_renameButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 140, --charColOne
-            offY = -139 --charRowSix
-        },
-        text = Locale["labelCHAR_renameButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_customizeButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_customizeButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -139 --charRowSix
-        },
-        text = Locale["labelCHAR_customizeButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_changeRaceButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_changeRaceButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -139 --charRowSix
-        },
-        text = Locale["labelCHAR_changeRaceButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_changeFactionButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_changeFactionButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 140, --charColOne
-            offY = -160 --charRowSeven
-        },
-        text = Locale["labelCHAR_changeFactionButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_combatStopButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_combatStopButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -160 --charRowSeven
-        },
-        text = Locale["labelCHAR_combatStopButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_maxSkillButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_maxSkillButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -160 --charRowSeven
-        },
-        text = Locale["labelCHAR_maxSkillButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_freezeButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_freezeButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 140, --charColOne
-            offY = -182 --charRowEight
-        },
-        text = Locale["labelCHAR_freezeButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_unfreezeButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unfreezeButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -182 --charRowEight
-        },
-        text = Locale["labelCHAR_unfreezeButton"]
-    })
 
-    FrameLib:BuildButton({
-        name = "CHAR_possessButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_possessButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 140, --charColOne
-            offY = -204 --charRowNine
-        },
-        text = Locale["labelCHAR_possessButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_unpossessButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unpossessButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 222, --charColTwo
-            offY = -204 --charRowNine
-        },
-        text = Locale["labelCHAR_unpossessButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_repairItemsButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_repairItemsButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 303, --charColThree
-            offY = -52 --charRowTwo [[offY = -225 --charRowTen]]
-        },
-        text = Locale["labelCHAR_repairItemsButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_banButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_banButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -52 --charRowTwo
-        },
-        text = Locale["labelCHAR_banButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_morphButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_morphButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -139 --charRowSix
-        },
-        text = Locale["labelCHAR_morphButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_appearButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_appearButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -52 --charRowTwo
-        },
-        text = Locale["labelCHAR_appearButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_createGuildButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_createGuildButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -52 --charRowTwo
-        },
-        text = Locale["labelCHAR_createGuildButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_banInfoButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_banInfoButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -74  --charRowThree
-        },
-        text = Locale["labelCHAR_banInfoButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_groupSummonButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_groupSummonButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -74  --charRowThree
-        },
-        text = Locale["labelCHAR_groupSummonButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_inviteGuildButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_inviteGuildButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -74  --charRowThree
-        },
-        text = Locale["labelCHAR_inviteGuildButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_banListButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_banListButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -95 --charRowFour
-        },
-        text = Locale["labelCHAR_banListButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_summonButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_summonButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -95 --charRowFour
-        },
-        text = Locale["labelCHAR_summonButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_rankGuildButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_rankGuildButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -95 --charRowFour
-        },
-        text = Locale["labelCHAR_rankGuildButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_teleportGroupButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_teleportGroupButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 630, --charColSeven
-            offY = -30 --charRowOne
-        },
-        text = Locale["labelCHAR_teleportGroupButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_unbanButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unbanButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -117 --charRowFive
-        },
-        text = Locale["labelCHAR_unbanButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_deleteGuildButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_deleteGuildButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -117 --charRowFive
-        },
-        text = Locale["labelCHAR_deleteGuildButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_uninviteGuildButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_uninviteGuildButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -117 --charRowFive
-        },
-        text = Locale["labelCHAR_uninviteGuildButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_teleportNameButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_teleportNameButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 630, --charColSeven
-            offY = -52 --charRowTwo
-        },
-        text = Locale["labelCHAR_teleportNameButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_muteButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_muteButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 630, --charColSeven
-            offY = -74  --charRowThree
-        },
-        text = Locale["labelCHAR_muteButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_auraButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_auraButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -139 --charRowSix
-        },
-        text = Locale["labelCHAR_auraButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_unauraButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unauraButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -139 --charRowSix
-        },
-        text = Locale["labelCHAR_unauraButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_jailAllianceButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_jailAllianceButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -160 --charRowSeven
-        },
-        text = Locale["labelCHAR_jailAllianceButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_jailHordeButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_jailHordeButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -160 --charRowSeven
-        },
-        text = Locale["labelCHAR_jailHordeButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_unjailButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unjailButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -160 --charRowSeven
-        },
-        text = Locale["labelCHAR_unjailButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_unmuteButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_unmuteButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 630, --charColSeven
-            offY = -95 --charRowFour
-        },
-        text = Locale["labelCHAR_unmuteButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_questAddButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_questAddButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -182 --charRowEight
-        },
-        text = Locale["labelCHAR_questAddButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_questCompleteButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_questCompleteButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -182 --charRowEight
-        },
-        text = Locale["labelCHAR_questCompleteButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_questRemoveButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_questRemoveButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -182 --charRowEight
-        },
-        text = Locale["labelCHAR_questRemoveButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_damageButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_damageButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 385, --charColFour
-            offY = -204 --charRowNine
-        },
-        text = Locale["labelCHAR_damageButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_hideAreaButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_hideAreaButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -30 --charRowOne
-        },
-        text = Locale["labelCHAR_hideAreaButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_showAreaButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_showAreaButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -30 --charRowOne
-        },
-        text = Locale["labelCHAR_showAreaButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_honorAddButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_honorAddButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 467, --charColFive
-            offY = -204 --charRowNine
-        },
-        text = Locale["labelCHAR_honorAddButton"]
-    })
-
-    FrameLib:BuildButton({
-        name = "CHAR_honorUpdateButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_honorUpdateButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 548, --charColSix
-            offY = -204 --charRowNine
-        },
-        text = Locale["labelCHAR_honorUpdateButton"]
-    })
-
+    -- Input Box Label
     FrameLib:BuildFontString({
         name = "ma_parameterboxtext",
         group = "char",
@@ -1380,11 +1412,11 @@ function MangAdmin:CreateCharSection()
         text = Locale["label_parameterText"],
         setpoint = {
             pos = "BOTTOMLEFT",
-            offX = 222, --charColTwo
+            offX = 150, --charColTwo
             offY = 8
         }
     })
-
+    -- Input Box
     FrameLib:BuildFrame({
         type = "EditBox",
         name = "CHAR_parameterInput",
@@ -1396,10 +1428,30 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "BOTTOMLEFT",
-            offX = 305,
+            offX = 250,
             offY = 4
         },
         inherits = "InputBoxTemplate"
     })
+    -- Clear Button
+    FrameLib:BuildButton({
+                name = "CHAR_clearParameterBoxButton",
+                group = "char",
+                parent = ma_midframe,
+                texture = {
+                    name = "CHAR_clearParameterBoxButton_texture",
+                    color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+                },
+                size = {
+                    width = 90,
+                    height = 15
+                },
+                setpoint = {
+                    pos = "BOTTOMLEFT", ---Correct This Location
+                    offX = 520,
+                    offY = 6
+                },
+                text = Locale["label_paramaterClearButton"]
+            })
 
 end
