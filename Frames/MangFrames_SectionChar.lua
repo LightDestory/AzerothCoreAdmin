@@ -1268,6 +1268,46 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["label_bagButton"]
     })
+    -- Learn Button
+    FrameLib:BuildButton({
+        name = "CHAR_learnSpellButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_learnSpellButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 632, --charColSix
+            offY = -96 --charRowNine
+        },
+        text = Locale["labelCHAR_learnSpellButton"]
+    })
+    -- Unlearn Button
+    FrameLib:BuildButton({
+        name = "CHAR_unlearnSpellButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_unlearnSpellButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 632, --charColSix
+            offY = -118 --charRowNine
+        },
+        text = Locale["labelCHAR_unlearnSpellButton"]
+    })
     -- Learn Preset Dropdown
     FrameLib:BuildFrame({
         name = "CHAR_learnPresetDropdown",
@@ -1304,59 +1344,6 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["labelCHAR_learnPresetButton"]
     })
-    -- Modify Dropdown
-    FrameLib:BuildFrame({
-        name = "CHAR_modifyDropdown",
-        group = "char",
-        parent = ma_midframe,
-        size = {
-            width = 80,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 315,
-            offY = 0
-        },
-        inherits = "UIDropDownMenuTemplate"
-    })
-    -- Modify Input Box
-    FrameLib:BuildFrame({
-        type = "EditBox",
-        name = "CHAR_modifyInputBox",
-        group = "char",
-        parent = ma_midframe,
-        size = {
-            width = 30,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 455,
-            offY = -4
-        },
-        inherits = "InputBoxTemplate"
-    })
-    -- Modify Button
-    FrameLib:BuildButton({
-        name = "CHAR_modifyButton",
-        group = "char",
-        parent = ma_midframe,
-        texture = {
-            name = "CHAR_modifyButton_texture",
-            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
-        },
-        size = {
-            width = 40,
-            height = 20
-        },
-        setpoint = {
-            pos = "TOPLEFT",
-            offX = 485,
-            offY = -4
-        },
-        text = Locale["labelCHAR_modifyButton"]
-    })
     -- Reset Dropdown
     FrameLib:BuildFrame({
         name = "CHAR_resetDropdown",
@@ -1368,7 +1355,7 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 150,
+            offX = 190,
             offY = 0
         },
         inherits = "UIDropDownMenuTemplate"
@@ -1388,11 +1375,65 @@ function MangAdmin:CreateCharSection()
         },
         setpoint = {
             pos = "TOPLEFT",
-            offX = 285,
+            offX = 330,
             offY = -4
         },
         text = Locale["labelCHAR_resetButton"]
     })
+    -- Modify Dropdown
+    FrameLib:BuildFrame({
+        name = "CHAR_modifyDropdown",
+        group = "char",
+        parent = ma_midframe,
+        size = {
+            width = 80,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 365,
+            offY = 0
+        },
+        inherits = "UIDropDownMenuTemplate"
+    })
+    -- Modify Input Box
+    FrameLib:BuildFrame({
+        type = "EditBox",
+        name = "CHAR_modifyInputBox",
+        group = "char",
+        parent = ma_midframe,
+        size = {
+            width = 60,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 505,
+            offY = -4
+        },
+        inherits = "InputBoxTemplate"
+    })
+    -- Modify Button
+    FrameLib:BuildButton({
+        name = "CHAR_modifyButton",
+        group = "char",
+        parent = ma_midframe,
+        texture = {
+            name = "CHAR_modifyButton_texture",
+            color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
+        },
+        size = {
+            width = 50,
+            height = 20
+        },
+        setpoint = {
+            pos = "TOPLEFT",
+            offX = 570,
+            offY = -4
+        },
+        text = Locale["labelCHAR_modifyButton"]
+    })
+
     -- Input Box Label
     FrameLib:BuildFontString({
         name = "ma_parameterboxtext",

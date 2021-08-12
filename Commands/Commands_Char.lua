@@ -423,8 +423,11 @@ function LearnAndUnlearnSpell(isLearn, value)
         elseif value == "all_lang" then
             MangAdmin:ChatMsg(command .. " all lang")
             MangAdmin:LogAction(log .. " all languages to " .. player .. ".")
+        elseif value == "all_default" then
+            MangAdmin:ChatMsg(command .. " all default")
+            MangAdmin:LogAction(log .. " all defaults to " .. player .. ".")
         elseif value == "all_myclass" then
-            MangAdmin:ChatMsg(command .. " all myclass")
+            MangAdmin:ChatMsg(command .. " all my class")
             MangAdmin:LogAction(log .. " all spells available to the "  .. "-class to " .. player .. ".")
         else
             MangAdmin:ChatMsg(command .. " " .. value)
@@ -464,7 +467,7 @@ function Modify(case, value)
             MangAdmin:ChatMsg(".modify mana " .. value)
             MangAdmin:LogAction("Modified mana for " .. player .. " to " .. value .. " mana")
         elseif case == "aspeed" then
-            MangAdmin:ChatMsg(".modify aspeed " .. value)
+            MangAdmin:ChatMsg(".modify speed all " .. value)
             MangAdmin:LogAction("Modified AllSpeeds for " .. player .. " to " .. value .. " mana")
         elseif case == "arena" then
             MangAdmin:ChatMsg(".modify arenapoints " .. value)
@@ -514,6 +517,10 @@ function LearnPresetDropDownInitialize()
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
         { Locale["labelCHAR_languageClass"], "all_lang" },
+        { Locale["labelCHAR_defaultClass"], "all_default" },
+        { Locale["labelCHAR_myClass"], "all_myclass" },
+        { Locale["labelCHAR_craftClass"], "all_crafts" },
+        { Locale["labelCHAR_GMClass"], "all_gm" },
         { Locale["labelCHAR_languageCommon"], "668" },
         { Locale["labelCHAR_languageOrcish"], "669" },
         { Locale["labelCHAR_languageTaurahe"], "670" },
@@ -588,7 +595,6 @@ function ResetDropDownInitialize()
     local level = 1
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
-        { Locale["labelCHAR_resetAchievementsOption"], "achievements" },
         { Locale["labelCHAR_resetHonorOption"], "honor" },
         { Locale["labelCHAR_resetLevelOption"], "level" },
         { Locale["labelCHAR_resetSpellsOption"], "spells" },
@@ -606,5 +612,5 @@ function ResetDropDownInitialize()
         info.keepShownOnClick = nil
         UIDropDownMenu_AddButton(info, level)
     end
-    UIDropDownMenu_SetSelectedValue(CHAR_resetDropdown, "achievements")
+    UIDropDownMenu_SetSelectedValue(CHAR_resetDropdown, "honor")
 end

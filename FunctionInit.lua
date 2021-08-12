@@ -753,6 +753,21 @@ function InitControls()
             end
     )
 
+    MangAdmin:PrepareScript(
+            CHAR_learnSpellButton,
+            Locale["ttCHAR_learnSpell"],
+            function()
+                LearnAndUnlearnSpell(true, CHAR_genericCommands[GENERICS_parametersGet]())
+            end
+    )
+
+    MangAdmin:PrepareScript(
+            CHAR_unlearnSpellButton,
+            Locale["ttCHAR_unlearnSpell"],
+            function()
+                LearnAndUnlearnSpell(false, CHAR_genericCommands[GENERICS_parametersGet]())
+            end
+    )
 
     MangAdmin:PrepareScript(
             CHAR_learnPresetButton,
@@ -776,7 +791,7 @@ function InitControls()
             end
     )
     LearnPresetDropDownInitialize()
-    UIDropDownMenu_Initialize(CHAR_learnPresetDropdown, LearnLangDropDownInitialize)
+    UIDropDownMenu_Initialize(CHAR_learnPresetDropdown, LearnPresetDropDownInitialize)
     UIDropDownMenu_SetWidth(CHAR_learnPresetDropdown, 100)
     UIDropDownMenu_SetButtonWidth(CHAR_learnPresetDropdown, 20)
     ModifyDropDownInitialize()
