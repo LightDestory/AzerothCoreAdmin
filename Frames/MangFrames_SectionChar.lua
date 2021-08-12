@@ -1268,9 +1268,9 @@ function MangAdmin:CreateCharSection()
         },
         text = Locale["label_bagButton"]
     })
-
+    -- Learn Preset Dropdown
     FrameLib:BuildFrame({
-        name = "ma_learnlangdropdown",
+        name = "CHAR_learnPresetDropdown",
         group = "char",
         parent = ma_midframe,
         size = {
@@ -1284,17 +1284,17 @@ function MangAdmin:CreateCharSection()
         },
         inherits = "UIDropDownMenuTemplate"
     })
-
+    -- Learn Preset Button
     FrameLib:BuildButton({
-        name = "ma_learnlangbutton",
+        name = "CHAR_learnPresetButton",
         group = "char",
         parent = ma_midframe,
         texture = {
-            name = "ma_learnlangbutton_texture",
+            name = "CHAR_learnPresetButton_texture",
             color = { color.btn.r, color.btn.g, color.btn.b, transparency.btn }
         },
         size = {
-            width = 40,
+            width = 80,
             height = 20
         },
         setpoint = {
@@ -1302,7 +1302,7 @@ function MangAdmin:CreateCharSection()
             offX = 120,
             offY = -4
         },
-        text = Locale["ma_Learn"]
+        text = Locale["labelCHAR_learnPresetButton"]
     })
     -- Modify Dropdown
     FrameLib:BuildFrame({

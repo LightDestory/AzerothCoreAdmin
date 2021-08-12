@@ -334,6 +334,7 @@ function Return_enUS()
     ["ttCHAR_honorUpdate"] = "Saves Honor for **selected** player",
     ["ttCHAR_modify"] = "Modify the selected attribute by the entered amount of the selected player",
     ["ttCHAR_reset"] = "Reset the selected attribute of the selected player",
+    ["ttCHAR_learnPreset"] = "Learn the selected spell(s)",
     --[[CHAR-Control-Labels]]
     ["labelCHAR_killButton"] = "Kill",
     ["labelCHAR_reviveButton"] = "Revive",
@@ -393,6 +394,7 @@ function Return_enUS()
     ["labelCHAR_hideMapsButton"] = "Hide Maps",
     ["labelCHAR_modifyButton"] = "Modify",
     ["labelCHAR_resetButton"] = "Reset",
+    ["labelCHAR_learnPresetButton"] = "Learn Preset",
     ["labelCHAR_modifyLevelUPOption"] = "Level up",
     ["labelCHAR_modifyLevelDownOption"] = "Level down",
     ["labelCHAR_modifyMoneyOption"] = "Money",
@@ -419,6 +421,21 @@ function Return_enUS()
     ["labelCHAR_resetHonorOption"] = "Honor",
     ["labelCHAR_resetLevelOption"] = "Level",
     ["labelCHAR_resetAchievementsOption"] = "Achievements",
+    ["labelCHAR_languageClass"] = "All Class Langs",
+    ["labelCHAR_languageCommon"] = "Common",
+    ["labelCHAR_languageOrcish"] = "Orcish",
+    ["labelCHAR_languageTaurahe"] = "Taurahe",
+    ["labelCHAR_languageDarnassian"] = "Darnassian",
+    ["labelCHAR_languageDwarven"] = "Dwarven",
+    ["labelCHAR_languageThalassian"] = "Thalassian",
+    ["labelCHAR_languageDraconic"] = "Draconic",
+    ["labelCHAR_languageDemon"] = "Demon Tongue",
+    ["labelCHAR_languageTitan"] = "Titan",
+    ["labelCHAR_languageOld"] = "Old Tongue",
+    ["labelCHAR_languageGnomish"] = "Gnomish",
+    ["labelCHAR_languageTroll"] = "Troll",
+    ["labelCHAR_languageGutterspeak"] = "Gutterspeak",
+    ["labelCHAR_languageDraenei"] = "Draenei",
 
     --[[CHAR-Commands Output]]
     ["logCHAR_kill"] = "_T_ has been killed",
@@ -480,30 +497,8 @@ function Return_enUS()
 
     ["tt_RotateLeft"] = "Rotate left.",
     ["tt_RotateRight"] = "Rotate right.",
-    ["tt_learnlangbutton"] = "Learn selected langauge(s)",
     ["tt_modelzoominbutton"] = "Zoom in the selected model",
     ["tt_modelzoomoutbutton"] = "Zoom out the selected model",
-
-    ["ma_LearnLangButton"] = "All languages",
-    ["ma_Learn"] = "Learn",
-    ["ma_AllLang"] = "All Languages",
-    --[[Other]]
-
-    -- languages
-    ["Common"] = "Common",
-    ["Orcish"] = "Orcish",
-    ["Taurahe"] = "Taurahe",
-    ["Darnassian"] = "Darnassian",
-    ["Dwarvish"] = "Dwarvish",
-    ["Thalassian"] = "Thalassian",
-    ["Demonic"] = "Demonic",
-    ["Draconic"] = "Draconic",
-    ["Titan"] = "Titan",
-    ["Kalimag"] = "Kalimag",
-    ["Gnomish"] = "Gnomish",
-    ["Troll"] = "Troll",
-    ["Gutterspeak"] = "Gutterspeak",
-    ["Draenei"] = "Draenei",
 
     --[[NPC Tab]]
     --[[Name]]

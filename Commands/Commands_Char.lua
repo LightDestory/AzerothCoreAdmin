@@ -405,41 +405,30 @@ function teleportToJail(jailCommand)
     MangAdmin:LogAction(genericLogGenerator(command[GENERICS_message], { ['value'] = character }))
 end
 
-function LearnSpell(value, state)
-    if MangAdmin:Selection("player") or MangAdmin:Selection("self") or MangAdmin:Selection("none") then
+function LearnAndUnlearnSpell(isLearn, value)
+    if (not value or value == '') then
+        MangAdmin:Print(Locale["paramError"])
+        return
+    end
+    if commandTargetCheck() then
+        local command = (isLearn == true and ".learn" or ".unlearn")
+        local log = (isLearn == true and "Learned" or "Unlearned")
         local player = UnitName("target") or UnitName("player")
-        local class = UnitClass("target") or UnitClass("player")
-        local command = ".learn"
-        local logcmd = "Learned"
-        if state == "RightButton" then
-            command = ".unlearn"
-            logcmd = "Unlearned"
-        end
-        if type(value) == "string" then
-            if value == "all" then
-                MangAdmin:ChatMsg(command .. " all")
-                MangAdmin:LogAction(logcmd .. " all spells to " .. player .. ".")
-            elseif value == "all_crafts" then
-                MangAdmin:ChatMsg(command .. " all_crafts")
-                MangAdmin:LogAction(logcmd .. " all professions and recipes to " .. player .. ".")
-            elseif value == "all_gm" then
-                MangAdmin:ChatMsg(command .. " all_gm")
-                MangAdmin:LogAction(logcmd .. " all default spells for Game Masters to " .. player .. ".")
-            elseif value == "all_lang" then
-                MangAdmin:ChatMsg(command .. " all_lang")
-                MangAdmin:LogAction(logcmd .. " all languages to " .. player .. ".")
-            elseif value == "all_myclass" then
-                MangAdmin:ChatMsg(command .. " all_myclass")
-                MangAdmin:LogAction(logcmd .. " all spells available to the " .. class .. "-class to " .. player .. ".")
-            else
-                MangAdmin:ChatMsg(command .. " " .. value)
-                MangAdmin:LogAction(logcmd .. " spell " .. value .. " to " .. player .. ".")
-            end
-        elseif type(value) == "table" then
-            for k, v in pairs(value) do
-                MangAdmin:ChatMsg(command .. " " .. v)
-                MangAdmin:LogAction(logcmd .. " spell " .. v .. " to " .. player .. ".")
-            end
+        if value == "all_crafts" then
+            MangAdmin:ChatMsg(command .. " all crafts")
+            MangAdmin:LogAction(log .. " all professions and recipes to " .. player .. ".")
+        elseif value == "all_gm" then
+            MangAdmin:ChatMsg(command .. " all gm")
+            MangAdmin:LogAction(log .. " all default spells for Game Masters to " .. player .. ".")
+        elseif value == "all_lang" then
+            MangAdmin:ChatMsg(command .. " all lang")
+            MangAdmin:LogAction(log .. " all languages to " .. player .. ".")
+        elseif value == "all_myclass" then
+            MangAdmin:ChatMsg(command .. " all myclass")
+            MangAdmin:LogAction(log .. " all spells available to the "  .. "-class to " .. player .. ".")
+        else
+            MangAdmin:ChatMsg(command .. " " .. value)
+            MangAdmin:LogAction(log .. " spell " .. value .. " to " .. player .. ".")
         end
     else
         MangAdmin:Print(Locale["selectionError"])
@@ -519,39 +508,39 @@ function Modify(case, value)
     end
 end
 
--- LEARN LANG
-function LearnLangDropDownInitialize()
+-- LEARN Spell Preset
+function LearnPresetDropDownInitialize()
     local level = 1
     local info = UIDropDownMenu_CreateInfo()
     local buttons = {
-        { Locale["ma_AllLang"], "all_lang" },
-        { Locale["Common"], "668" },
-        { Locale["Orcish"], "669" },
-        { Locale["Taurahe"], "670" },
-        { Locale["Darnassian"], "671" },
-        { Locale["Dwarvish"], "672" },
-        { Locale["Thalassian"], "813" },
-        { Locale["Demonic"], "815" },
-        { Locale["Draconic"], "814" },
-        { Locale["Titan"], "816" },
-        { Locale["Kalimag"], "817" },
-        { Locale["Gnomish"], "7340" },
-        { Locale["Troll"], "7341" },
-        { Locale["Gutterspeak"], "17737" },
-        { Locale["Draenei"], "29932" }
+        { Locale["labelCHAR_languageClass"], "all_lang" },
+        { Locale["labelCHAR_languageCommon"], "668" },
+        { Locale["labelCHAR_languageOrcish"], "669" },
+        { Locale["labelCHAR_languageTaurahe"], "670" },
+        { Locale["labelCHAR_languageDarnassian"], "671" },
+        { Locale["labelCHAR_languageDwarven"], "672" },
+        { Locale["labelCHAR_languageThalassian"], "813" },
+        { Locale["labelCHAR_languageDemon"], "815" },
+        { Locale["labelCHAR_languageDraconic"], "814" },
+        { Locale["labelCHAR_languageTitan"], "816" },
+        { Locale["labelCHAR_languageOld"], "817" },
+        { Locale["labelCHAR_languageGnomish"], "7340" },
+        { Locale["labelCHAR_languageTroll"], "7341" },
+        { Locale["labelCHAR_languageGutterspeak"], "17737" },
+        { Locale["labelCHAR_languageDraenei"], "29932" }
     }
     for k, v in pairs(buttons) do
         info.text = v[1]
         info.value = v[2]
         info.func = function()
-            UIDropDownMenu_SetSelectedValue(ma_learnlangdropdown, this.value)
+            UIDropDownMenu_SetSelectedValue(CHAR_learnPresetDropdown, this.value)
         end
         info.checked = nil
         info.icon = nil
         info.keepShownOnClick = nil
         UIDropDownMenu_AddButton(info, level)
     end
-    UIDropDownMenu_SetSelectedValue(ma_learnlangdropdown, "all_lang")
+    UIDropDownMenu_SetSelectedValue(CHAR_learnPresetDropdown, "all_lang")
 end
 
 -- MODIFY

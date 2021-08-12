@@ -261,7 +261,6 @@ end
 function GM_deleteAccountCommand()
   local input = GM_genericCommands[GENERICS_parametersGet]()
   local params = {}
-  local fail = false
   for w in input:gmatch("%w+") do
     table.insert(params, w)
   end

@@ -2307,7 +2307,7 @@ function PopupScrollUpdate()
           getglobal("ma_PopupScrollBarEntry"..line):SetText("Id: |cffffffff"..spell["spId"].."|r Name: |cffffffff"..spell["spName"].."|r")
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnEnter", function() --[[Do nothing]] end)
           getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnLeave", function() --[[Do nothing]] end)
-          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() LearnSpell(spell["spId"], arg1) end)
+          getglobal("ma_PopupScrollBarEntry"..line):SetScript("OnClick", function() LearnAndUnlearnSpell(true, spell["spId"]) end)
           getglobal("ma_PopupScrollBarEntry"..line):Enable()
           getglobal("ma_PopupScrollBarEntry"..line):Show()
           if MangAdmin.db.char.requests.spell then

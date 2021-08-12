@@ -755,11 +755,10 @@ function InitControls()
 
 
     MangAdmin:PrepareScript(
-            ma_learnlangbutton,
-            Locale["tt_learnlangbutton"],
-            function(self, button, down)
-                MangAdmin:Print(button)
-                LearnSpell(UIDropDownMenu_GetSelectedValue(ma_learnlangdropdown), button)
+            CHAR_learnPresetButton,
+            Locale["ttCHAR_learnPreset"],
+            function()
+                LearnAndUnlearnSpell(true, UIDropDownMenu_GetSelectedValue(CHAR_learnPresetDropdown))
             end
     )
     MangAdmin:PrepareScript(
@@ -776,10 +775,10 @@ function InitControls()
                 genericCaller(CHAR_KEY, CHAR_resetCommand, UIDropDownMenu_GetSelectedValue(CHAR_resetDropdown))
             end
     )
-    LearnLangDropDownInitialize()
-    UIDropDownMenu_Initialize(ma_learnlangdropdown, LearnLangDropDownInitialize)
-    UIDropDownMenu_SetWidth(ma_learnlangdropdown, 100)
-    UIDropDownMenu_SetButtonWidth(ma_learnlangdropdown, 20)
+    LearnPresetDropDownInitialize()
+    UIDropDownMenu_Initialize(CHAR_learnPresetDropdown, LearnLangDropDownInitialize)
+    UIDropDownMenu_SetWidth(CHAR_learnPresetDropdown, 100)
+    UIDropDownMenu_SetButtonWidth(CHAR_learnPresetDropdown, 20)
     ModifyDropDownInitialize()
     UIDropDownMenu_Initialize(CHAR_modifyDropdown, ModifyDropDownInitialize)
     UIDropDownMenu_SetWidth(CHAR_modifyDropdown, 100)
