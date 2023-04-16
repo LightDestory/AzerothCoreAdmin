@@ -1,20 +1,26 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest new functionality for this project.
+title: ''
+labels: 'feature request'
+assignees: ''
 
 ---
 
-**AzerothCoreAdmin Information**
-  -Revision number: What version are you using ?
+**Thank you in advance for the feedback!** Please read through the template below and answer all relevant questions. A clear comunication is greatly appreciated and will help to respond as quickly as possible. To avoid duplicates, please search existing Issues before submitting one here.
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### Describe the problem/feature you'd like to have solved/implemented
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+> A clear and concise description of what the problem/feature is.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+### Describe the ideal solution
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+> If you have the proper knownledge, provide a developer point of view description of what you want to happen.
+>
+> Delete this section if not needed
+
+### Additional context
+
+> Add any other context or screenshots about the feature request here.
+> 
+> Delete this section if not needed.
