@@ -5,8 +5,8 @@
 
 <div align="center">
 
-  <a href="https://github.com/LightDestory/RepositoryTemplate">
-    <img src=".github/assets/images/presentation_image.png" alt="Preview" width="90%">
+  <a href="https://github.com/LightDestory/AzerothCoreAdmin">
+    <img src="https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/.github/assets/images/presentation_image.png" alt="Preview" width="90%">
   </a>
 
   <h2 align="center">AzerothCoreAdmin</h2>
@@ -59,9 +59,9 @@ _The adaption is based on the most updated fork available of TrinityAdmin for 3.
 
 <details>
 <summary>🖼️ Gallery</summary>
-<img src=".github/assets/images/ACAdmin_GM.png" alt="Preview" width="90%">
-<img src=".github/assets/images/ACAdmin_CHAR.png" alt="Preview" width="90%">
-<img src=".github/assets/images/ACAdmin_WHO.png" alt="Preview" width="90%">
+<img src="https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/.github/assets/images/ACAdmin_GM.png" alt="Preview" width="90%">
+<img src="https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/.github/assets/images/ACAdmin_CHAR.png" alt="Preview" width="90%">
+<img src="https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/.github/assets/images/ACAdmin_WHO.png" alt="Preview" width="90%">
 </details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -126,7 +126,7 @@ If you find value in my work, please consider making a donation to help me creat
 Your donation will go a long way in helping me continue to create free software that can benefit people around the world.
 
 <p align="center">
-<a href='https://ko-fi.com/M4M6KC01A' target='_blank'><img src='.github/assets/images/support.png' alt='Buy Me a Hot Chocolate at ko-fi.com' width="45%" /></a>
+<a href='https://ko-fi.com/M4M6KC01A' target='_blank'><img src='https://raw.githubusercontent.com/LightDestory/AzerothCoreAdmin/master/.github/assets/images/support.png' alt='Buy Me a Hot Chocolate at ko-fi.com' width="45%" /></a>
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
